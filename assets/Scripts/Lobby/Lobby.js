@@ -1,82 +1,77 @@
-// Learn cc.Class:
-//  - https://docs.cocos.com/creator/manual/en/scripting/class.html
-// Learn Attribute:
-//  - https://docs.cocos.com/creator/manual/en/scripting/reference/attributes.html
-// Learn life-cycle callbacks:
-//  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
-const Cookies = require('js-cookies');
-const login = require('Login')
+const Cookies = require("js-cookies");
+const login = require("Login");
+const jwt = require('jsonwebtoken'); 
 cc.Class({
-    extends: cc.Component,
+  extends: cc.Component,
 
-    properties: {
-     userId:{
-        default: null,
-        type:cc.Label,
-     },
-     coinsLabel:{
-        default: null,
-        type: cc.Label,
-     },
-     cloudAnimNode:{
-        default: null,
-        type: cc.Node
-     },
-     sprite: {
-        default: null,
-        type: cc.SpriteFrame,
+  properties: {
+    userId: {
+      default: null,
+      type: cc.Label,
     },
-    smallItemNode:{
-        default: null,
-        type: cc.Node,
+    coinsLabel: {
+      default: null,
+      type: cc.Label,
     },
-    rightTiltNode:{
-        default: null,
-        type: cc.Node
-    },
-    leftTiltNode:{
-        default: null,
-        type: cc.Node
-    },
-    spinWheelNode:{
-        default: null,
-        type: cc.Node
-    },
-    OuterAnimation:{
-        default: null,
-        type:cc.Node,
-    },
-    passwordNode:{
+    cloudAnimNode: {
       default: null,
       type: cc.Node,
     },
-    passwordChangeButton:{
+    sprite: {
       default: null,
-      type:cc.Node
+      type: cc.SpriteFrame,
     },
-    popupNode:{
+    smallItemNode: {
       default: null,
-      type: cc.Node
+      type: cc.Node,
+    },
+    rightTiltNode: {
+      default: null,
+      type: cc.Node,
+    },
+    leftTiltNode: {
+      default: null,
+      type: cc.Node,
+    },
+    spinWheelNode: {
+      default: null,
+      type: cc.Node,
+    },
+    OuterAnimation: {
+      default: null,
+      type: cc.Node,
+    },
+    passwordNode: {
+      default: null,
+      type: cc.Node,
+    },
+    passwordChangeButton: {
+      default: null,
+      type: cc.Node,
+    },
+    popupNode: {
+      default: null,
+      type: cc.Node,
     },
     oldPassword: {
       default: null,
-      type: cc.Label
+      type: cc.Label,
     },
     newPassword: {
       default: null,
-      type: cc.Label
+      type: cc.Label,
     },
     confirmPassword: {
       default: null,
-      type: cc.Label
+      type: cc.Label,
     },
-    profileNode:{
+    profileNode: {
       default: null,
-      type: cc.Node
+      type: cc.Node,
     },
-    saveProfileBtn:{
+    saveProfileBtn: {
       default: null,
-      type: cc.Node
+      type: cc.Node,
     },
     allTab: {
       default: null,
@@ -106,258 +101,313 @@ cc.Class({
       default: null,
       type: login,
     },
-     category: null,
-     lefttiltAngle: -7,  // Angle to tilt the node (in degrees)
-     tiltDuration: 0.2,  // Duration of the tilt animation
-     originalRotation: 0,
-     righttiltAngle: 7,
-     targetX: 0,   
-     moveDuration: 2.0, 
-     scaleUp: 0.9,  // Scale factor when mouse enters
+    scrollView: cc.ScrollView,
+    itemPrefab: cc.Prefab,
+    smallItemPrefab: cc.Prefab,
+    category: null,
+    lefttiltAngle: -7, // Angle to tilt the node (in degrees)
+    tiltDuration: 0.2, // Duration of the tilt animation
+    originalRotation: 0,
+    righttiltAngle: 7,
+    targetX: 0,
+    moveDuration: 2.0,
+    scaleUp: 0.9, // Scale factor when mouse enters
     scaleNormal: 0.9,
-      
-    },
+    itemsPerLoad: 10,
+  },
 
-    // LIFE-CYCLE CALLBACKS:
+  // LIFE-CYCLE CALLBACKS:
 
-    onLoad () {
-        if(!this.category){
-            this.category = "all"
-        }
+  onLoad() {
+    if (!this.category) {
+      this.category = "all";
+    }
+    this.itemsToLoad = []; // Array to store all items to be loaded
+    this.currentIndex = 0; // Current index in the items array
+    this.scrollView.node.on("scroll-to-right", this.loadMoreItems, this); // Event listener for horizontal scrolling
+    let currentPos = this.cloudAnimNode.getPosition();
+    let moveAction = cc.moveTo(
+      this.moveDuration,
+      cc.v2(this.targetX, currentPos.y)
+    );
+    // Run the move action on the sprite node
+    this.cloudAnimNode.runAction(moveAction);
+    this.fetchGames(this.category);
+  },
 
-        let currentPos = this.cloudAnimNode.getPosition();
-        let moveAction = cc.moveTo(this.moveDuration, cc.v2(this.targetX, currentPos.y));
+  /**
+   * @method Fetach Games by category
+   * @description HTTP request - POST data
+   * @param {String} address -address of Server
+   * @param {Object} data -Data/PayLoad to be sent
+   * @param {method} callback -Callback to be executed if response.succss is true!
+   * @param {method} error -Callback to be executed if response.success is false!
+   */
+  fetchGames: function (gameCategory) {
+    let content = this.scrollView.content;
+    content.removeAllChildren();
 
-        // Run the move action on the sprite node
-        this.cloudAnimNode.runAction(moveAction);
-
-        
-        var address = K.ServerAddress.ipAddress + K.ServerAPI.game +"="+ this.category;
-        
-        ServerCom.httpRequest("GET", address, function (response) {
-           console.log("responseresponseresponse in lobby", response);
-        }.bind(this));
-
-        let leftAngle = cc.scaleTo(this.tiltDuration, this.leftTiltAngle);
-        let sleftDownAction = cc.scaleTo(this.animationDuration, this.scaleNormal);
-        
-        // Create the sequence action
-        let scaleSequence = cc.sequence(leftAngle, sleftDownAction);
-        
-        // Repeat the sequence forever
-        this.leftTiltNode.runAction(cc.repeatForever(scaleSequence));
-         // Set initial position of the sprite
-        //  let leftTilt = cc.rotateTo(this.tiltDuration, this.leftTiltAngle);
-        // //  let rightTilt = cc.rotateTo(this.tiltDuration, this.rightTiltAngle);
-        //  let originalTilt = cc.rotateTo(this.tiltDuration, this.originalRotation);
- 
-        //  // Create the sequence action for leftTiltNode
-        //  let tiltSequence = cc.sequence(leftTilt, originalTilt);
- 
-        //  // Run the sequence action indefinitely on leftTiltNode
-        //  this.leftTiltNode.runAction(cc.repeatForever(tiltSequence));
- 
-        //  // Create the tilt actions for rightTiltNode
-        // //  let leftTiltRightNode = cc.rotateTo(this.tiltDuration, this.leftTiltAngle);
-        //  let rightTiltRightNode = cc.rotateTo(this.tiltDuration, this.rightTiltAngle);
-        //  let originalTiltRightNode = cc.rotateTo(this.tiltDuration, this.originalRotation);
- 
-        //  // Create the sequence action for rightTiltNode
-        //  let tiltSequenceRightNode = cc.sequence(rightTiltRightNode, originalTiltRightNode);
- 
-        //  // Run the sequence action indefinitely on rightTiltNode
-        //  this.rightTiltNode.runAction(cc.repeatForever(tiltSequenceRightNode));
-
-        //Registerred Mouse Enter event
-        // this.smallItemNode.on(cc.Node.EventType.MOUSE_ENTER, this.onMouseEnter, this);
-        // // Register mouse leave event
-        // this.smallItemNode.on(cc.Node.EventType.MOUSE_LEAVE, this.onMouseLeave, this);
-        // console.log(this.node);
-        // this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item").on(cc.Node.EventType.MOUSE_ENTER, this.onMouseEnter, this);
-        // this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item").on(cc.Node.EventType.MOUSE_LEAVE, this.onMouseLeave, this);
-        // this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item1").on(cc.Node.EventType.MOUSE_ENTER, this.onMouse1Enter, this);
-        // this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item1").on(cc.Node.EventType.MOUSE_LEAVE, this.onMouse1Leave, this);
-        // this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item2").on(cc.Node.EventType.MOUSE_ENTER, this.onMouse2Enter, this);
-        // this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item2").on(cc.Node.EventType.MOUSE_LEAVE, this.onMouse2Leave, this);
-        // this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item3").on(cc.Node.EventType.MOUSE_ENTER, this.onMouse3Enter, this);
-        // this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item3").on(cc.Node.EventType.MOUSE_LEAVE, this.onMouse3Leave, this); 
-        // this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item4").on(cc.Node.EventType.MOUSE_ENTER, this.onMouse4Enter, this);
-        // this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item4").on(cc.Node.EventType.MOUSE_LEAVE, this.onMouse4Leave, this);
-        // this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item5").on(cc.Node.EventType.MOUSE_ENTER, this.onMouse5Enter, this);
-        // this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item5").on(cc.Node.EventType.MOUSE_LEAVE, this.onMouse5Leave, this);
-        // this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item6").on(cc.Node.EventType.MOUSE_ENTER, this.onMouse6Enter, this);
-        // this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item6").on(cc.Node.EventType.MOUSE_LEAVE, this.onMouse6Leave, this);
-        
-    },
-
-//     onMouseEnter: function(){
-//         this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item").setScale(1.08);
-//     },
-//     onMouse1Enter: function(){
-//       this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item1").setScale(1.08);
-//   },
-//   onMouse2Enter: function(){
-//     this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item2").setScale(1.08);
-// },
-// onMouse3Enter: function(){
-//   this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item3").setScale(1.08);
-// },
-// onMouse4Enter: function(){
-//   this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item4").setScale(1.08);
-// },
-// onMouse5Enter: function(){
-//   this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item5").setScale(1.08);
-// },
-// onMouse6Enter: function(){
-//   this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item6").setScale(1.08);
-// },
-
-    getGamesByCategoryAll: function(){
-      const gameTabs = [this.fishTab.getChildByName('bg'), this.favTab.getChildByName('bg'), this.slotTab.getChildByName('bg'), this.kenoTab.getChildByName('bg'), this.otherTab.getChildByName('bg')];
-      gameTabs.forEach(tab => tab.active = false)
-     this.allTab.getChildByName('bg').active = true;
-      // console.log('Custom event received:', event.detail.value);
-    },
-
-    getGamesByCategoryfish: function(){
-      const gameTabs = [this.allTab.getChildByName('bg'), this.favTab.getChildByName('bg'), this.slotTab.getChildByName('bg'), this.kenoTab.getChildByName('bg'), this.otherTab.getChildByName('bg')];
-      gameTabs.forEach(tab => tab.active = false)
-      this.fishTab.getChildByName('bg').active = true;
-       // console.log('Custom event received:', event.detail.value);
-     },
-     getGamesByCategoryfav: function(){
-      const gameTabs = [this.fishTab.getChildByName('bg'), this.allTab.getChildByName('bg'), this.slotTab.getChildByName('bg'), this.kenoTab.getChildByName('bg'), this.otherTab.getChildByName('bg')];
-      gameTabs.forEach(tab => tab.active = false)
-      this.favTab.getChildByName('bg').active = true;
-       // console.log('Custom event received:', event.detail.value);
-     },
-     getGamesByCategorySlot: function(event){
-      const gameTabs = [this.fishTab.getChildByName('bg'), this.allTab.getChildByName('bg'), this.favTab.getChildByName('bg'), this.kenoTab.getChildByName('bg'), this.otherTab.getChildByName('bg')];
-      gameTabs.forEach(tab => tab.active = false)
-      this.slotTab.getChildByName('bg').active = true;
-       // console.log('Custom event received:', event.detail.value);
-     },
-     getGamesByCategoryKeno: function(event){
-      const gameTabs = [this.fishTab.getChildByName('bg'), this.allTab.getChildByName('bg'), this.favTab.getChildByName('bg'), this.slotTab.getChildByName('bg'), this.otherTab.getChildByName('bg')];
-      gameTabs.forEach(tab => tab.active = false)
-      this.kenoTab.getChildByName('bg').active = true;
-       // console.log('Custom event received:', event.detail.value);
-     },
-     getGamesByCategoryOther: function(event){
-      const gameTabs = [this.fishTab.getChildByName('bg'), this.allTab.getChildByName('bg'), this.favTab.getChildByName('bg'), this.slotTab.getChildByName('bg'), this.kenoTab.getChildByName('bg')];
-      gameTabs.forEach(tab => tab.active = false);
-      this.otherTab.getChildByName('bg').active = true;
-     },
-     
-    
-    // onMouseLeave: function(){
-    //     this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item").setScale(this.scaleNormal);
-    // },
-    // onMouse1Leave: function(){
-    //   this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item1").setScale(this.scaleNormal);
-    // },
-    // onMouse2Leave: function(){
-    //   this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item2").setScale(this.scaleNormal);
-    // },
-    // onMouse3Leave: function(){
-    //   this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item3").setScale(this.scaleNormal);
-    // },
-    // onMouse4Leave: function(){
-    //   this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item4").setScale(this.scaleNormal);
-    // },
-    // onMouse5Leave: function(){
-    //   this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item5").setScale(this.scaleNormal);
-    // },
-    // onMouse6Leave: function(){
-    //   this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item6").setScale(this.scaleNormal);
-    // },
-
-     // for full Screen
-     zoomFullScreenClick: function(){
-            if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement
-            ) {
-              // current working methods
-              if (document.documentElement.requestFullscreen) {
-                document.documentElement.requestFullscreen()
-              } else if (document.documentElement.mozRequestFullScreen) {
-                document.documentElement.mozRequestFullScreen()
-              } else if (document.documentElement.webkitRequestFullscreen) {
-                document.documentElement.webkitRequestFullscreen(
-                  Element.ALLOW_KEYBOARD_INPUT
-                )
-              }
-            } else {
-              if (document.cancelFullScreen) {
-                document.cancelFullScreen()
-              } else if (document.mozCancelFullScreen) {
-                document.mozCancelFullScreen()
-              } else if (document.webkitCancelFullScreen) {
-                document.webkitCancelFullScreen()
-              }
-            }
-    },
-
-    closeSpinNode: function(){
-        if(this.spinWheelNode.active){
-            this.spinWheelNode.active = false;
-        }
-    },
-
-    openSpinWheelNode: function(){
-        var rotateAction = cc.rotateBy(5, 360);
-        var continueRotate = cc.repeatForever(rotateAction);
-        this.OuterAnimation.runAction(continueRotate);
-        if(!this.spinWheelNode.active){
-            this.spinWheelNode.active = true;
-        }
-    },
-
-    openProflePopup: function(){
-      this.popupNode.active = true;
-      this.profileNode.active = true;
-    },
-
-    logOutClick: function(){
-      console.log("clck");
-      this.node.active = false
-      this.loginNode.logutClick();
-    },   
-
-    passwordChangeBtn: function(){
-      if(this.oldPassword.string == "" || this.newPassword.string == "" || this.confirmPassword.string == ""){
-        ServerCom.errorLable.string = "All fields are mandatory";
-        ServerCom.loginErrorNode.active = true;
+    var address =
+      K.ServerAddress.ipAddress + K.ServerAPI.game + "=" + gameCategory;
+    ServerCom.httpRequest("GET", address, "", function (response) {
+        if (response.featured.length === 0 &&  response.otherGames.length === 0) {
+          ServerCom.errorLable.string = "No Games Found For This Category";
+          ServerCom.loginErrorNode.active = true;
           setTimeout(() => {
             ServerCom.loginErrorNode.active = false;
-        }, 2000);
-      }else{
-        if( this.newPassword.string != this.confirmPassword.string){
-          ServerCom.errorLable.string = "New Password and confirm password did not match";
-          ServerCom.loginErrorNode.active = true;
-            setTimeout(() => {
-              ServerCom.loginErrorNode.active = false;
           }, 2000);
+          return;
         }
-        this.passwordNode.active = false;
-        this.popupNode.active = false;
-      }
-     
-    },
-    changePassword: function(){
-      this.passwordNode.active = true;
-      this.popupNode.active = true;
-      
-    },
-    closePopupBtn: function(){
-      if(this.passwordNode.active || this.profileNode.active){
-        this.passwordNode.active = false;
-        this.profileNode.active = false;
-      }
-      this.popupNode.active = false;
-    },
-    saveProfile: function(){
-      this.profileNode.active = false;
-      this.popupNode.active = false;
-      
+
+        let otherGames = response.otherGames || [];
+        let featured = response.featured || [];
+
+        this.itemsToLoad = [];
+
+        // Insert the featured item at the third position
+        for (let i = 0; i < otherGames.length; i++) {
+          if (i === 2 && featured.length > 0) {
+            this.itemsToLoad.push({data: featured[0],prefab: this.smallItemPrefab,});
+          }
+          this.itemsToLoad.push({data: otherGames[i],prefab: this.itemPrefab,});
+        }
+
+        // If there are less than 3 otherGames, add the featured item at the end if it hasn't been added yet
+        if (otherGames.length < 3 && featured.length > 0) {
+          this.itemsToLoad.push({ data: featured[0], prefab: this.smallItemPrefab, });
+        }
+        this.currentIndex = 0;
+        this.loadMoreItems(); // Load the first batch of items
+      }.bind(this)
+    );
+  },
+
+  loadMoreItems: function () {
+    if (this.currentIndex >= this.itemsToLoad.length) return; // No more items to load
+    let endIndex = Math.min(
+      this.currentIndex + this.itemsPerLoad,
+      this.itemsToLoad.length
+    );
+    for (let i = this.currentIndex; i < endIndex; i++) {
+      let itemData = this.itemsToLoad[i];
+      this.populateItems(itemData.data, itemData.prefab);
     }
+    this.currentIndex = endIndex;
+  },
+
+    // Draw Game Items in Lobby
+  populateItems(itemData, prefab) {
+      let item = cc.instantiate(prefab);
+      let itemScript = item.getComponent("GamesPrefab");
+      itemScript.updateItem(itemData);
+      this.scrollView.content.addChild(item);
+    },
+
+  getGamesByCategoryAll: function () {
+    this.category = "all";
+    const gameTabs = [
+      this.fishTab.getChildByName("bg"),
+      this.favTab.getChildByName("bg"),
+      this.slotTab.getChildByName("bg"),
+      this.kenoTab.getChildByName("bg"),
+      this.otherTab.getChildByName("bg"),
+    ];
+    gameTabs.forEach((tab) => (tab.active = false));
+    this.allTab.getChildByName("bg").active = true;
+    this.fetchGames(this.category);
+  },
+
+  getGamesByCategoryfish: function () {
+    this.category = "fish";
+    const gameTabs = [
+      this.allTab.getChildByName("bg"),
+      this.favTab.getChildByName("bg"),
+      this.slotTab.getChildByName("bg"),
+      this.kenoTab.getChildByName("bg"),
+      this.otherTab.getChildByName("bg"),
+    ];
+    gameTabs.forEach((tab) => (tab.active = false));
+    this.fishTab.getChildByName("bg").active = true;
+    this.fetchGames(this.category);
+  },
+  getGamesByCategoryfav: function () {
+    this.category = "fav";
+    const gameTabs = [
+      this.fishTab.getChildByName("bg"),
+      this.allTab.getChildByName("bg"),
+      this.slotTab.getChildByName("bg"),
+      this.kenoTab.getChildByName("bg"),
+      this.otherTab.getChildByName("bg"),
+    ];
+    gameTabs.forEach((tab) => (tab.active = false));
+    this.favTab.getChildByName("bg").active = true;
+    this.fetchGames(this.category);
+  },
+  getGamesByCategorySlot: function (event) {
+    this.category = "slot";
+    const gameTabs = [
+      this.fishTab.getChildByName("bg"),
+      this.allTab.getChildByName("bg"),
+      this.favTab.getChildByName("bg"),
+      this.kenoTab.getChildByName("bg"),
+      this.otherTab.getChildByName("bg"),
+    ];
+    gameTabs.forEach((tab) => (tab.active = false));
+    this.slotTab.getChildByName("bg").active = true;
+    this.fetchGames(this.category);
+  },
+  getGamesByCategoryKeno: function (event) {
+    this.category = "keno";
+    const gameTabs = [
+      this.fishTab.getChildByName("bg"),
+      this.allTab.getChildByName("bg"),
+      this.favTab.getChildByName("bg"),
+      this.slotTab.getChildByName("bg"),
+      this.otherTab.getChildByName("bg"),
+    ];
+    gameTabs.forEach((tab) => (tab.active = false));
+    this.kenoTab.getChildByName("bg").active = true;
+    this.fetchGames(this.category);
+  },
+  getGamesByCategoryOther: function (event) {
+    this.category = "others";
+    const gameTabs = [
+      this.fishTab.getChildByName("bg"),
+      this.allTab.getChildByName("bg"),
+      this.favTab.getChildByName("bg"),
+      this.slotTab.getChildByName("bg"),
+      this.kenoTab.getChildByName("bg"),
+    ];
+    gameTabs.forEach((tab) => (tab.active = false));
+    this.otherTab.getChildByName("bg").active = true;
+    this.fetchGames(this.category);
+  },
+
+
+
+  // for full Screen
+  zoomFullScreenClick: function () {
+    if (
+      !document.fullscreenElement &&
+      !document.mozFullScreenElement &&
+      !document.webkitFullscreenElement
+    ) {
+      // current working methods
+      if (document.documentElement.requestFullscreen) {
+        document.documentElement.requestFullscreen();
+      } else if (document.documentElement.mozRequestFullScreen) {
+        document.documentElement.mozRequestFullScreen();
+      } else if (document.documentElement.webkitRequestFullscreen) {
+        document.documentElement.webkitRequestFullscreen(
+          Element.ALLOW_KEYBOARD_INPUT
+        );
+      }
+    } else {
+      if (document.cancelFullScreen) {
+        document.cancelFullScreen();
+      } else if (document.mozCancelFullScreen) {
+        document.mozCancelFullScreen();
+      } else if (document.webkitCancelFullScreen) {
+        document.webkitCancelFullScreen();
+      }
+    }
+  },
+  // Close Spin Popup Node
+  closeSpinNode: function () {
+    if (this.spinWheelNode.active) {
+      this.spinWheelNode.active = false;
+    }
+  },
+
+  // Open Spin the Wheel popup and run outer animation
+  openSpinWheelNode: function () {
+    var rotateAction = cc.rotateBy(5, 360);
+    var continueRotate = cc.repeatForever(rotateAction);
+    this.OuterAnimation.runAction(continueRotate);
+    if (!this.spinWheelNode.active) {
+      this.spinWheelNode.active = true;
+    }
+  },
+
+  // open Profile popup
+  openProflePopup: function () {
+    this.popupNode.active = true;
+    this.profileNode.active = true;
+  },
+  // Logout Button Clicked
+  logOutClick: function () {
+    this.node.active = false;
+    this.loginNode.logutClick();
+  },
+
+  /**
+   * @method PasswordChange Popup request
+   * @description HTTP request - POST data
+   * @param {String} address -address of Server
+   * @param {Object} data -Data/PayLoad to be sent
+   * @param {method} callback -Callback to be executed if response.succss is true!
+   * @param {method} error -Callback to be executed if response.success is false!
+   */
+  passwordChangeBtn: function () {
+    if (
+      this.oldPassword.string == "" ||
+      this.newPassword.string == "" ||
+      this.confirmPassword.string == ""
+    ) {
+      ServerCom.errorLable.string = "All fields are mandatory";
+      ServerCom.loginErrorNode.active = true;
+      setTimeout(() => {
+        ServerCom.loginErrorNode.active = false;
+      }, 2000);
+    } else {
+      if (this.newPassword.string != this.confirmPassword.string) {
+        ServerCom.errorLable.string =
+          "New Password and confirm password did not match";
+        ServerCom.loginErrorNode.active = true;
+        setTimeout(() => {
+          ServerCom.loginErrorNode.active = false;
+        }, 2000);
+      }
+      let token = null
+      if (!token && cc.sys.isBrowser) {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            if (cookie.startsWith('token=')) {
+                token = cookie.substring('token='.length, cookie.length);
+                break;
+            }
+        }
+      }
+      const user = jwt.decode(token);
+      let address = K.ServerAddress.ipAddress + K.ServerAPI.password + `/${user.username}`;
+      let changeData = {
+        changedPassword : this.newPassword.string
+      }
+      ServerCom.httpRequest("PUT", address, changeData, function(resposen){
+        console.log("response", response);
+      }.bind(this))
+      this.passwordNode.active = false;
+      this.popupNode.active = false;
+    }
+  },
+  // to open the password popup
+  changePassword: function () {
+    this.passwordNode.active = true;
+    this.popupNode.active = true;
+  },
+  // close all popup
+  closePopupBtn: function () {
+    if (this.passwordNode.active || this.profileNode.active) {
+      this.passwordNode.active = false;
+      this.profileNode.active = false;
+    }
+    this.popupNode.active = false;
+  },
+
+  // Save profile button Clicked
+  saveProfile: function () {
+    this.profileNode.active = false;
+    this.popupNode.active = false;
+  },
 });

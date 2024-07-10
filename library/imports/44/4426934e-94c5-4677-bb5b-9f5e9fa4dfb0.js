@@ -4,15 +4,11 @@ cc._RF.push(module, '44269NOlMVGd7tbn16fpN+w', 'Lobby');
 
 "use strict";
 
-// Learn cc.Class:
-//  - https://docs.cocos.com/creator/manual/en/scripting/class.html
-// Learn Attribute:
-//  - https://docs.cocos.com/creator/manual/en/scripting/reference/attributes.html
-// Learn life-cycle callbacks:
-//  - https://docs.cocos.com/creator/manual/en/scripting/life-cycle-callbacks.html
-var Cookies = require('js-cookies');
+var Cookies = require("js-cookies");
 
-var login = require('Login');
+var login = require("Login");
+
+var jwt = require('jsonwebtoken');
 
 cc.Class({
   "extends": cc.Component,
@@ -113,6 +109,9 @@ cc.Class({
       "default": null,
       type: login
     },
+    scrollView: cc.ScrollView,
+    itemPrefab: cc.Prefab,
+    smallItemPrefab: cc.Prefab,
     category: null,
     lefttiltAngle: -7,
     // Angle to tilt the node (in degrees)
@@ -124,7 +123,8 @@ cc.Class({
     moveDuration: 2.0,
     scaleUp: 0.9,
     // Scale factor when mouse enters
-    scaleNormal: 0.9
+    scaleNormal: 0.9,
+    itemsPerLoad: 10
   },
   // LIFE-CYCLE CALLBACKS:
   onLoad: function onLoad() {
@@ -132,139 +132,144 @@ cc.Class({
       this.category = "all";
     }
 
+    this.itemsToLoad = []; // Array to store all items to be loaded
+
+    this.currentIndex = 0; // Current index in the items array
+
+    this.scrollView.node.on("scroll-to-right", this.loadMoreItems, this); // Event listener for horizontal scrolling
+
     var currentPos = this.cloudAnimNode.getPosition();
     var moveAction = cc.moveTo(this.moveDuration, cc.v2(this.targetX, currentPos.y)); // Run the move action on the sprite node
 
     this.cloudAnimNode.runAction(moveAction);
-    var address = K.ServerAddress.ipAddress + K.ServerAPI.game + "=" + this.category;
-    ServerCom.httpRequest("GET", address, function (response) {
-      console.log("responseresponseresponse in lobby", response);
-    }.bind(this));
-    var leftAngle = cc.scaleTo(this.tiltDuration, this.leftTiltAngle);
-    var sleftDownAction = cc.scaleTo(this.animationDuration, this.scaleNormal); // Create the sequence action
-
-    var scaleSequence = cc.sequence(leftAngle, sleftDownAction); // Repeat the sequence forever
-
-    this.leftTiltNode.runAction(cc.repeatForever(scaleSequence)); // Set initial position of the sprite
-    //  let leftTilt = cc.rotateTo(this.tiltDuration, this.leftTiltAngle);
-    // //  let rightTilt = cc.rotateTo(this.tiltDuration, this.rightTiltAngle);
-    //  let originalTilt = cc.rotateTo(this.tiltDuration, this.originalRotation);
-    //  // Create the sequence action for leftTiltNode
-    //  let tiltSequence = cc.sequence(leftTilt, originalTilt);
-    //  // Run the sequence action indefinitely on leftTiltNode
-    //  this.leftTiltNode.runAction(cc.repeatForever(tiltSequence));
-    //  // Create the tilt actions for rightTiltNode
-    // //  let leftTiltRightNode = cc.rotateTo(this.tiltDuration, this.leftTiltAngle);
-    //  let rightTiltRightNode = cc.rotateTo(this.tiltDuration, this.rightTiltAngle);
-    //  let originalTiltRightNode = cc.rotateTo(this.tiltDuration, this.originalRotation);
-    //  // Create the sequence action for rightTiltNode
-    //  let tiltSequenceRightNode = cc.sequence(rightTiltRightNode, originalTiltRightNode);
-    //  // Run the sequence action indefinitely on rightTiltNode
-    //  this.rightTiltNode.runAction(cc.repeatForever(tiltSequenceRightNode));
-    //Registerred Mouse Enter event
-    // this.smallItemNode.on(cc.Node.EventType.MOUSE_ENTER, this.onMouseEnter, this);
-    // // Register mouse leave event
-    // this.smallItemNode.on(cc.Node.EventType.MOUSE_LEAVE, this.onMouseLeave, this);
-    // console.log(this.node);
-    // this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item").on(cc.Node.EventType.MOUSE_ENTER, this.onMouseEnter, this);
-    // this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item").on(cc.Node.EventType.MOUSE_LEAVE, this.onMouseLeave, this);
-    // this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item1").on(cc.Node.EventType.MOUSE_ENTER, this.onMouse1Enter, this);
-    // this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item1").on(cc.Node.EventType.MOUSE_LEAVE, this.onMouse1Leave, this);
-    // this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item2").on(cc.Node.EventType.MOUSE_ENTER, this.onMouse2Enter, this);
-    // this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item2").on(cc.Node.EventType.MOUSE_LEAVE, this.onMouse2Leave, this);
-    // this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item3").on(cc.Node.EventType.MOUSE_ENTER, this.onMouse3Enter, this);
-    // this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item3").on(cc.Node.EventType.MOUSE_LEAVE, this.onMouse3Leave, this); 
-    // this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item4").on(cc.Node.EventType.MOUSE_ENTER, this.onMouse4Enter, this);
-    // this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item4").on(cc.Node.EventType.MOUSE_LEAVE, this.onMouse4Leave, this);
-    // this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item5").on(cc.Node.EventType.MOUSE_ENTER, this.onMouse5Enter, this);
-    // this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item5").on(cc.Node.EventType.MOUSE_LEAVE, this.onMouse5Leave, this);
-    // this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item6").on(cc.Node.EventType.MOUSE_ENTER, this.onMouse6Enter, this);
-    // this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item6").on(cc.Node.EventType.MOUSE_LEAVE, this.onMouse6Leave, this);
+    this.fetchGames(this.category);
   },
-  //     onMouseEnter: function(){
-  //         this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item").setScale(1.08);
-  //     },
-  //     onMouse1Enter: function(){
-  //       this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item1").setScale(1.08);
-  //   },
-  //   onMouse2Enter: function(){
-  //     this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item2").setScale(1.08);
-  // },
-  // onMouse3Enter: function(){
-  //   this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item3").setScale(1.08);
-  // },
-  // onMouse4Enter: function(){
-  //   this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item4").setScale(1.08);
-  // },
-  // onMouse5Enter: function(){
-  //   this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item5").setScale(1.08);
-  // },
-  // onMouse6Enter: function(){
-  //   this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item6").setScale(1.08);
-  // },
+
+  /**
+   * @method Fetach Games by category
+   * @description HTTP request - POST data
+   * @param {String} address -address of Server
+   * @param {Object} data -Data/PayLoad to be sent
+   * @param {method} callback -Callback to be executed if response.succss is true!
+   * @param {method} error -Callback to be executed if response.success is false!
+   */
+  fetchGames: function fetchGames(gameCategory) {
+    var content = this.scrollView.content;
+    content.removeAllChildren();
+    var address = K.ServerAddress.ipAddress + K.ServerAPI.game + "=" + gameCategory;
+    ServerCom.httpRequest("GET", address, "", function (response) {
+      if (response.featured.length === 0 && response.otherGames.length === 0) {
+        ServerCom.errorLable.string = "No Games Found For This Category";
+        ServerCom.loginErrorNode.active = true;
+        setTimeout(function () {
+          ServerCom.loginErrorNode.active = false;
+        }, 2000);
+        return;
+      }
+
+      var otherGames = response.otherGames || [];
+      var featured = response.featured || [];
+      this.itemsToLoad = []; // Insert the featured item at the third position
+
+      for (var i = 0; i < otherGames.length; i++) {
+        if (i === 2 && featured.length > 0) {
+          this.itemsToLoad.push({
+            data: featured[0],
+            prefab: this.smallItemPrefab
+          });
+        }
+
+        this.itemsToLoad.push({
+          data: otherGames[i],
+          prefab: this.itemPrefab
+        });
+      } // If there are less than 3 otherGames, add the featured item at the end if it hasn't been added yet
+
+
+      if (otherGames.length < 3 && featured.length > 0) {
+        this.itemsToLoad.push({
+          data: featured[0],
+          prefab: this.smallItemPrefab
+        });
+      }
+
+      this.currentIndex = 0;
+      this.loadMoreItems(); // Load the first batch of items
+    }.bind(this));
+  },
+  loadMoreItems: function loadMoreItems() {
+    if (this.currentIndex >= this.itemsToLoad.length) return; // No more items to load
+
+    var endIndex = Math.min(this.currentIndex + this.itemsPerLoad, this.itemsToLoad.length);
+
+    for (var i = this.currentIndex; i < endIndex; i++) {
+      var itemData = this.itemsToLoad[i];
+      this.populateItems(itemData.data, itemData.prefab);
+    }
+
+    this.currentIndex = endIndex;
+  },
+  // Draw Game Items in Lobby
+  populateItems: function populateItems(itemData, prefab) {
+    var item = cc.instantiate(prefab);
+    var itemScript = item.getComponent("GamesPrefab");
+    itemScript.updateItem(itemData);
+    this.scrollView.content.addChild(item);
+  },
   getGamesByCategoryAll: function getGamesByCategoryAll() {
-    var gameTabs = [this.fishTab.getChildByName('bg'), this.favTab.getChildByName('bg'), this.slotTab.getChildByName('bg'), this.kenoTab.getChildByName('bg'), this.otherTab.getChildByName('bg')];
+    this.category = "all";
+    var gameTabs = [this.fishTab.getChildByName("bg"), this.favTab.getChildByName("bg"), this.slotTab.getChildByName("bg"), this.kenoTab.getChildByName("bg"), this.otherTab.getChildByName("bg")];
     gameTabs.forEach(function (tab) {
       return tab.active = false;
     });
-    this.allTab.getChildByName('bg').active = true; // console.log('Custom event received:', event.detail.value);
+    this.allTab.getChildByName("bg").active = true;
+    this.fetchGames(this.category);
   },
   getGamesByCategoryfish: function getGamesByCategoryfish() {
-    var gameTabs = [this.allTab.getChildByName('bg'), this.favTab.getChildByName('bg'), this.slotTab.getChildByName('bg'), this.kenoTab.getChildByName('bg'), this.otherTab.getChildByName('bg')];
+    this.category = "fish";
+    var gameTabs = [this.allTab.getChildByName("bg"), this.favTab.getChildByName("bg"), this.slotTab.getChildByName("bg"), this.kenoTab.getChildByName("bg"), this.otherTab.getChildByName("bg")];
     gameTabs.forEach(function (tab) {
       return tab.active = false;
     });
-    this.fishTab.getChildByName('bg').active = true; // console.log('Custom event received:', event.detail.value);
+    this.fishTab.getChildByName("bg").active = true;
+    this.fetchGames(this.category);
   },
   getGamesByCategoryfav: function getGamesByCategoryfav() {
-    var gameTabs = [this.fishTab.getChildByName('bg'), this.allTab.getChildByName('bg'), this.slotTab.getChildByName('bg'), this.kenoTab.getChildByName('bg'), this.otherTab.getChildByName('bg')];
+    this.category = "fav";
+    var gameTabs = [this.fishTab.getChildByName("bg"), this.allTab.getChildByName("bg"), this.slotTab.getChildByName("bg"), this.kenoTab.getChildByName("bg"), this.otherTab.getChildByName("bg")];
     gameTabs.forEach(function (tab) {
       return tab.active = false;
     });
-    this.favTab.getChildByName('bg').active = true; // console.log('Custom event received:', event.detail.value);
+    this.favTab.getChildByName("bg").active = true;
+    this.fetchGames(this.category);
   },
   getGamesByCategorySlot: function getGamesByCategorySlot(event) {
-    var gameTabs = [this.fishTab.getChildByName('bg'), this.allTab.getChildByName('bg'), this.favTab.getChildByName('bg'), this.kenoTab.getChildByName('bg'), this.otherTab.getChildByName('bg')];
+    this.category = "slot";
+    var gameTabs = [this.fishTab.getChildByName("bg"), this.allTab.getChildByName("bg"), this.favTab.getChildByName("bg"), this.kenoTab.getChildByName("bg"), this.otherTab.getChildByName("bg")];
     gameTabs.forEach(function (tab) {
       return tab.active = false;
     });
-    this.slotTab.getChildByName('bg').active = true; // console.log('Custom event received:', event.detail.value);
+    this.slotTab.getChildByName("bg").active = true;
+    this.fetchGames(this.category);
   },
   getGamesByCategoryKeno: function getGamesByCategoryKeno(event) {
-    var gameTabs = [this.fishTab.getChildByName('bg'), this.allTab.getChildByName('bg'), this.favTab.getChildByName('bg'), this.slotTab.getChildByName('bg'), this.otherTab.getChildByName('bg')];
+    this.category = "keno";
+    var gameTabs = [this.fishTab.getChildByName("bg"), this.allTab.getChildByName("bg"), this.favTab.getChildByName("bg"), this.slotTab.getChildByName("bg"), this.otherTab.getChildByName("bg")];
     gameTabs.forEach(function (tab) {
       return tab.active = false;
     });
-    this.kenoTab.getChildByName('bg').active = true; // console.log('Custom event received:', event.detail.value);
+    this.kenoTab.getChildByName("bg").active = true;
+    this.fetchGames(this.category);
   },
   getGamesByCategoryOther: function getGamesByCategoryOther(event) {
-    var gameTabs = [this.fishTab.getChildByName('bg'), this.allTab.getChildByName('bg'), this.favTab.getChildByName('bg'), this.slotTab.getChildByName('bg'), this.kenoTab.getChildByName('bg')];
+    this.category = "others";
+    var gameTabs = [this.fishTab.getChildByName("bg"), this.allTab.getChildByName("bg"), this.favTab.getChildByName("bg"), this.slotTab.getChildByName("bg"), this.kenoTab.getChildByName("bg")];
     gameTabs.forEach(function (tab) {
       return tab.active = false;
     });
-    this.otherTab.getChildByName('bg').active = true;
+    this.otherTab.getChildByName("bg").active = true;
+    this.fetchGames(this.category);
   },
-  // onMouseLeave: function(){
-  //     this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item").setScale(this.scaleNormal);
-  // },
-  // onMouse1Leave: function(){
-  //   this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item1").setScale(this.scaleNormal);
-  // },
-  // onMouse2Leave: function(){
-  //   this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item2").setScale(this.scaleNormal);
-  // },
-  // onMouse3Leave: function(){
-  //   this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item3").setScale(this.scaleNormal);
-  // },
-  // onMouse4Leave: function(){
-  //   this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item4").setScale(this.scaleNormal);
-  // },
-  // onMouse5Leave: function(){
-  //   this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item5").setScale(this.scaleNormal);
-  // },
-  // onMouse6Leave: function(){
-  //   this.node.getChildByName("Games").getChildByName("GameScrollView").getChildByName("view").getChildByName("content").getChildByName("item6").setScale(this.scaleNormal);
-  // },
   // for full Screen
   zoomFullScreenClick: function zoomFullScreenClick() {
     if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement) {
@@ -286,11 +291,13 @@ cc.Class({
       }
     }
   },
+  // Close Spin Popup Node
   closeSpinNode: function closeSpinNode() {
     if (this.spinWheelNode.active) {
       this.spinWheelNode.active = false;
     }
   },
+  // Open Spin the Wheel popup and run outer animation
   openSpinWheelNode: function openSpinWheelNode() {
     var rotateAction = cc.rotateBy(5, 360);
     var continueRotate = cc.repeatForever(rotateAction);
@@ -300,15 +307,25 @@ cc.Class({
       this.spinWheelNode.active = true;
     }
   },
+  // open Profile popup
   openProflePopup: function openProflePopup() {
     this.popupNode.active = true;
     this.profileNode.active = true;
   },
+  // Logout Button Clicked
   logOutClick: function logOutClick() {
-    console.log("clck");
     this.node.active = false;
     this.loginNode.logutClick();
   },
+
+  /**
+   * @method PasswordChange Popup request
+   * @description HTTP request - POST data
+   * @param {String} address -address of Server
+   * @param {Object} data -Data/PayLoad to be sent
+   * @param {method} callback -Callback to be executed if response.succss is true!
+   * @param {method} error -Callback to be executed if response.success is false!
+   */
   passwordChangeBtn: function passwordChangeBtn() {
     if (this.oldPassword.string == "" || this.newPassword.string == "" || this.confirmPassword.string == "") {
       ServerCom.errorLable.string = "All fields are mandatory";
@@ -325,14 +342,39 @@ cc.Class({
         }, 2000);
       }
 
+      var token = null;
+
+      if (!token && cc.sys.isBrowser) {
+        var cookies = document.cookie.split(';');
+
+        for (var i = 0; i < cookies.length; i++) {
+          var cookie = cookies[i].trim();
+
+          if (cookie.startsWith('token=')) {
+            token = cookie.substring('token='.length, cookie.length);
+            break;
+          }
+        }
+      }
+
+      var user = jwt.decode(token);
+      var address = K.ServerAddress.ipAddress + K.ServerAPI.password + ("/" + user.username);
+      var changeData = {
+        changedPassword: this.newPassword.string
+      };
+      ServerCom.httpRequest("PUT", address, changeData, function (resposen) {
+        console.log("response", response);
+      }.bind(this));
       this.passwordNode.active = false;
       this.popupNode.active = false;
     }
   },
+  // to open the password popup
   changePassword: function changePassword() {
     this.passwordNode.active = true;
     this.popupNode.active = true;
   },
+  // close all popup
   closePopupBtn: function closePopupBtn() {
     if (this.passwordNode.active || this.profileNode.active) {
       this.passwordNode.active = false;
@@ -341,6 +383,7 @@ cc.Class({
 
     this.popupNode.active = false;
   },
+  // Save profile button Clicked
   saveProfile: function saveProfile() {
     this.profileNode.active = false;
     this.popupNode.active = false;

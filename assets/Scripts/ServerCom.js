@@ -68,12 +68,13 @@ cc.Class({
 
  
     httpRequest: function (method, address, data, callback, error, timeout) {
+        
         var inst = this;
         var xhr = new XMLHttpRequest();
         xhr.timeout = timeout || 1000;
-        if(!ServerCom.loading.active){
-            ServerCom.loading.active = true;
-        }
+        // if(!ServerCom.loading.active){
+        //     ServerCom.loading.active = true;
+        // }
         xhr.onreadystatechange = function () {
             K.internetAvailable = true;
             if (xhr.readyState == 4) {
@@ -125,10 +126,15 @@ cc.Class({
             K.disconnectRequestedByPlayer = false;
             K.internetAvailable = false;
             // 
-            inst.emit('error', {
-                code: K.Error.TimeOutError,
-                response: "Timeout " + address,
-            });
+            inst.errorLable.string = "Timeout " + address,
+            inst.loginErrorNode.active = true;
+            setTimeout(() => {
+                inst.loginErrorNode.active = false;
+            }, 2000);
+            // inst.emit('error', {
+            //     code: K.Error.TimeOutError,
+            //     response: "Timeout " + address,
+            // });
         };
         // 
         // xhr.withCredentials = true;
@@ -149,12 +155,17 @@ cc.Class({
         if (token) {
             xhr.setRequestHeader("Cookie", `userToken=${token}`);
         }
-        if (method === "POST") {
+        if (method === "POST" || method === "PUT") {
+            // console.log(data, " befor psot method");
+            // let newdata = JSON.stringify(data);
+            // console.log(newdata);
             xhr.send(JSON.stringify(data));
         } else if (method === "GET") {
             xhr.send();
         }
     },
+
+
 
     
     // WILL use the following code later to check if the same api is request untill we gets its response

@@ -74,11 +74,9 @@ cc.Class({
   httpRequest: function httpRequest(method, address, data, callback, error, timeout) {
     var inst = this;
     var xhr = new XMLHttpRequest();
-    xhr.timeout = timeout || 1000;
-
-    if (!ServerCom.loading.active) {
-      ServerCom.loading.active = true;
-    }
+    xhr.timeout = timeout || 1000; // if(!ServerCom.loading.active){
+    //     ServerCom.loading.active = true;
+    // }
 
     xhr.onreadystatechange = function () {
       K.internetAvailable = true;
@@ -136,10 +134,13 @@ cc.Class({
       K.disconnectRequestedByPlayer = false;
       K.internetAvailable = false; // 
 
-      inst.emit('error', {
-        code: K.Error.TimeOutError,
-        response: "Timeout " + address
-      });
+      inst.errorLable.string = "Timeout " + address, inst.loginErrorNode.active = true;
+      setTimeout(function () {
+        inst.loginErrorNode.active = false;
+      }, 2000); // inst.emit('error', {
+      //     code: K.Error.TimeOutError,
+      //     response: "Timeout " + address,
+      // });
     }; // 
     // xhr.withCredentials = true;
 
@@ -166,7 +167,10 @@ cc.Class({
       xhr.setRequestHeader("Cookie", "userToken=" + token);
     }
 
-    if (method === "POST") {
+    if (method === "POST" || method === "PUT") {
+      // console.log(data, " befor psot method");
+      // let newdata = JSON.stringify(data);
+      // console.log(newdata);
       xhr.send(JSON.stringify(data));
     } else if (method === "GET") {
       xhr.send();

@@ -35,7 +35,7 @@ root.K.WS = false;
 root.K.DeveloperMode = true;
 root.K.ServerAddress = {
   ////// IP and URLS update as per requirements
-  ipAddress: "https://game-crm-rtp-backend.onrender.com" // OTL
+  ipAddress: "https://7p68wzhv-5000.inc1.devtunnels.ms" // OTL
 
 };
 /**
@@ -46,7 +46,9 @@ root.K.ServerAddress = {
 
 root.K.ServerAPI = {
   login: "/api/users/login",
-  game: "/api/games/getGames?category"
+  game: "/api/games/getGames?category",
+  addtoFav: "//api/games/favourite",
+  password: "/api/users/updateClientPassword/"
 };
 /**
  * @description Represents sound effects played on user related events
