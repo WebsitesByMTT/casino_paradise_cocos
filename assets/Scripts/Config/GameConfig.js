@@ -34,7 +34,7 @@ root.K.DeveloperMode = true;
 
 root.K.ServerAddress = {
     ////// IP and URLS update as per requirements
-    ipAddress: "https://7p68wzhv-5000.inc1.devtunnels.ms", // OTL
+    ipAddress: "https://dev.casinoparadize.com", // OTL
 };
 
 /**
@@ -44,9 +44,10 @@ root.K.ServerAddress = {
  */
 root.K.ServerAPI = {
     login: "/api/users/login",
-    game: "/api/games/getGames?category",
-    addtoFav: "//api/games/favourite",
-    password: "/api/users/updateClientPassword/"
+    game: "/api/games?platform=milkyway&category",
+    addtoFav: "/api/games/favourite",
+    password: "/api/users",
+    userDetails: "/api/users"
 };
 
 /**

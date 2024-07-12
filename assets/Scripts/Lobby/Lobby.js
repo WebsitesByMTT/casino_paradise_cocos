@@ -1,4 +1,3 @@
-const Cookies = require("js-cookies");
 const login = require("Login");
 const jwt = require('jsonwebtoken'); 
 cc.Class({
@@ -101,6 +100,7 @@ cc.Class({
       default: null,
       type: login,
     },
+    id: null,
     scrollView: cc.ScrollView,
     itemPrefab: cc.Prefab,
     smallItemPrefab: cc.Prefab,
@@ -114,6 +114,7 @@ cc.Class({
     scaleUp: 0.9, // Scale factor when mouse enters
     scaleNormal: 0.9,
     itemsPerLoad: 10,
+    myWebView: cc.WebView,
   },
 
   // LIFE-CYCLE CALLBACKS:
@@ -130,6 +131,7 @@ cc.Class({
       this.moveDuration,
       cc.v2(this.targetX, currentPos.y)
     );
+    this.getUserDetails();
     // Run the move action on the sprite node
     this.cloudAnimNode.runAction(moveAction);
     this.fetchGames(this.category);
@@ -147,61 +149,86 @@ cc.Class({
     let content = this.scrollView.content;
     content.removeAllChildren();
 
-    var address =
-      K.ServerAddress.ipAddress + K.ServerAPI.game + "=" + gameCategory;
-    ServerCom.httpRequest("GET", address, "", function (response) {
-        if (response.featured.length === 0 &&  response.otherGames.length === 0) {
-          ServerCom.errorLable.string = "No Games Found For This Category";
-          ServerCom.loginErrorNode.active = true;
-          setTimeout(() => {
-            ServerCom.loginErrorNode.active = false;
-          }, 2000);
-          return;
+    var address = K.ServerAddress.ipAddress + K.ServerAPI.game + "=" + gameCategory;
+    ServerCom.httpRequest("GET", address, " ", function (response) {
+        if (response.featured.length === 0 && response.others.length === 0) {
+            ServerCom.errorLable.string = "No Games Found For This Category";
+            ServerCom.loginErrorNode.active = true;
+            setTimeout(() => {
+                ServerCom.loginErrorNode.active = false;
+            }, 2000);
+            return;
         }
 
-        let otherGames = response.otherGames || [];
+        let otherGames = response.others || [];
         let featured = response.featured || [];
 
         this.itemsToLoad = [];
+        let featuredIndex = 0;
 
-        // Insert the featured item at the third position
+        console.log("otherGames", otherGames);
+        console.log("featured", featured);
+
+        // Insert a featured item after every 2 other items
         for (let i = 0; i < otherGames.length; i++) {
-          if (i === 2 && featured.length > 0) {
-            this.itemsToLoad.push({data: featured[0],prefab: this.smallItemPrefab,});
-          }
-          this.itemsToLoad.push({data: otherGames[i],prefab: this.itemPrefab,});
+            if (i > 0 && i % 2 === 0 && featuredIndex < featured.length) {
+                this.itemsToLoad.push({
+                    data: featured[featuredIndex],
+                    prefab: this.smallItemPrefab,
+                });
+                featuredIndex++;
+            }
+            this.itemsToLoad.push({
+                data: otherGames[i],
+                prefab: this.itemPrefab,
+            });
         }
 
-        // If there are less than 3 otherGames, add the featured item at the end if it hasn't been added yet
-        if (otherGames.length < 3 && featured.length > 0) {
-          this.itemsToLoad.push({ data: featured[0], prefab: this.smallItemPrefab, });
+        // If there are remaining featured items and less than 3 otherGames, add the featured items at the end
+        while (featuredIndex < featured.length) {
+            this.itemsToLoad.push({
+                data: featured[featuredIndex],
+                prefab: this.smallItemPrefab,
+            });
+            featuredIndex++;
         }
+
+        // If there are no otherGames, add all featured items
+        if (otherGames.length === 0 && featured.length > 0) {
+            for (let i = 0; i < featured.length; i++) {
+                this.itemsToLoad.push({
+                    data: featured[i],
+                    prefab: this.smallItemPrefab,
+                });
+            }
+        }
+
         this.currentIndex = 0;
         this.loadMoreItems(); // Load the first batch of items
-      }.bind(this)
-    );
-  },
+    }.bind(this));
+},
 
-  loadMoreItems: function () {
+loadMoreItems: function () {
     if (this.currentIndex >= this.itemsToLoad.length) return; // No more items to load
     let endIndex = Math.min(
-      this.currentIndex + this.itemsPerLoad,
-      this.itemsToLoad.length
+        this.currentIndex + this.itemsPerLoad,
+        this.itemsToLoad.length
     );
     for (let i = this.currentIndex; i < endIndex; i++) {
-      let itemData = this.itemsToLoad[i];
-      this.populateItems(itemData.data, itemData.prefab);
+        let itemData = this.itemsToLoad[i];
+        this.populateItems(itemData.data, itemData.prefab);
     }
     this.currentIndex = endIndex;
-  },
+},
 
-    // Draw Game Items in Lobby
-  populateItems(itemData, prefab) {
-      let item = cc.instantiate(prefab);
-      let itemScript = item.getComponent("GamesPrefab");
-      itemScript.updateItem(itemData);
-      this.scrollView.content.addChild(item);
-    },
+// Draw Game Items in Lobby
+populateItems: function (itemData, prefab) {
+    let item = cc.instantiate(prefab);
+    let itemScript = item.getComponent("GamesPrefab");
+    itemScript.updateItem(itemData);
+    this.scrollView.content.addChild(item);
+},
+
 
   getGamesByCategoryAll: function () {
     this.category = "all";
@@ -283,8 +310,6 @@ cc.Class({
     this.fetchGames(this.category);
   },
 
-
-
   // for full Screen
   zoomFullScreenClick: function () {
     if (
@@ -329,6 +354,58 @@ cc.Class({
     }
   },
 
+  openWebView: function(url) {
+    let inst = this
+    let token = null;
+    if (cc.sys.isBrowser) {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            if (cookie.startsWith('userToken=')) {
+                token = cookie.substring('userToken='.length, cookie.length);
+                break;
+            }
+        }
+    } else {
+        token = cc.sys.localStorage.getItem('userToken');
+    }
+    // Set the WebView URL
+    this.myWebView.url = url;
+    this.myWebView.node.active = true;
+    this.myWebView.node.on('loaded', () => {
+        if (token) {
+            this.myWebView.evaluateJS(`
+               window.postMessage({ type: 'authToken', token: '${token}' }, '${url}');
+            `);
+        }
+    });   
+  window.addEventListener('message', function(event) {
+    console.log("message", event);
+    const message = event.data;
+    if (message === 'authToken') {
+        inst.myWebView.node._components[0]._impl._iframe.contentWindow.postMessage({ type: 'authToken', cookie: token }, `${url}`);
+    }
+    if (message === "onExit") {
+      inst.myWebView.url = "";
+      inst.myWebView.node.active = false;
+    }
+});
+},
+ getUserDetails: function(){  
+  let inst= this
+  let address = K.ServerAddress.ipAddress + K.ServerAPI.userDetails
+    ServerCom.httpRequest("GET", address, "", function(response){
+      // let username = response.username; // Assuming response.username is 'ins'
+      // let capitalizedUsername = inst.capitalizeFirstLetter(username);
+      inst.id = response._id;
+      inst.userId.string = response.username
+      inst.coinsLabel.string = response.credits;
+    })
+ },
+
+ capitalizeFirstLetter: function(str){
+  return str.charAt(0).toUpperCase() + str.slice(1);
+ },
   // open Profile popup
   openProflePopup: function () {
     this.popupNode.active = true;
@@ -367,6 +444,7 @@ cc.Class({
         setTimeout(() => {
           ServerCom.loginErrorNode.active = false;
         }, 2000);
+        return
       }
       let token = null
       if (!token && cc.sys.isBrowser) {
@@ -380,12 +458,22 @@ cc.Class({
         }
       }
       const user = jwt.decode(token);
-      let address = K.ServerAddress.ipAddress + K.ServerAPI.password + `/${user.username}`;
+      let address = K.ServerAddress.ipAddress + K.ServerAPI.password + `/` + this.id;
       let changeData = {
-        changedPassword : this.newPassword.string
+        existingPassword: this.oldPassword.string,
+        password : this.newPassword.string
       }
-      ServerCom.httpRequest("PUT", address, changeData, function(resposen){
+      console.log(changeData, "pas");
+      ServerCom.httpRequest("PUT", address, changeData, function(response){
         console.log("response", response);
+        if(response.message){
+          ServerCom.errorHeading.string = "Password Changed Successfully"
+          ServerCom.errorLable.string = response.message;
+          ServerCom.loginErrorNode.active = true;
+          setTimeout(() => {
+            ServerCom.loginErrorNode.active = false;
+          }, 2000);
+        }
       }.bind(this))
       this.passwordNode.active = false;
       this.popupNode.active = false;
@@ -411,3 +499,4 @@ cc.Class({
     this.popupNode.active = false;
   },
 });
+

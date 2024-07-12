@@ -87,9 +87,7 @@
         "cocos-services"
       ]
     },
-    " common-asset-worker-worker": {},
-    "window-1720616908219": {},
-    " build-worker-worker": {}
+    "window-1720790851329": {}
   },
   "panels": {
     "project-settings": {
@@ -99,8 +97,8 @@
       "height": 554
     },
     "builder": {
-      "x": 710,
-      "y": 163,
+      "x": 709,
+      "y": 162,
       "width": 500,
       "height": 728
     },
@@ -121,6 +119,12 @@
       "y": 113,
       "width": 504,
       "height": 828
+    },
+    "google-instant-games": {
+      "x": 510,
+      "y": 213,
+      "width": 900,
+      "height": 628
     }
   },
   "panelLabelWidth": {}

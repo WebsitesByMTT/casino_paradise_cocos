@@ -1,6 +1,6 @@
 {
-  "platform": "android",
-  "actualPlatform": "android",
+  "platform": "web-desktop",
+  "actualPlatform": "web-desktop",
   "template": "default",
   "buildPath": "./build",
   "debug": false,

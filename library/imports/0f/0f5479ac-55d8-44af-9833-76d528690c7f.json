@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "Loader13",
+    "texture": "761cc76c-41c4-4724-bf8a-c46ab82a4f9e",
+    "atlas": "",
+    "rect": [
+      12,
+      0,
+      388,
+      398
+    ],
+    "offset": [
+      6,
+      2.5
+    ],
+    "originalSize": [
+      400,
+      403
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

@@ -61,12 +61,13 @@ cc.Class({
         }
         ServerCom.httpRequest("POST", address, data, function (response) {
             if (response.token) {
+                console.log("token on login", response.token);
                 const randomNumber = Math.floor(Math.random() * 10) + 1;
                 if (cc.sys.isBrowser) {
-                    document.cookie = `token=${response.token}; path=/;`;
+                    document.cookie = `userToken=${response.token}; path=/;`;
                     document.cookie = `index = ${randomNumber}`
                 } else {
-                    cc.sys.localStorage.setItem('token', response.token);
+                    cc.sys.localStorage.setItem('userToken', response.token);
                     cc.sys.localStorage.setItem("index", randomNumber); 
                 }
                 // Cookies.set("index", randomNumber);
@@ -76,11 +77,6 @@ cc.Class({
             }
             else{
                 console.log("response of user not found on login page", response);
-                // this.errorLable.string = response.error
-                // this.loginErrorNode.active = true;
-                // setTimeout(() => {
-                //     this.loginErrorNode.active = false;
-                // }, 2000);
             }
             
         }.bind(this));

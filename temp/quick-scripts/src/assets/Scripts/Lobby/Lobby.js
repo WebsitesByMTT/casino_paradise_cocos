@@ -4,8 +4,6 @@ cc._RF.push(module, '44269NOlMVGd7tbn16fpN+w', 'Lobby');
 
 "use strict";
 
-var Cookies = require("js-cookies");
-
 var login = require("Login");
 
 var jwt = require('jsonwebtoken');
@@ -109,6 +107,7 @@ cc.Class({
       "default": null,
       type: login
     },
+    id: null,
     scrollView: cc.ScrollView,
     itemPrefab: cc.Prefab,
     smallItemPrefab: cc.Prefab,
@@ -124,7 +123,8 @@ cc.Class({
     scaleUp: 0.9,
     // Scale factor when mouse enters
     scaleNormal: 0.9,
-    itemsPerLoad: 10
+    itemsPerLoad: 10,
+    myWebView: cc.WebView
   },
   // LIFE-CYCLE CALLBACKS:
   onLoad: function onLoad() {
@@ -139,7 +139,8 @@ cc.Class({
     this.scrollView.node.on("scroll-to-right", this.loadMoreItems, this); // Event listener for horizontal scrolling
 
     var currentPos = this.cloudAnimNode.getPosition();
-    var moveAction = cc.moveTo(this.moveDuration, cc.v2(this.targetX, currentPos.y)); // Run the move action on the sprite node
+    var moveAction = cc.moveTo(this.moveDuration, cc.v2(this.targetX, currentPos.y));
+    this.getUserDetails(); // Run the move action on the sprite node
 
     this.cloudAnimNode.runAction(moveAction);
     this.fetchGames(this.category);
@@ -157,8 +158,8 @@ cc.Class({
     var content = this.scrollView.content;
     content.removeAllChildren();
     var address = K.ServerAddress.ipAddress + K.ServerAPI.game + "=" + gameCategory;
-    ServerCom.httpRequest("GET", address, "", function (response) {
-      if (response.featured.length === 0 && response.otherGames.length === 0) {
+    ServerCom.httpRequest("GET", address, " ", function (response) {
+      if (response.featured.length === 0 && response.others.length === 0) {
         ServerCom.errorLable.string = "No Games Found For This Category";
         ServerCom.loginErrorNode.active = true;
         setTimeout(function () {
@@ -167,30 +168,45 @@ cc.Class({
         return;
       }
 
-      var otherGames = response.otherGames || [];
+      var otherGames = response.others || [];
       var featured = response.featured || [];
-      this.itemsToLoad = []; // Insert the featured item at the third position
+      this.itemsToLoad = [];
+      var featuredIndex = 0;
+      console.log("otherGames", otherGames);
+      console.log("featured", featured); // Insert a featured item after every 2 other items
 
       for (var i = 0; i < otherGames.length; i++) {
-        if (i === 2 && featured.length > 0) {
+        if (i > 0 && i % 2 === 0 && featuredIndex < featured.length) {
           this.itemsToLoad.push({
-            data: featured[0],
+            data: featured[featuredIndex],
             prefab: this.smallItemPrefab
           });
+          featuredIndex++;
         }
 
         this.itemsToLoad.push({
           data: otherGames[i],
           prefab: this.itemPrefab
         });
-      } // If there are less than 3 otherGames, add the featured item at the end if it hasn't been added yet
+      } // If there are remaining featured items and less than 3 otherGames, add the featured items at the end
 
 
-      if (otherGames.length < 3 && featured.length > 0) {
+      while (featuredIndex < featured.length) {
         this.itemsToLoad.push({
-          data: featured[0],
+          data: featured[featuredIndex],
           prefab: this.smallItemPrefab
         });
+        featuredIndex++;
+      } // If there are no otherGames, add all featured items
+
+
+      if (otherGames.length === 0 && featured.length > 0) {
+        for (var _i = 0; _i < featured.length; _i++) {
+          this.itemsToLoad.push({
+            data: featured[_i],
+            prefab: this.smallItemPrefab
+          });
+        }
       }
 
       this.currentIndex = 0;
@@ -307,6 +323,66 @@ cc.Class({
       this.spinWheelNode.active = true;
     }
   },
+  openWebView: function openWebView(url) {
+    var _this = this;
+
+    var inst = this;
+    var token = null;
+
+    if (cc.sys.isBrowser) {
+      var cookies = document.cookie.split(';');
+
+      for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i].trim();
+
+        if (cookie.startsWith('userToken=')) {
+          token = cookie.substring('userToken='.length, cookie.length);
+          break;
+        }
+      }
+    } else {
+      token = cc.sys.localStorage.getItem('userToken');
+    } // Set the WebView URL
+
+
+    this.myWebView.url = url;
+    this.myWebView.node.active = true;
+    this.myWebView.node.on('loaded', function () {
+      if (token) {
+        _this.myWebView.evaluateJS("\n               window.postMessage({ type: 'authToken', token: '" + token + "' }, '" + url + "');\n            ");
+      }
+    });
+    window.addEventListener('message', function (event) {
+      console.log("message", event);
+      var message = event.data;
+
+      if (message === 'authToken') {
+        inst.myWebView.node._components[0]._impl._iframe.contentWindow.postMessage({
+          type: 'authToken',
+          cookie: token
+        }, "" + url);
+      }
+
+      if (message === "onExit") {
+        inst.myWebView.url = "";
+        inst.myWebView.node.active = false;
+      }
+    });
+  },
+  getUserDetails: function getUserDetails() {
+    var inst = this;
+    var address = K.ServerAddress.ipAddress + K.ServerAPI.userDetails;
+    ServerCom.httpRequest("GET", address, "", function (response) {
+      // let username = response.username; // Assuming response.username is 'ins'
+      // let capitalizedUsername = inst.capitalizeFirstLetter(username);
+      inst.id = response._id;
+      inst.userId.string = response.username;
+      inst.coinsLabel.string = response.credits;
+    });
+  },
+  capitalizeFirstLetter: function capitalizeFirstLetter(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  },
   // open Profile popup
   openProflePopup: function openProflePopup() {
     this.popupNode.active = true;
@@ -340,6 +416,7 @@ cc.Class({
         setTimeout(function () {
           ServerCom.loginErrorNode.active = false;
         }, 2000);
+        return;
       }
 
       var token = null;
@@ -358,12 +435,23 @@ cc.Class({
       }
 
       var user = jwt.decode(token);
-      var address = K.ServerAddress.ipAddress + K.ServerAPI.password + ("/" + user.username);
+      var address = K.ServerAddress.ipAddress + K.ServerAPI.password + "/" + this.id;
       var changeData = {
-        changedPassword: this.newPassword.string
+        existingPassword: this.oldPassword.string,
+        password: this.newPassword.string
       };
-      ServerCom.httpRequest("PUT", address, changeData, function (resposen) {
+      console.log(changeData, "pas");
+      ServerCom.httpRequest("PUT", address, changeData, function (response) {
         console.log("response", response);
+
+        if (response.message) {
+          ServerCom.errorHeading.string = "Password Changed Successfully";
+          ServerCom.errorLable.string = response.message;
+          ServerCom.loginErrorNode.active = true;
+          setTimeout(function () {
+            ServerCom.loginErrorNode.active = false;
+          }, 2000);
+        }
       }.bind(this));
       this.passwordNode.active = false;
       this.popupNode.active = false;
