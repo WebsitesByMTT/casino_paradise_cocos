@@ -44,7 +44,7 @@ root.K.ServerAddress = {
  */
 root.K.ServerAPI = {
     login: "/api/users/login",
-    game: "/api/games?platform=milkyway&category",
+    game: "/api/games?platform=casinoParadise&category",
     addtoFav: "/api/games/favourite",
     password: "/api/users",
     userDetails: "/api/users"

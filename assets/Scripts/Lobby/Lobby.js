@@ -54,15 +54,15 @@ cc.Class({
     },
     oldPassword: {
       default: null,
-      type: cc.Label,
+      type: cc.EditBox,
     },
     newPassword: {
       default: null,
-      type: cc.Label,
+      type: cc.EditBox,
     },
     confirmPassword: {
       default: null,
-      type: cc.Label,
+      type: cc.EditBox,
     },
     profileNode: {
       default: null,
@@ -114,7 +114,51 @@ cc.Class({
     scaleUp: 0.9, // Scale factor when mouse enters
     scaleNormal: 0.9,
     itemsPerLoad: 10,
+    myWebViewParent:{
+      default: null,
+      type: cc.Node
+    },
     myWebView: cc.WebView,
+    customKeyboard:{
+      default: null,
+      type: cc.Node,
+  },
+  smallAlphabet:{
+      default: null,
+      type: cc.Node
+  },
+  capitalAlphabet:{
+      default: null,
+      type: cc.Node
+  },
+  symbolsAlphabet: {
+      default: null,
+      type:cc.Node
+  },
+  capsButton:{
+      default: null,
+      type: cc.Node
+  },
+  smallButton:{
+      default: null,
+      type: cc.Node
+  },
+  deleteButton: {
+      default:null,
+      type: cc.Node
+  },
+  spaceButton:{
+      default: null,
+      type: cc.Node
+  },
+  commaButton:{
+      default: null,
+      type: cc.Node
+  },
+  dotButton:{
+      default: null,
+      type: cc.Node
+  }
   },
 
   // LIFE-CYCLE CALLBACKS:
@@ -123,8 +167,16 @@ cc.Class({
     if (!this.category) {
       this.category = "all";
     }
+
+    this.activeInputField = null; 
+    this.setupLobbyInputFocusListeners();
+    this.setupLobbyKeyboardButtonListeners();
+    this.disableDefaultKeyboard();
+
     this.itemsToLoad = []; // Array to store all items to be loaded
     this.currentIndex = 0; // Current index in the items array
+    this.setFullScreenWidth();
+    cc.view.setResizeCallback(this.setFullScreenWidth.bind(this)); // Update width on screen resize
     this.scrollView.node.on("scroll-to-right", this.loadMoreItems, this); // Event listener for horizontal scrolling
     let currentPos = this.cloudAnimNode.getPosition();
     let moveAction = cc.moveTo(
@@ -165,10 +217,6 @@ cc.Class({
 
         this.itemsToLoad = [];
         let featuredIndex = 0;
-
-        console.log("otherGames", otherGames);
-        console.log("featured", featured);
-
         // Insert a featured item after every 2 other items
         for (let i = 0; i < otherGames.length; i++) {
             if (i > 0 && i % 2 === 0 && featuredIndex < featured.length) {
@@ -312,11 +360,7 @@ populateItems: function (itemData, prefab) {
 
   // for full Screen
   zoomFullScreenClick: function () {
-    if (
-      !document.fullscreenElement &&
-      !document.mozFullScreenElement &&
-      !document.webkitFullscreenElement
-    ) {
+    if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement) {
       // current working methods
       if (document.documentElement.requestFullscreen) {
         document.documentElement.requestFullscreen();
@@ -327,6 +371,7 @@ populateItems: function (itemData, prefab) {
           Element.ALLOW_KEYBOARD_INPUT
         );
       }
+      
     } else {
       if (document.cancelFullScreen) {
         document.cancelFullScreen();
@@ -336,6 +381,7 @@ populateItems: function (itemData, prefab) {
         document.webkitCancelFullScreen();
       }
     }
+    this.setFullScreenWidth();
   },
   // Close Spin Popup Node
   closeSpinNode: function () {
@@ -371,7 +417,7 @@ populateItems: function (itemData, prefab) {
     }
     // Set the WebView URL
     this.myWebView.url = url;
-    this.myWebView.node.active = true;
+    this.myWebViewParent.active = true;
     this.myWebView.node.on('loaded', () => {
         if (token) {
             this.myWebView.evaluateJS(`
@@ -387,7 +433,7 @@ populateItems: function (itemData, prefab) {
     }
     if (message === "onExit") {
       inst.myWebView.url = "";
-      inst.myWebView.node.active = false;
+      inst.myWebViewParent.active = false;
     }
 });
 },
@@ -498,5 +544,114 @@ populateItems: function (itemData, prefab) {
     this.profileNode.active = false;
     this.popupNode.active = false;
   },
+
+  setFullScreenWidth() {
+    if(!document.fullscreenElement){
+      this.scrollView.node.width = 2050;
+      this.scrollView.node.getChildByName("view").width = 2050;
+    } else{
+      const screenWidth = cc.winSize.width;
+      // Set the width of the ScrollView node
+      this.scrollView.node.width = screenWidth;
+       // Set the width of the View node within the ScrollView
+      this.scrollView.node.getChildByName("view").width = screenWidth;
+    }
+   },
+
+   setupLobbyInputFocusListeners() {
+    if (cc.sys.isMobile && cc.sys.isBrowser) {
+            // Attach focus event listeners to username and password input fields
+            if (this.oldPassword) {
+                this.oldPassword.node.on(cc.Node.EventType.TOUCH_END, this.onInputFieldClicked, this);
+            }
+            if (this.newPassword) {
+                this.newPassword.node.on(cc.Node.EventType.TOUCH_END, this.onInputFieldClicked, this);
+            }
+            if(this.confirmPassword){
+              this.confirmPassword.node.on(cc.Node.EventType.TOUCH_END, this.onInputFieldClicked, this);
+              this.confirmPassword.node.on('editing-did-began', this.onInputFieldFocused, this);
+              this.confirmPassword.node.on('editing-did-ended', this.onInputFieldBlurred, this);
+            }
+        }
+    },
+
+    onInputFieldClicked(event) {
+      // Focus the corresponding input field to trigger the keyboard
+      const inputNode = event.currentTarget.getComponent(cc.EditBox);
+      if (inputNode) {
+          // inputNode.focus()
+          this.activeInputField = inputNode;
+          if (this.customKeyboard) {
+              this.customKeyboard.active = true; // Show the custom keyboard if needed
+          }
+      }
+    },
+
+    onInputFieldFocused: function(event){
+      // console.log("eventFocused", event);
+      const inputNode = event.node.getComponent(cc.EditBox);
+        if (inputNode) {
+            inputNode.placeholder = ""; // Remove the placeholder text when focused
+        }
+    },
+
+    onInputFieldBlurred: function(event){
+      const inputNode = event.node.getComponent(cc.EditBox);
+        if (inputNode) {
+            // inputNode.placeholder = inputNode._placeholderLabel.string; // Restore the placeholder text when blurred
+        }
+    },
+
+
+  setupLobbyKeyboardButtonListeners: function() {
+    const allKeyboardButtons = this.getAllKeyboardButtons();
+        allKeyboardButtons.forEach(button => {
+            button.on(cc.Node.EventType.TOUCH_END, this.onKeyboardButtonClicked, this);
+        });
+        if (this.deleteButton) { // Add listener for the delete button
+            this.deleteButton.on(cc.Node.EventType.TOUCH_END, this.onDeleteButtonClicked, this);
+        }
+    },
+
+    getAllKeyboardButtons() {
+      let buttons = [];
+          buttons = buttons.concat(this.smallAlphabet.children);
+          buttons = buttons.concat(this.capitalAlphabet.children);
+          buttons = buttons.concat(this.symbolsAlphabet.children);
+          buttons = buttons.concat(this.spaceButton);
+          buttons = buttons.concat(this.commaButton);
+          buttons = buttons.concat(this.dotButton);
+          return buttons;
+      },
+
+      onKeyboardButtonClicked(event) {
+          const button = event.target;
+          const customEventValue = button._components[1].clickEvents[0].customEventData;
+          this.appendToActiveInput(customEventValue);
+      },
+
+      appendToActiveInput(value) {
+          if (this.activeInputField) {
+              this.activeInputField.string += value; // Append value to the active input field
+          }
+      },
+      onDeleteButtonClicked() {
+          this.removeFromActiveInput();
+      },
+
+      removeFromActiveInput() {
+            if (this.activeInputField && this.activeInputField.string.length > 0) {
+                this.activeInputField.string = this.activeInputField.string.slice(0, -1); // Remove last character
+            }
+        },
+      
+        disableDefaultKeyboard:function() {
+            if (cc.sys.isMobile && cc.sys.isBrowser) {
+                const inputs = document.querySelectorAll('input, textarea');
+                inputs.forEach(input => {
+                    input.style.pointerEvents = 'none'; // Disable interactions
+                });
+            }
+        },
 });
 

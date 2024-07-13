@@ -67,7 +67,6 @@ cc.Class({
      * @memberof Utilities.ServerCom#
      */
 
- 
     httpRequest: function (method, address, data, callback, error, timeout) {
         
         var inst = this;
