@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "redHeart",
+    "texture": "b9da7f09-d172-4a7f-88f5-f2f9e58ef317",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      123,
+      109
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      123,
+      109
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

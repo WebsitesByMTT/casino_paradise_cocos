@@ -1,7 +1,4 @@
-const Cookies = require('js-cookies');
-// const axios = require('./axios/dist/axios');
-// const axios = require('axios');
-
+// const axios = require('axios')
 var root = window;
 cc.Class({
     extends: cc.Component,
@@ -24,6 +21,10 @@ cc.Class({
         loginErrorNode:{
             default: null,
             type: cc.Node
+        },
+        errorHeading:{
+            default: null,
+            type: cc.Label
         },
         trackerCount: 0,
         timer : 0,
@@ -66,11 +67,11 @@ cc.Class({
      * @memberof Utilities.ServerCom#
      */
 
- 
     httpRequest: function (method, address, data, callback, error, timeout) {
+        
         var inst = this;
         var xhr = new XMLHttpRequest();
-        xhr.timeout = timeout || 1000;
+        xhr.timeout = timeout || 4000;
         if(!ServerCom.loading.active){
             ServerCom.loading.active = true;
         }
@@ -92,14 +93,14 @@ cc.Class({
                             errorMsg = errorData.error;
                         }
                         console.log("errorDataerrorData", errorData, xhr);
-                        inst.errorLable.string = errorData.error
+                        inst.errorLable.string = errorData.error ? errorData.error : errorData.message;
                         inst.loginErrorNode.active = true;
                         setTimeout(() => {
                             inst.loginErrorNode.active = false;
                         }, 2000);
                         // callback(errorData);
                     } catch (e) {
-                        console.error("Error parsing error response:", e);
+                        console.log("Error parsing error response:", e);
                     }
                 }
             }
@@ -108,9 +109,9 @@ cc.Class({
         xhr.onerror = function (err) {
             ServerCom.loading.active = false;
             K.internetAvailable = false;
-    
             var errorMsg = "Unknown error";
             try {
+                console.log("xhr on error", xhr);
                 var errorData = JSON.parse(xhr.responseText);
                 if (errorData.error) {
                     errorMsg = errorData.error;
@@ -125,10 +126,11 @@ cc.Class({
             K.disconnectRequestedByPlayer = false;
             K.internetAvailable = false;
             // 
-            inst.emit('error', {
-                code: K.Error.TimeOutError,
-                response: "Timeout " + address,
-            });
+            inst.errorLable.string = "Something went wrong",
+            inst.loginErrorNode.active = true;
+            setTimeout(() => {
+                inst.loginErrorNode.active = false;
+            }, 2000);
         };
         // 
         // xhr.withCredentials = true;
@@ -139,22 +141,26 @@ cc.Class({
             const cookies = document.cookie.split(';');
             for (let i = 0; i < cookies.length; i++) {
                 const cookie = cookies[i].trim();
-                if (cookie.startsWith('token=')) {
-                    token = cookie.substring('token='.length, cookie.length);
+                if (cookie.startsWith('userToken=')) {
+                    token = cookie.substring('userToken='.length, cookie.length);
                     break;
                 }
             }
         }
         // If token exists, add it to a custom header
         if (token) {
-            xhr.setRequestHeader("Cookie", `userToken=${token}`);
+            console.log(token, "token");
+            xhr.setRequestHeader("Authorization", "Bearer " + token);
+            // xhr.setRequestHeader("Cookie", `userToken=${token}`);
         }
-        if (method === "POST") {
+        if (method === "POST" || method === "PUT") {
             xhr.send(JSON.stringify(data));
         } else if (method === "GET") {
             xhr.send();
         }
     },
+
+
 
     
     // WILL use the following code later to check if the same api is request untill we gets its response

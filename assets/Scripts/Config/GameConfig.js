@@ -34,7 +34,7 @@ root.K.DeveloperMode = true;
 
 root.K.ServerAddress = {
     ////// IP and URLS update as per requirements
-    ipAddress: "https://game-crm-rtp-backend.onrender.com", // OTL
+    ipAddress: "https://dev.casinoparadize.com", // OTL
 };
 
 /**
@@ -44,7 +44,10 @@ root.K.ServerAddress = {
  */
 root.K.ServerAPI = {
     login: "/api/users/login",
-    game: "/api/games/getGames?category",
+    game: "/api/games?platform=casinoParadise&category",
+    addtoFav: "/api/games/favourite",
+    password: "/api/users",
+    userDetails: "/api/users"
 };
 
 /**

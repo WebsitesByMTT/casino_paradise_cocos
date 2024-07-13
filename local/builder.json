@@ -1,7 +1,7 @@
 {
-  "platform": "ios",
-  "actualPlatform": "ios",
-  "template": "link",
+  "platform": "web-desktop",
+  "actualPlatform": "web-desktop",
+  "template": "default",
   "buildPath": "./build",
   "debug": false,
   "sourceMaps": false,
@@ -13,7 +13,7 @@
   "keystorePassword": "",
   "keystoreAlias": "",
   "keystoreAliasPassword": "",
-  "apiLevel": "",
+  "apiLevel": "android-35",
   "appABIs": [],
   "vsVersion": "auto",
   "buildScriptsOnly": false

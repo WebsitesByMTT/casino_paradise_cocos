@@ -44,7 +44,7 @@
             "children": [
               {
                 "width": 1151,
-                "height": 506,
+                "height": 611,
                 "type": "panel",
                 "active": 0,
                 "children": [
@@ -53,7 +53,7 @@
               },
               {
                 "width": 1151,
-                "height": 461,
+                "height": 356,
                 "type": "panel",
                 "active": 0,
                 "children": [
@@ -87,7 +87,7 @@
         "cocos-services"
       ]
     },
-    "window-1720526114133": {}
+    "window-1720869656914": {}
   },
   "panels": {
     "project-settings": {
@@ -97,8 +97,8 @@
       "height": 554
     },
     "builder": {
-      "x": 710,
-      "y": 163,
+      "x": 709,
+      "y": 162,
       "width": 500,
       "height": 728
     },
@@ -113,6 +113,18 @@
       "y": 163,
       "width": 1000,
       "height": 728
+    },
+    "package-manager": {
+      "x": 710,
+      "y": 113,
+      "width": 504,
+      "height": 828
+    },
+    "google-instant-games": {
+      "x": 510,
+      "y": 213,
+      "width": 900,
+      "height": 628
     }
   },
   "panelLabelWidth": {}

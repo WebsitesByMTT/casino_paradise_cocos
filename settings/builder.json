@@ -4,25 +4,25 @@
   "startScene": "a8cc58cf-815d-47f6-b8b8-330f6af854f3",
   "excludeScenes": [],
   "orientation": {
-    "landscapeRight": true,
-    "landscapeLeft": true,
-    "portrait": false,
+    "landscapeRight": false,
+    "landscapeLeft": false,
+    "portrait": true,
     "upsideDown": false
   },
-  "webOrientation": "auto",
-  "inlineSpriteFrames": true,
-  "inlineSpriteFrames_native": true,
+  "webOrientation": "portrait",
+  "inlineSpriteFrames": false,
+  "inlineSpriteFrames_native": false,
   "mainCompressionType": "default",
   "mainIsRemote": false,
   "optimizeHotUpdate": false,
-  "md5Cache": true,
+  "md5Cache": false,
   "nativeMd5Cache": false,
   "encryptJs": false,
   "xxteaKey": "55d7a0f7-1d2d-4a",
   "zipCompressJs": true,
   "fb-instant-games": {},
   "android": {
-    "packageName": "org.cocos2d.demo",
+    "packageName": "com.casino.milkyway",
     "REMOTE_SERVER_ROOT": ""
   },
   "ios": {
@@ -43,7 +43,7 @@
   },
   "android-instant": {
     "packageName": "org.cocos2d.demo",
-    "REMOTE_SERVER_ROOT": "",
+    "REMOTE_SERVER_ROOT": "http://192.168.1.21:7456/preview-android-instant/",
     "pathPattern": "",
     "scheme": "https",
     "host": "",
@@ -51,5 +51,9 @@
     "recordPath": ""
   },
   "appBundle": false,
-  "agreements": {}
+  "agreements": {
+    "20200831115453": false,
+    "20220901093311": false
+  },
+  "includeAnySDK": false
 }
