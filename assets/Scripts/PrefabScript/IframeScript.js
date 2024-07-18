@@ -10,7 +10,7 @@ cc.Class({
     },
 
     updateView(data) {
-       console.log("URL", data, "this", this);
+    //    console.log("URL", data, "this", this);
        this.webView.url = data.url
        this.webView.active = true;
     },

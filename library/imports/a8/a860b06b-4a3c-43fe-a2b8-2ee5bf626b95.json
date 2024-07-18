@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "PageViewFrame",
+    "texture": "0ce5ba71-5337-49ae-baa6-309b084beaa1",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      355,
+      696
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      355,
+      696
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}

@@ -1,0 +1,2 @@
+/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/jni/Android.mk
+/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/jni/Application.mk

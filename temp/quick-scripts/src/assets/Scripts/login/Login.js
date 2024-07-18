@@ -4,6 +4,7 @@ cc._RF.push(module, 'ac1ac5oJ6VEUL3rD+Zja0yl', 'Login');
 
 "use strict";
 
+// var responseTypes = require('ResponseTypes');
 cc.Class({
   "extends": cc.Component,
   properties: {
@@ -74,14 +75,18 @@ cc.Class({
   },
   // LIFE-CYCLE CALLBACKS:
   onLoad: function onLoad() {
-    if (this.rememberMe) {
-      this.rememberMe.isChecked = false;
-    }
-
+    // if(this.rememberMe){
+    //     this.rememberMe.isChecked = false;
+    // }   
     this.activeInputField = null;
     this.setupInputFocusListeners();
     this.setupKeyboardButtonListeners();
     this.disableDefaultKeyboard();
+    this.loadSavedLoginInfo();
+
+    if (cc.sys.isMobile && cc.sys.isBrowser) {
+      console.log = function () {};
+    }
   },
   disableDefaultKeyboard: function disableDefaultKeyboard() {
     if (cc.sys.isMobile && cc.sys.isBrowser) {
@@ -104,7 +109,10 @@ cc.Class({
     }
   },
   onInputFieldClicked: function onInputFieldClicked(event) {
+    var _this = this;
+
     // Focus the corresponding input field to trigger the keyboard
+    // console.log(event);
     var inputNode = event.currentTarget.getComponent(cc.EditBox);
 
     if (inputNode) {
@@ -113,15 +121,21 @@ cc.Class({
 
       if (this.customKeyboard) {
         this.customKeyboard.active = true; // Show the custom keyboard if needed
+
+        event.preventDefault();
+        this.scheduleOnce(function () {
+          _this.activeInputField.blur(); // Blur the input field after showing the custom keyboard
+
+        }, 0.1);
       }
     }
   },
   setupKeyboardButtonListeners: function setupKeyboardButtonListeners() {
-    var _this = this;
+    var _this2 = this;
 
     var allKeyboardButtons = this.getAllKeyboardButtons();
     allKeyboardButtons.forEach(function (button) {
-      button.on(cc.Node.EventType.TOUCH_END, _this.onKeyboardButtonClicked, _this);
+      button.on(cc.Node.EventType.TOUCH_END, _this2.onKeyboardButtonClicked, _this2);
     });
 
     if (this.deleteButton) {
@@ -157,6 +171,18 @@ cc.Class({
     if (this.lobbyNode.active) {
       this.lobbyNode.active = false;
     }
+
+    var rememberMeChecked;
+
+    if (cc.sys.isBrowser) {
+      rememberMeChecked = localStorage.getItem('rememberMeChecked');
+    } else {
+      rememberMeChecked = cc.sys.localStorage.getItem('rememberMeChecked');
+    }
+
+    if (!rememberMeChecked) {
+      this.clearSavedLoginInfo();
+    }
   },
   removeFromActiveInput: function removeFromActiveInput() {
     if (this.activeInputField && this.activeInputField.string.length > 0) {
@@ -164,10 +190,8 @@ cc.Class({
     }
   },
   onLoginClick: function onLoginClick() {
-    var _this2 = this;
+    var _this3 = this;
 
-    this.userName.string = "ritik";
-    this.password.string = "password";
     var address = K.ServerAddress.ipAddress + K.ServerAPI.login;
     var data = {
       username: this.userName.string,
@@ -178,12 +202,19 @@ cc.Class({
       this.errorLable.string = "Username or Password fields are empty";
       this.loginErrorNode.active = true;
       setTimeout(function () {
-        _this2.loginErrorNode.active = false;
+        _this3.loginErrorNode.active = false;
       }, 2000);
       return;
     }
 
+    if (this.rememberMe.isChecked) {
+      this.saveLoginInfo(this.userName.string, this.password.string);
+    } else {
+      this.clearSavedLoginInfo();
+    }
+
     ServerCom.httpRequest("POST", address, data, function (response) {
+      // console.error("reponse on login", response.token);
       if (response.token) {
         var randomNumber = Math.floor(Math.random() * 10) + 1;
 
@@ -240,6 +271,50 @@ cc.Class({
   },
   closeKeyBoard: function closeKeyBoard() {
     this.customKeyboard.active = false;
+  },
+  saveLoginInfo: function saveLoginInfo(username, password) {
+    if (cc.sys.isBrowser) {
+      localStorage.setItem('rememberedUsername', username);
+      localStorage.setItem('rememberedPassword', password);
+      localStorage.setItem('rememberMeChecked', 'true');
+    } else {
+      cc.sys.localStorage.setItem('rememberedUsername', username);
+      cc.sys.localStorage.setItem('rememberedPassword', password);
+      cc.sys.localStorage.setItem('rememberMeChecked', 'true');
+    }
+  },
+  clearSavedLoginInfo: function clearSavedLoginInfo() {
+    if (cc.sys.isBrowser) {
+      localStorage.removeItem('rememberedUsername');
+      localStorage.removeItem('rememberedPassword');
+      localStorage.removeItem('rememberMeChecked');
+    } else {
+      cc.sys.localStorage.removeItem('rememberedUsername');
+      cc.sys.localStorage.removeItem('rememberedPassword');
+      cc.sys.localStorage.removeItem('rememberMeChecked');
+    }
+  },
+  loadSavedLoginInfo: function loadSavedLoginInfo() {
+    var username, password, rememberMeChecked;
+
+    if (cc.sys.isBrowser) {
+      username = localStorage.getItem('rememberedUsername');
+      password = localStorage.getItem('rememberedPassword');
+      rememberMeChecked = localStorage.getItem('rememberMeChecked');
+    } else {
+      username = cc.sys.localStorage.getItem('rememberedUsername');
+      password = cc.sys.localStorage.getItem('rememberedPassword');
+      rememberMeChecked = cc.sys.localStorage.getItem('rememberMeChecked');
+    }
+
+    if (username && password) {
+      this.userName.string = username;
+      this.password.string = password;
+    }
+
+    if (rememberMeChecked === 'true') {
+      this.rememberMe.isChecked = true; // this.rememberMe.getChildByName("checkmark").active = true
+    }
   }
 });
 

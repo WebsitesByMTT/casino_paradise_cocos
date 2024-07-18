@@ -11,6 +11,8 @@
                     function __define (exports, require, module) {
                         if (!nodeEnv) {__quick_compile_project__.registerModule(__filename, module);}
 require('./assets/Scripts/Config/GameConfig');
+require('./assets/Scripts/Config/ResponseType');
+require('./assets/Scripts/EditBox');
 require('./assets/Scripts/GamesPrefab');
 require('./assets/Scripts/Lobby/Lobby');
 require('./assets/Scripts/PrefabScript/IframeScript');

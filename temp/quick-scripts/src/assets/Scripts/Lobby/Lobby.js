@@ -6,7 +6,8 @@ cc._RF.push(module, '44269NOlMVGd7tbn16fpN+w', 'Lobby');
 
 var login = require("Login");
 
-var jwt = require('jsonwebtoken');
+var jwt = require('jsonwebtoken'); // var setUserDetails = require('ResponseTypes');
+
 
 cc.Class({
   "extends": cc.Component,
@@ -168,10 +169,19 @@ cc.Class({
     dotButton: {
       "default": null,
       type: cc.Node
-    }
+    },
+    pageViewParent: {
+      "default": null,
+      type: cc.Node
+    },
+    pageView: cc.ScrollView,
+    itemsPerPage: 1,
+    scrollInterval: 3
   },
   // LIFE-CYCLE CALLBACKS:
   onLoad: function onLoad() {
+    var _this = this;
+
     if (!this.category) {
       this.category = "all";
     }
@@ -180,21 +190,37 @@ cc.Class({
     this.setupLobbyInputFocusListeners();
     this.setupLobbyKeyboardButtonListeners();
     this.disableDefaultKeyboard();
+    this.initialPosition = this.scrollView.node.position.clone();
     this.itemsToLoad = []; // Array to store all items to be loaded
 
     this.currentIndex = 0; // Current index in the items array
 
     this.setFullScreenWidth();
     cc.view.setResizeCallback(this.setFullScreenWidth.bind(this)); // Update width on screen resize
+    // this.scrollView.node.on("scroll-to-right", this.loadMoreItems, this); // Event listener for horizontal scrolling
 
-    this.scrollView.node.on("scroll-to-right", this.loadMoreItems, this); // Event listener for horizontal scrolling
-
-    var currentPos = this.cloudAnimNode.getPosition();
-    var moveAction = cc.moveTo(this.moveDuration, cc.v2(this.targetX, currentPos.y));
-    this.getUserDetails(); // Run the move action on the sprite node
-
-    this.cloudAnimNode.runAction(moveAction);
+    var startX = cc.v2(415, 0);
+    var endY = cc.v2(-415, 0);
+    var resetPos = cc.v2(415, 0);
+    this.cloudAnimNode.setPosition(startX);
+    var moveItem = cc.tween().to(4, {
+      position: endY
+    }).call(function () {
+      _this.cloudAnimNode.setPosition(resetPos);
+    });
+    cc.tween(this.cloudAnimNode).repeatForever(moveItem).start();
+    this.getUserDetails();
     this.fetchGames(this.category);
+    this.currentPage = 0;
+    this.schedule(this.autoScrollPageView, this.scrollInterval); // const isAndroid = cc.sys.os === cc.sys.OS_ANDROID;
+    // const isIOS = cc.sys.os === cc.sys.OS_IOS;
+    // if (isAndroid || isIOS) {
+    //     this.myWebView.node.on('loaded', this.onWebViewLoaded, this);
+    // }
+
+    if (cc.sys.isMobile && cc.sys.isBrowser) {
+      console.log = function () {};
+    }
   },
 
   /**
@@ -207,9 +233,19 @@ cc.Class({
    */
   fetchGames: function fetchGames(gameCategory) {
     var content = this.scrollView.content;
+    var pageViewContent = this.pageView.content;
+    pageViewContent.removeAllChildren();
     content.removeAllChildren();
+    this.pageViewParent.active = false;
+    this.scrollView.node.setPosition(this.initialPosition);
+    this.scrollView.node.getChildByName("view").width = 1600;
+    this.scrollView.node.width = 1500;
     var address = K.ServerAddress.ipAddress + K.ServerAPI.game + "=" + gameCategory;
     ServerCom.httpRequest("GET", address, " ", function (response) {
+      if (!response.featured && !response.others) {
+        return;
+      }
+
       if (response.featured.length === 0 && response.others.length === 0) {
         ServerCom.errorLable.string = "No Games Found For This Category";
         ServerCom.loginErrorNode.active = true;
@@ -222,64 +258,48 @@ cc.Class({
       var otherGames = response.others || [];
       var featured = response.featured || [];
       this.itemsToLoad = [];
-      var featuredIndex = 0; // Insert a featured item after every 2 other items
-
-      for (var i = 0; i < otherGames.length; i++) {
-        if (i > 0 && i % 2 === 0 && featuredIndex < featured.length) {
-          this.itemsToLoad.push({
-            data: featured[featuredIndex],
-            prefab: this.smallItemPrefab
-          });
-          featuredIndex++;
-        }
-
-        this.itemsToLoad.push({
-          data: otherGames[i],
-          prefab: this.itemPrefab
-        });
-      } // If there are remaining featured items and less than 3 otherGames, add the featured items at the end
-
-
-      while (featuredIndex < featured.length) {
-        this.itemsToLoad.push({
-          data: featured[featuredIndex],
-          prefab: this.smallItemPrefab
-        });
-        featuredIndex++;
-      } // If there are no otherGames, add all featured items
-
-
-      if (otherGames.length === 0 && featured.length > 0) {
-        for (var _i = 0; _i < featured.length; _i++) {
-          this.itemsToLoad.push({
-            data: featured[_i],
-            prefab: this.smallItemPrefab
-          });
-        }
-      }
-
       this.currentIndex = 0;
-      this.loadMoreItems(); // Load the first batch of items
+
+      if (featured.length > 0) {
+        this.pageViewParent.active = true;
+        this.scollItemCount = featured.length;
+        this.populatePageView(featured, gameCategory);
+      } else {
+        this.pageViewParent.active = false;
+      } // this is done for testing
+
+
+      if (gameCategory == "fav") {
+        this.populateScrollView(otherGames, gameCategory);
+      } else {
+        this.populateScrollView(featured, gameCategory);
+      } // if (otherGames.length > 0) {
+      //   this.populateScrollView(otherGames, gameCategory);
+      // }
+
+
+      this.setFullScreenWidth();
     }.bind(this));
   },
-  loadMoreItems: function loadMoreItems() {
-    if (this.currentIndex >= this.itemsToLoad.length) return; // No more items to load
+  populatePageView: function populatePageView(featuredItems, gameCategory) {
+    var pageViewContent = this.pageView.content;
 
-    var endIndex = Math.min(this.currentIndex + this.itemsPerLoad, this.itemsToLoad.length);
-
-    for (var i = this.currentIndex; i < endIndex; i++) {
-      var itemData = this.itemsToLoad[i];
-      this.populateItems(itemData.data, itemData.prefab);
+    for (var i = 0; i < featuredItems.length; i++) {
+      this.populateItems(featuredItems[i], this.smallItemPrefab, pageViewContent, gameCategory);
     }
-
-    this.currentIndex = endIndex;
   },
-  // Draw Game Items in Lobby
-  populateItems: function populateItems(itemData, prefab) {
+  populateScrollView: function populateScrollView(otherGames, gameCategory) {
+    var scrollViewContent = this.scrollView.content;
+
+    for (var i = 0; i < otherGames.length; i++) {
+      this.populateItems(otherGames[i], this.itemPrefab, scrollViewContent, gameCategory);
+    }
+  },
+  populateItems: function populateItems(itemData, prefab, parent, gameCategory) {
     var item = cc.instantiate(prefab);
-    var itemScript = item.getComponent("GamesPrefab");
-    itemScript.updateItem(itemData);
-    this.scrollView.content.addChild(item);
+    var itemScript = item.getComponent('GamesPrefab');
+    itemScript.updateItem(itemData, gameCategory);
+    parent.addChild(item);
   },
   getGamesByCategoryAll: function getGamesByCategoryAll() {
     this.category = "all";
@@ -345,18 +365,20 @@ cc.Class({
         document.documentElement.mozRequestFullScreen();
       } else if (document.documentElement.webkitRequestFullscreen) {
         document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
-      }
+      } // console.log("fullout");
+
     } else {
       if (document.cancelFullScreen) {
-        document.cancelFullScreen();
+        document.cancelFullScreen(); // console.log("fullout1");
       } else if (document.mozCancelFullScreen) {
+        // console.log("fullou2");
         document.mozCancelFullScreen();
       } else if (document.webkitCancelFullScreen) {
+        // console.log("fullout3");
         document.webkitCancelFullScreen();
       }
-    }
+    } // this.setFullScreenWidth();
 
-    this.setFullScreenWidth();
   },
   // Close Spin Popup Node
   closeSpinNode: function closeSpinNode() {
@@ -375,7 +397,7 @@ cc.Class({
     }
   },
   openWebView: function openWebView(url) {
-    var _this = this;
+    var _this2 = this;
 
     var inst = this;
     var token = null;
@@ -392,33 +414,84 @@ cc.Class({
         }
       }
     } else {
-      token = cc.sys.localStorage.getItem('userToken');
+      if (cc.sys.os === cc.sys.OS_ANDROID || cc.sys.os == cc.sys.Os_IOS) {
+        // This is an Android device
+        token = cc.sys.localStorage.getItem('userToken');
+      }
     } // Set the WebView URL
 
 
     this.myWebView.url = url;
     this.myWebViewParent.active = true;
-    this.myWebView.node.on('loaded', function () {
-      if (token) {
-        _this.myWebView.evaluateJS("\n               window.postMessage({ type: 'authToken', token: '" + token + "' }, '" + url + "');\n            ");
-      }
-    });
+
+    if (cc.sys.isBrowser) {
+      this.myWebView.node.on('loaded', function () {
+        if (token) {
+          _this2.myWebView.evaluateJS("\n                  inst.myWebView.node._components[0]._impl._iframe.contentWindow.postMessage({ type: 'authToken', token: '" + token + "' }, '" + url + "');\n                ");
+        }
+      });
+    }
+
+    if (cc.sys.os === cc.sys.OS_ANDROID || cc.sys.os == cc.sys.Os_IOS) {
+      this.myWebView.node.on('loaded', function () {
+        if (token) {
+          console.log("================================================ iam inside loaded function in for Mobilewebviewsss");
+          var script = "\n            if (window && window.postMessage) {\n                window.postMessage({ type: 'authToken', token: '" + token + "' }, '" + url + "');\n            }\n           ";
+
+          _this2.myWebView.evaluateJS(script); // this.myWebView.evaluateJS(`this.myWebView.node._components[0]._impl._iframe.contentWindow.postMessage({ type: 'authToken', token: '${token}' }, '${url}');
+          // `);
+
+        }
+      });
+    } //     window.addEventListener('message', function(event) {
+    //     const message = event.data;
+    //     if (message === 'authToken') {
+    //         console.log("this window check", this, "and inst also", inst)
+    //         inst.myWebView.node._components[0]._impl._iframe.contentWindow.postMessage({ type: 'authToken', cookie: token }, `${url}`);
+    //     }
+    //     if (message === "onExit") {
+    //       inst.myWebView.url = "";
+    //       inst.myWebViewParent.active = false;
+    //     }
+    // });
+
+
     window.addEventListener('message', function (event) {
-      console.log("message", event);
+      console.log("event check for mobile application is it worlking or not", event);
       var message = event.data;
 
       if (message === 'authToken') {
-        inst.myWebView.node._components[0]._impl._iframe.contentWindow.postMessage({
-          type: 'authToken',
-          cookie: token
-        }, "" + url);
+        console.log("Received authToken message here for cocos game"); // For browser, we need to use the iframe
+
+        if (cc.sys.isBrowser) {
+          inst.myWebView.node._components[0]._impl._iframe.contentWindow.postMessage({
+            type: 'authToken',
+            cookie: token
+          }, url);
+        } else {
+          // For mobile, we can use the same method as before
+          inst.myWebView.evaluateJS("\n                  window.postMessage({ type: 'authToken', cookie: '" + token + "' }, '" + url + "');\n              ");
+        }
       }
 
       if (message === "onExit") {
         inst.myWebView.url = "";
         inst.myWebViewParent.active = false;
+        inst.getUserDetails();
       }
     });
+
+    if (!document.fullscreenElement) {
+      if (cc.sys.isMobile && cc.sys.isBrowser) {
+        this.myWebView.node.width = 1200;
+      } else {
+        this.myWebView.node.width = 2250;
+      }
+    } else {
+      if (cc.sys.isMobile && cc.sys.isBrowser) {
+        this.myWebView.node.width = 2250;
+      }
+    }
   },
   getUserDetails: function getUserDetails() {
     var inst = this;
@@ -491,10 +564,7 @@ cc.Class({
         existingPassword: this.oldPassword.string,
         password: this.newPassword.string
       };
-      console.log(changeData, "pas");
       ServerCom.httpRequest("PUT", address, changeData, function (response) {
-        console.log("response", response);
-
         if (response.message) {
           ServerCom.errorHeading.string = "Password Changed Successfully";
           ServerCom.errorLable.string = response.message;
@@ -529,15 +599,46 @@ cc.Class({
   },
   setFullScreenWidth: function setFullScreenWidth() {
     if (!document.fullscreenElement) {
-      this.scrollView.node.width = 2050;
-      this.scrollView.node.getChildByName("view").width = 2050;
+      if (!this.pageViewParent.active) {
+        this.scrollView.node.setPosition(cc.v2(-950, 0));
+        this.scrollView.node.width = 2100;
+        this.scrollView.node.getChildByName("view").width = 2200;
+      } else {
+        this.scrollView.node.width = 1200;
+        this.scrollView.node.getChildByName("view").width = 1600;
+      }
+
+      this.pageView.node.width = 335;
+      this.pageView.node.getChildByName("view").width = 335;
     } else {
-      var screenWidth = cc.winSize.width; // Set the width of the ScrollView node
+      if (cc.sys.isMobile && cc.sys.isBrowser) {
+        this.scrollView.node.width = 1500;
+        this.scrollView.node.getChildByName("view").width = 1600; // this.pageView.node.width.width = 340;
+        // this.pageView.node.getChildByName("view").width = 340;
+      } else {
+        if (!this.pageViewParent.active) {
+          // console.log("mai  full screen mei hun");
+          this.scrollView.node.setPosition(cc.v2(-900, 0));
+          this.scrollView.node.width = 2000;
+          this.scrollView.node.getChildByName("view").width = 2200;
+        } else {
+          var screenWidth = cc.winSize.width - 380;
+          this.scrollView.node.width = screenWidth;
+          this.scrollView.node.getChildByName("view").width = screenWidth;
+        }
 
-      this.scrollView.node.width = screenWidth; // Set the width of the View node within the ScrollView
-
-      this.scrollView.node.getChildByName("view").width = screenWidth;
+        this.pageView.node.width = 335;
+        this.pageView.node.getChildByName("view").width = 335;
+      }
     }
+  },
+  // Auto Scroll 
+  autoScrollPageView: function autoScrollPageView() {
+    var content = this.pageView.content;
+    var totalPageCount = content.childrenCount;
+    this.currentPage = (this.currentPage + 1) % totalPageCount;
+    var targetPos = cc.v2(this.currentPage * this.pageView.node.width, 0);
+    this.pageView.scrollToOffset(targetPos, 1); // Scroll to the target position in 1 second
   },
   setupLobbyInputFocusListeners: function setupLobbyInputFocusListeners() {
     if (cc.sys.isMobile && cc.sys.isBrowser) {
@@ -551,13 +652,14 @@ cc.Class({
       }
 
       if (this.confirmPassword) {
-        this.confirmPassword.node.on(cc.Node.EventType.TOUCH_END, this.onInputFieldClicked, this);
-        this.confirmPassword.node.on('editing-did-began', this.onInputFieldFocused, this);
-        this.confirmPassword.node.on('editing-did-ended', this.onInputFieldBlurred, this);
+        this.confirmPassword.node.on(cc.Node.EventType.TOUCH_END, this.onInputFieldClicked, this); // this.confirmPassword.node.on('editing-did-began', this.onInputFieldFocused, this);
+        // this.confirmPassword.node.on('editing-did-ended', this.onInputFieldBlurred, this);
       }
     }
   },
   onInputFieldClicked: function onInputFieldClicked(event) {
+    var _this3 = this;
+
     // Focus the corresponding input field to trigger the keyboard
     var inputNode = event.currentTarget.getComponent(cc.EditBox);
 
@@ -567,6 +669,12 @@ cc.Class({
 
       if (this.customKeyboard) {
         this.customKeyboard.active = true; // Show the custom keyboard if needed
+
+        event.preventDefault();
+        this.scheduleOnce(function () {
+          _this3.activeInputField.blur(); // Blur the input field after showing the custom keyboard
+
+        }, 0.1);
       }
     }
   },
@@ -585,11 +693,11 @@ cc.Class({
     }
   },
   setupLobbyKeyboardButtonListeners: function setupLobbyKeyboardButtonListeners() {
-    var _this2 = this;
+    var _this4 = this;
 
     var allKeyboardButtons = this.getAllKeyboardButtons();
     allKeyboardButtons.forEach(function (button) {
-      button.on(cc.Node.EventType.TOUCH_END, _this2.onKeyboardButtonClicked, _this2);
+      button.on(cc.Node.EventType.TOUCH_END, _this4.onKeyboardButtonClicked, _this4);
     });
 
     if (this.deleteButton) {

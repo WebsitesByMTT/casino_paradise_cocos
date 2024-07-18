@@ -49,7 +49,8 @@ root.K.ServerAPI = {
   game: "/api/games?platform=casinoParadise&category",
   addtoFav: "/api/games/favourite",
   password: "/api/users",
-  userDetails: "/api/users"
+  userDetails: "/api/users",
+  getGameById: "/api/games"
 };
 /**
  * @description Represents sound effects played on user related events

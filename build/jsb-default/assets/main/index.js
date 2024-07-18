@@ -1635,84 +1635,84 @@ f = 0 | u;
 return r.strip();
 }
 var b = function(e, t, r) {
-var i, n, s, o = e.words, a = t.words, f = r.words, c = 0, u = 0 | o[0], h = 8191 & u, d = u >>> 13, l = 0 | o[1], p = 8191 & l, b = l >>> 13, m = 0 | o[2], g = 8191 & m, y = m >>> 13, v = 0 | o[3], w = 8191 & v, _ = v >>> 13, S = 0 | o[4], M = 8191 & S, E = S >>> 13, k = 0 | o[5], A = 8191 & k, R = k >>> 13, x = 0 | o[6], I = 8191 & x, T = x >>> 13, j = 0 | o[7], B = 8191 & j, P = j >>> 13, N = 0 | o[8], L = 8191 & N, C = N >>> 13, O = 0 | o[9], D = 8191 & O, U = O >>> 13, q = 0 | a[0], z = 8191 & q, $ = q >>> 13, F = 0 | a[1], K = 8191 & F, H = F >>> 13, W = 0 | a[2], G = 8191 & W, V = W >>> 13, X = 0 | a[3], Y = 8191 & X, Z = X >>> 13, J = 0 | a[4], Q = 8191 & J, ee = J >>> 13, te = 0 | a[5], re = 8191 & te, ie = te >>> 13, ne = 0 | a[6], se = 8191 & ne, oe = ne >>> 13, ae = 0 | a[7], fe = 8191 & ae, ce = ae >>> 13, ue = 0 | a[8], he = 8191 & ue, de = ue >>> 13, le = 0 | a[9], pe = 8191 & le, be = le >>> 13;
+var i, n, s, o = e.words, a = t.words, f = r.words, c = 0, u = 0 | o[0], h = 8191 & u, d = u >>> 13, l = 0 | o[1], p = 8191 & l, b = l >>> 13, m = 0 | o[2], g = 8191 & m, y = m >>> 13, v = 0 | o[3], w = 8191 & v, _ = v >>> 13, S = 0 | o[4], E = 8191 & S, M = S >>> 13, A = 0 | o[5], k = 8191 & A, R = A >>> 13, x = 0 | o[6], I = 8191 & x, B = x >>> 13, T = 0 | o[7], j = 8191 & T, N = T >>> 13, P = 0 | o[8], C = 8191 & P, L = P >>> 13, O = 0 | o[9], D = 8191 & O, U = O >>> 13, q = 0 | a[0], F = 8191 & q, z = q >>> 13, $ = 0 | a[1], K = 8191 & $, H = $ >>> 13, V = 0 | a[2], W = 8191 & V, G = V >>> 13, X = 0 | a[3], Y = 8191 & X, J = X >>> 13, Z = 0 | a[4], Q = 8191 & Z, ee = Z >>> 13, te = 0 | a[5], re = 8191 & te, ie = te >>> 13, ne = 0 | a[6], se = 8191 & ne, oe = ne >>> 13, ae = 0 | a[7], fe = 8191 & ae, ce = ae >>> 13, ue = 0 | a[8], he = 8191 & ue, de = ue >>> 13, le = 0 | a[9], pe = 8191 & le, be = le >>> 13;
 r.negative = e.negative ^ t.negative;
 r.length = 19;
-var me = (c + (i = Math.imul(h, z)) | 0) + ((8191 & (n = (n = Math.imul(h, $)) + Math.imul(d, z) | 0)) << 13) | 0;
-c = ((s = Math.imul(d, $)) + (n >>> 13) | 0) + (me >>> 26) | 0;
+var me = (c + (i = Math.imul(h, F)) | 0) + ((8191 & (n = (n = Math.imul(h, z)) + Math.imul(d, F) | 0)) << 13) | 0;
+c = ((s = Math.imul(d, z)) + (n >>> 13) | 0) + (me >>> 26) | 0;
 me &= 67108863;
-i = Math.imul(p, z);
-n = (n = Math.imul(p, $)) + Math.imul(b, z) | 0;
-s = Math.imul(b, $);
+i = Math.imul(p, F);
+n = (n = Math.imul(p, z)) + Math.imul(b, F) | 0;
+s = Math.imul(b, z);
 var ge = (c + (i = i + Math.imul(h, K) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(h, H) | 0) + Math.imul(d, K) | 0)) << 13) | 0;
 c = ((s = s + Math.imul(d, H) | 0) + (n >>> 13) | 0) + (ge >>> 26) | 0;
 ge &= 67108863;
-i = Math.imul(g, z);
-n = (n = Math.imul(g, $)) + Math.imul(y, z) | 0;
-s = Math.imul(y, $);
+i = Math.imul(g, F);
+n = (n = Math.imul(g, z)) + Math.imul(y, F) | 0;
+s = Math.imul(y, z);
 i = i + Math.imul(p, K) | 0;
 n = (n = n + Math.imul(p, H) | 0) + Math.imul(b, K) | 0;
 s = s + Math.imul(b, H) | 0;
-var ye = (c + (i = i + Math.imul(h, G) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(h, V) | 0) + Math.imul(d, G) | 0)) << 13) | 0;
-c = ((s = s + Math.imul(d, V) | 0) + (n >>> 13) | 0) + (ye >>> 26) | 0;
+var ye = (c + (i = i + Math.imul(h, W) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(h, G) | 0) + Math.imul(d, W) | 0)) << 13) | 0;
+c = ((s = s + Math.imul(d, G) | 0) + (n >>> 13) | 0) + (ye >>> 26) | 0;
 ye &= 67108863;
-i = Math.imul(w, z);
-n = (n = Math.imul(w, $)) + Math.imul(_, z) | 0;
-s = Math.imul(_, $);
+i = Math.imul(w, F);
+n = (n = Math.imul(w, z)) + Math.imul(_, F) | 0;
+s = Math.imul(_, z);
 i = i + Math.imul(g, K) | 0;
 n = (n = n + Math.imul(g, H) | 0) + Math.imul(y, K) | 0;
 s = s + Math.imul(y, H) | 0;
-i = i + Math.imul(p, G) | 0;
-n = (n = n + Math.imul(p, V) | 0) + Math.imul(b, G) | 0;
-s = s + Math.imul(b, V) | 0;
-var ve = (c + (i = i + Math.imul(h, Y) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(h, Z) | 0) + Math.imul(d, Y) | 0)) << 13) | 0;
-c = ((s = s + Math.imul(d, Z) | 0) + (n >>> 13) | 0) + (ve >>> 26) | 0;
+i = i + Math.imul(p, W) | 0;
+n = (n = n + Math.imul(p, G) | 0) + Math.imul(b, W) | 0;
+s = s + Math.imul(b, G) | 0;
+var ve = (c + (i = i + Math.imul(h, Y) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(h, J) | 0) + Math.imul(d, Y) | 0)) << 13) | 0;
+c = ((s = s + Math.imul(d, J) | 0) + (n >>> 13) | 0) + (ve >>> 26) | 0;
 ve &= 67108863;
-i = Math.imul(M, z);
-n = (n = Math.imul(M, $)) + Math.imul(E, z) | 0;
-s = Math.imul(E, $);
+i = Math.imul(E, F);
+n = (n = Math.imul(E, z)) + Math.imul(M, F) | 0;
+s = Math.imul(M, z);
 i = i + Math.imul(w, K) | 0;
 n = (n = n + Math.imul(w, H) | 0) + Math.imul(_, K) | 0;
 s = s + Math.imul(_, H) | 0;
-i = i + Math.imul(g, G) | 0;
-n = (n = n + Math.imul(g, V) | 0) + Math.imul(y, G) | 0;
-s = s + Math.imul(y, V) | 0;
+i = i + Math.imul(g, W) | 0;
+n = (n = n + Math.imul(g, G) | 0) + Math.imul(y, W) | 0;
+s = s + Math.imul(y, G) | 0;
 i = i + Math.imul(p, Y) | 0;
-n = (n = n + Math.imul(p, Z) | 0) + Math.imul(b, Y) | 0;
-s = s + Math.imul(b, Z) | 0;
+n = (n = n + Math.imul(p, J) | 0) + Math.imul(b, Y) | 0;
+s = s + Math.imul(b, J) | 0;
 var we = (c + (i = i + Math.imul(h, Q) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(h, ee) | 0) + Math.imul(d, Q) | 0)) << 13) | 0;
 c = ((s = s + Math.imul(d, ee) | 0) + (n >>> 13) | 0) + (we >>> 26) | 0;
 we &= 67108863;
-i = Math.imul(A, z);
-n = (n = Math.imul(A, $)) + Math.imul(R, z) | 0;
-s = Math.imul(R, $);
-i = i + Math.imul(M, K) | 0;
-n = (n = n + Math.imul(M, H) | 0) + Math.imul(E, K) | 0;
-s = s + Math.imul(E, H) | 0;
-i = i + Math.imul(w, G) | 0;
-n = (n = n + Math.imul(w, V) | 0) + Math.imul(_, G) | 0;
-s = s + Math.imul(_, V) | 0;
+i = Math.imul(k, F);
+n = (n = Math.imul(k, z)) + Math.imul(R, F) | 0;
+s = Math.imul(R, z);
+i = i + Math.imul(E, K) | 0;
+n = (n = n + Math.imul(E, H) | 0) + Math.imul(M, K) | 0;
+s = s + Math.imul(M, H) | 0;
+i = i + Math.imul(w, W) | 0;
+n = (n = n + Math.imul(w, G) | 0) + Math.imul(_, W) | 0;
+s = s + Math.imul(_, G) | 0;
 i = i + Math.imul(g, Y) | 0;
-n = (n = n + Math.imul(g, Z) | 0) + Math.imul(y, Y) | 0;
-s = s + Math.imul(y, Z) | 0;
+n = (n = n + Math.imul(g, J) | 0) + Math.imul(y, Y) | 0;
+s = s + Math.imul(y, J) | 0;
 i = i + Math.imul(p, Q) | 0;
 n = (n = n + Math.imul(p, ee) | 0) + Math.imul(b, Q) | 0;
 s = s + Math.imul(b, ee) | 0;
 var _e = (c + (i = i + Math.imul(h, re) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(h, ie) | 0) + Math.imul(d, re) | 0)) << 13) | 0;
 c = ((s = s + Math.imul(d, ie) | 0) + (n >>> 13) | 0) + (_e >>> 26) | 0;
 _e &= 67108863;
-i = Math.imul(I, z);
-n = (n = Math.imul(I, $)) + Math.imul(T, z) | 0;
-s = Math.imul(T, $);
-i = i + Math.imul(A, K) | 0;
-n = (n = n + Math.imul(A, H) | 0) + Math.imul(R, K) | 0;
+i = Math.imul(I, F);
+n = (n = Math.imul(I, z)) + Math.imul(B, F) | 0;
+s = Math.imul(B, z);
+i = i + Math.imul(k, K) | 0;
+n = (n = n + Math.imul(k, H) | 0) + Math.imul(R, K) | 0;
 s = s + Math.imul(R, H) | 0;
-i = i + Math.imul(M, G) | 0;
-n = (n = n + Math.imul(M, V) | 0) + Math.imul(E, G) | 0;
-s = s + Math.imul(E, V) | 0;
+i = i + Math.imul(E, W) | 0;
+n = (n = n + Math.imul(E, G) | 0) + Math.imul(M, W) | 0;
+s = s + Math.imul(M, G) | 0;
 i = i + Math.imul(w, Y) | 0;
-n = (n = n + Math.imul(w, Z) | 0) + Math.imul(_, Y) | 0;
-s = s + Math.imul(_, Z) | 0;
+n = (n = n + Math.imul(w, J) | 0) + Math.imul(_, Y) | 0;
+s = s + Math.imul(_, J) | 0;
 i = i + Math.imul(g, Q) | 0;
 n = (n = n + Math.imul(g, ee) | 0) + Math.imul(y, Q) | 0;
 s = s + Math.imul(y, ee) | 0;
@@ -1722,18 +1722,18 @@ s = s + Math.imul(b, ie) | 0;
 var Se = (c + (i = i + Math.imul(h, se) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(h, oe) | 0) + Math.imul(d, se) | 0)) << 13) | 0;
 c = ((s = s + Math.imul(d, oe) | 0) + (n >>> 13) | 0) + (Se >>> 26) | 0;
 Se &= 67108863;
-i = Math.imul(B, z);
-n = (n = Math.imul(B, $)) + Math.imul(P, z) | 0;
-s = Math.imul(P, $);
+i = Math.imul(j, F);
+n = (n = Math.imul(j, z)) + Math.imul(N, F) | 0;
+s = Math.imul(N, z);
 i = i + Math.imul(I, K) | 0;
-n = (n = n + Math.imul(I, H) | 0) + Math.imul(T, K) | 0;
-s = s + Math.imul(T, H) | 0;
-i = i + Math.imul(A, G) | 0;
-n = (n = n + Math.imul(A, V) | 0) + Math.imul(R, G) | 0;
-s = s + Math.imul(R, V) | 0;
-i = i + Math.imul(M, Y) | 0;
-n = (n = n + Math.imul(M, Z) | 0) + Math.imul(E, Y) | 0;
-s = s + Math.imul(E, Z) | 0;
+n = (n = n + Math.imul(I, H) | 0) + Math.imul(B, K) | 0;
+s = s + Math.imul(B, H) | 0;
+i = i + Math.imul(k, W) | 0;
+n = (n = n + Math.imul(k, G) | 0) + Math.imul(R, W) | 0;
+s = s + Math.imul(R, G) | 0;
+i = i + Math.imul(E, Y) | 0;
+n = (n = n + Math.imul(E, J) | 0) + Math.imul(M, Y) | 0;
+s = s + Math.imul(M, J) | 0;
 i = i + Math.imul(w, Q) | 0;
 n = (n = n + Math.imul(w, ee) | 0) + Math.imul(_, Q) | 0;
 s = s + Math.imul(_, ee) | 0;
@@ -1743,24 +1743,24 @@ s = s + Math.imul(y, ie) | 0;
 i = i + Math.imul(p, se) | 0;
 n = (n = n + Math.imul(p, oe) | 0) + Math.imul(b, se) | 0;
 s = s + Math.imul(b, oe) | 0;
-var Me = (c + (i = i + Math.imul(h, fe) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(h, ce) | 0) + Math.imul(d, fe) | 0)) << 13) | 0;
-c = ((s = s + Math.imul(d, ce) | 0) + (n >>> 13) | 0) + (Me >>> 26) | 0;
-Me &= 67108863;
-i = Math.imul(L, z);
-n = (n = Math.imul(L, $)) + Math.imul(C, z) | 0;
-s = Math.imul(C, $);
-i = i + Math.imul(B, K) | 0;
-n = (n = n + Math.imul(B, H) | 0) + Math.imul(P, K) | 0;
-s = s + Math.imul(P, H) | 0;
-i = i + Math.imul(I, G) | 0;
-n = (n = n + Math.imul(I, V) | 0) + Math.imul(T, G) | 0;
-s = s + Math.imul(T, V) | 0;
-i = i + Math.imul(A, Y) | 0;
-n = (n = n + Math.imul(A, Z) | 0) + Math.imul(R, Y) | 0;
-s = s + Math.imul(R, Z) | 0;
-i = i + Math.imul(M, Q) | 0;
-n = (n = n + Math.imul(M, ee) | 0) + Math.imul(E, Q) | 0;
-s = s + Math.imul(E, ee) | 0;
+var Ee = (c + (i = i + Math.imul(h, fe) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(h, ce) | 0) + Math.imul(d, fe) | 0)) << 13) | 0;
+c = ((s = s + Math.imul(d, ce) | 0) + (n >>> 13) | 0) + (Ee >>> 26) | 0;
+Ee &= 67108863;
+i = Math.imul(C, F);
+n = (n = Math.imul(C, z)) + Math.imul(L, F) | 0;
+s = Math.imul(L, z);
+i = i + Math.imul(j, K) | 0;
+n = (n = n + Math.imul(j, H) | 0) + Math.imul(N, K) | 0;
+s = s + Math.imul(N, H) | 0;
+i = i + Math.imul(I, W) | 0;
+n = (n = n + Math.imul(I, G) | 0) + Math.imul(B, W) | 0;
+s = s + Math.imul(B, G) | 0;
+i = i + Math.imul(k, Y) | 0;
+n = (n = n + Math.imul(k, J) | 0) + Math.imul(R, Y) | 0;
+s = s + Math.imul(R, J) | 0;
+i = i + Math.imul(E, Q) | 0;
+n = (n = n + Math.imul(E, ee) | 0) + Math.imul(M, Q) | 0;
+s = s + Math.imul(M, ee) | 0;
 i = i + Math.imul(w, re) | 0;
 n = (n = n + Math.imul(w, ie) | 0) + Math.imul(_, re) | 0;
 s = s + Math.imul(_, ie) | 0;
@@ -1770,27 +1770,27 @@ s = s + Math.imul(y, oe) | 0;
 i = i + Math.imul(p, fe) | 0;
 n = (n = n + Math.imul(p, ce) | 0) + Math.imul(b, fe) | 0;
 s = s + Math.imul(b, ce) | 0;
-var Ee = (c + (i = i + Math.imul(h, he) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(h, de) | 0) + Math.imul(d, he) | 0)) << 13) | 0;
-c = ((s = s + Math.imul(d, de) | 0) + (n >>> 13) | 0) + (Ee >>> 26) | 0;
-Ee &= 67108863;
-i = Math.imul(D, z);
-n = (n = Math.imul(D, $)) + Math.imul(U, z) | 0;
-s = Math.imul(U, $);
-i = i + Math.imul(L, K) | 0;
-n = (n = n + Math.imul(L, H) | 0) + Math.imul(C, K) | 0;
-s = s + Math.imul(C, H) | 0;
-i = i + Math.imul(B, G) | 0;
-n = (n = n + Math.imul(B, V) | 0) + Math.imul(P, G) | 0;
-s = s + Math.imul(P, V) | 0;
+var Me = (c + (i = i + Math.imul(h, he) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(h, de) | 0) + Math.imul(d, he) | 0)) << 13) | 0;
+c = ((s = s + Math.imul(d, de) | 0) + (n >>> 13) | 0) + (Me >>> 26) | 0;
+Me &= 67108863;
+i = Math.imul(D, F);
+n = (n = Math.imul(D, z)) + Math.imul(U, F) | 0;
+s = Math.imul(U, z);
+i = i + Math.imul(C, K) | 0;
+n = (n = n + Math.imul(C, H) | 0) + Math.imul(L, K) | 0;
+s = s + Math.imul(L, H) | 0;
+i = i + Math.imul(j, W) | 0;
+n = (n = n + Math.imul(j, G) | 0) + Math.imul(N, W) | 0;
+s = s + Math.imul(N, G) | 0;
 i = i + Math.imul(I, Y) | 0;
-n = (n = n + Math.imul(I, Z) | 0) + Math.imul(T, Y) | 0;
-s = s + Math.imul(T, Z) | 0;
-i = i + Math.imul(A, Q) | 0;
-n = (n = n + Math.imul(A, ee) | 0) + Math.imul(R, Q) | 0;
+n = (n = n + Math.imul(I, J) | 0) + Math.imul(B, Y) | 0;
+s = s + Math.imul(B, J) | 0;
+i = i + Math.imul(k, Q) | 0;
+n = (n = n + Math.imul(k, ee) | 0) + Math.imul(R, Q) | 0;
 s = s + Math.imul(R, ee) | 0;
-i = i + Math.imul(M, re) | 0;
-n = (n = n + Math.imul(M, ie) | 0) + Math.imul(E, re) | 0;
-s = s + Math.imul(E, ie) | 0;
+i = i + Math.imul(E, re) | 0;
+n = (n = n + Math.imul(E, ie) | 0) + Math.imul(M, re) | 0;
+s = s + Math.imul(M, ie) | 0;
 i = i + Math.imul(w, se) | 0;
 n = (n = n + Math.imul(w, oe) | 0) + Math.imul(_, se) | 0;
 s = s + Math.imul(_, oe) | 0;
@@ -1800,54 +1800,54 @@ s = s + Math.imul(y, ce) | 0;
 i = i + Math.imul(p, he) | 0;
 n = (n = n + Math.imul(p, de) | 0) + Math.imul(b, he) | 0;
 s = s + Math.imul(b, de) | 0;
-var ke = (c + (i = i + Math.imul(h, pe) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(h, be) | 0) + Math.imul(d, pe) | 0)) << 13) | 0;
-c = ((s = s + Math.imul(d, be) | 0) + (n >>> 13) | 0) + (ke >>> 26) | 0;
-ke &= 67108863;
+var Ae = (c + (i = i + Math.imul(h, pe) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(h, be) | 0) + Math.imul(d, pe) | 0)) << 13) | 0;
+c = ((s = s + Math.imul(d, be) | 0) + (n >>> 13) | 0) + (Ae >>> 26) | 0;
+Ae &= 67108863;
 i = Math.imul(D, K);
 n = (n = Math.imul(D, H)) + Math.imul(U, K) | 0;
 s = Math.imul(U, H);
-i = i + Math.imul(L, G) | 0;
-n = (n = n + Math.imul(L, V) | 0) + Math.imul(C, G) | 0;
-s = s + Math.imul(C, V) | 0;
-i = i + Math.imul(B, Y) | 0;
-n = (n = n + Math.imul(B, Z) | 0) + Math.imul(P, Y) | 0;
-s = s + Math.imul(P, Z) | 0;
+i = i + Math.imul(C, W) | 0;
+n = (n = n + Math.imul(C, G) | 0) + Math.imul(L, W) | 0;
+s = s + Math.imul(L, G) | 0;
+i = i + Math.imul(j, Y) | 0;
+n = (n = n + Math.imul(j, J) | 0) + Math.imul(N, Y) | 0;
+s = s + Math.imul(N, J) | 0;
 i = i + Math.imul(I, Q) | 0;
-n = (n = n + Math.imul(I, ee) | 0) + Math.imul(T, Q) | 0;
-s = s + Math.imul(T, ee) | 0;
-i = i + Math.imul(A, re) | 0;
-n = (n = n + Math.imul(A, ie) | 0) + Math.imul(R, re) | 0;
+n = (n = n + Math.imul(I, ee) | 0) + Math.imul(B, Q) | 0;
+s = s + Math.imul(B, ee) | 0;
+i = i + Math.imul(k, re) | 0;
+n = (n = n + Math.imul(k, ie) | 0) + Math.imul(R, re) | 0;
 s = s + Math.imul(R, ie) | 0;
-i = i + Math.imul(M, se) | 0;
-n = (n = n + Math.imul(M, oe) | 0) + Math.imul(E, se) | 0;
-s = s + Math.imul(E, oe) | 0;
+i = i + Math.imul(E, se) | 0;
+n = (n = n + Math.imul(E, oe) | 0) + Math.imul(M, se) | 0;
+s = s + Math.imul(M, oe) | 0;
 i = i + Math.imul(w, fe) | 0;
 n = (n = n + Math.imul(w, ce) | 0) + Math.imul(_, fe) | 0;
 s = s + Math.imul(_, ce) | 0;
 i = i + Math.imul(g, he) | 0;
 n = (n = n + Math.imul(g, de) | 0) + Math.imul(y, he) | 0;
 s = s + Math.imul(y, de) | 0;
-var Ae = (c + (i = i + Math.imul(p, pe) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(p, be) | 0) + Math.imul(b, pe) | 0)) << 13) | 0;
-c = ((s = s + Math.imul(b, be) | 0) + (n >>> 13) | 0) + (Ae >>> 26) | 0;
-Ae &= 67108863;
-i = Math.imul(D, G);
-n = (n = Math.imul(D, V)) + Math.imul(U, G) | 0;
-s = Math.imul(U, V);
-i = i + Math.imul(L, Y) | 0;
-n = (n = n + Math.imul(L, Z) | 0) + Math.imul(C, Y) | 0;
-s = s + Math.imul(C, Z) | 0;
-i = i + Math.imul(B, Q) | 0;
-n = (n = n + Math.imul(B, ee) | 0) + Math.imul(P, Q) | 0;
-s = s + Math.imul(P, ee) | 0;
+var ke = (c + (i = i + Math.imul(p, pe) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(p, be) | 0) + Math.imul(b, pe) | 0)) << 13) | 0;
+c = ((s = s + Math.imul(b, be) | 0) + (n >>> 13) | 0) + (ke >>> 26) | 0;
+ke &= 67108863;
+i = Math.imul(D, W);
+n = (n = Math.imul(D, G)) + Math.imul(U, W) | 0;
+s = Math.imul(U, G);
+i = i + Math.imul(C, Y) | 0;
+n = (n = n + Math.imul(C, J) | 0) + Math.imul(L, Y) | 0;
+s = s + Math.imul(L, J) | 0;
+i = i + Math.imul(j, Q) | 0;
+n = (n = n + Math.imul(j, ee) | 0) + Math.imul(N, Q) | 0;
+s = s + Math.imul(N, ee) | 0;
 i = i + Math.imul(I, re) | 0;
-n = (n = n + Math.imul(I, ie) | 0) + Math.imul(T, re) | 0;
-s = s + Math.imul(T, ie) | 0;
-i = i + Math.imul(A, se) | 0;
-n = (n = n + Math.imul(A, oe) | 0) + Math.imul(R, se) | 0;
+n = (n = n + Math.imul(I, ie) | 0) + Math.imul(B, re) | 0;
+s = s + Math.imul(B, ie) | 0;
+i = i + Math.imul(k, se) | 0;
+n = (n = n + Math.imul(k, oe) | 0) + Math.imul(R, se) | 0;
 s = s + Math.imul(R, oe) | 0;
-i = i + Math.imul(M, fe) | 0;
-n = (n = n + Math.imul(M, ce) | 0) + Math.imul(E, fe) | 0;
-s = s + Math.imul(E, ce) | 0;
+i = i + Math.imul(E, fe) | 0;
+n = (n = n + Math.imul(E, ce) | 0) + Math.imul(M, fe) | 0;
+s = s + Math.imul(M, ce) | 0;
 i = i + Math.imul(w, he) | 0;
 n = (n = n + Math.imul(w, de) | 0) + Math.imul(_, he) | 0;
 s = s + Math.imul(_, de) | 0;
@@ -1855,89 +1855,89 @@ var Re = (c + (i = i + Math.imul(g, pe) | 0) | 0) + ((8191 & (n = (n = n + Math.
 c = ((s = s + Math.imul(y, be) | 0) + (n >>> 13) | 0) + (Re >>> 26) | 0;
 Re &= 67108863;
 i = Math.imul(D, Y);
-n = (n = Math.imul(D, Z)) + Math.imul(U, Y) | 0;
-s = Math.imul(U, Z);
-i = i + Math.imul(L, Q) | 0;
-n = (n = n + Math.imul(L, ee) | 0) + Math.imul(C, Q) | 0;
-s = s + Math.imul(C, ee) | 0;
-i = i + Math.imul(B, re) | 0;
-n = (n = n + Math.imul(B, ie) | 0) + Math.imul(P, re) | 0;
-s = s + Math.imul(P, ie) | 0;
+n = (n = Math.imul(D, J)) + Math.imul(U, Y) | 0;
+s = Math.imul(U, J);
+i = i + Math.imul(C, Q) | 0;
+n = (n = n + Math.imul(C, ee) | 0) + Math.imul(L, Q) | 0;
+s = s + Math.imul(L, ee) | 0;
+i = i + Math.imul(j, re) | 0;
+n = (n = n + Math.imul(j, ie) | 0) + Math.imul(N, re) | 0;
+s = s + Math.imul(N, ie) | 0;
 i = i + Math.imul(I, se) | 0;
-n = (n = n + Math.imul(I, oe) | 0) + Math.imul(T, se) | 0;
-s = s + Math.imul(T, oe) | 0;
-i = i + Math.imul(A, fe) | 0;
-n = (n = n + Math.imul(A, ce) | 0) + Math.imul(R, fe) | 0;
+n = (n = n + Math.imul(I, oe) | 0) + Math.imul(B, se) | 0;
+s = s + Math.imul(B, oe) | 0;
+i = i + Math.imul(k, fe) | 0;
+n = (n = n + Math.imul(k, ce) | 0) + Math.imul(R, fe) | 0;
 s = s + Math.imul(R, ce) | 0;
-i = i + Math.imul(M, he) | 0;
-n = (n = n + Math.imul(M, de) | 0) + Math.imul(E, he) | 0;
-s = s + Math.imul(E, de) | 0;
+i = i + Math.imul(E, he) | 0;
+n = (n = n + Math.imul(E, de) | 0) + Math.imul(M, he) | 0;
+s = s + Math.imul(M, de) | 0;
 var xe = (c + (i = i + Math.imul(w, pe) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(w, be) | 0) + Math.imul(_, pe) | 0)) << 13) | 0;
 c = ((s = s + Math.imul(_, be) | 0) + (n >>> 13) | 0) + (xe >>> 26) | 0;
 xe &= 67108863;
 i = Math.imul(D, Q);
 n = (n = Math.imul(D, ee)) + Math.imul(U, Q) | 0;
 s = Math.imul(U, ee);
-i = i + Math.imul(L, re) | 0;
-n = (n = n + Math.imul(L, ie) | 0) + Math.imul(C, re) | 0;
-s = s + Math.imul(C, ie) | 0;
-i = i + Math.imul(B, se) | 0;
-n = (n = n + Math.imul(B, oe) | 0) + Math.imul(P, se) | 0;
-s = s + Math.imul(P, oe) | 0;
+i = i + Math.imul(C, re) | 0;
+n = (n = n + Math.imul(C, ie) | 0) + Math.imul(L, re) | 0;
+s = s + Math.imul(L, ie) | 0;
+i = i + Math.imul(j, se) | 0;
+n = (n = n + Math.imul(j, oe) | 0) + Math.imul(N, se) | 0;
+s = s + Math.imul(N, oe) | 0;
 i = i + Math.imul(I, fe) | 0;
-n = (n = n + Math.imul(I, ce) | 0) + Math.imul(T, fe) | 0;
-s = s + Math.imul(T, ce) | 0;
-i = i + Math.imul(A, he) | 0;
-n = (n = n + Math.imul(A, de) | 0) + Math.imul(R, he) | 0;
+n = (n = n + Math.imul(I, ce) | 0) + Math.imul(B, fe) | 0;
+s = s + Math.imul(B, ce) | 0;
+i = i + Math.imul(k, he) | 0;
+n = (n = n + Math.imul(k, de) | 0) + Math.imul(R, he) | 0;
 s = s + Math.imul(R, de) | 0;
-var Ie = (c + (i = i + Math.imul(M, pe) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(M, be) | 0) + Math.imul(E, pe) | 0)) << 13) | 0;
-c = ((s = s + Math.imul(E, be) | 0) + (n >>> 13) | 0) + (Ie >>> 26) | 0;
+var Ie = (c + (i = i + Math.imul(E, pe) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(E, be) | 0) + Math.imul(M, pe) | 0)) << 13) | 0;
+c = ((s = s + Math.imul(M, be) | 0) + (n >>> 13) | 0) + (Ie >>> 26) | 0;
 Ie &= 67108863;
 i = Math.imul(D, re);
 n = (n = Math.imul(D, ie)) + Math.imul(U, re) | 0;
 s = Math.imul(U, ie);
-i = i + Math.imul(L, se) | 0;
-n = (n = n + Math.imul(L, oe) | 0) + Math.imul(C, se) | 0;
-s = s + Math.imul(C, oe) | 0;
-i = i + Math.imul(B, fe) | 0;
-n = (n = n + Math.imul(B, ce) | 0) + Math.imul(P, fe) | 0;
-s = s + Math.imul(P, ce) | 0;
+i = i + Math.imul(C, se) | 0;
+n = (n = n + Math.imul(C, oe) | 0) + Math.imul(L, se) | 0;
+s = s + Math.imul(L, oe) | 0;
+i = i + Math.imul(j, fe) | 0;
+n = (n = n + Math.imul(j, ce) | 0) + Math.imul(N, fe) | 0;
+s = s + Math.imul(N, ce) | 0;
 i = i + Math.imul(I, he) | 0;
-n = (n = n + Math.imul(I, de) | 0) + Math.imul(T, he) | 0;
-s = s + Math.imul(T, de) | 0;
-var Te = (c + (i = i + Math.imul(A, pe) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(A, be) | 0) + Math.imul(R, pe) | 0)) << 13) | 0;
-c = ((s = s + Math.imul(R, be) | 0) + (n >>> 13) | 0) + (Te >>> 26) | 0;
-Te &= 67108863;
+n = (n = n + Math.imul(I, de) | 0) + Math.imul(B, he) | 0;
+s = s + Math.imul(B, de) | 0;
+var Be = (c + (i = i + Math.imul(k, pe) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(k, be) | 0) + Math.imul(R, pe) | 0)) << 13) | 0;
+c = ((s = s + Math.imul(R, be) | 0) + (n >>> 13) | 0) + (Be >>> 26) | 0;
+Be &= 67108863;
 i = Math.imul(D, se);
 n = (n = Math.imul(D, oe)) + Math.imul(U, se) | 0;
 s = Math.imul(U, oe);
-i = i + Math.imul(L, fe) | 0;
-n = (n = n + Math.imul(L, ce) | 0) + Math.imul(C, fe) | 0;
-s = s + Math.imul(C, ce) | 0;
-i = i + Math.imul(B, he) | 0;
-n = (n = n + Math.imul(B, de) | 0) + Math.imul(P, he) | 0;
-s = s + Math.imul(P, de) | 0;
-var je = (c + (i = i + Math.imul(I, pe) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(I, be) | 0) + Math.imul(T, pe) | 0)) << 13) | 0;
-c = ((s = s + Math.imul(T, be) | 0) + (n >>> 13) | 0) + (je >>> 26) | 0;
-je &= 67108863;
+i = i + Math.imul(C, fe) | 0;
+n = (n = n + Math.imul(C, ce) | 0) + Math.imul(L, fe) | 0;
+s = s + Math.imul(L, ce) | 0;
+i = i + Math.imul(j, he) | 0;
+n = (n = n + Math.imul(j, de) | 0) + Math.imul(N, he) | 0;
+s = s + Math.imul(N, de) | 0;
+var Te = (c + (i = i + Math.imul(I, pe) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(I, be) | 0) + Math.imul(B, pe) | 0)) << 13) | 0;
+c = ((s = s + Math.imul(B, be) | 0) + (n >>> 13) | 0) + (Te >>> 26) | 0;
+Te &= 67108863;
 i = Math.imul(D, fe);
 n = (n = Math.imul(D, ce)) + Math.imul(U, fe) | 0;
 s = Math.imul(U, ce);
-i = i + Math.imul(L, he) | 0;
-n = (n = n + Math.imul(L, de) | 0) + Math.imul(C, he) | 0;
-s = s + Math.imul(C, de) | 0;
-var Be = (c + (i = i + Math.imul(B, pe) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(B, be) | 0) + Math.imul(P, pe) | 0)) << 13) | 0;
-c = ((s = s + Math.imul(P, be) | 0) + (n >>> 13) | 0) + (Be >>> 26) | 0;
-Be &= 67108863;
+i = i + Math.imul(C, he) | 0;
+n = (n = n + Math.imul(C, de) | 0) + Math.imul(L, he) | 0;
+s = s + Math.imul(L, de) | 0;
+var je = (c + (i = i + Math.imul(j, pe) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(j, be) | 0) + Math.imul(N, pe) | 0)) << 13) | 0;
+c = ((s = s + Math.imul(N, be) | 0) + (n >>> 13) | 0) + (je >>> 26) | 0;
+je &= 67108863;
 i = Math.imul(D, he);
 n = (n = Math.imul(D, de)) + Math.imul(U, he) | 0;
 s = Math.imul(U, de);
-var Pe = (c + (i = i + Math.imul(L, pe) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(L, be) | 0) + Math.imul(C, pe) | 0)) << 13) | 0;
-c = ((s = s + Math.imul(C, be) | 0) + (n >>> 13) | 0) + (Pe >>> 26) | 0;
-Pe &= 67108863;
-var Ne = (c + (i = Math.imul(D, pe)) | 0) + ((8191 & (n = (n = Math.imul(D, be)) + Math.imul(U, pe) | 0)) << 13) | 0;
-c = ((s = Math.imul(U, be)) + (n >>> 13) | 0) + (Ne >>> 26) | 0;
+var Ne = (c + (i = i + Math.imul(C, pe) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(C, be) | 0) + Math.imul(L, pe) | 0)) << 13) | 0;
+c = ((s = s + Math.imul(L, be) | 0) + (n >>> 13) | 0) + (Ne >>> 26) | 0;
 Ne &= 67108863;
+var Pe = (c + (i = Math.imul(D, pe)) | 0) + ((8191 & (n = (n = Math.imul(D, be)) + Math.imul(U, pe) | 0)) << 13) | 0;
+c = ((s = Math.imul(U, be)) + (n >>> 13) | 0) + (Pe >>> 26) | 0;
+Pe &= 67108863;
 f[0] = me;
 f[1] = ge;
 f[2] = ye;
@@ -1945,18 +1945,18 @@ f[3] = ve;
 f[4] = we;
 f[5] = _e;
 f[6] = Se;
-f[7] = Me;
-f[8] = Ee;
-f[9] = ke;
-f[10] = Ae;
+f[7] = Ee;
+f[8] = Me;
+f[9] = Ae;
+f[10] = ke;
 f[11] = Re;
 f[12] = xe;
 f[13] = Ie;
-f[14] = Te;
-f[15] = je;
-f[16] = Be;
-f[17] = Pe;
-f[18] = Ne;
+f[14] = Be;
+f[15] = Te;
+f[16] = je;
+f[17] = Ne;
+f[18] = Pe;
 if (0 !== c) {
 f[19] = c;
 r.length++;
@@ -2636,7 +2636,7 @@ s.prototype.eq = function(e) {
 return 0 === this.cmp(e);
 };
 s.red = function(e) {
-return new k(e);
+return new A(e);
 };
 s.prototype.toRed = function(e) {
 i(!this.red, "Already a number in reduction context");
@@ -2795,15 +2795,15 @@ function S() {
 w.call(this, "p224", "ffffffff ffffffff ffffffff ffffffff 00000000 00000000 00000001");
 }
 n(S, w);
-function M() {
+function E() {
 w.call(this, "p192", "ffffffff ffffffff ffffffff fffffffe ffffffff ffffffff");
 }
-n(M, w);
-function E() {
+n(E, w);
+function M() {
 w.call(this, "25519", "7fffffffffffffff ffffffffffffffff ffffffffffffffff ffffffffffffffed");
 }
-n(E, w);
-E.prototype.imulK = function(e) {
+n(M, w);
+M.prototype.imulK = function(e) {
 for (var t = 0, r = 0; r < e.length; r++) {
 var i = 19 * (0 | e.words[r]) + t, n = 67108863 & i;
 i >>>= 26;
@@ -2816,14 +2816,14 @@ return e;
 s._prime = function(e) {
 if (v[e]) return v[e];
 var t;
-if ("k256" === e) t = new _(); else if ("p224" === e) t = new S(); else if ("p192" === e) t = new M(); else {
+if ("k256" === e) t = new _(); else if ("p224" === e) t = new S(); else if ("p192" === e) t = new E(); else {
 if ("p25519" !== e) throw new Error("Unknown prime " + e);
-t = new E();
+t = new M();
 }
 v[e] = t;
 return t;
 };
-function k(e) {
+function A(e) {
 if ("string" == typeof e) {
 var t = s._prime(e);
 this.m = t.p;
@@ -2834,63 +2834,63 @@ this.m = e;
 this.prime = null;
 }
 }
-k.prototype._verify1 = function(e) {
+A.prototype._verify1 = function(e) {
 i(0 === e.negative, "red works only with positives");
 i(e.red, "red works only with red numbers");
 };
-k.prototype._verify2 = function(e, t) {
+A.prototype._verify2 = function(e, t) {
 i(0 == (e.negative | t.negative), "red works only with positives");
 i(e.red && e.red === t.red, "red works only with red numbers");
 };
-k.prototype.imod = function(e) {
+A.prototype.imod = function(e) {
 return this.prime ? this.prime.ireduce(e)._forceRed(this) : e.umod(this.m)._forceRed(this);
 };
-k.prototype.neg = function(e) {
+A.prototype.neg = function(e) {
 return e.isZero() ? e.clone() : this.m.sub(e)._forceRed(this);
 };
-k.prototype.add = function(e, t) {
+A.prototype.add = function(e, t) {
 this._verify2(e, t);
 var r = e.add(t);
 r.cmp(this.m) >= 0 && r.isub(this.m);
 return r._forceRed(this);
 };
-k.prototype.iadd = function(e, t) {
+A.prototype.iadd = function(e, t) {
 this._verify2(e, t);
 var r = e.iadd(t);
 r.cmp(this.m) >= 0 && r.isub(this.m);
 return r;
 };
-k.prototype.sub = function(e, t) {
+A.prototype.sub = function(e, t) {
 this._verify2(e, t);
 var r = e.sub(t);
 r.cmpn(0) < 0 && r.iadd(this.m);
 return r._forceRed(this);
 };
-k.prototype.isub = function(e, t) {
+A.prototype.isub = function(e, t) {
 this._verify2(e, t);
 var r = e.isub(t);
 r.cmpn(0) < 0 && r.iadd(this.m);
 return r;
 };
-k.prototype.shl = function(e, t) {
+A.prototype.shl = function(e, t) {
 this._verify1(e);
 return this.imod(e.ushln(t));
 };
-k.prototype.imul = function(e, t) {
+A.prototype.imul = function(e, t) {
 this._verify2(e, t);
 return this.imod(e.imul(t));
 };
-k.prototype.mul = function(e, t) {
+A.prototype.mul = function(e, t) {
 this._verify2(e, t);
 return this.imod(e.mul(t));
 };
-k.prototype.isqr = function(e) {
+A.prototype.isqr = function(e) {
 return this.imul(e, e.clone());
 };
-k.prototype.sqr = function(e) {
+A.prototype.sqr = function(e) {
 return this.mul(e, e);
 };
-k.prototype.sqrt = function(e) {
+A.prototype.sqrt = function(e) {
 if (e.isZero()) return e.clone();
 var t = this.m.andln(3);
 i(t % 2 == 1);
@@ -2917,7 +2917,7 @@ p = m;
 }
 return d;
 };
-k.prototype.invm = function(e) {
+A.prototype.invm = function(e) {
 var t = e._invmp(this.m);
 if (0 !== t.negative) {
 t.negative = 0;
@@ -2925,7 +2925,7 @@ return this.imod(t).redNeg();
 }
 return this.imod(t);
 };
-k.prototype.pow = function(e, t) {
+A.prototype.pow = function(e, t) {
 if (t.isZero()) return new s(1).toRed(this);
 if (0 === t.cmpn(1)) return e.clone();
 var r = new Array(16);
@@ -2952,20 +2952,20 @@ f = 26;
 }
 return n;
 };
-k.prototype.convertTo = function(e) {
+A.prototype.convertTo = function(e) {
 var t = e.umod(this.m);
 return t === e ? t.clone() : t;
 };
-k.prototype.convertFrom = function(e) {
+A.prototype.convertFrom = function(e) {
 var t = e.clone();
 t.red = null;
 return t;
 };
 s.mont = function(e) {
-return new A(e);
+return new k(e);
 };
-function A(e) {
-k.call(this, e);
+function k(e) {
+A.call(this, e);
 this.shift = this.m.bitLength();
 this.shift % 26 != 0 && (this.shift += 26 - this.shift % 26);
 this.r = new s(1).iushln(this.shift);
@@ -2975,16 +2975,16 @@ this.minv = this.rinv.mul(this.r).isubn(1).div(this.m);
 this.minv = this.minv.umod(this.r);
 this.minv = this.r.sub(this.minv);
 }
-n(A, k);
-A.prototype.convertTo = function(e) {
+n(k, A);
+k.prototype.convertTo = function(e) {
 return this.imod(e.ushln(this.shift));
 };
-A.prototype.convertFrom = function(e) {
+k.prototype.convertFrom = function(e) {
 var t = this.imod(e.mul(this.rinv));
 t.red = null;
 return t;
 };
-A.prototype.imul = function(e, t) {
+k.prototype.imul = function(e, t) {
 if (e.isZero() || t.isZero()) {
 e.words[0] = 0;
 e.length = 1;
@@ -2994,13 +2994,13 @@ var r = e.imul(t), i = r.maskn(this.shift).mul(this.minv).imaskn(this.shift).mul
 n.cmp(this.m) >= 0 ? s = n.isub(this.m) : n.cmpn(0) < 0 && (s = n.iadd(this.m));
 return s._forceRed(this);
 };
-A.prototype.mul = function(e, t) {
+k.prototype.mul = function(e, t) {
 if (e.isZero() || t.isZero()) return new s(0)._forceRed(this);
 var r = e.mul(t), i = r.maskn(this.shift).mul(this.minv).imaskn(this.shift).mul(this.m), n = r.isub(i).iushrn(this.shift), o = n;
 n.cmp(this.m) >= 0 ? o = n.isub(this.m) : n.cmpn(0) < 0 && (o = n.iadd(this.m));
 return o._forceRed(this);
 };
-A.prototype.invm = function(e) {
+k.prototype.invm = function(e) {
 return this.imod(e._invmp(this.m).mul(this.r2))._forceRed(this);
 };
 })("undefined" == typeof t || t, this);
@@ -3656,84 +3656,84 @@ f = 0 | u;
 return r._strip();
 }
 var y = function(e, t, r) {
-var i, n, s, o = e.words, a = t.words, f = r.words, c = 0, u = 0 | o[0], h = 8191 & u, d = u >>> 13, l = 0 | o[1], p = 8191 & l, b = l >>> 13, m = 0 | o[2], g = 8191 & m, y = m >>> 13, v = 0 | o[3], w = 8191 & v, _ = v >>> 13, S = 0 | o[4], M = 8191 & S, E = S >>> 13, k = 0 | o[5], A = 8191 & k, R = k >>> 13, x = 0 | o[6], I = 8191 & x, T = x >>> 13, j = 0 | o[7], B = 8191 & j, P = j >>> 13, N = 0 | o[8], L = 8191 & N, C = N >>> 13, O = 0 | o[9], D = 8191 & O, U = O >>> 13, q = 0 | a[0], z = 8191 & q, $ = q >>> 13, F = 0 | a[1], K = 8191 & F, H = F >>> 13, W = 0 | a[2], G = 8191 & W, V = W >>> 13, X = 0 | a[3], Y = 8191 & X, Z = X >>> 13, J = 0 | a[4], Q = 8191 & J, ee = J >>> 13, te = 0 | a[5], re = 8191 & te, ie = te >>> 13, ne = 0 | a[6], se = 8191 & ne, oe = ne >>> 13, ae = 0 | a[7], fe = 8191 & ae, ce = ae >>> 13, ue = 0 | a[8], he = 8191 & ue, de = ue >>> 13, le = 0 | a[9], pe = 8191 & le, be = le >>> 13;
+var i, n, s, o = e.words, a = t.words, f = r.words, c = 0, u = 0 | o[0], h = 8191 & u, d = u >>> 13, l = 0 | o[1], p = 8191 & l, b = l >>> 13, m = 0 | o[2], g = 8191 & m, y = m >>> 13, v = 0 | o[3], w = 8191 & v, _ = v >>> 13, S = 0 | o[4], E = 8191 & S, M = S >>> 13, A = 0 | o[5], k = 8191 & A, R = A >>> 13, x = 0 | o[6], I = 8191 & x, B = x >>> 13, T = 0 | o[7], j = 8191 & T, N = T >>> 13, P = 0 | o[8], C = 8191 & P, L = P >>> 13, O = 0 | o[9], D = 8191 & O, U = O >>> 13, q = 0 | a[0], F = 8191 & q, z = q >>> 13, $ = 0 | a[1], K = 8191 & $, H = $ >>> 13, V = 0 | a[2], W = 8191 & V, G = V >>> 13, X = 0 | a[3], Y = 8191 & X, J = X >>> 13, Z = 0 | a[4], Q = 8191 & Z, ee = Z >>> 13, te = 0 | a[5], re = 8191 & te, ie = te >>> 13, ne = 0 | a[6], se = 8191 & ne, oe = ne >>> 13, ae = 0 | a[7], fe = 8191 & ae, ce = ae >>> 13, ue = 0 | a[8], he = 8191 & ue, de = ue >>> 13, le = 0 | a[9], pe = 8191 & le, be = le >>> 13;
 r.negative = e.negative ^ t.negative;
 r.length = 19;
-var me = (c + (i = Math.imul(h, z)) | 0) + ((8191 & (n = (n = Math.imul(h, $)) + Math.imul(d, z) | 0)) << 13) | 0;
-c = ((s = Math.imul(d, $)) + (n >>> 13) | 0) + (me >>> 26) | 0;
+var me = (c + (i = Math.imul(h, F)) | 0) + ((8191 & (n = (n = Math.imul(h, z)) + Math.imul(d, F) | 0)) << 13) | 0;
+c = ((s = Math.imul(d, z)) + (n >>> 13) | 0) + (me >>> 26) | 0;
 me &= 67108863;
-i = Math.imul(p, z);
-n = (n = Math.imul(p, $)) + Math.imul(b, z) | 0;
-s = Math.imul(b, $);
+i = Math.imul(p, F);
+n = (n = Math.imul(p, z)) + Math.imul(b, F) | 0;
+s = Math.imul(b, z);
 var ge = (c + (i = i + Math.imul(h, K) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(h, H) | 0) + Math.imul(d, K) | 0)) << 13) | 0;
 c = ((s = s + Math.imul(d, H) | 0) + (n >>> 13) | 0) + (ge >>> 26) | 0;
 ge &= 67108863;
-i = Math.imul(g, z);
-n = (n = Math.imul(g, $)) + Math.imul(y, z) | 0;
-s = Math.imul(y, $);
+i = Math.imul(g, F);
+n = (n = Math.imul(g, z)) + Math.imul(y, F) | 0;
+s = Math.imul(y, z);
 i = i + Math.imul(p, K) | 0;
 n = (n = n + Math.imul(p, H) | 0) + Math.imul(b, K) | 0;
 s = s + Math.imul(b, H) | 0;
-var ye = (c + (i = i + Math.imul(h, G) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(h, V) | 0) + Math.imul(d, G) | 0)) << 13) | 0;
-c = ((s = s + Math.imul(d, V) | 0) + (n >>> 13) | 0) + (ye >>> 26) | 0;
+var ye = (c + (i = i + Math.imul(h, W) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(h, G) | 0) + Math.imul(d, W) | 0)) << 13) | 0;
+c = ((s = s + Math.imul(d, G) | 0) + (n >>> 13) | 0) + (ye >>> 26) | 0;
 ye &= 67108863;
-i = Math.imul(w, z);
-n = (n = Math.imul(w, $)) + Math.imul(_, z) | 0;
-s = Math.imul(_, $);
+i = Math.imul(w, F);
+n = (n = Math.imul(w, z)) + Math.imul(_, F) | 0;
+s = Math.imul(_, z);
 i = i + Math.imul(g, K) | 0;
 n = (n = n + Math.imul(g, H) | 0) + Math.imul(y, K) | 0;
 s = s + Math.imul(y, H) | 0;
-i = i + Math.imul(p, G) | 0;
-n = (n = n + Math.imul(p, V) | 0) + Math.imul(b, G) | 0;
-s = s + Math.imul(b, V) | 0;
-var ve = (c + (i = i + Math.imul(h, Y) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(h, Z) | 0) + Math.imul(d, Y) | 0)) << 13) | 0;
-c = ((s = s + Math.imul(d, Z) | 0) + (n >>> 13) | 0) + (ve >>> 26) | 0;
+i = i + Math.imul(p, W) | 0;
+n = (n = n + Math.imul(p, G) | 0) + Math.imul(b, W) | 0;
+s = s + Math.imul(b, G) | 0;
+var ve = (c + (i = i + Math.imul(h, Y) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(h, J) | 0) + Math.imul(d, Y) | 0)) << 13) | 0;
+c = ((s = s + Math.imul(d, J) | 0) + (n >>> 13) | 0) + (ve >>> 26) | 0;
 ve &= 67108863;
-i = Math.imul(M, z);
-n = (n = Math.imul(M, $)) + Math.imul(E, z) | 0;
-s = Math.imul(E, $);
+i = Math.imul(E, F);
+n = (n = Math.imul(E, z)) + Math.imul(M, F) | 0;
+s = Math.imul(M, z);
 i = i + Math.imul(w, K) | 0;
 n = (n = n + Math.imul(w, H) | 0) + Math.imul(_, K) | 0;
 s = s + Math.imul(_, H) | 0;
-i = i + Math.imul(g, G) | 0;
-n = (n = n + Math.imul(g, V) | 0) + Math.imul(y, G) | 0;
-s = s + Math.imul(y, V) | 0;
+i = i + Math.imul(g, W) | 0;
+n = (n = n + Math.imul(g, G) | 0) + Math.imul(y, W) | 0;
+s = s + Math.imul(y, G) | 0;
 i = i + Math.imul(p, Y) | 0;
-n = (n = n + Math.imul(p, Z) | 0) + Math.imul(b, Y) | 0;
-s = s + Math.imul(b, Z) | 0;
+n = (n = n + Math.imul(p, J) | 0) + Math.imul(b, Y) | 0;
+s = s + Math.imul(b, J) | 0;
 var we = (c + (i = i + Math.imul(h, Q) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(h, ee) | 0) + Math.imul(d, Q) | 0)) << 13) | 0;
 c = ((s = s + Math.imul(d, ee) | 0) + (n >>> 13) | 0) + (we >>> 26) | 0;
 we &= 67108863;
-i = Math.imul(A, z);
-n = (n = Math.imul(A, $)) + Math.imul(R, z) | 0;
-s = Math.imul(R, $);
-i = i + Math.imul(M, K) | 0;
-n = (n = n + Math.imul(M, H) | 0) + Math.imul(E, K) | 0;
-s = s + Math.imul(E, H) | 0;
-i = i + Math.imul(w, G) | 0;
-n = (n = n + Math.imul(w, V) | 0) + Math.imul(_, G) | 0;
-s = s + Math.imul(_, V) | 0;
+i = Math.imul(k, F);
+n = (n = Math.imul(k, z)) + Math.imul(R, F) | 0;
+s = Math.imul(R, z);
+i = i + Math.imul(E, K) | 0;
+n = (n = n + Math.imul(E, H) | 0) + Math.imul(M, K) | 0;
+s = s + Math.imul(M, H) | 0;
+i = i + Math.imul(w, W) | 0;
+n = (n = n + Math.imul(w, G) | 0) + Math.imul(_, W) | 0;
+s = s + Math.imul(_, G) | 0;
 i = i + Math.imul(g, Y) | 0;
-n = (n = n + Math.imul(g, Z) | 0) + Math.imul(y, Y) | 0;
-s = s + Math.imul(y, Z) | 0;
+n = (n = n + Math.imul(g, J) | 0) + Math.imul(y, Y) | 0;
+s = s + Math.imul(y, J) | 0;
 i = i + Math.imul(p, Q) | 0;
 n = (n = n + Math.imul(p, ee) | 0) + Math.imul(b, Q) | 0;
 s = s + Math.imul(b, ee) | 0;
 var _e = (c + (i = i + Math.imul(h, re) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(h, ie) | 0) + Math.imul(d, re) | 0)) << 13) | 0;
 c = ((s = s + Math.imul(d, ie) | 0) + (n >>> 13) | 0) + (_e >>> 26) | 0;
 _e &= 67108863;
-i = Math.imul(I, z);
-n = (n = Math.imul(I, $)) + Math.imul(T, z) | 0;
-s = Math.imul(T, $);
-i = i + Math.imul(A, K) | 0;
-n = (n = n + Math.imul(A, H) | 0) + Math.imul(R, K) | 0;
+i = Math.imul(I, F);
+n = (n = Math.imul(I, z)) + Math.imul(B, F) | 0;
+s = Math.imul(B, z);
+i = i + Math.imul(k, K) | 0;
+n = (n = n + Math.imul(k, H) | 0) + Math.imul(R, K) | 0;
 s = s + Math.imul(R, H) | 0;
-i = i + Math.imul(M, G) | 0;
-n = (n = n + Math.imul(M, V) | 0) + Math.imul(E, G) | 0;
-s = s + Math.imul(E, V) | 0;
+i = i + Math.imul(E, W) | 0;
+n = (n = n + Math.imul(E, G) | 0) + Math.imul(M, W) | 0;
+s = s + Math.imul(M, G) | 0;
 i = i + Math.imul(w, Y) | 0;
-n = (n = n + Math.imul(w, Z) | 0) + Math.imul(_, Y) | 0;
-s = s + Math.imul(_, Z) | 0;
+n = (n = n + Math.imul(w, J) | 0) + Math.imul(_, Y) | 0;
+s = s + Math.imul(_, J) | 0;
 i = i + Math.imul(g, Q) | 0;
 n = (n = n + Math.imul(g, ee) | 0) + Math.imul(y, Q) | 0;
 s = s + Math.imul(y, ee) | 0;
@@ -3743,18 +3743,18 @@ s = s + Math.imul(b, ie) | 0;
 var Se = (c + (i = i + Math.imul(h, se) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(h, oe) | 0) + Math.imul(d, se) | 0)) << 13) | 0;
 c = ((s = s + Math.imul(d, oe) | 0) + (n >>> 13) | 0) + (Se >>> 26) | 0;
 Se &= 67108863;
-i = Math.imul(B, z);
-n = (n = Math.imul(B, $)) + Math.imul(P, z) | 0;
-s = Math.imul(P, $);
+i = Math.imul(j, F);
+n = (n = Math.imul(j, z)) + Math.imul(N, F) | 0;
+s = Math.imul(N, z);
 i = i + Math.imul(I, K) | 0;
-n = (n = n + Math.imul(I, H) | 0) + Math.imul(T, K) | 0;
-s = s + Math.imul(T, H) | 0;
-i = i + Math.imul(A, G) | 0;
-n = (n = n + Math.imul(A, V) | 0) + Math.imul(R, G) | 0;
-s = s + Math.imul(R, V) | 0;
-i = i + Math.imul(M, Y) | 0;
-n = (n = n + Math.imul(M, Z) | 0) + Math.imul(E, Y) | 0;
-s = s + Math.imul(E, Z) | 0;
+n = (n = n + Math.imul(I, H) | 0) + Math.imul(B, K) | 0;
+s = s + Math.imul(B, H) | 0;
+i = i + Math.imul(k, W) | 0;
+n = (n = n + Math.imul(k, G) | 0) + Math.imul(R, W) | 0;
+s = s + Math.imul(R, G) | 0;
+i = i + Math.imul(E, Y) | 0;
+n = (n = n + Math.imul(E, J) | 0) + Math.imul(M, Y) | 0;
+s = s + Math.imul(M, J) | 0;
 i = i + Math.imul(w, Q) | 0;
 n = (n = n + Math.imul(w, ee) | 0) + Math.imul(_, Q) | 0;
 s = s + Math.imul(_, ee) | 0;
@@ -3764,24 +3764,24 @@ s = s + Math.imul(y, ie) | 0;
 i = i + Math.imul(p, se) | 0;
 n = (n = n + Math.imul(p, oe) | 0) + Math.imul(b, se) | 0;
 s = s + Math.imul(b, oe) | 0;
-var Me = (c + (i = i + Math.imul(h, fe) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(h, ce) | 0) + Math.imul(d, fe) | 0)) << 13) | 0;
-c = ((s = s + Math.imul(d, ce) | 0) + (n >>> 13) | 0) + (Me >>> 26) | 0;
-Me &= 67108863;
-i = Math.imul(L, z);
-n = (n = Math.imul(L, $)) + Math.imul(C, z) | 0;
-s = Math.imul(C, $);
-i = i + Math.imul(B, K) | 0;
-n = (n = n + Math.imul(B, H) | 0) + Math.imul(P, K) | 0;
-s = s + Math.imul(P, H) | 0;
-i = i + Math.imul(I, G) | 0;
-n = (n = n + Math.imul(I, V) | 0) + Math.imul(T, G) | 0;
-s = s + Math.imul(T, V) | 0;
-i = i + Math.imul(A, Y) | 0;
-n = (n = n + Math.imul(A, Z) | 0) + Math.imul(R, Y) | 0;
-s = s + Math.imul(R, Z) | 0;
-i = i + Math.imul(M, Q) | 0;
-n = (n = n + Math.imul(M, ee) | 0) + Math.imul(E, Q) | 0;
-s = s + Math.imul(E, ee) | 0;
+var Ee = (c + (i = i + Math.imul(h, fe) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(h, ce) | 0) + Math.imul(d, fe) | 0)) << 13) | 0;
+c = ((s = s + Math.imul(d, ce) | 0) + (n >>> 13) | 0) + (Ee >>> 26) | 0;
+Ee &= 67108863;
+i = Math.imul(C, F);
+n = (n = Math.imul(C, z)) + Math.imul(L, F) | 0;
+s = Math.imul(L, z);
+i = i + Math.imul(j, K) | 0;
+n = (n = n + Math.imul(j, H) | 0) + Math.imul(N, K) | 0;
+s = s + Math.imul(N, H) | 0;
+i = i + Math.imul(I, W) | 0;
+n = (n = n + Math.imul(I, G) | 0) + Math.imul(B, W) | 0;
+s = s + Math.imul(B, G) | 0;
+i = i + Math.imul(k, Y) | 0;
+n = (n = n + Math.imul(k, J) | 0) + Math.imul(R, Y) | 0;
+s = s + Math.imul(R, J) | 0;
+i = i + Math.imul(E, Q) | 0;
+n = (n = n + Math.imul(E, ee) | 0) + Math.imul(M, Q) | 0;
+s = s + Math.imul(M, ee) | 0;
 i = i + Math.imul(w, re) | 0;
 n = (n = n + Math.imul(w, ie) | 0) + Math.imul(_, re) | 0;
 s = s + Math.imul(_, ie) | 0;
@@ -3791,27 +3791,27 @@ s = s + Math.imul(y, oe) | 0;
 i = i + Math.imul(p, fe) | 0;
 n = (n = n + Math.imul(p, ce) | 0) + Math.imul(b, fe) | 0;
 s = s + Math.imul(b, ce) | 0;
-var Ee = (c + (i = i + Math.imul(h, he) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(h, de) | 0) + Math.imul(d, he) | 0)) << 13) | 0;
-c = ((s = s + Math.imul(d, de) | 0) + (n >>> 13) | 0) + (Ee >>> 26) | 0;
-Ee &= 67108863;
-i = Math.imul(D, z);
-n = (n = Math.imul(D, $)) + Math.imul(U, z) | 0;
-s = Math.imul(U, $);
-i = i + Math.imul(L, K) | 0;
-n = (n = n + Math.imul(L, H) | 0) + Math.imul(C, K) | 0;
-s = s + Math.imul(C, H) | 0;
-i = i + Math.imul(B, G) | 0;
-n = (n = n + Math.imul(B, V) | 0) + Math.imul(P, G) | 0;
-s = s + Math.imul(P, V) | 0;
+var Me = (c + (i = i + Math.imul(h, he) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(h, de) | 0) + Math.imul(d, he) | 0)) << 13) | 0;
+c = ((s = s + Math.imul(d, de) | 0) + (n >>> 13) | 0) + (Me >>> 26) | 0;
+Me &= 67108863;
+i = Math.imul(D, F);
+n = (n = Math.imul(D, z)) + Math.imul(U, F) | 0;
+s = Math.imul(U, z);
+i = i + Math.imul(C, K) | 0;
+n = (n = n + Math.imul(C, H) | 0) + Math.imul(L, K) | 0;
+s = s + Math.imul(L, H) | 0;
+i = i + Math.imul(j, W) | 0;
+n = (n = n + Math.imul(j, G) | 0) + Math.imul(N, W) | 0;
+s = s + Math.imul(N, G) | 0;
 i = i + Math.imul(I, Y) | 0;
-n = (n = n + Math.imul(I, Z) | 0) + Math.imul(T, Y) | 0;
-s = s + Math.imul(T, Z) | 0;
-i = i + Math.imul(A, Q) | 0;
-n = (n = n + Math.imul(A, ee) | 0) + Math.imul(R, Q) | 0;
+n = (n = n + Math.imul(I, J) | 0) + Math.imul(B, Y) | 0;
+s = s + Math.imul(B, J) | 0;
+i = i + Math.imul(k, Q) | 0;
+n = (n = n + Math.imul(k, ee) | 0) + Math.imul(R, Q) | 0;
 s = s + Math.imul(R, ee) | 0;
-i = i + Math.imul(M, re) | 0;
-n = (n = n + Math.imul(M, ie) | 0) + Math.imul(E, re) | 0;
-s = s + Math.imul(E, ie) | 0;
+i = i + Math.imul(E, re) | 0;
+n = (n = n + Math.imul(E, ie) | 0) + Math.imul(M, re) | 0;
+s = s + Math.imul(M, ie) | 0;
 i = i + Math.imul(w, se) | 0;
 n = (n = n + Math.imul(w, oe) | 0) + Math.imul(_, se) | 0;
 s = s + Math.imul(_, oe) | 0;
@@ -3821,54 +3821,54 @@ s = s + Math.imul(y, ce) | 0;
 i = i + Math.imul(p, he) | 0;
 n = (n = n + Math.imul(p, de) | 0) + Math.imul(b, he) | 0;
 s = s + Math.imul(b, de) | 0;
-var ke = (c + (i = i + Math.imul(h, pe) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(h, be) | 0) + Math.imul(d, pe) | 0)) << 13) | 0;
-c = ((s = s + Math.imul(d, be) | 0) + (n >>> 13) | 0) + (ke >>> 26) | 0;
-ke &= 67108863;
+var Ae = (c + (i = i + Math.imul(h, pe) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(h, be) | 0) + Math.imul(d, pe) | 0)) << 13) | 0;
+c = ((s = s + Math.imul(d, be) | 0) + (n >>> 13) | 0) + (Ae >>> 26) | 0;
+Ae &= 67108863;
 i = Math.imul(D, K);
 n = (n = Math.imul(D, H)) + Math.imul(U, K) | 0;
 s = Math.imul(U, H);
-i = i + Math.imul(L, G) | 0;
-n = (n = n + Math.imul(L, V) | 0) + Math.imul(C, G) | 0;
-s = s + Math.imul(C, V) | 0;
-i = i + Math.imul(B, Y) | 0;
-n = (n = n + Math.imul(B, Z) | 0) + Math.imul(P, Y) | 0;
-s = s + Math.imul(P, Z) | 0;
+i = i + Math.imul(C, W) | 0;
+n = (n = n + Math.imul(C, G) | 0) + Math.imul(L, W) | 0;
+s = s + Math.imul(L, G) | 0;
+i = i + Math.imul(j, Y) | 0;
+n = (n = n + Math.imul(j, J) | 0) + Math.imul(N, Y) | 0;
+s = s + Math.imul(N, J) | 0;
 i = i + Math.imul(I, Q) | 0;
-n = (n = n + Math.imul(I, ee) | 0) + Math.imul(T, Q) | 0;
-s = s + Math.imul(T, ee) | 0;
-i = i + Math.imul(A, re) | 0;
-n = (n = n + Math.imul(A, ie) | 0) + Math.imul(R, re) | 0;
+n = (n = n + Math.imul(I, ee) | 0) + Math.imul(B, Q) | 0;
+s = s + Math.imul(B, ee) | 0;
+i = i + Math.imul(k, re) | 0;
+n = (n = n + Math.imul(k, ie) | 0) + Math.imul(R, re) | 0;
 s = s + Math.imul(R, ie) | 0;
-i = i + Math.imul(M, se) | 0;
-n = (n = n + Math.imul(M, oe) | 0) + Math.imul(E, se) | 0;
-s = s + Math.imul(E, oe) | 0;
+i = i + Math.imul(E, se) | 0;
+n = (n = n + Math.imul(E, oe) | 0) + Math.imul(M, se) | 0;
+s = s + Math.imul(M, oe) | 0;
 i = i + Math.imul(w, fe) | 0;
 n = (n = n + Math.imul(w, ce) | 0) + Math.imul(_, fe) | 0;
 s = s + Math.imul(_, ce) | 0;
 i = i + Math.imul(g, he) | 0;
 n = (n = n + Math.imul(g, de) | 0) + Math.imul(y, he) | 0;
 s = s + Math.imul(y, de) | 0;
-var Ae = (c + (i = i + Math.imul(p, pe) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(p, be) | 0) + Math.imul(b, pe) | 0)) << 13) | 0;
-c = ((s = s + Math.imul(b, be) | 0) + (n >>> 13) | 0) + (Ae >>> 26) | 0;
-Ae &= 67108863;
-i = Math.imul(D, G);
-n = (n = Math.imul(D, V)) + Math.imul(U, G) | 0;
-s = Math.imul(U, V);
-i = i + Math.imul(L, Y) | 0;
-n = (n = n + Math.imul(L, Z) | 0) + Math.imul(C, Y) | 0;
-s = s + Math.imul(C, Z) | 0;
-i = i + Math.imul(B, Q) | 0;
-n = (n = n + Math.imul(B, ee) | 0) + Math.imul(P, Q) | 0;
-s = s + Math.imul(P, ee) | 0;
+var ke = (c + (i = i + Math.imul(p, pe) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(p, be) | 0) + Math.imul(b, pe) | 0)) << 13) | 0;
+c = ((s = s + Math.imul(b, be) | 0) + (n >>> 13) | 0) + (ke >>> 26) | 0;
+ke &= 67108863;
+i = Math.imul(D, W);
+n = (n = Math.imul(D, G)) + Math.imul(U, W) | 0;
+s = Math.imul(U, G);
+i = i + Math.imul(C, Y) | 0;
+n = (n = n + Math.imul(C, J) | 0) + Math.imul(L, Y) | 0;
+s = s + Math.imul(L, J) | 0;
+i = i + Math.imul(j, Q) | 0;
+n = (n = n + Math.imul(j, ee) | 0) + Math.imul(N, Q) | 0;
+s = s + Math.imul(N, ee) | 0;
 i = i + Math.imul(I, re) | 0;
-n = (n = n + Math.imul(I, ie) | 0) + Math.imul(T, re) | 0;
-s = s + Math.imul(T, ie) | 0;
-i = i + Math.imul(A, se) | 0;
-n = (n = n + Math.imul(A, oe) | 0) + Math.imul(R, se) | 0;
+n = (n = n + Math.imul(I, ie) | 0) + Math.imul(B, re) | 0;
+s = s + Math.imul(B, ie) | 0;
+i = i + Math.imul(k, se) | 0;
+n = (n = n + Math.imul(k, oe) | 0) + Math.imul(R, se) | 0;
 s = s + Math.imul(R, oe) | 0;
-i = i + Math.imul(M, fe) | 0;
-n = (n = n + Math.imul(M, ce) | 0) + Math.imul(E, fe) | 0;
-s = s + Math.imul(E, ce) | 0;
+i = i + Math.imul(E, fe) | 0;
+n = (n = n + Math.imul(E, ce) | 0) + Math.imul(M, fe) | 0;
+s = s + Math.imul(M, ce) | 0;
 i = i + Math.imul(w, he) | 0;
 n = (n = n + Math.imul(w, de) | 0) + Math.imul(_, he) | 0;
 s = s + Math.imul(_, de) | 0;
@@ -3876,89 +3876,89 @@ var Re = (c + (i = i + Math.imul(g, pe) | 0) | 0) + ((8191 & (n = (n = n + Math.
 c = ((s = s + Math.imul(y, be) | 0) + (n >>> 13) | 0) + (Re >>> 26) | 0;
 Re &= 67108863;
 i = Math.imul(D, Y);
-n = (n = Math.imul(D, Z)) + Math.imul(U, Y) | 0;
-s = Math.imul(U, Z);
-i = i + Math.imul(L, Q) | 0;
-n = (n = n + Math.imul(L, ee) | 0) + Math.imul(C, Q) | 0;
-s = s + Math.imul(C, ee) | 0;
-i = i + Math.imul(B, re) | 0;
-n = (n = n + Math.imul(B, ie) | 0) + Math.imul(P, re) | 0;
-s = s + Math.imul(P, ie) | 0;
+n = (n = Math.imul(D, J)) + Math.imul(U, Y) | 0;
+s = Math.imul(U, J);
+i = i + Math.imul(C, Q) | 0;
+n = (n = n + Math.imul(C, ee) | 0) + Math.imul(L, Q) | 0;
+s = s + Math.imul(L, ee) | 0;
+i = i + Math.imul(j, re) | 0;
+n = (n = n + Math.imul(j, ie) | 0) + Math.imul(N, re) | 0;
+s = s + Math.imul(N, ie) | 0;
 i = i + Math.imul(I, se) | 0;
-n = (n = n + Math.imul(I, oe) | 0) + Math.imul(T, se) | 0;
-s = s + Math.imul(T, oe) | 0;
-i = i + Math.imul(A, fe) | 0;
-n = (n = n + Math.imul(A, ce) | 0) + Math.imul(R, fe) | 0;
+n = (n = n + Math.imul(I, oe) | 0) + Math.imul(B, se) | 0;
+s = s + Math.imul(B, oe) | 0;
+i = i + Math.imul(k, fe) | 0;
+n = (n = n + Math.imul(k, ce) | 0) + Math.imul(R, fe) | 0;
 s = s + Math.imul(R, ce) | 0;
-i = i + Math.imul(M, he) | 0;
-n = (n = n + Math.imul(M, de) | 0) + Math.imul(E, he) | 0;
-s = s + Math.imul(E, de) | 0;
+i = i + Math.imul(E, he) | 0;
+n = (n = n + Math.imul(E, de) | 0) + Math.imul(M, he) | 0;
+s = s + Math.imul(M, de) | 0;
 var xe = (c + (i = i + Math.imul(w, pe) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(w, be) | 0) + Math.imul(_, pe) | 0)) << 13) | 0;
 c = ((s = s + Math.imul(_, be) | 0) + (n >>> 13) | 0) + (xe >>> 26) | 0;
 xe &= 67108863;
 i = Math.imul(D, Q);
 n = (n = Math.imul(D, ee)) + Math.imul(U, Q) | 0;
 s = Math.imul(U, ee);
-i = i + Math.imul(L, re) | 0;
-n = (n = n + Math.imul(L, ie) | 0) + Math.imul(C, re) | 0;
-s = s + Math.imul(C, ie) | 0;
-i = i + Math.imul(B, se) | 0;
-n = (n = n + Math.imul(B, oe) | 0) + Math.imul(P, se) | 0;
-s = s + Math.imul(P, oe) | 0;
+i = i + Math.imul(C, re) | 0;
+n = (n = n + Math.imul(C, ie) | 0) + Math.imul(L, re) | 0;
+s = s + Math.imul(L, ie) | 0;
+i = i + Math.imul(j, se) | 0;
+n = (n = n + Math.imul(j, oe) | 0) + Math.imul(N, se) | 0;
+s = s + Math.imul(N, oe) | 0;
 i = i + Math.imul(I, fe) | 0;
-n = (n = n + Math.imul(I, ce) | 0) + Math.imul(T, fe) | 0;
-s = s + Math.imul(T, ce) | 0;
-i = i + Math.imul(A, he) | 0;
-n = (n = n + Math.imul(A, de) | 0) + Math.imul(R, he) | 0;
+n = (n = n + Math.imul(I, ce) | 0) + Math.imul(B, fe) | 0;
+s = s + Math.imul(B, ce) | 0;
+i = i + Math.imul(k, he) | 0;
+n = (n = n + Math.imul(k, de) | 0) + Math.imul(R, he) | 0;
 s = s + Math.imul(R, de) | 0;
-var Ie = (c + (i = i + Math.imul(M, pe) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(M, be) | 0) + Math.imul(E, pe) | 0)) << 13) | 0;
-c = ((s = s + Math.imul(E, be) | 0) + (n >>> 13) | 0) + (Ie >>> 26) | 0;
+var Ie = (c + (i = i + Math.imul(E, pe) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(E, be) | 0) + Math.imul(M, pe) | 0)) << 13) | 0;
+c = ((s = s + Math.imul(M, be) | 0) + (n >>> 13) | 0) + (Ie >>> 26) | 0;
 Ie &= 67108863;
 i = Math.imul(D, re);
 n = (n = Math.imul(D, ie)) + Math.imul(U, re) | 0;
 s = Math.imul(U, ie);
-i = i + Math.imul(L, se) | 0;
-n = (n = n + Math.imul(L, oe) | 0) + Math.imul(C, se) | 0;
-s = s + Math.imul(C, oe) | 0;
-i = i + Math.imul(B, fe) | 0;
-n = (n = n + Math.imul(B, ce) | 0) + Math.imul(P, fe) | 0;
-s = s + Math.imul(P, ce) | 0;
+i = i + Math.imul(C, se) | 0;
+n = (n = n + Math.imul(C, oe) | 0) + Math.imul(L, se) | 0;
+s = s + Math.imul(L, oe) | 0;
+i = i + Math.imul(j, fe) | 0;
+n = (n = n + Math.imul(j, ce) | 0) + Math.imul(N, fe) | 0;
+s = s + Math.imul(N, ce) | 0;
 i = i + Math.imul(I, he) | 0;
-n = (n = n + Math.imul(I, de) | 0) + Math.imul(T, he) | 0;
-s = s + Math.imul(T, de) | 0;
-var Te = (c + (i = i + Math.imul(A, pe) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(A, be) | 0) + Math.imul(R, pe) | 0)) << 13) | 0;
-c = ((s = s + Math.imul(R, be) | 0) + (n >>> 13) | 0) + (Te >>> 26) | 0;
-Te &= 67108863;
+n = (n = n + Math.imul(I, de) | 0) + Math.imul(B, he) | 0;
+s = s + Math.imul(B, de) | 0;
+var Be = (c + (i = i + Math.imul(k, pe) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(k, be) | 0) + Math.imul(R, pe) | 0)) << 13) | 0;
+c = ((s = s + Math.imul(R, be) | 0) + (n >>> 13) | 0) + (Be >>> 26) | 0;
+Be &= 67108863;
 i = Math.imul(D, se);
 n = (n = Math.imul(D, oe)) + Math.imul(U, se) | 0;
 s = Math.imul(U, oe);
-i = i + Math.imul(L, fe) | 0;
-n = (n = n + Math.imul(L, ce) | 0) + Math.imul(C, fe) | 0;
-s = s + Math.imul(C, ce) | 0;
-i = i + Math.imul(B, he) | 0;
-n = (n = n + Math.imul(B, de) | 0) + Math.imul(P, he) | 0;
-s = s + Math.imul(P, de) | 0;
-var je = (c + (i = i + Math.imul(I, pe) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(I, be) | 0) + Math.imul(T, pe) | 0)) << 13) | 0;
-c = ((s = s + Math.imul(T, be) | 0) + (n >>> 13) | 0) + (je >>> 26) | 0;
-je &= 67108863;
+i = i + Math.imul(C, fe) | 0;
+n = (n = n + Math.imul(C, ce) | 0) + Math.imul(L, fe) | 0;
+s = s + Math.imul(L, ce) | 0;
+i = i + Math.imul(j, he) | 0;
+n = (n = n + Math.imul(j, de) | 0) + Math.imul(N, he) | 0;
+s = s + Math.imul(N, de) | 0;
+var Te = (c + (i = i + Math.imul(I, pe) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(I, be) | 0) + Math.imul(B, pe) | 0)) << 13) | 0;
+c = ((s = s + Math.imul(B, be) | 0) + (n >>> 13) | 0) + (Te >>> 26) | 0;
+Te &= 67108863;
 i = Math.imul(D, fe);
 n = (n = Math.imul(D, ce)) + Math.imul(U, fe) | 0;
 s = Math.imul(U, ce);
-i = i + Math.imul(L, he) | 0;
-n = (n = n + Math.imul(L, de) | 0) + Math.imul(C, he) | 0;
-s = s + Math.imul(C, de) | 0;
-var Be = (c + (i = i + Math.imul(B, pe) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(B, be) | 0) + Math.imul(P, pe) | 0)) << 13) | 0;
-c = ((s = s + Math.imul(P, be) | 0) + (n >>> 13) | 0) + (Be >>> 26) | 0;
-Be &= 67108863;
+i = i + Math.imul(C, he) | 0;
+n = (n = n + Math.imul(C, de) | 0) + Math.imul(L, he) | 0;
+s = s + Math.imul(L, de) | 0;
+var je = (c + (i = i + Math.imul(j, pe) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(j, be) | 0) + Math.imul(N, pe) | 0)) << 13) | 0;
+c = ((s = s + Math.imul(N, be) | 0) + (n >>> 13) | 0) + (je >>> 26) | 0;
+je &= 67108863;
 i = Math.imul(D, he);
 n = (n = Math.imul(D, de)) + Math.imul(U, he) | 0;
 s = Math.imul(U, de);
-var Pe = (c + (i = i + Math.imul(L, pe) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(L, be) | 0) + Math.imul(C, pe) | 0)) << 13) | 0;
-c = ((s = s + Math.imul(C, be) | 0) + (n >>> 13) | 0) + (Pe >>> 26) | 0;
-Pe &= 67108863;
-var Ne = (c + (i = Math.imul(D, pe)) | 0) + ((8191 & (n = (n = Math.imul(D, be)) + Math.imul(U, pe) | 0)) << 13) | 0;
-c = ((s = Math.imul(U, be)) + (n >>> 13) | 0) + (Ne >>> 26) | 0;
+var Ne = (c + (i = i + Math.imul(C, pe) | 0) | 0) + ((8191 & (n = (n = n + Math.imul(C, be) | 0) + Math.imul(L, pe) | 0)) << 13) | 0;
+c = ((s = s + Math.imul(L, be) | 0) + (n >>> 13) | 0) + (Ne >>> 26) | 0;
 Ne &= 67108863;
+var Pe = (c + (i = Math.imul(D, pe)) | 0) + ((8191 & (n = (n = Math.imul(D, be)) + Math.imul(U, pe) | 0)) << 13) | 0;
+c = ((s = Math.imul(U, be)) + (n >>> 13) | 0) + (Pe >>> 26) | 0;
+Pe &= 67108863;
 f[0] = me;
 f[1] = ge;
 f[2] = ye;
@@ -3966,18 +3966,18 @@ f[3] = ve;
 f[4] = we;
 f[5] = _e;
 f[6] = Se;
-f[7] = Me;
-f[8] = Ee;
-f[9] = ke;
-f[10] = Ae;
+f[7] = Ee;
+f[8] = Me;
+f[9] = Ae;
+f[10] = ke;
 f[11] = Re;
 f[12] = xe;
 f[13] = Ie;
-f[14] = Te;
-f[15] = je;
-f[16] = Be;
-f[17] = Pe;
-f[18] = Ne;
+f[14] = Be;
+f[15] = Te;
+f[16] = je;
+f[17] = Ne;
+f[18] = Pe;
 if (0 !== c) {
 f[19] = c;
 r.length++;
@@ -4752,19 +4752,19 @@ p224: null,
 p192: null,
 p25519: null
 };
-function M(e, t) {
+function E(e, t) {
 this.name = e;
 this.p = new s(t, 16);
 this.n = this.p.bitLength();
 this.k = new s(1).iushln(this.n).isub(this.p);
 this.tmp = this._tmp();
 }
-M.prototype._tmp = function() {
+E.prototype._tmp = function() {
 var e = new s(null);
 e.words = new Array(Math.ceil(this.n / 13));
 return e;
 };
-M.prototype.ireduce = function(e) {
+E.prototype.ireduce = function(e) {
 var t, r = e;
 do {
 this.split(r, this.tmp);
@@ -4777,17 +4777,17 @@ r.length = 1;
 } else i > 0 ? r.isub(this.p) : void 0 !== r.strip ? r.strip() : r._strip();
 return r;
 };
-M.prototype.split = function(e, t) {
+E.prototype.split = function(e, t) {
 e.iushrn(this.n, 0, t);
 };
-M.prototype.imulK = function(e) {
+E.prototype.imulK = function(e) {
 return e.imul(this.k);
 };
-function E() {
-M.call(this, "k256", "ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff fffffffe fffffc2f");
+function M() {
+E.call(this, "k256", "ffffffff ffffffff ffffffff ffffffff ffffffff ffffffff fffffffe fffffc2f");
 }
-n(E, M);
-E.prototype.split = function(e, t) {
+n(M, E);
+M.prototype.split = function(e, t) {
 for (var r = Math.min(e.length, 9), i = 0; i < r; i++) t.words[i] = e.words[i];
 t.length = r;
 if (e.length <= 9) {
@@ -4806,7 +4806,7 @@ e.words[i - 10] = n;
 0 === n && e.length > 10 ? e.length -= 10 : e.length -= 9;
 }
 };
-E.prototype.imulK = function(e) {
+M.prototype.imulK = function(e) {
 e.words[e.length] = 0;
 e.words[e.length + 1] = 0;
 e.length += 2;
@@ -4822,18 +4822,18 @@ e.length--;
 }
 return e;
 };
-function k() {
-M.call(this, "p224", "ffffffff ffffffff ffffffff ffffffff 00000000 00000000 00000001");
-}
-n(k, M);
 function A() {
-M.call(this, "p192", "ffffffff ffffffff ffffffff fffffffe ffffffff ffffffff");
+E.call(this, "p224", "ffffffff ffffffff ffffffff ffffffff 00000000 00000000 00000001");
 }
-n(A, M);
+n(A, E);
+function k() {
+E.call(this, "p192", "ffffffff ffffffff ffffffff fffffffe ffffffff ffffffff");
+}
+n(k, E);
 function R() {
-M.call(this, "25519", "7fffffffffffffff ffffffffffffffff ffffffffffffffff ffffffffffffffed");
+E.call(this, "25519", "7fffffffffffffff ffffffffffffffff ffffffffffffffff ffffffffffffffed");
 }
-n(R, M);
+n(R, E);
 R.prototype.imulK = function(e) {
 for (var t = 0, r = 0; r < e.length; r++) {
 var i = 19 * (0 | e.words[r]) + t, n = 67108863 & i;
@@ -4847,7 +4847,7 @@ return e;
 s._prime = function(e) {
 if (S[e]) return S[e];
 var t;
-if ("k256" === e) t = new E(); else if ("p224" === e) t = new k(); else if ("p192" === e) t = new A(); else {
+if ("k256" === e) t = new M(); else if ("p224" === e) t = new A(); else if ("p192" === e) t = new k(); else {
 if ("p25519" !== e) throw new Error("Unknown prime " + e);
 t = new R();
 }
@@ -6625,7 +6625,7 @@ inherits: 138
 "use strict";
 t.exports = R;
 var n;
-R.ReadableState = A;
+R.ReadableState = k;
 e("events").EventEmitter;
 var s = function(e, t) {
 return e.listeners(t).length;
@@ -6637,12 +6637,12 @@ var u, h = e("util");
 u = h && h.debuglog ? h.debuglog("stream") : function() {};
 var d, l, p, b = e("./internal/streams/buffer_list"), m = e("./internal/streams/destroy"), g = e("./internal/streams/state").getHighWaterMark, y = e("../errors").codes, v = y.ERR_INVALID_ARG_TYPE, w = y.ERR_STREAM_PUSH_AFTER_EOF, _ = y.ERR_METHOD_NOT_IMPLEMENTED, S = y.ERR_STREAM_UNSHIFT_AFTER_END_EVENT;
 e("inherits")(R, o);
-var M = m.errorOrDestroy, E = [ "error", "close", "destroy", "pause", "resume" ];
-function k(e, t, r) {
+var E = m.errorOrDestroy, M = [ "error", "close", "destroy", "pause", "resume" ];
+function A(e, t, r) {
 if ("function" == typeof e.prependListener) return e.prependListener(t, r);
 e._events && e._events[t] ? Array.isArray(e._events[t]) ? e._events[t].unshift(r) : e._events[t] = [ r, e._events[t] ] : e.on(t, r);
 }
-function A(t, r, i) {
+function k(t, r, i) {
 n = n || e("./_stream_duplex");
 t = t || {};
 "boolean" != typeof i && (i = r instanceof n);
@@ -6681,7 +6681,7 @@ function R(t) {
 n = n || e("./_stream_duplex");
 if (!(this instanceof R)) return new R(t);
 var r = this instanceof n;
-this._readableState = new A(t, this, r);
+this._readableState = new k(t, this, r);
 this.readable = !0;
 if (t) {
 "function" == typeof t.read && (this._read = t.read);
@@ -6722,13 +6722,13 @@ u("readableAddChunk", t);
 var s = e._readableState;
 if (null === t) {
 s.reading = !1;
-N(e, s);
+P(e, s);
 } else {
 var o;
-n || (o = T(s, t));
-if (o) M(e, o); else if (s.objectMode || t && t.length > 0) {
+n || (o = B(s, t));
+if (o) E(e, o); else if (s.objectMode || t && t.length > 0) {
 "string" == typeof t || s.objectMode || Object.getPrototypeOf(t) === a.prototype || (t = c(t));
-if (i) s.endEmitted ? M(e, new S()) : I(e, s, t, !0); else if (s.ended) M(e, new w()); else {
+if (i) s.endEmitted ? E(e, new S()) : I(e, s, t, !0); else if (s.ended) E(e, new w()); else {
 if (s.destroyed) return !1;
 s.reading = !1;
 if (s.decoder && !r) {
@@ -6750,11 +6750,11 @@ e.emit("data", r);
 } else {
 t.length += t.objectMode ? 1 : r.length;
 i ? t.buffer.unshift(r) : t.buffer.push(r);
-t.needReadable && L(e);
+t.needReadable && C(e);
 }
 O(e, t);
 }
-function T(e, t) {
+function B(e, t) {
 var r, i;
 (i = t, a.isBuffer(i) || i instanceof f) || "string" == typeof t || void 0 === t || e.objectMode || (r = new v("chunk", [ "string", "Buffer", "Uint8Array" ], t));
 return r;
@@ -6776,9 +6776,9 @@ this._readableState.buffer.clear();
 this._readableState.length = n.length;
 return this;
 };
-var j = 1073741824;
-function B(e) {
-if (e >= j) e = j; else {
+var T = 1073741824;
+function j(e) {
+if (e >= T) e = T; else {
 e--;
 e |= e >>> 1;
 e |= e >>> 2;
@@ -6789,11 +6789,11 @@ e++;
 }
 return e;
 }
-function P(e, t) {
+function N(e, t) {
 if (e <= 0 || 0 === t.length && t.ended) return 0;
 if (t.objectMode) return 1;
 if (e != e) return t.flowing && t.length ? t.buffer.head.data.length : t.length;
-e > t.highWaterMark && (t.highWaterMark = B(e));
+e > t.highWaterMark && (t.highWaterMark = j(e));
 if (e <= t.length) return e;
 if (!t.ended) {
 t.needReadable = !0;
@@ -6808,11 +6808,11 @@ var t = this._readableState, r = e;
 0 !== e && (t.emittedReadable = !1);
 if (0 === e && t.needReadable && ((0 !== t.highWaterMark ? t.length >= t.highWaterMark : t.length > 0) || t.ended)) {
 u("read: emitReadable", t.length, t.ended);
-0 === t.length && t.ended ? W(this) : L(this);
+0 === t.length && t.ended ? V(this) : C(this);
 return null;
 }
-if (0 === (e = P(e, t)) && t.ended) {
-0 === t.length && W(this);
+if (0 === (e = N(e, t)) && t.ended) {
+0 === t.length && V(this);
 return null;
 }
 var i, n = t.needReadable;
@@ -6825,7 +6825,7 @@ t.sync = !0;
 0 === t.length && (t.needReadable = !0);
 this._read(t.highWaterMark);
 t.sync = !1;
-t.reading || (e = P(r, t));
+t.reading || (e = N(r, t));
 }
 if (null === (i = e > 0 ? H(e, t) : null)) {
 t.needReadable = t.length <= t.highWaterMark;
@@ -6836,12 +6836,12 @@ t.awaitDrain = 0;
 }
 if (0 === t.length) {
 t.ended || (t.needReadable = !0);
-r !== e && t.ended && W(this);
+r !== e && t.ended && V(this);
 }
 null !== i && this.emit("data", i);
 return i;
 };
-function N(e, t) {
+function P(e, t) {
 u("onEofChunk");
 if (!t.ended) {
 if (t.decoder) {
@@ -6852,26 +6852,26 @@ t.length += t.objectMode ? 1 : r.length;
 }
 }
 t.ended = !0;
-if (t.sync) L(e); else {
+if (t.sync) C(e); else {
 t.needReadable = !1;
 if (!t.emittedReadable) {
 t.emittedReadable = !0;
-C(e);
+L(e);
 }
 }
 }
 }
-function L(e) {
+function C(e) {
 var t = e._readableState;
 u("emitReadable", t.needReadable, t.emittedReadable);
 t.needReadable = !1;
 if (!t.emittedReadable) {
 u("emitReadable", t.flowing);
 t.emittedReadable = !0;
-r.nextTick(C, e);
+r.nextTick(L, e);
 }
 }
-function C(e) {
+function L(e) {
 var t = e._readableState;
 u("emitReadable_", t.destroyed, t.length, t.ended);
 if (!t.destroyed && (t.length || t.ended)) {
@@ -6897,7 +6897,7 @@ if (r === t.length) break;
 t.readingMore = !1;
 }
 R.prototype._read = function() {
-M(this, new _("_read()"));
+E(this, new _("_read()"));
 };
 R.prototype.pipe = function(e, t) {
 var i = this, n = this._readableState;
@@ -6951,7 +6951,7 @@ u("ondata");
 var r = e.write(t);
 u("dest.write", r);
 if (!1 === r) {
-if ((1 === n.pipesCount && n.pipes === e || n.pipesCount > 1 && -1 !== V(n.pipes, e)) && !h) {
+if ((1 === n.pipesCount && n.pipes === e || n.pipesCount > 1 && -1 !== G(n.pipes, e)) && !h) {
 u("false write response, pause", n.awaitDrain);
 n.awaitDrain++;
 }
@@ -6962,9 +6962,9 @@ function p(t) {
 u("onerror", t);
 g();
 e.removeListener("error", p);
-0 === s(e, "error") && M(e, t);
+0 === s(e, "error") && E(e, t);
 }
-k(e, "error", p);
+A(e, "error", p);
 function b() {
 e.removeListener("finish", m);
 g();
@@ -7022,7 +7022,7 @@ hasUnpiped: !1
 });
 return this;
 }
-var o = V(t.pipes, e);
+var o = G(t.pipes, e);
 if (-1 === o) return this;
 t.pipes.splice(o, 1);
 t.pipesCount -= 1;
@@ -7040,7 +7040,7 @@ n.readableListening = n.needReadable = !0;
 n.flowing = !1;
 n.emittedReadable = !1;
 u("on readable", n.length, n.reading);
-n.length ? L(this) : n.reading || r.nextTick(z, this);
+n.length ? C(this) : n.reading || r.nextTick(F, this);
 }
 return i;
 };
@@ -7060,7 +7060,7 @@ var t = e._readableState;
 t.readableListening = e.listenerCount("readable") > 0;
 t.resumeScheduled && !t.paused ? t.flowing = !0 : e.listenerCount("data") > 0 && e.resume();
 }
-function z(e) {
+function F(e) {
 u("readable nexttick read 0");
 e.read(0);
 }
@@ -7069,18 +7069,18 @@ var e = this._readableState;
 if (!e.flowing) {
 u("resume");
 e.flowing = !e.readableListening;
-$(this, e);
+z(this, e);
 }
 e.paused = !1;
 return this;
 };
-function $(e, t) {
+function z(e, t) {
 if (!t.resumeScheduled) {
 t.resumeScheduled = !0;
-r.nextTick(F, e, t);
+r.nextTick($, e, t);
 }
 }
-function F(e, t) {
+function $(e, t) {
 u("resume", t.reading);
 t.reading || e.read(0);
 t.resumeScheduled = !1;
@@ -7126,7 +7126,7 @@ return function() {
 return e[t].apply(e, arguments);
 };
 }(n));
-for (var s = 0; s < E.length; s++) e.on(E[s], this.emit.bind(this, E[s]));
+for (var s = 0; s < M.length; s++) e.on(M[s], this.emit.bind(this, M[s]));
 this._read = function(t) {
 u("wrapped _read", t);
 if (i) {
@@ -7177,15 +7177,15 @@ t.buffer.clear();
 } else r = t.buffer.consume(e, t.decoder);
 return r;
 }
-function W(e) {
+function V(e) {
 var t = e._readableState;
 u("endReadable", t.endEmitted);
 if (!t.endEmitted) {
 t.ended = !0;
-r.nextTick(G, t, e);
+r.nextTick(W, t, e);
 }
 }
-function G(e, t) {
+function W(e, t) {
 u("endReadableNT", e.endEmitted, e.length);
 if (!e.endEmitted && 0 === e.length) {
 e.endEmitted = !0;
@@ -7201,7 +7201,7 @@ var r = t._writableState;
 void 0 === p && (p = e("./internal/streams/from"));
 return p(R, t, r);
 });
-function V(e, t) {
+function G(e, t) {
 for (var r = 0, i = e.length; r < i; r++) if (e[r] === t) return r;
 return -1;
 }
@@ -7309,27 +7309,27 @@ inherits: 138
 52: [ function(e, t) {
 (function(r, i) {
 "use strict";
-t.exports = A;
+t.exports = k;
 function n(e) {
 var t = this;
 this.next = null;
 this.entry = null;
 this.finish = function() {
-F(t, e);
+$(t, e);
 };
 }
 var s;
-A.WritableState = k;
+k.WritableState = A;
 var o = {
 deprecate: e("util-deprecate")
 }, a = e("./internal/streams/stream"), f = e("buffer").Buffer, c = i.Uint8Array || function() {};
 function u(e) {
 return f.from(e);
 }
-var h, d = e("./internal/streams/destroy"), l = e("./internal/streams/state").getHighWaterMark, p = e("../errors").codes, b = p.ERR_INVALID_ARG_TYPE, m = p.ERR_METHOD_NOT_IMPLEMENTED, g = p.ERR_MULTIPLE_CALLBACK, y = p.ERR_STREAM_CANNOT_PIPE, v = p.ERR_STREAM_DESTROYED, w = p.ERR_STREAM_NULL_VALUES, _ = p.ERR_STREAM_WRITE_AFTER_END, S = p.ERR_UNKNOWN_ENCODING, M = d.errorOrDestroy;
-e("inherits")(A, a);
-function E() {}
-function k(t, r, i) {
+var h, d = e("./internal/streams/destroy"), l = e("./internal/streams/state").getHighWaterMark, p = e("../errors").codes, b = p.ERR_INVALID_ARG_TYPE, m = p.ERR_METHOD_NOT_IMPLEMENTED, g = p.ERR_MULTIPLE_CALLBACK, y = p.ERR_STREAM_CANNOT_PIPE, v = p.ERR_STREAM_DESTROYED, w = p.ERR_STREAM_NULL_VALUES, _ = p.ERR_STREAM_WRITE_AFTER_END, S = p.ERR_UNKNOWN_ENCODING, E = d.errorOrDestroy;
+e("inherits")(k, a);
+function M() {}
+function A(t, r, i) {
 s = s || e("./_stream_duplex");
 t = t || {};
 "boolean" != typeof i && (i = r instanceof s);
@@ -7351,7 +7351,7 @@ this.corked = 0;
 this.sync = !0;
 this.bufferProcessing = !1;
 this.onwrite = function(e) {
-N(r, e);
+P(r, e);
 };
 this.writecb = null;
 this.writelen = 0;
@@ -7365,7 +7365,7 @@ this.autoDestroy = !!t.autoDestroy;
 this.bufferedRequestCount = 0;
 this.corkedRequestsFree = new n(this);
 }
-k.prototype.getBuffer = function() {
+A.prototype.getBuffer = function() {
 for (var e = this.bufferedRequest, t = []; e; ) {
 t.push(e);
 e = e.next;
@@ -7374,7 +7374,7 @@ return t;
 };
 (function() {
 try {
-Object.defineProperty(k.prototype, "buffer", {
+Object.defineProperty(A.prototype, "buffer", {
 get: o.deprecate(function() {
 return this.getBuffer();
 }, "_writableState.buffer is deprecated. Use _writableState.getBuffer instead.", "DEP0003")
@@ -7383,18 +7383,18 @@ return this.getBuffer();
 })();
 if ("function" == typeof Symbol && Symbol.hasInstance && "function" == typeof Function.prototype[Symbol.hasInstance]) {
 h = Function.prototype[Symbol.hasInstance];
-Object.defineProperty(A, Symbol.hasInstance, {
+Object.defineProperty(k, Symbol.hasInstance, {
 value: function(e) {
-return !!h.call(this, e) || this === A && e && e._writableState instanceof k;
+return !!h.call(this, e) || this === k && e && e._writableState instanceof A;
 }
 });
 } else h = function(e) {
 return e instanceof this;
 };
-function A(t) {
+function k(t) {
 var r = this instanceof (s = s || e("./_stream_duplex"));
-if (!r && !h.call(A, this)) return new A(t);
-this._writableState = new k(t, this, r);
+if (!r && !h.call(k, this)) return new k(t);
+this._writableState = new A(t, this, r);
 this.writable = !0;
 if (t) {
 "function" == typeof t.write && (this._write = t.write);
@@ -7404,25 +7404,25 @@ if (t) {
 }
 a.call(this);
 }
-A.prototype.pipe = function() {
-M(this, new y());
+k.prototype.pipe = function() {
+E(this, new y());
 };
 function R(e, t) {
 var i = new _();
-M(e, i);
+E(e, i);
 r.nextTick(t, i);
 }
 function x(e, t, i, n) {
 var s;
 null === i ? s = new w() : "string" == typeof i || t.objectMode || (s = new b("chunk", [ "string", "Buffer" ], i));
 if (s) {
-M(e, s);
+E(e, s);
 r.nextTick(n, s);
 return !1;
 }
 return !0;
 }
-A.prototype.write = function(e, t, r) {
+k.prototype.write = function(e, t, r) {
 var i, n = this._writableState, s = !1, o = !n.objectMode && (i = e, f.isBuffer(i) || i instanceof c);
 o && !f.isBuffer(e) && (e = u(e));
 if ("function" == typeof t) {
@@ -7430,30 +7430,30 @@ r = t;
 t = null;
 }
 o ? t = "buffer" : t || (t = n.defaultEncoding);
-"function" != typeof r && (r = E);
+"function" != typeof r && (r = M);
 if (n.ending) R(this, r); else if (o || x(this, n, e, r)) {
 n.pendingcb++;
-s = T(this, n, o, e, t, r);
+s = B(this, n, o, e, t, r);
 }
 return s;
 };
-A.prototype.cork = function() {
+k.prototype.cork = function() {
 this._writableState.corked++;
 };
-A.prototype.uncork = function() {
+k.prototype.uncork = function() {
 var e = this._writableState;
 if (e.corked) {
 e.corked--;
 e.writing || e.corked || e.bufferProcessing || !e.bufferedRequest || O(this, e);
 }
 };
-A.prototype.setDefaultEncoding = function(e) {
+k.prototype.setDefaultEncoding = function(e) {
 "string" == typeof e && (e = e.toLowerCase());
 if (!([ "hex", "utf8", "utf-8", "ascii", "binary", "base64", "ucs2", "ucs-2", "utf16le", "utf-16le", "raw" ].indexOf((e + "").toLowerCase()) > -1)) throw new S(e);
 this._writableState.defaultEncoding = e;
 return this;
 };
-Object.defineProperty(A.prototype, "writableBuffer", {
+Object.defineProperty(k.prototype, "writableBuffer", {
 enumerable: !1,
 get: function() {
 return this._writableState && this._writableState.getBuffer();
@@ -7463,13 +7463,13 @@ function I(e, t, r) {
 e.objectMode || !1 === e.decodeStrings || "string" != typeof t || (t = f.from(t, r));
 return t;
 }
-Object.defineProperty(A.prototype, "writableHighWaterMark", {
+Object.defineProperty(k.prototype, "writableHighWaterMark", {
 enumerable: !1,
 get: function() {
 return this._writableState.highWaterMark;
 }
 });
-function T(e, t, r, i, n, s) {
+function B(e, t, r, i, n, s) {
 if (!r) {
 var o = I(t, i, n);
 if (i !== o) {
@@ -7493,10 +7493,10 @@ next: null
 };
 c ? c.next = t.lastBufferedRequest : t.bufferedRequest = t.lastBufferedRequest;
 t.bufferedRequestCount += 1;
-} else j(e, t, !1, a, i, n, s);
+} else T(e, t, !1, a, i, n, s);
 return f;
 }
-function j(e, t, r, i, n, s, o) {
+function T(e, t, r, i, n, s, o) {
 t.writelen = i;
 t.writecb = o;
 t.writing = !0;
@@ -7504,43 +7504,43 @@ t.sync = !0;
 t.destroyed ? t.onwrite(new v("write")) : r ? e._writev(n, t.onwrite) : e._write(n, s, t.onwrite);
 t.sync = !1;
 }
-function B(e, t, i, n, s) {
+function j(e, t, i, n, s) {
 --t.pendingcb;
 if (i) {
 r.nextTick(s, n);
-r.nextTick(z, e, t);
+r.nextTick(F, e, t);
 e._writableState.errorEmitted = !0;
-M(e, n);
+E(e, n);
 } else {
 s(n);
 e._writableState.errorEmitted = !0;
-M(e, n);
-z(e, t);
+E(e, n);
+F(e, t);
 }
 }
-function P(e) {
+function N(e) {
 e.writing = !1;
 e.writecb = null;
 e.length -= e.writelen;
 e.writelen = 0;
 }
-function N(e, t) {
+function P(e, t) {
 var i = e._writableState, n = i.sync, s = i.writecb;
 if ("function" != typeof s) throw new g();
-P(i);
-if (t) B(e, i, n, t, s); else {
+N(i);
+if (t) j(e, i, n, t, s); else {
 var o = D(i) || e.destroyed;
 o || i.corked || i.bufferProcessing || !i.bufferedRequest || O(e, i);
-n ? r.nextTick(L, e, i, o, s) : L(e, i, o, s);
+n ? r.nextTick(C, e, i, o, s) : C(e, i, o, s);
 }
 }
-function L(e, t, r, i) {
-r || C(e, t);
+function C(e, t, r, i) {
+r || L(e, t);
 t.pendingcb--;
 i();
-z(e, t);
+F(e, t);
 }
-function C(e, t) {
+function L(e, t) {
 if (0 === t.length && t.needDrain) {
 t.needDrain = !1;
 e.emit("drain");
@@ -7559,7 +7559,7 @@ r = r.next;
 a += 1;
 }
 s.allBuffers = f;
-j(e, t, !0, t.length, s, "", o.finish);
+T(e, t, !0, t.length, s, "", o.finish);
 t.pendingcb++;
 t.lastBufferedRequest = null;
 if (o.next) {
@@ -7570,7 +7570,7 @@ t.bufferedRequestCount = 0;
 } else {
 for (;r; ) {
 var c = r.chunk, u = r.encoding, h = r.callback;
-j(e, t, !1, t.objectMode ? 1 : c.length, c, u, h);
+T(e, t, !1, t.objectMode ? 1 : c.length, c, u, h);
 r = r.next;
 t.bufferedRequestCount--;
 if (t.writing) break;
@@ -7580,11 +7580,11 @@ null === r && (t.lastBufferedRequest = null);
 t.bufferedRequest = r;
 t.bufferProcessing = !1;
 }
-A.prototype._write = function(e, t, r) {
+k.prototype._write = function(e, t, r) {
 r(new m("_write()"));
 };
-A.prototype._writev = null;
-A.prototype.end = function(e, t, r) {
+k.prototype._writev = null;
+k.prototype.end = function(e, t, r) {
 var i = this._writableState;
 if ("function" == typeof e) {
 r = e;
@@ -7599,10 +7599,10 @@ if (i.corked) {
 i.corked = 1;
 this.uncork();
 }
-i.ending || $(this, i, r);
+i.ending || z(this, i, r);
 return this;
 };
-Object.defineProperty(A.prototype, "writableLength", {
+Object.defineProperty(k.prototype, "writableLength", {
 enumerable: !1,
 get: function() {
 return this._writableState.length;
@@ -7614,10 +7614,10 @@ return e.ending && 0 === e.length && null === e.bufferedRequest && !e.finished &
 function U(e, t) {
 e._final(function(r) {
 t.pendingcb--;
-r && M(e, r);
+r && E(e, r);
 t.prefinished = !0;
 e.emit("prefinish");
-z(e, t);
+F(e, t);
 });
 }
 function q(e, t) {
@@ -7630,7 +7630,7 @@ t.finalCalled = !0;
 r.nextTick(U, e, t);
 }
 }
-function z(e, t) {
+function F(e, t) {
 var r = D(t);
 if (r) {
 q(e, t);
@@ -7645,14 +7645,14 @@ var i = e._readableState;
 }
 return r;
 }
-function $(e, t, i) {
+function z(e, t, i) {
 t.ending = !0;
-z(e, t);
+F(e, t);
 i && (t.finished ? r.nextTick(i) : e.once("finish", i));
 t.ended = !0;
 e.writable = !1;
 }
-function F(e, t, r) {
+function $(e, t, r) {
 var i = e.entry;
 e.entry = null;
 for (;i; ) {
@@ -7663,7 +7663,7 @@ i = i.next;
 }
 t.corkedRequestsFree.next = e;
 }
-Object.defineProperty(A.prototype, "destroyed", {
+Object.defineProperty(k.prototype, "destroyed", {
 enumerable: !1,
 get: function() {
 return void 0 !== this._writableState && this._writableState.destroyed;
@@ -7672,9 +7672,9 @@ set: function(e) {
 this._writableState && (this._writableState.destroyed = e);
 }
 });
-A.prototype.destroy = d.destroy;
-A.prototype._undestroy = d.undestroy;
-A.prototype._destroy = function(e, t) {
+k.prototype.destroy = d.destroy;
+k.prototype._undestroy = d.undestroy;
+k.prototype._destroy = function(e, t) {
 t(e);
 };
 }).call(this, e("_process"), "undefined" != typeof global ? global : "undefined" != typeof self ? self : "undefined" != typeof window ? window : {});
@@ -8726,7 +8726,7 @@ return r;
 case "utf8":
 case "utf-8":
 case void 0:
-return G(e).length;
+return W(e).length;
 
 case "ucs2":
 case "ucs-2":
@@ -8741,7 +8741,7 @@ case "base64":
 return Y(e).length;
 
 default:
-if (i) return G(e).length;
+if (i) return W(e).length;
 t = ("" + t).toLowerCase();
 i = !0;
 }
@@ -8757,18 +8757,18 @@ if ((r >>>= 0) <= (t >>>= 0)) return "";
 e || (e = "utf8");
 for (;;) switch (e) {
 case "hex":
-return L(this, t, r);
+return C(this, t, r);
 
 case "utf8":
 case "utf-8":
-return T(this, t, r);
+return B(this, t, r);
 
 case "ascii":
-return P(this, t, r);
+return N(this, t, r);
 
 case "latin1":
 case "binary":
-return N(this, t, r);
+return P(this, t, r);
 
 case "base64":
 return I(this, t, r);
@@ -8777,7 +8777,7 @@ case "ucs2":
 case "ucs-2":
 case "utf16le":
 case "utf-16le":
-return C(this, t, r);
+return L(this, t, r);
 
 default:
 if (i) throw new TypeError("Unknown encoding: " + e);
@@ -8819,7 +8819,7 @@ return this;
 };
 f.prototype.toString = function() {
 var e = 0 | this.length;
-return 0 === e ? "" : 0 === arguments.length ? T(this, 0, e) : v.apply(this, arguments);
+return 0 === e ? "" : 0 === arguments.length ? B(this, 0, e) : v.apply(this, arguments);
 };
 f.prototype.equals = function(e) {
 if (!f.isBuffer(e)) throw new TypeError("Argument must be a Buffer");
@@ -8917,7 +8917,7 @@ return _(this, e, t, r, !0);
 f.prototype.lastIndexOf = function(e, t, r) {
 return _(this, e, t, r, !1);
 };
-function M(e, t, r, i) {
+function E(e, t, r, i) {
 r = Number(r) || 0;
 var n = e.length - r;
 i ? (i = Number(i)) > n && (i = n) : i = n;
@@ -8931,20 +8931,20 @@ e[r + o] = a;
 }
 return o;
 }
-function E(e, t, r, i) {
-return Z(G(t, e.length - r), e, r, i);
-}
-function k(e, t, r, i) {
-return Z(V(t), e, r, i);
+function M(e, t, r, i) {
+return J(W(t, e.length - r), e, r, i);
 }
 function A(e, t, r, i) {
-return k(e, t, r, i);
+return J(G(t), e, r, i);
+}
+function k(e, t, r, i) {
+return A(e, t, r, i);
 }
 function R(e, t, r, i) {
-return Z(Y(t), e, r, i);
+return J(Y(t), e, r, i);
 }
 function x(e, t, r, i) {
-return Z(X(t, e.length - r), e, r, i);
+return J(X(t, e.length - r), e, r, i);
 }
 f.prototype.write = function(e, t, r, i) {
 if (void 0 === t) {
@@ -8972,18 +8972,18 @@ if (e.length > 0 && (r < 0 || t < 0) || t > this.length) throw new RangeError("A
 i || (i = "utf8");
 for (var s = !1; ;) switch (i) {
 case "hex":
-return M(this, e, t, r);
+return E(this, e, t, r);
 
 case "utf8":
 case "utf-8":
-return E(this, e, t, r);
+return M(this, e, t, r);
 
 case "ascii":
-return k(this, e, t, r);
+return A(this, e, t, r);
 
 case "latin1":
 case "binary":
-return A(this, e, t, r);
+return k(this, e, t, r);
 
 case "base64":
 return R(this, e, t, r);
@@ -9009,7 +9009,7 @@ data: Array.prototype.slice.call(this._arr || this, 0)
 function I(e, t, r) {
 return 0 === t && r === e.length ? i.fromByteArray(e) : i.fromByteArray(e.slice(t, r));
 }
-function T(e, t, r) {
+function B(e, t, r) {
 r = Math.min(e.length, r);
 for (var i = [], n = t; n < r; ) {
 var s = e[n], o = null, a = s > 239 ? 4 : s > 223 ? 3 : s > 191 ? 2 : 1;
@@ -9048,35 +9048,35 @@ o = 56320 | 1023 & o;
 i.push(o);
 n += a;
 }
-return B(i);
+return j(i);
 }
-var j = 4096;
-function B(e) {
+var T = 4096;
+function j(e) {
 var t = e.length;
-if (t <= j) return String.fromCharCode.apply(String, e);
-for (var r = "", i = 0; i < t; ) r += String.fromCharCode.apply(String, e.slice(i, i += j));
+if (t <= T) return String.fromCharCode.apply(String, e);
+for (var r = "", i = 0; i < t; ) r += String.fromCharCode.apply(String, e.slice(i, i += T));
 return r;
 }
-function P(e, t, r) {
+function N(e, t, r) {
 var i = "";
 r = Math.min(e.length, r);
 for (var n = t; n < r; ++n) i += String.fromCharCode(127 & e[n]);
 return i;
 }
-function N(e, t, r) {
+function P(e, t, r) {
 var i = "";
 r = Math.min(e.length, r);
 for (var n = t; n < r; ++n) i += String.fromCharCode(e[n]);
 return i;
 }
-function L(e, t, r) {
+function C(e, t, r) {
 var i, n = e.length;
 (!t || t < 0) && (t = 0);
 (!r || r < 0 || r > n) && (r = n);
 for (var s = "", o = t; o < r; ++o) s += (i = e[o]) < 16 ? "0" + i.toString(16) : i.toString(16);
 return s;
 }
-function C(e, t, r) {
+function L(e, t, r) {
 for (var i = e.slice(t, r), n = "", s = 0; s < i.length; s += 2) n += String.fromCharCode(i[s] + 256 * i[s + 1]);
 return n;
 }
@@ -9353,31 +9353,31 @@ this[t + 3] = 255 & e;
 } else q(this, e, t, !1);
 return t + 4;
 };
-function z(e, t, r, i) {
+function F(e, t, r, i) {
 if (r + i > e.length) throw new RangeError("Index out of range");
 if (r < 0) throw new RangeError("Index out of range");
 }
-function $(e, t, r, i, s) {
-s || z(e, 0, r, 4);
+function z(e, t, r, i, s) {
+s || F(e, 0, r, 4);
 n.write(e, t, r, i, 23, 4);
 return r + 4;
 }
 f.prototype.writeFloatLE = function(e, t, r) {
-return $(this, e, t, !0, r);
+return z(this, e, t, !0, r);
 };
 f.prototype.writeFloatBE = function(e, t, r) {
-return $(this, e, t, !1, r);
+return z(this, e, t, !1, r);
 };
-function F(e, t, r, i, s) {
-s || z(e, 0, r, 8);
+function $(e, t, r, i, s) {
+s || F(e, 0, r, 8);
 n.write(e, t, r, i, 52, 8);
 return r + 8;
 }
 f.prototype.writeDoubleLE = function(e, t, r) {
-return F(this, e, t, !0, r);
+return $(this, e, t, !0, r);
 };
 f.prototype.writeDoubleBE = function(e, t, r) {
-return F(this, e, t, !1, r);
+return $(this, e, t, !1, r);
 };
 f.prototype.copy = function(e, t, r, i) {
 r || (r = 0);
@@ -9420,21 +9420,21 @@ r = void 0 === r ? this.length : r >>> 0;
 e || (e = 0);
 var s;
 if ("number" == typeof e) for (s = t; s < r; ++s) this[s] = e; else {
-var o = f.isBuffer(e) ? e : G(new f(e, i).toString()), a = o.length;
+var o = f.isBuffer(e) ? e : W(new f(e, i).toString()), a = o.length;
 for (s = 0; s < r - t; ++s) this[s + t] = o[s % a];
 }
 return this;
 };
 var K = /[^+\/0-9A-Za-z-_]/g;
 function H(e) {
-if ((e = W(e).replace(K, "")).length < 2) return "";
+if ((e = V(e).replace(K, "")).length < 2) return "";
 for (;e.length % 4 != 0; ) e += "=";
 return e;
 }
-function W(e) {
+function V(e) {
 return e.trim ? e.trim() : e.replace(/^\s+|\s+$/g, "");
 }
-function G(e, t) {
+function W(e, t) {
 t = t || Infinity;
 for (var r, i = e.length, n = null, s = [], o = 0; o < i; ++o) {
 if ((r = e.charCodeAt(o)) > 55295 && r < 57344) {
@@ -9475,7 +9475,7 @@ s.push(r >> 18 | 240, r >> 12 & 63 | 128, r >> 6 & 63 | 128, 63 & r | 128);
 }
 return s;
 }
-function V(e) {
+function G(e) {
 for (var t = [], r = 0; r < e.length; ++r) t.push(255 & e.charCodeAt(r));
 return t;
 }
@@ -9491,7 +9491,7 @@ return s;
 function Y(e) {
 return i.toByteArray(H(e));
 }
-function Z(e, t, r, i) {
+function J(e, t, r, i) {
 for (var n = 0; n < i && !(n + r >= t.length || n >= e.length); ++n) t[n + r] = e[n];
 return n;
 }
@@ -10652,25 +10652,25 @@ l = Math.max(d[b].length, l);
 l = Math.max(d[m].length, l);
 }
 }
-var S = this.jpoint(null, null, null), M = this._wnafT4;
+var S = this.jpoint(null, null, null), E = this._wnafT4;
 for (a = l; a >= 0; a--) {
-for (var E = 0; a >= 0; ) {
-var k = !0;
+for (var M = 0; a >= 0; ) {
+var A = !0;
 for (f = 0; f < i; f++) {
-M[f] = 0 | d[f][a];
-0 !== M[f] && (k = !1);
+E[f] = 0 | d[f][a];
+0 !== E[f] && (A = !1);
 }
-if (!k) break;
-E++;
+if (!A) break;
+M++;
 a--;
 }
-a >= 0 && E++;
-S = S.dblp(E);
+a >= 0 && M++;
+S = S.dblp(M);
 if (a < 0) break;
 for (f = 0; f < i; f++) {
-var A = M[f];
-if (0 !== A) {
-A > 0 ? c = h[f][A - 1 >> 1] : A < 0 && (c = h[f][-A - 1 >> 1].neg());
+var k = E[f];
+if (0 !== k) {
+k > 0 ? c = h[f][k - 1 >> 1] : k < 0 && (c = h[f][-k - 1 >> 1].neg());
 S = "affine" === c.type ? S.mixedAdd(c) : S.add(c);
 }
 }
@@ -12792,26 +12792,26 @@ u.outSize = 160;
 u.hmacStrength = 192;
 u.padLength = 64;
 u.prototype._update = function(e, t) {
-for (var r = this.h[0], i = this.h[1], n = this.h[2], c = this.h[3], u = this.h[4], y = r, v = i, w = n, _ = c, S = u, M = 0; M < 80; M++) {
-var E = o(s(f(r, h(M, i, n, c), e[p[M] + t], d(M)), m[M]), u);
+for (var r = this.h[0], i = this.h[1], n = this.h[2], c = this.h[3], u = this.h[4], y = r, v = i, w = n, _ = c, S = u, E = 0; E < 80; E++) {
+var M = o(s(f(r, h(E, i, n, c), e[p[E] + t], d(E)), m[E]), u);
 r = u;
 u = c;
 c = s(n, 10);
 n = i;
-i = E;
-E = o(s(f(y, h(79 - M, v, w, _), e[b[M] + t], l(M)), g[M]), S);
+i = M;
+M = o(s(f(y, h(79 - E, v, w, _), e[b[E] + t], l(E)), g[E]), S);
 y = S;
 S = _;
 _ = s(w, 10);
 w = v;
-v = E;
+v = M;
 }
-E = a(this.h[1], n, _);
+M = a(this.h[1], n, _);
 this.h[1] = a(this.h[2], c, S);
 this.h[2] = a(this.h[3], u, y);
 this.h[3] = a(this.h[4], r, v);
 this.h[4] = a(this.h[0], i, w);
-this.h[0] = E;
+this.h[0] = M;
 };
 u.prototype._digest = function(e) {
 return "hex" === e ? i.toHex32(this.h, "little") : i.split32(this.h, "little");
@@ -12928,7 +12928,7 @@ for (;i < r.length; i++) r[i] = a(p(r[i - 2]), r[i - 7], l(r[i - 15]), r[i - 16]
 var n = this.h[0], b = this.h[1], m = this.h[2], g = this.h[3], y = this.h[4], v = this.h[5], w = this.h[6], _ = this.h[7];
 s(this.k.length === r.length);
 for (i = 0; i < r.length; i++) {
-var S = f(_, d(y), c(y, v, w), this.k[i], r[i]), M = o(h(n), u(n, b, m));
+var S = f(_, d(y), c(y, v, w), this.k[i], r[i]), E = o(h(n), u(n, b, m));
 _ = w;
 w = v;
 v = y;
@@ -12936,7 +12936,7 @@ y = o(g, S);
 g = m;
 m = b;
 b = n;
-n = o(S, M);
+n = o(S, E);
 }
 this.h[0] = o(this.h[0], n);
 this.h[1] = o(this.h[1], b);
@@ -12996,26 +12996,26 @@ y.padLength = 128;
 y.prototype._prepareBlock = function(e, t) {
 for (var r = this.W, i = 0; i < 32; i++) r[i] = e[t + i];
 for (;i < r.length; i += 2) {
-var n = I(r[i - 4], r[i - 3]), s = T(r[i - 4], r[i - 3]), o = r[i - 14], a = r[i - 13], f = R(r[i - 30], r[i - 29]), c = x(r[i - 30], r[i - 29]), u = r[i - 32], h = r[i - 31];
+var n = I(r[i - 4], r[i - 3]), s = B(r[i - 4], r[i - 3]), o = r[i - 14], a = r[i - 13], f = R(r[i - 30], r[i - 29]), c = x(r[i - 30], r[i - 29]), u = r[i - 32], h = r[i - 31];
 r[i] = d(n, s, o, a, f, c, u, h);
 r[i + 1] = l(n, s, o, a, f, c, u, h);
 }
 };
 y.prototype._update = function(e, t) {
 this._prepareBlock(e, t);
-var r = this.W, i = this.h[0], s = this.h[1], o = this.h[2], a = this.h[3], f = this.h[4], d = this.h[5], l = this.h[6], m = this.h[7], g = this.h[8], y = this.h[9], R = this.h[10], x = this.h[11], I = this.h[12], T = this.h[13], j = this.h[14], B = this.h[15];
+var r = this.W, i = this.h[0], s = this.h[1], o = this.h[2], a = this.h[3], f = this.h[4], d = this.h[5], l = this.h[6], m = this.h[7], g = this.h[8], y = this.h[9], R = this.h[10], x = this.h[11], I = this.h[12], B = this.h[13], T = this.h[14], j = this.h[15];
 n(this.k.length === r.length);
-for (var P = 0; P < r.length; P += 2) {
-var N = j, L = B, C = k(g, y), O = A(g, y), D = v(g, 0, R, 0, I), U = w(0, y, 0, x, 0, T), q = this.k[P], z = this.k[P + 1], $ = r[P], F = r[P + 1], K = p(N, L, C, O, D, U, q, z, $, F), H = b(N, L, C, O, D, U, q, z, $, F);
-N = M(i, s);
-L = E(i, s);
-C = _(i, 0, o, 0, f);
+for (var N = 0; N < r.length; N += 2) {
+var P = T, C = j, L = A(g, y), O = k(g, y), D = v(g, 0, R, 0, I), U = w(0, y, 0, x, 0, B), q = this.k[N], F = this.k[N + 1], z = r[N], $ = r[N + 1], K = p(P, C, L, O, D, U, q, F, z, $), H = b(P, C, L, O, D, U, q, F, z, $);
+P = E(i, s);
+C = M(i, s);
+L = _(i, 0, o, 0, f);
 O = S(0, s, 0, a, 0, d);
-var W = u(N, L, C, O), G = h(N, L, C, O);
-j = I;
-B = T;
+var V = u(P, C, L, O), W = h(P, C, L, O);
+T = I;
+j = B;
 I = R;
-T = x;
+B = x;
 R = g;
 x = y;
 g = u(l, m, K, H);
@@ -13026,8 +13026,8 @@ f = o;
 d = a;
 o = i;
 a = s;
-i = u(K, H, W, G);
-s = h(K, H, W, G);
+i = u(K, H, V, W);
+s = h(K, H, V, W);
 }
 c(this.h, 0, i, s);
 c(this.h, 2, o, a);
@@ -13035,8 +13035,8 @@ c(this.h, 4, f, d);
 c(this.h, 6, l, m);
 c(this.h, 8, g, y);
 c(this.h, 10, R, x);
-c(this.h, 12, I, T);
-c(this.h, 14, j, B);
+c(this.h, 12, I, B);
+c(this.h, 14, T, j);
 };
 y.prototype._digest = function(e) {
 return "hex" === e ? r.toHex32(this.h, "big") : r.split32(this.h, "big");
@@ -13061,22 +13061,22 @@ var o = t & i ^ t & s ^ i & s;
 o < 0 && (o += 4294967296);
 return o;
 }
-function M(e, t) {
+function E(e, t) {
 var r = s(e, t, 28) ^ s(t, e, 2) ^ s(t, e, 7);
 r < 0 && (r += 4294967296);
 return r;
 }
-function E(e, t) {
+function M(e, t) {
 var r = o(e, t, 28) ^ o(t, e, 2) ^ o(t, e, 7);
 r < 0 && (r += 4294967296);
 return r;
 }
-function k(e, t) {
+function A(e, t) {
 var r = s(e, t, 14) ^ s(e, t, 18) ^ s(t, e, 9);
 r < 0 && (r += 4294967296);
 return r;
 }
-function A(e, t) {
+function k(e, t) {
 var r = o(e, t, 14) ^ o(e, t, 18) ^ o(t, e, 9);
 r < 0 && (r += 4294967296);
 return r;
@@ -13096,7 +13096,7 @@ var r = s(e, t, 19) ^ s(t, e, 29) ^ a(e, t, 6);
 r < 0 && (r += 4294967296);
 return r;
 }
-function T(e, t) {
+function B(e, t) {
 var r = o(e, t, 19) ^ o(t, e, 29) ^ f(e, t, 6);
 r < 0 && (r += 4294967296);
 return r;
@@ -14676,37 +14676,37 @@ s.reading = !1;
 I(e, s);
 } else {
 var o;
-n || (o = E(s, t));
+n || (o = M(s, t));
 if (o) e.emit("error", o); else if (s.objectMode || t && t.length > 0) {
 "string" == typeof t || s.objectMode || Object.getPrototypeOf(t) === c.prototype || (t = h(t));
-if (i) s.endEmitted ? e.emit("error", new Error("stream.unshift() after end event")) : M(e, s, t, !0); else if (s.ended) e.emit("error", new Error("stream.push() after EOF")); else {
+if (i) s.endEmitted ? e.emit("error", new Error("stream.unshift() after end event")) : E(e, s, t, !0); else if (s.ended) e.emit("error", new Error("stream.push() after EOF")); else {
 s.reading = !1;
 if (s.decoder && !r) {
 t = s.decoder.write(t);
-s.objectMode || 0 !== t.length ? M(e, s, t, !1) : B(e, s);
-} else M(e, s, t, !1);
+s.objectMode || 0 !== t.length ? E(e, s, t, !1) : j(e, s);
+} else E(e, s, t, !1);
 }
 } else i || (s.reading = !1);
 }
-return k(s);
+return A(s);
 }
-function M(e, t, r, i) {
+function E(e, t, r, i) {
 if (t.flowing && 0 === t.length && !t.sync) {
 e.emit("data", r);
 e.read(0);
 } else {
 t.length += t.objectMode ? 1 : r.length;
 i ? t.buffer.unshift(r) : t.buffer.push(r);
-t.needReadable && T(e);
+t.needReadable && B(e);
 }
-B(e, t);
+j(e, t);
 }
-function E(e, t) {
+function M(e, t) {
 var r, i;
 (i = t, c.isBuffer(i) || i instanceof u) || "string" == typeof t || void 0 === t || e.objectMode || (r = new TypeError("Invalid non-string/buffer chunk"));
 return r;
 }
-function k(e) {
+function A(e) {
 return !e.ended && (e.needReadable || e.length < e.highWaterMark || 0 === e.length);
 }
 _.prototype.isPaused = function() {
@@ -14718,9 +14718,9 @@ this._readableState.decoder = new b(t);
 this._readableState.encoding = t;
 return this;
 };
-var A = 8388608;
+var k = 8388608;
 function R(e) {
-if (e >= A) e = A; else {
+if (e >= k) e = k; else {
 e--;
 e |= e >>> 1;
 e |= e >>> 2;
@@ -14750,11 +14750,11 @@ var t = this._readableState, r = e;
 0 !== e && (t.emittedReadable = !1);
 if (0 === e && t.needReadable && (t.length >= t.highWaterMark || t.ended)) {
 p("read: emitReadable", t.length, t.ended);
-0 === t.length && t.ended ? F(this) : T(this);
+0 === t.length && t.ended ? $(this) : B(this);
 return null;
 }
 if (0 === (e = x(e, t)) && t.ended) {
-0 === t.length && F(this);
+0 === t.length && $(this);
 return null;
 }
 var i, n = t.needReadable;
@@ -14775,7 +14775,7 @@ e = 0;
 } else t.length -= e;
 if (0 === t.length) {
 t.ended || (t.needReadable = !0);
-r !== e && t.ended && F(this);
+r !== e && t.ended && $(this);
 }
 null !== i && this.emit("data", i);
 return i;
@@ -14790,30 +14790,30 @@ t.length += t.objectMode ? 1 : r.length;
 }
 }
 t.ended = !0;
-T(e);
+B(e);
 }
 }
-function T(e) {
+function B(e) {
 var t = e._readableState;
 t.needReadable = !1;
 if (!t.emittedReadable) {
 p("emitReadable", t.flowing);
 t.emittedReadable = !0;
-t.sync ? n.nextTick(j, e) : j(e);
+t.sync ? n.nextTick(T, e) : T(e);
 }
 }
-function j(e) {
+function T(e) {
 p("emit readable");
 e.emit("readable");
 D(e);
 }
-function B(e, t) {
+function j(e, t) {
 if (!t.readingMore) {
 t.readingMore = !0;
-n.nextTick(P, e, t);
+n.nextTick(N, e, t);
 }
 }
-function P(e, t) {
+function N(e, t) {
 for (var r = t.length; !t.reading && !t.flowing && !t.ended && t.length < t.highWaterMark; ) {
 p("maybeReadMore read 0");
 e.read(0);
@@ -14855,7 +14855,7 @@ function c() {
 p("onend");
 e.end();
 }
-var u = N(i);
+var u = P(i);
 e.on("drain", u);
 var h = !1;
 function d() {
@@ -14914,7 +14914,7 @@ i.resume();
 }
 return e;
 };
-function N(e) {
+function P(e) {
 return function() {
 var t = e._readableState;
 p("pipeOnDrain", t.awaitDrain);
@@ -14962,13 +14962,13 @@ var i = this._readableState;
 if (!i.endEmitted && !i.readableListening) {
 i.readableListening = i.needReadable = !0;
 i.emittedReadable = !1;
-i.reading ? i.length && T(this) : n.nextTick(L, this);
+i.reading ? i.length && B(this) : n.nextTick(C, this);
 }
 }
 return r;
 };
 _.prototype.addListener = _.prototype.on;
-function L(e) {
+function C(e) {
 p("readable nexttick read 0");
 e.read(0);
 }
@@ -14977,11 +14977,11 @@ var e = this._readableState;
 if (!e.flowing) {
 p("resume");
 e.flowing = !0;
-C(this, e);
+L(this, e);
 }
 return this;
 };
-function C(e, t) {
+function L(e, t) {
 if (!t.resumeScheduled) {
 t.resumeScheduled = !0;
 n.nextTick(O, e, t);
@@ -15066,10 +15066,10 @@ var i;
 if (e < t.head.data.length) {
 i = t.head.data.slice(0, e);
 t.head.data = t.head.data.slice(e);
-} else i = e === t.head.data.length ? t.shift() : r ? z(e, t) : $(e, t);
+} else i = e === t.head.data.length ? t.shift() : r ? F(e, t) : z(e, t);
 return i;
 }
-function z(e, t) {
+function F(e, t) {
 var r = t.head, i = 1, n = r.data;
 e -= n.length;
 for (;r = r.next; ) {
@@ -15090,7 +15090,7 @@ break;
 t.length -= i;
 return n;
 }
-function $(e, t) {
+function z(e, t) {
 var r = c.allocUnsafe(e), i = t.head, n = 1;
 i.data.copy(r);
 e -= i.data.length;
@@ -15112,7 +15112,7 @@ break;
 t.length -= n;
 return r;
 }
-function F(e) {
+function $(e) {
 var t = e._readableState;
 if (t.length > 0) throw new Error('"endReadable()" called on non-empty stream');
 if (!t.endEmitted) {
@@ -15244,7 +15244,7 @@ var t = this;
 this.next = null;
 this.entry = null;
 this.finish = function() {
-L(t, e);
+C(t, e);
 };
 }
 var o, a = !r.browser && [ "v0.10", "v0.9." ].indexOf(r.version.slice(0, 5)) > -1 ? setImmediate : n.nextTick;
@@ -15284,7 +15284,7 @@ this.corked = 0;
 this.sync = !0;
 this.bufferProcessing = !1;
 this.onwrite = function(e) {
-A(r, e);
+k(r, e);
 };
 this.writecb = null;
 this.writelen = 0;
@@ -15418,10 +15418,10 @@ next: null
 };
 c ? c.next = t.lastBufferedRequest : t.bufferedRequest = t.lastBufferedRequest;
 t.bufferedRequestCount += 1;
-} else M(e, t, !1, a, i, n, s);
+} else E(e, t, !1, a, i, n, s);
 return f;
 }
-function M(e, t, r, i, n, s, o) {
+function E(e, t, r, i, n, s, o) {
 t.writelen = i;
 t.writecb = o;
 t.writing = !0;
@@ -15429,31 +15429,31 @@ t.sync = !0;
 r ? e._writev(n, t.onwrite) : e._write(n, s, t.onwrite);
 t.sync = !1;
 }
-function E(e, t, r, i, s) {
+function M(e, t, r, i, s) {
 --t.pendingcb;
 if (r) {
 n.nextTick(s, i);
-n.nextTick(P, e, t);
+n.nextTick(N, e, t);
 e._writableState.errorEmitted = !0;
 e.emit("error", i);
 } else {
 s(i);
 e._writableState.errorEmitted = !0;
 e.emit("error", i);
-P(e, t);
+N(e, t);
 }
 }
-function k(e) {
+function A(e) {
 e.writing = !1;
 e.writecb = null;
 e.length -= e.writelen;
 e.writelen = 0;
 }
-function A(e, t) {
+function k(e, t) {
 var r = e._writableState, i = r.sync, n = r.writecb;
-k(r);
-if (t) E(e, r, i, t, n); else {
-var s = T(r);
+A(r);
+if (t) M(e, r, i, t, n); else {
+var s = B(r);
 s || r.corked || r.bufferProcessing || !r.bufferedRequest || I(e, r);
 i ? a(R, e, r, s, n) : R(e, r, s, n);
 }
@@ -15462,7 +15462,7 @@ function R(e, t, r, i) {
 r || x(e, t);
 t.pendingcb--;
 i();
-P(e, t);
+N(e, t);
 }
 function x(e, t) {
 if (0 === t.length && t.needDrain) {
@@ -15483,7 +15483,7 @@ r = r.next;
 a += 1;
 }
 n.allBuffers = f;
-M(e, t, !0, t.length, n, "", o.finish);
+E(e, t, !0, t.length, n, "", o.finish);
 t.pendingcb++;
 t.lastBufferedRequest = null;
 if (o.next) {
@@ -15494,7 +15494,7 @@ t.bufferedRequestCount = 0;
 } else {
 for (;r; ) {
 var c = r.chunk, u = r.encoding, h = r.callback;
-M(e, t, !1, t.objectMode ? 1 : c.length, c, u, h);
+E(e, t, !1, t.objectMode ? 1 : c.length, c, u, h);
 r = r.next;
 t.bufferedRequestCount--;
 if (t.writing) break;
@@ -15523,34 +15523,34 @@ if (i.corked) {
 i.corked = 1;
 this.uncork();
 }
-i.ending || i.finished || N(this, i, r);
+i.ending || i.finished || P(this, i, r);
 };
-function T(e) {
+function B(e) {
 return e.ending && 0 === e.length && null === e.bufferedRequest && !e.finished && !e.writing;
 }
-function j(e, t) {
+function T(e, t) {
 e._final(function(r) {
 t.pendingcb--;
 r && e.emit("error", r);
 t.prefinished = !0;
 e.emit("prefinish");
-P(e, t);
+N(e, t);
 });
 }
-function B(e, t) {
+function j(e, t) {
 if (!t.prefinished && !t.finalCalled) if ("function" == typeof e._final) {
 t.pendingcb++;
 t.finalCalled = !0;
-n.nextTick(j, e, t);
+n.nextTick(T, e, t);
 } else {
 t.prefinished = !0;
 e.emit("prefinish");
 }
 }
-function P(e, t) {
-var r = T(t);
+function N(e, t) {
+var r = B(t);
 if (r) {
-B(e, t);
+j(e, t);
 if (0 === t.pendingcb) {
 t.finished = !0;
 e.emit("finish");
@@ -15558,14 +15558,14 @@ e.emit("finish");
 }
 return r;
 }
-function N(e, t, r) {
+function P(e, t, r) {
 t.ending = !0;
-P(e, t);
+N(e, t);
 r && (t.finished ? n.nextTick(r) : e.once("finish", r));
 t.ended = !0;
 e.writable = !1;
 }
-function L(e, t, r) {
+function C(e, t, r) {
 var i = e.entry;
 e.entry = null;
 for (;i; ) {
@@ -15774,37 +15774,37 @@ this._e = 3285377520;
 i(d, n);
 d.prototype._update = function() {
 for (var e = s, t = 0; t < 16; ++t) e[t] = this._block.readInt32LE(4 * t);
-for (var r = 0 | this._a, i = 0 | this._b, n = 0 | this._c, d = 0 | this._d, v = 0 | this._e, w = 0 | this._a, _ = 0 | this._b, S = 0 | this._c, M = 0 | this._d, E = 0 | this._e, k = 0; k < 80; k += 1) {
-var A, R;
-if (k < 16) {
-A = p(r, i, n, d, v, e[o[k]], u[0], f[k]);
-R = y(w, _, S, M, E, e[a[k]], h[0], c[k]);
-} else if (k < 32) {
-A = b(r, i, n, d, v, e[o[k]], u[1], f[k]);
-R = g(w, _, S, M, E, e[a[k]], h[1], c[k]);
-} else if (k < 48) {
-A = m(r, i, n, d, v, e[o[k]], u[2], f[k]);
-R = m(w, _, S, M, E, e[a[k]], h[2], c[k]);
-} else if (k < 64) {
-A = g(r, i, n, d, v, e[o[k]], u[3], f[k]);
-R = b(w, _, S, M, E, e[a[k]], h[3], c[k]);
+for (var r = 0 | this._a, i = 0 | this._b, n = 0 | this._c, d = 0 | this._d, v = 0 | this._e, w = 0 | this._a, _ = 0 | this._b, S = 0 | this._c, E = 0 | this._d, M = 0 | this._e, A = 0; A < 80; A += 1) {
+var k, R;
+if (A < 16) {
+k = p(r, i, n, d, v, e[o[A]], u[0], f[A]);
+R = y(w, _, S, E, M, e[a[A]], h[0], c[A]);
+} else if (A < 32) {
+k = b(r, i, n, d, v, e[o[A]], u[1], f[A]);
+R = g(w, _, S, E, M, e[a[A]], h[1], c[A]);
+} else if (A < 48) {
+k = m(r, i, n, d, v, e[o[A]], u[2], f[A]);
+R = m(w, _, S, E, M, e[a[A]], h[2], c[A]);
+} else if (A < 64) {
+k = g(r, i, n, d, v, e[o[A]], u[3], f[A]);
+R = b(w, _, S, E, M, e[a[A]], h[3], c[A]);
 } else {
-A = y(r, i, n, d, v, e[o[k]], u[4], f[k]);
-R = p(w, _, S, M, E, e[a[k]], h[4], c[k]);
+k = y(r, i, n, d, v, e[o[A]], u[4], f[A]);
+R = p(w, _, S, E, M, e[a[A]], h[4], c[A]);
 }
 r = v;
 v = d;
 d = l(n, 10);
 n = i;
-i = A;
-w = E;
-E = M;
-M = l(S, 10);
+i = k;
+w = M;
+M = E;
+E = l(S, 10);
 S = _;
 _ = R;
 }
-var x = this._b + n + M | 0;
-this._b = this._c + d + E | 0;
+var x = this._b + n + E | 0;
+this._b = this._c + d + M | 0;
 this._c = this._d + v + w | 0;
 this._d = this._e + r + _ | 0;
 this._e = this._a + i + S | 0;
@@ -16314,52 +16314,52 @@ function m(e, t) {
 return e >>> 0 < t >>> 0 ? 1 : 0;
 }
 a.prototype._update = function(e) {
-for (var t = this._w, r = 0 | this._ah, i = 0 | this._bh, n = 0 | this._ch, o = 0 | this._dh, a = 0 | this._eh, g = 0 | this._fh, y = 0 | this._gh, v = 0 | this._hh, w = 0 | this._al, _ = 0 | this._bl, S = 0 | this._cl, M = 0 | this._dl, E = 0 | this._el, k = 0 | this._fl, A = 0 | this._gl, R = 0 | this._hl, x = 0; x < 32; x += 2) {
+for (var t = this._w, r = 0 | this._ah, i = 0 | this._bh, n = 0 | this._ch, o = 0 | this._dh, a = 0 | this._eh, g = 0 | this._fh, y = 0 | this._gh, v = 0 | this._hh, w = 0 | this._al, _ = 0 | this._bl, S = 0 | this._cl, E = 0 | this._dl, M = 0 | this._el, A = 0 | this._fl, k = 0 | this._gl, R = 0 | this._hl, x = 0; x < 32; x += 2) {
 t[x] = e.readInt32BE(4 * x);
 t[x + 1] = e.readInt32BE(4 * x + 4);
 }
 for (;x < 160; x += 2) {
-var I = t[x - 30], T = t[x - 30 + 1], j = d(I, T), B = l(T, I), P = p(I = t[x - 4], T = t[x - 4 + 1]), N = b(T, I), L = t[x - 14], C = t[x - 14 + 1], O = t[x - 32], D = t[x - 32 + 1], U = B + C | 0, q = j + L + m(U, B) | 0;
-q = (q = q + P + m(U = U + N | 0, N) | 0) + O + m(U = U + D | 0, D) | 0;
+var I = t[x - 30], B = t[x - 30 + 1], T = d(I, B), j = l(B, I), N = p(I = t[x - 4], B = t[x - 4 + 1]), P = b(B, I), C = t[x - 14], L = t[x - 14 + 1], O = t[x - 32], D = t[x - 32 + 1], U = j + L | 0, q = T + C + m(U, j) | 0;
+q = (q = q + N + m(U = U + P | 0, P) | 0) + O + m(U = U + D | 0, D) | 0;
 t[x] = q;
 t[x + 1] = U;
 }
-for (var z = 0; z < 160; z += 2) {
-q = t[z];
-U = t[z + 1];
-var $ = c(r, i, n), F = c(w, _, S), K = u(r, w), H = u(w, r), W = h(a, E), G = h(E, a), V = s[z], X = s[z + 1], Y = f(a, g, y), Z = f(E, k, A), J = R + G | 0, Q = v + W + m(J, R) | 0;
-Q = (Q = (Q = Q + Y + m(J = J + Z | 0, Z) | 0) + V + m(J = J + X | 0, X) | 0) + q + m(J = J + U | 0, U) | 0;
-var ee = H + F | 0, te = K + $ + m(ee, H) | 0;
+for (var F = 0; F < 160; F += 2) {
+q = t[F];
+U = t[F + 1];
+var z = c(r, i, n), $ = c(w, _, S), K = u(r, w), H = u(w, r), V = h(a, M), W = h(M, a), G = s[F], X = s[F + 1], Y = f(a, g, y), J = f(M, A, k), Z = R + W | 0, Q = v + V + m(Z, R) | 0;
+Q = (Q = (Q = Q + Y + m(Z = Z + J | 0, J) | 0) + G + m(Z = Z + X | 0, X) | 0) + q + m(Z = Z + U | 0, U) | 0;
+var ee = H + $ | 0, te = K + z + m(ee, H) | 0;
 v = y;
-R = A;
+R = k;
 y = g;
-A = k;
+k = A;
 g = a;
-k = E;
-a = o + Q + m(E = M + J | 0, M) | 0;
+A = M;
+a = o + Q + m(M = E + Z | 0, E) | 0;
 o = n;
-M = S;
+E = S;
 n = i;
 S = _;
 i = r;
 _ = w;
-r = Q + te + m(w = J + ee | 0, J) | 0;
+r = Q + te + m(w = Z + ee | 0, Z) | 0;
 }
 this._al = this._al + w | 0;
 this._bl = this._bl + _ | 0;
 this._cl = this._cl + S | 0;
-this._dl = this._dl + M | 0;
-this._el = this._el + E | 0;
-this._fl = this._fl + k | 0;
-this._gl = this._gl + A | 0;
+this._dl = this._dl + E | 0;
+this._el = this._el + M | 0;
+this._fl = this._fl + A | 0;
+this._gl = this._gl + k | 0;
 this._hl = this._hl + R | 0;
 this._ah = this._ah + r + m(this._al, w) | 0;
 this._bh = this._bh + i + m(this._bl, _) | 0;
 this._ch = this._ch + n + m(this._cl, S) | 0;
-this._dh = this._dh + o + m(this._dl, M) | 0;
-this._eh = this._eh + a + m(this._el, E) | 0;
-this._fh = this._fh + g + m(this._fl, k) | 0;
-this._gh = this._gh + y + m(this._gl, A) | 0;
+this._dh = this._dh + o + m(this._dl, E) | 0;
+this._eh = this._eh + a + m(this._el, M) | 0;
+this._fh = this._fh + g + m(this._fl, A) | 0;
+this._gh = this._gh + y + m(this._gl, k) | 0;
 this._hh = this._hh + v + m(this._hl, R) | 0;
 };
 a.prototype._hash = function() {
@@ -16657,7 +16657,7 @@ return "[Circular]";
 default:
 return e;
 }
-}), f = i[r]; r < s; f = i[++r]) v(f) || !E(f) ? o += " " + f : o += " " + a(f);
+}), f = i[r]; r < s; f = i[++r]) v(f) || !M(f) ? o += " " + f : o += " " + a(f);
 return o;
 };
 r.deprecate = function(e, n) {
@@ -16753,15 +16753,15 @@ var s = d(e, t);
 if (s) return s;
 var o = Object.keys(t), a = u(o);
 e.showHidden && (o = Object.getOwnPropertyNames(t));
-if (A(t) && (o.indexOf("message") >= 0 || o.indexOf("description") >= 0)) return l(t);
+if (k(t) && (o.indexOf("message") >= 0 || o.indexOf("description") >= 0)) return l(t);
 if (0 === o.length) {
 if (R(t)) {
 var f = t.name ? ": " + t.name : "";
 return e.stylize("[Function" + f + "]", "special");
 }
-if (M(t)) return e.stylize(RegExp.prototype.toString.call(t), "regexp");
-if (k(t)) return e.stylize(Date.prototype.toString.call(t), "date");
-if (A(t)) return l(t);
+if (E(t)) return e.stylize(RegExp.prototype.toString.call(t), "regexp");
+if (A(t)) return e.stylize(Date.prototype.toString.call(t), "date");
+if (k(t)) return l(t);
 }
 var c, y = "", v = !1, w = [ "{", "}" ];
 if (g(t)) {
@@ -16769,11 +16769,11 @@ v = !0;
 w = [ "[", "]" ];
 }
 R(t) && (y = " [Function" + (t.name ? ": " + t.name : "") + "]");
-M(t) && (y = " " + RegExp.prototype.toString.call(t));
-k(t) && (y = " " + Date.prototype.toUTCString.call(t));
-A(t) && (y = " " + l(t));
+E(t) && (y = " " + RegExp.prototype.toString.call(t));
+A(t) && (y = " " + Date.prototype.toUTCString.call(t));
+k(t) && (y = " " + l(t));
 if (0 === o.length && (!v || 0 == t.length)) return w[0] + y + w[1];
-if (i < 0) return M(t) ? e.stylize(RegExp.prototype.toString.call(t), "regexp") : e.stylize("[Object]", "special");
+if (i < 0) return E(t) ? e.stylize(RegExp.prototype.toString.call(t), "regexp") : e.stylize("[Object]", "special");
 e.seen.push(t);
 c = v ? p(e, t, i, a, o) : o.map(function(r) {
 return b(e, t, i, a, r, v);
@@ -16793,7 +16793,7 @@ function l(e) {
 return "[" + Error.prototype.toString.call(e) + "]";
 }
 function p(e, t, r, i, n) {
-for (var s = [], o = 0, a = t.length; o < a; ++o) B(t, String(o)) ? s.push(b(e, t, r, i, String(o), !0)) : s.push("");
+for (var s = [], o = 0, a = t.length; o < a; ++o) j(t, String(o)) ? s.push(b(e, t, r, i, String(o), !0)) : s.push("");
 n.forEach(function(n) {
 n.match(/^\d+$/) || s.push(b(e, t, r, i, n, !0));
 });
@@ -16804,7 +16804,7 @@ var o, a, f;
 (f = Object.getOwnPropertyDescriptor(t, n) || {
 value: t[n]
 }).get ? a = f.set ? e.stylize("[Getter/Setter]", "special") : e.stylize("[Getter]", "special") : f.set && (a = e.stylize("[Setter]", "special"));
-B(i, n) || (o = "[" + n + "]");
+j(i, n) || (o = "[" + n + "]");
 a || (e.seen.indexOf(f.value) < 0 ? (a = v(r) ? h(e, f.value, null) : h(e, f.value, r - 1)).indexOf("\n") > -1 && (a = s ? a.split("\n").map(function(e) {
 return "  " + e;
 }).join("\n").substr(2) : "\n" + a.split("\n").map(function(e) {
@@ -16858,22 +16858,22 @@ function S(e) {
 return void 0 === e;
 }
 r.isUndefined = S;
-function M(e) {
-return E(e) && "[object RegExp]" === x(e);
-}
-r.isRegExp = M;
 function E(e) {
+return M(e) && "[object RegExp]" === x(e);
+}
+r.isRegExp = E;
+function M(e) {
 return "object" == typeof e && null !== e;
 }
-r.isObject = E;
-function k(e) {
-return E(e) && "[object Date]" === x(e);
-}
-r.isDate = k;
+r.isObject = M;
 function A(e) {
-return E(e) && ("[object Error]" === x(e) || e instanceof Error);
+return M(e) && "[object Date]" === x(e);
 }
-r.isError = A;
+r.isDate = A;
+function k(e) {
+return M(e) && ("[object Error]" === x(e) || e instanceof Error);
+}
+r.isError = k;
 function R(e) {
 return "function" == typeof e;
 }
@@ -16888,21 +16888,21 @@ return Object.prototype.toString.call(e);
 function I(e) {
 return e < 10 ? "0" + e.toString(10) : e.toString(10);
 }
-var T = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
-function j() {
+var B = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ];
+function T() {
 var e = new Date(), t = [ I(e.getHours()), I(e.getMinutes()), I(e.getSeconds()) ].join(":");
-return [ e.getDate(), T[e.getMonth()], t ].join(" ");
+return [ e.getDate(), B[e.getMonth()], t ].join(" ");
 }
 r.log = function() {
-console.log("%s - %s", j(), r.format.apply(r, arguments));
+console.log("%s - %s", T(), r.format.apply(r, arguments));
 };
 r.inherits = e("inherits");
 r._extend = function(e, t) {
-if (!t || !E(t)) return e;
+if (!t || !M(t)) return e;
 for (var r = Object.keys(t), i = r.length; i--; ) e[r[i]] = t[r[i]];
 return e;
 };
-function B(e, t) {
+function j(e, t) {
 return Object.prototype.hasOwnProperty.call(e, t);
 }
 }).call(this, e("_process"), "undefined" != typeof global ? global : "undefined" != typeof self ? self : "undefined" != typeof window ? window : {});
@@ -17261,12 +17261,12 @@ return w(y, !1, e, "options");
 function S(e) {
 return w(v, !0, e, "payload");
 }
-const M = {
+const E = {
 audience: "aud",
 issuer: "iss",
 subject: "sub",
 jwtid: "jti"
-}, E = [ "expiresIn", "notBefore", "noTimestamp", "audience", "issuer", "subject", "jwtid" ];
+}, M = [ "expiresIn", "notBefore", "noTimestamp", "audience", "issuer", "subject", "jwtid" ];
 t.exports = function(e, t, n, a) {
 if ("function" == typeof n) {
 a = n;
@@ -17305,7 +17305,7 @@ return u(e);
 }
 n.mutatePayload || (e = Object.assign({}, e));
 } else {
-const t = E.filter(function(e) {
+const t = M.filter(function(e) {
 return "undefined" != typeof n[e];
 });
 if (t.length > 0) return u(new Error("invalid " + t.join(",") + " option for " + typeof e + " payload"));
@@ -17340,8 +17340,8 @@ return u(e);
 }
 if ("undefined" == typeof e.exp) return u(new Error('"expiresIn" should be a number of seconds or string representing a timespan eg: "1d", "20h", 60'));
 }
-Object.keys(M).forEach(function(t) {
-const r = M[t];
+Object.keys(E).forEach(function(t) {
+const r = E[t];
 if ("undefined" != typeof n[t]) {
 if ("undefined" != typeof e[r]) return u(new Error('Bad "options.' + t + '" option. The payload already has an "' + r + '" property.'));
 e[r] = n[t];
@@ -17421,15 +17421,15 @@ complete: !0
 return v(e);
 }
 if (!S) return v(new i("invalid token"));
-const M = S.header;
-let E;
+const E = S.header;
+let M;
 if ("function" == typeof t) {
 if (!y) return v(new i("verify must be called asynchronous if secret or public key is provided as a callback"));
-E = t;
-} else E = function(e, r) {
+M = t;
+} else M = function(e, r) {
 return r(null, t);
 };
-return E(M, function(t, o) {
+return M(E, function(t, o) {
 if (t) return v(new i("error in secret or public key callback: " + t.message));
 const y = "" !== _[2].trim();
 if (!y && o) return v(new i("jwt signature is required"));
@@ -17446,56 +17446,56 @@ return v(new i("secretOrPublicKey is not valid key material"));
 }
 c.algorithms || ("secret" === o.type ? c.algorithms = g : [ "rsa", "rsa-pss" ].includes(o.asymmetricKeyType) ? c.algorithms = m : "ec" === o.asymmetricKeyType ? c.algorithms = b : c.algorithms = p);
 if (-1 === c.algorithms.indexOf(S.header.alg)) return v(new i("invalid algorithm"));
-if (M.alg.startsWith("HS") && "secret" !== o.type) return v(new i(`secretOrPublicKey must be a symmetric key when using ${M.alg}`));
-if (/^(?:RS|PS|ES)/.test(M.alg) && "public" !== o.type) return v(new i(`secretOrPublicKey must be an asymmetric key when using ${M.alg}`));
+if (E.alg.startsWith("HS") && "secret" !== o.type) return v(new i(`secretOrPublicKey must be a symmetric key when using ${E.alg}`));
+if (/^(?:RS|PS|ES)/.test(E.alg) && "public" !== o.type) return v(new i(`secretOrPublicKey must be an asymmetric key when using ${E.alg}`));
 if (!c.allowInvalidAsymmetricKeyTypes) try {
-f(M.alg, o);
+f(E.alg, o);
 } catch (e) {
 return v(e);
 }
-let E;
+let M;
 try {
-E = u.verify(e, S.header.alg, o);
+M = u.verify(e, S.header.alg, o);
 } catch (e) {
 return v(e);
 }
-if (!E) return v(new i("invalid signature"));
-const k = S.payload;
-if ("undefined" != typeof k.nbf && !c.ignoreNotBefore) {
-if ("number" != typeof k.nbf) return v(new i("invalid nbf value"));
-if (k.nbf > w + (c.clockTolerance || 0)) return v(new n("jwt not active", new Date(1e3 * k.nbf)));
+if (!M) return v(new i("invalid signature"));
+const A = S.payload;
+if ("undefined" != typeof A.nbf && !c.ignoreNotBefore) {
+if ("number" != typeof A.nbf) return v(new i("invalid nbf value"));
+if (A.nbf > w + (c.clockTolerance || 0)) return v(new n("jwt not active", new Date(1e3 * A.nbf)));
 }
-if ("undefined" != typeof k.exp && !c.ignoreExpiration) {
-if ("number" != typeof k.exp) return v(new i("invalid exp value"));
-if (w >= k.exp + (c.clockTolerance || 0)) return v(new s("jwt expired", new Date(1e3 * k.exp)));
+if ("undefined" != typeof A.exp && !c.ignoreExpiration) {
+if ("number" != typeof A.exp) return v(new i("invalid exp value"));
+if (w >= A.exp + (c.clockTolerance || 0)) return v(new s("jwt expired", new Date(1e3 * A.exp)));
 }
 if (c.audience) {
 const e = Array.isArray(c.audience) ? c.audience : [ c.audience ];
-if (!(Array.isArray(k.aud) ? k.aud : [ k.aud ]).some(function(t) {
+if (!(Array.isArray(A.aud) ? A.aud : [ A.aud ]).some(function(t) {
 return e.some(function(e) {
 return e instanceof RegExp ? e.test(t) : e === t;
 });
 })) return v(new i("jwt audience invalid. expected: " + e.join(" or ")));
 }
-if (c.issuer && ("string" == typeof c.issuer && k.iss !== c.issuer || Array.isArray(c.issuer) && -1 === c.issuer.indexOf(k.iss))) return v(new i("jwt issuer invalid. expected: " + c.issuer));
-if (c.subject && k.sub !== c.subject) return v(new i("jwt subject invalid. expected: " + c.subject));
-if (c.jwtid && k.jti !== c.jwtid) return v(new i("jwt jwtid invalid. expected: " + c.jwtid));
-if (c.nonce && k.nonce !== c.nonce) return v(new i("jwt nonce invalid. expected: " + c.nonce));
+if (c.issuer && ("string" == typeof c.issuer && A.iss !== c.issuer || Array.isArray(c.issuer) && -1 === c.issuer.indexOf(A.iss))) return v(new i("jwt issuer invalid. expected: " + c.issuer));
+if (c.subject && A.sub !== c.subject) return v(new i("jwt subject invalid. expected: " + c.subject));
+if (c.jwtid && A.jti !== c.jwtid) return v(new i("jwt jwtid invalid. expected: " + c.jwtid));
+if (c.nonce && A.nonce !== c.nonce) return v(new i("jwt nonce invalid. expected: " + c.nonce));
 if (c.maxAge) {
-if ("number" != typeof k.iat) return v(new i("iat required when maxAge is specified"));
-const e = a(c.maxAge, k.iat);
+if ("number" != typeof A.iat) return v(new i("iat required when maxAge is specified"));
+const e = a(c.maxAge, A.iat);
 if ("undefined" == typeof e) return v(new i('"maxAge" should be a number of seconds or string representing a timespan eg: "1d", "20h", 60'));
 if (w >= e + (c.clockTolerance || 0)) return v(new s("maxAge exceeded", new Date(1e3 * e)));
 }
 if (!0 === c.complete) {
 const e = S.signature;
 return v(null, {
-header: M,
-payload: k,
+header: E,
+payload: A,
 signature: e
 });
 }
-return v(null, k);
+return v(null, A);
 });
 };
 }).call(this, e("buffer").Buffer);
@@ -17599,7 +17599,7 @@ saltLength: n.constants.RSA_PSS_SALTLEN_DIGEST
 }, "base64")));
 };
 }
-function M(e) {
+function E(e) {
 return function(t, r, i) {
 h(i);
 t = g(t);
@@ -17613,21 +17613,21 @@ saltLength: n.constants.RSA_PSS_SALTLEN_DIGEST
 }, r, "base64");
 };
 }
-function E(e) {
+function M(e) {
 var t = w(e);
 return function() {
 var r = t.apply(null, arguments);
 return s.derToJose(r, "ES" + e);
 };
 }
-function k(e) {
+function A(e) {
 var t = _(e);
 return function(r, i, n) {
 i = s.joseToDer(i, "ES" + e).toString("base64");
 return t(r, i, n);
 };
 }
-function A() {
+function k() {
 return function() {
 return "";
 };
@@ -17642,13 +17642,13 @@ var t = {
 hs: y,
 rs: w,
 ps: S,
-es: E,
-none: A
+es: M,
+none: k
 }, r = {
 hs: v,
 rs: _,
-ps: M,
-es: k,
+ps: E,
+es: A,
 none: R
 }, i = e.match(/^(RS|PS|ES|HS)(256|384|512)$|^(none)$/i);
 if (!i) throw m('"%s" is not a valid algorithm.\n  Supported algorithms are:\n  "HS256", "HS384", "HS512", "RS256", "RS384", "RS512", "PS256", "PS384", "PS512", "ES256", "ES384", "ES512" and "none".', e);
@@ -17917,34 +17917,34 @@ return g(t, function(t) {
 return e[t];
 });
 }
-var M, E, k = Object.prototype, A = k.hasOwnProperty, R = k.toString, x = k.propertyIsEnumerable, I = (M = Object.keys, 
-E = Object, function(e) {
-return M(E(e));
-}), T = Math.max;
-function j(e, t) {
-var r = L(e) || N(e) ? _(e.length, String) : [], i = r.length, n = !!i;
-for (var s in e) !t && !A.call(e, s) || n && ("length" == s || P(s, i)) || r.push(s);
+var E, M, A = Object.prototype, k = A.hasOwnProperty, R = A.toString, x = A.propertyIsEnumerable, I = (E = Object.keys, 
+M = Object, function(e) {
+return E(M(e));
+}), B = Math.max;
+function T(e, t) {
+var r = C(e) || P(e) ? _(e.length, String) : [], i = r.length, n = !!i;
+for (var s in e) !t && !k.call(e, s) || n && ("length" == s || N(s, i)) || r.push(s);
 return r;
 }
-function B(e) {
-if (!(t = e, r = t && t.constructor, i = "function" == typeof r && r.prototype || k, 
+function j(e) {
+if (!(t = e, r = t && t.constructor, i = "function" == typeof r && r.prototype || A, 
 t === i)) return I(e);
 var t, r, i, n = [];
-for (var s in Object(e)) A.call(e, s) && "constructor" != s && n.push(s);
+for (var s in Object(e)) k.call(e, s) && "constructor" != s && n.push(s);
 return n;
 }
-function P(e, t) {
+function N(e, t) {
 return !!(t = null == t ? i : t) && ("number" == typeof e || b.test(e)) && e > -1 && e % 1 == 0 && e < t;
 }
-function N(e) {
-return O(e) && A.call(e, "callee") && (!x.call(e, "callee") || R.call(e) == o);
+function P(e) {
+return O(e) && k.call(e, "callee") && (!x.call(e, "callee") || R.call(e) == o);
 }
-var L = Array.isArray;
-function C(e) {
+var C = Array.isArray;
+function L(e) {
 return null != e && U(e.length) && !D(e);
 }
 function O(e) {
-return z(e) && C(e);
+return F(e) && L(e);
 }
 function D(e) {
 var t = q(e) ? R.call(e) : "";
@@ -17957,25 +17957,25 @@ function q(e) {
 var t = typeof e;
 return !!e && ("object" == t || "function" == t);
 }
-function z(e) {
+function F(e) {
 return !!e && "object" == typeof e;
 }
-function $(e) {
-return "string" == typeof e || !L(e) && z(e) && R.call(e) == c;
+function z(e) {
+return "string" == typeof e || !C(e) && F(e) && R.call(e) == c;
 }
-function F(e) {
-return "symbol" == typeof e || z(e) && R.call(e) == u;
+function $(e) {
+return "symbol" == typeof e || F(e) && R.call(e) == u;
 }
 function K(e) {
-return e ? (e = W(e)) === r || e === -r ? (e < 0 ? -1 : 1) * n : e == e ? e : 0 : 0 === e ? e : 0;
+return e ? (e = V(e)) === r || e === -r ? (e < 0 ? -1 : 1) * n : e == e ? e : 0 : 0 === e ? e : 0;
 }
 function H(e) {
 var t = K(e), r = t % 1;
 return t == t ? r ? t - r : t : 0;
 }
-function W(e) {
+function V(e) {
 if ("number" == typeof e) return e;
-if (F(e)) return s;
+if ($(e)) return s;
 if (q(e)) {
 var t = "function" == typeof e.valueOf ? e.valueOf() : e;
 e = q(t) ? t + "" : t;
@@ -17985,16 +17985,16 @@ e = e.replace(h, "");
 var r = l.test(e);
 return r || p.test(e) ? m(e.slice(2), r ? 2 : 8) : d.test(e) ? s : +e;
 }
-function G(e) {
-return C(e) ? j(e) : B(e);
+function W(e) {
+return L(e) ? T(e) : j(e);
 }
 t.exports = function(e, t, r, i) {
-e = C(e) ? e : (n = e) ? S(n, G(n)) : [];
+e = L(e) ? e : (n = e) ? S(n, W(n)) : [];
 var n;
 r = r && !i ? H(r) : 0;
 var s = e.length;
-r < 0 && (r = T(s + r, 0));
-return $(e) ? r <= s && e.indexOf(t, r) > -1 : !!s && v(e, t, r) > -1;
+r < 0 && (r = B(s + r, 0));
+return z(e) ? r <= s && e.indexOf(t, r) > -1 : !!s && v(e, t, r) > -1;
 };
 }, {} ],
 220: [ function(e, t) {
@@ -18356,9 +18356,9 @@ e = S(e, t);
 o("caret", e);
 e = w(e, t);
 o("tildes", e);
-e = E(e, t);
+e = M(e, t);
 o("xrange", e);
-e = A(e, t);
+e = k(e, t);
 o("stars", e);
 return e;
 }, v = e => !e || "x" === e.toLowerCase() || "*" === e, w = (e, t) => e.trim().split(/\s+/).map(e => _(e, t)).join(" "), _ = (e, t) => {
@@ -18373,7 +18373,7 @@ a = `>=${r}.${i}.${n}-${s} <${r}.${+i + 1}.0-0`;
 o("tilde return", a);
 return a;
 });
-}, S = (e, t) => e.trim().split(/\s+/).map(e => M(e, t)).join(" "), M = (e, t) => {
+}, S = (e, t) => e.trim().split(/\s+/).map(e => E(e, t)).join(" "), E = (e, t) => {
 o("caret", e, t);
 const r = t.loose ? f[c.CARETLOOSE] : f[c.CARET], i = t.includePrerelease ? "-0" : "";
 return e.replace(r, (t, r, n, s, a) => {
@@ -18389,10 +18389,10 @@ f = "0" === r ? "0" === n ? `>=${r}.${n}.${s}${i} <${r}.${n}.${+s + 1}-0` : `>=$
 o("caret return", f);
 return f;
 });
-}, E = (e, t) => {
+}, M = (e, t) => {
 o("replaceXRanges", e, t);
-return e.split(/\s+/).map(e => k(e, t)).join(" ");
-}, k = (e, t) => {
+return e.split(/\s+/).map(e => A(e, t)).join(" ");
+}, A = (e, t) => {
 e = e.trim();
 const r = t.loose ? f[c.XRANGELOOSE] : f[c.XRANGE];
 return e.replace(r, (r, i, n, s, a, f) => {
@@ -18423,7 +18423,7 @@ r = `${i + n}.${s}.${a}${f}`;
 o("xRange return", r);
 return r;
 });
-}, A = (e, t) => {
+}, k = (e, t) => {
 o("replaceStars", e, t);
 return e.trim().replace(f[c.STAR], "");
 }, R = (e, t) => {
@@ -18866,7 +18866,7 @@ return i ? i.version : null;
 "./parse": 247
 } ],
 255: [ function(e, t) {
-const r = e("./internal/re"), i = e("./internal/constants"), n = e("./classes/semver"), s = e("./internal/identifiers"), o = e("./functions/parse"), a = e("./functions/valid"), f = e("./functions/clean"), c = e("./functions/inc"), u = e("./functions/diff"), h = e("./functions/major"), d = e("./functions/minor"), l = e("./functions/patch"), p = e("./functions/prerelease"), b = e("./functions/compare"), m = e("./functions/rcompare"), g = e("./functions/compare-loose"), y = e("./functions/compare-build"), v = e("./functions/sort"), w = e("./functions/rsort"), _ = e("./functions/gt"), S = e("./functions/lt"), M = e("./functions/eq"), E = e("./functions/neq"), k = e("./functions/gte"), A = e("./functions/lte"), R = e("./functions/cmp"), x = e("./functions/coerce"), I = e("./classes/comparator"), T = e("./classes/range"), j = e("./functions/satisfies"), B = e("./ranges/to-comparators"), P = e("./ranges/max-satisfying"), N = e("./ranges/min-satisfying"), L = e("./ranges/min-version"), C = e("./ranges/valid"), O = e("./ranges/outside"), D = e("./ranges/gtr"), U = e("./ranges/ltr"), q = e("./ranges/intersects"), z = e("./ranges/simplify"), $ = e("./ranges/subset");
+const r = e("./internal/re"), i = e("./internal/constants"), n = e("./classes/semver"), s = e("./internal/identifiers"), o = e("./functions/parse"), a = e("./functions/valid"), f = e("./functions/clean"), c = e("./functions/inc"), u = e("./functions/diff"), h = e("./functions/major"), d = e("./functions/minor"), l = e("./functions/patch"), p = e("./functions/prerelease"), b = e("./functions/compare"), m = e("./functions/rcompare"), g = e("./functions/compare-loose"), y = e("./functions/compare-build"), v = e("./functions/sort"), w = e("./functions/rsort"), _ = e("./functions/gt"), S = e("./functions/lt"), E = e("./functions/eq"), M = e("./functions/neq"), A = e("./functions/gte"), k = e("./functions/lte"), R = e("./functions/cmp"), x = e("./functions/coerce"), I = e("./classes/comparator"), B = e("./classes/range"), T = e("./functions/satisfies"), j = e("./ranges/to-comparators"), N = e("./ranges/max-satisfying"), P = e("./ranges/min-satisfying"), C = e("./ranges/min-version"), L = e("./ranges/valid"), O = e("./ranges/outside"), D = e("./ranges/gtr"), U = e("./ranges/ltr"), q = e("./ranges/intersects"), F = e("./ranges/simplify"), z = e("./ranges/subset");
 t.exports = {
 parse: o,
 valid: a,
@@ -18885,26 +18885,26 @@ sort: v,
 rsort: w,
 gt: _,
 lt: S,
-eq: M,
-neq: E,
-gte: k,
-lte: A,
+eq: E,
+neq: M,
+gte: A,
+lte: k,
 cmp: R,
 coerce: x,
 Comparator: I,
-Range: T,
-satisfies: j,
-toComparators: B,
-maxSatisfying: P,
-minSatisfying: N,
-minVersion: L,
-validRange: C,
+Range: B,
+satisfies: T,
+toComparators: j,
+maxSatisfying: N,
+minSatisfying: P,
+minVersion: C,
+validRange: L,
 outside: O,
 gtr: D,
 ltr: U,
 intersects: q,
-simplifyRange: z,
-subset: $,
+simplifyRange: F,
+subset: z,
 SemVer: n,
 re: r.re,
 src: r.src,
@@ -19359,6 +19359,30 @@ return null;
 }, {
 "../classes/range": 229
 } ],
+EditBox: [ function(e, t) {
+"use strict";
+cc._RF.push(t, "53322cCKMhM5q2Q5w/kuQHj", "EditBox");
+cc.Class({
+extends: cc.Component,
+properties: {
+editBox: cc.EditBox
+},
+onLoad: function() {
+if (this.isMobile()) {
+this.editBox.node.on("editing-did-began", this.onEditBoxFocus, this);
+this.editBox.node.on("touchstart", this.onEditBoxFocus, this);
+}
+},
+isMobile: function() {
+return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+},
+onEditBoxFocus: function(e) {
+e.preventDefault();
+this.editBox.blur();
+}
+});
+cc._RF.pop();
+}, {} ],
 GameConfig: [ function(e, t) {
 "use strict";
 cc._RF.push(t, "8da19Kpt7FCnoycSPF3SsWw", "GameConfig");
@@ -19376,10 +19400,11 @@ ipAddress: "https://dev.casinoparadize.com"
 };
 r.K.ServerAPI = {
 login: "/api/users/login",
-game: "/api/games?platform=milkyway&category",
+game: "/api/games?platform=casinoParadise&category",
 addtoFav: "/api/games/favourite",
 password: "/api/users",
-userDetails: "/api/users"
+userDetails: "/api/users",
+getGameById: "/api/games"
 };
 r.K.Sounds = {};
 t.exports = {
@@ -19398,53 +19423,99 @@ imageClick: cc.Button,
 addToFavouirteButton: cc.Button,
 mywebView: cc.WebView,
 webviewUrl: null,
-lobbyNode: null
+lobbyNode: null,
+redHeart: {
+default: null,
+type: cc.Node
+},
+blueHeart: {
+default: null,
+type: cc.Node
+}
 },
 onLoad: function() {
 this.setupEventListeners();
-var e = cc.find("Canvas");
-console.log(e, "finidng");
-var t = cc.find("Canvas/LobbyNode");
-if (t) {
-this.lobbyNode = t.getComponent("Lobby");
+var e = cc.find("Canvas/LobbyNode");
+if (e) {
+this.lobbyNode = e.getComponent("Lobby");
 this.lobbyNode;
 }
 },
 setupEventListeners: function() {
-this.imageClick.node.off("click", this.onClickItem, this);
-this.addToFavouirteButton.node.off("click", this.addToFavouirte, this);
-this.imageClick.node.on("click", this.onClickItem, this);
-this.addToFavouirteButton.node.on("click", this.addToFavouirte, this);
+this.imageClick.node.off("touchstart", this.onTouchStart, this);
+this.imageClick.node.off("touchend", this.onTouchEnd, this);
+this.imageClick.node.off("touchcancel", this.onTouchCancel, this);
+this.imageClick.node.on("touchstart", this.onTouchStart, this);
+this.imageClick.node.on("touchend", this.onTouchEnd, this);
+this.imageClick.node.on("touchcancel", this.onTouchCancel, this);
 },
-updateItem: function(e) {
-var t = this;
-cc.assetManager.loadRemote(e.thumbnail, function(e, r) {
-e ? console.error(e) : t.imageView.spriteFrame = new cc.SpriteFrame(r);
+updateItem: function(e, t) {
+var r = this, i = e;
+cc.assetManager.loadRemote(e.thumbnail, function(e, t) {
+e ? console.error(e) : r.imageView.spriteFrame = new cc.SpriteFrame(t);
 });
-this.imageClick.node.off("click", this.onClickItem, this);
-this.addToFavouirteButton.node.off("click", this.addToFavouirte, this);
-this.imageClick.node.on("click", function() {
-t.onClickItem(e);
-t.imageClick.node.interactable = !1;
+if ("fav" == t) {
+this.blueHeart.active = !1;
+this.redHeart.active = !0;
+}
+this.imageClick.node.off("click");
+this.addToFavouirteButton.node.off("click");
+this.imageClick.node.on("touchend", function(t) {
+t.getLocation().sub(r.touchStartPos).mag() < 10 && r.onClickItem(e);
+r.imageClick.node.interactable = !1;
 });
 this.addToFavouirteButton.node.on("click", function() {
-t.addToFavouirte(e);
+if (null != i.slug) {
+r.addToFavouirte(i);
+r.addToFavouirteButton.node.interactable = !1;
+}
 });
 },
+onTouchStart: function(e) {
+this.touchStartPos = e.getLocation();
+},
+onTouchEnd: function(e) {
+e.getLocation().sub(this.touchStartPos).mag();
+},
+onTouchCancel: function() {
+this.touchStartPos = null;
+},
 onClickItem: function(e) {
-console.log(e);
+var t = this;
+if (null != e.slug) {
+var r = K.ServerAddress.ipAddress + K.ServerAPI.getGameById + "/" + e.slug;
+ServerCom.httpRequest("GET", r, "", function(e) {
 if (null != e.url) {
-var t = e.url;
-console.log(this.lobbyNode);
-this.lobbyNode && this.lobbyNode.openWebView(t);
+var r = e.url;
+t.lobbyNode && t.lobbyNode.openWebView(r);
+}
+}.bind(this));
 }
 },
 addToFavouirte: function(e) {
-var t = {
+var t = this;
+if (null != e.slug) {
+var r = {
 gameId: e._id,
-type: e.type
-}, r = K.ServerAddress.ipAddress + K.ServerAPI.addtoFav;
-ServerCom.httpRequest("POST", r, t, function() {}.bind(this));
+type: t.blueHeart.active ? "add" : "remove"
+}, i = K.ServerAddress.ipAddress + K.ServerAPI.addtoFav + "/" + this.lobbyNode.id;
+ServerCom.httpRequest("PUT", i, r, function(e) {
+ServerCom.errorHeading.string = "Success";
+ServerCom.errorLable.string = e.message;
+if ("Game added to favourites" == e.message) {
+t.redHeart.active = !0;
+t.blueHeart.active = !1;
+} else {
+t.blueHeart.active = !0;
+t.redHeart.active = !1;
+}
+ServerCom.loginErrorNode.active = !0;
+setTimeout(function() {
+ServerCom.loginErrorNode.active = !1;
+}, 2e3);
+t.lobbyNode && "fav" == t.lobbyNode.category && t.lobbyNode.fetchGames("fav");
+}.bind(this));
+}
 }
 });
 cc._RF.pop();
@@ -19459,7 +19530,6 @@ webView: cc.WebView
 },
 onload: function() {},
 updateView: function(e) {
-console.log("URL", e, "this", this);
 this.webView.url = e.url;
 this.webView.active = !0;
 }
@@ -19523,15 +19593,15 @@ type: cc.Node
 },
 oldPassword: {
 default: null,
-type: cc.Label
+type: cc.EditBox
 },
 newPassword: {
 default: null,
-type: cc.Label
+type: cc.EditBox
 },
 confirmPassword: {
 default: null,
-type: cc.Label
+type: cc.EditBox
 },
 profileNode: {
 default: null,
@@ -19583,54 +19653,109 @@ moveDuration: 2,
 scaleUp: .9,
 scaleNormal: .9,
 itemsPerLoad: 10,
-myWebView: cc.WebView
+myWebViewParent: {
+default: null,
+type: cc.Node
+},
+myWebView: cc.WebView,
+customKeyboard: {
+default: null,
+type: cc.Node
+},
+smallAlphabet: {
+default: null,
+type: cc.Node
+},
+capitalAlphabet: {
+default: null,
+type: cc.Node
+},
+symbolsAlphabet: {
+default: null,
+type: cc.Node
+},
+capsButton: {
+default: null,
+type: cc.Node
+},
+smallButton: {
+default: null,
+type: cc.Node
+},
+deleteButton: {
+default: null,
+type: cc.Node
+},
+spaceButton: {
+default: null,
+type: cc.Node
+},
+commaButton: {
+default: null,
+type: cc.Node
+},
+dotButton: {
+default: null,
+type: cc.Node
+},
+pageViewParent: {
+default: null,
+type: cc.Node
+},
+pageView: cc.ScrollView,
+itemsPerPage: 1,
+scrollInterval: 3
 },
 onLoad: function() {
+var e = this;
 this.category || (this.category = "all");
+this.activeInputField = null;
+this.setupLobbyInputFocusListeners();
+this.setupLobbyKeyboardButtonListeners();
+this.disableDefaultKeyboard();
+this.initialPosition = this.scrollView.node.position.clone();
 this.itemsToLoad = [];
 this.currentIndex = 0;
-this.scrollView.node.on("scroll-to-right", this.loadMoreItems, this);
-var e = this.cloudAnimNode.getPosition(), t = cc.moveTo(this.moveDuration, cc.v2(this.targetX, e.y));
+this.setFullScreenWidth();
+cc.view.setResizeCallback(this.setFullScreenWidth.bind(this));
+var t = cc.v2(415, 0), r = cc.v2(-415, 0), i = cc.v2(415, 0);
+this.cloudAnimNode.setPosition(t);
+var n = cc.tween().to(4, {
+position: r
+}).call(function() {
+e.cloudAnimNode.setPosition(i);
+});
+cc.tween(this.cloudAnimNode).repeatForever(n).start();
 this.getUserDetails();
-this.cloudAnimNode.runAction(t);
 this.fetchGames(this.category);
+this.currentPage = 0;
+this.schedule(this.autoScrollPageView, this.scrollInterval);
+var s = cc.sys.os === cc.sys.OS_ANDROID, o = cc.sys.os === cc.sys.OS_IOS;
+(s || o) && this.myWebView.node.on("loaded", this.onWebViewLoaded, this);
 },
 fetchGames: function(e) {
-this.scrollView.content.removeAllChildren();
-var t = K.ServerAddress.ipAddress + K.ServerAPI.game + "=" + e;
-ServerCom.httpRequest("GET", t, " ", function(e) {
-if (0 !== e.featured.length || 0 !== e.others.length) {
-var t = e.others || [], r = e.featured || [];
+var t = this.scrollView.content;
+this.pageView.content.removeAllChildren();
+t.removeAllChildren();
+this.pageViewParent.active = !1;
+this.scrollView.node.setPosition(this.initialPosition);
+this.scrollView.node.getChildByName("view").width = 1600;
+this.scrollView.node.width = 1500;
+var r = K.ServerAddress.ipAddress + K.ServerAPI.game + "=" + e;
+ServerCom.httpRequest("GET", r, " ", function(t) {
+if (t.featured || t.others) if (0 !== t.featured.length || 0 !== t.others.length) {
+var r = t.others || [], i = t.featured || [];
 this.itemsToLoad = [];
-var i = 0;
-console.log("otherGames", t);
-console.log("featured", r);
-for (var n = 0; n < t.length; n++) {
-if (n > 0 && n % 2 == 0 && i < r.length) {
-this.itemsToLoad.push({
-data: r[i],
-prefab: this.smallItemPrefab
-});
-i++;
-}
-this.itemsToLoad.push({
-data: t[n],
-prefab: this.itemPrefab
-});
-}
-for (;i < r.length; ) {
-this.itemsToLoad.push({
-data: r[i],
-prefab: this.smallItemPrefab
-});
-i++;
-}
-if (0 === t.length && r.length > 0) for (var s = 0; s < r.length; s++) this.itemsToLoad.push({
-data: r[s],
-prefab: this.smallItemPrefab
-});
 this.currentIndex = 0;
-this.loadMoreItems();
+if (i.length > 0) {
+this.pageViewParent.active = !0;
+this.scollItemCount = i.length;
+this.populatePageView(i, e);
+} else {
+this.pageViewParent.active = !1;
+this.setFullScreenWidth();
+}
+r.length > 0 && this.populateScrollView(r, e);
 } else {
 ServerCom.errorLable.string = "No Games Found For This Category";
 ServerCom.loginErrorNode.active = !0;
@@ -19640,19 +19765,16 @@ ServerCom.loginErrorNode.active = !1;
 }
 }.bind(this));
 },
-loadMoreItems: function() {
-if (!(this.currentIndex >= this.itemsToLoad.length)) {
-for (var e = Math.min(this.currentIndex + this.itemsPerLoad, this.itemsToLoad.length), t = this.currentIndex; t < e; t++) {
-var r = this.itemsToLoad[t];
-this.populateItems(r.data, r.prefab);
-}
-this.currentIndex = e;
-}
+populatePageView: function(e, t) {
+for (var r = this.pageView.content, i = 0; i < e.length; i++) this.populateItems(e[i], this.smallItemPrefab, r, t);
 },
-populateItems: function(e, t) {
-var r = cc.instantiate(t);
-r.getComponent("GamesPrefab").updateItem(e);
-this.scrollView.content.addChild(r);
+populateScrollView: function(e, t) {
+for (var r = this.scrollView.content, i = 0; i < e.length; i++) this.populateItems(e[i], this.itemPrefab, r, t);
+},
+populateItems: function(e, t, r, i) {
+var n = cc.instantiate(t);
+n.getComponent("GamesPrefab").updateItem(e, i);
+r.addChild(n);
 },
 getGamesByCategoryAll: function() {
 this.category = "all";
@@ -19721,22 +19843,33 @@ if (o.startsWith("userToken=")) {
 i = o.substring("userToken=".length, o.length);
 break;
 }
-} else i = cc.sys.localStorage.getItem("userToken");
+} else cc.sys.os !== cc.sys.OS_ANDROID && cc.sys.os != cc.sys.Os_IOS || (i = cc.sys.localStorage.getItem("userToken"));
 this.myWebView.url = e;
-this.myWebView.node.active = !0;
-this.myWebView.node.on("loaded", function() {
-i && t.myWebView.evaluateJS("\n               window.postMessage({ type: 'authToken', token: '" + i + "' }, '" + e + "');\n            ");
+document.fullscreenElement ? cc.sys.isMobile && cc.sys.isBrowser && (this.myWebView.node.width = 2250) : cc.sys.isMobile && cc.sys.isBrowser ? this.myWebView.node.width = 2200 : this.myWebView.node.width = 2250;
+this.myWebViewParent.active = !0;
+cc.sys.isBrowser && this.myWebView.node.on("loaded", function() {
+i && t.myWebView.evaluateJS("\n                  inst.myWebView.node._components[0]._impl._iframe.contentWindow.postMessage({ type: 'authToken', token: '" + i + "' }, '" + e + "');\n                ");
+});
+cc.sys.os !== cc.sys.OS_ANDROID && cc.sys.os != cc.sys.Os_IOS || this.myWebView.node.on("loaded", function() {
+if (i) {
+console.log("================================================ iam inside loaded function in for Mobilewebviewsss");
+var r = "\n            if (window && window.postMessage) {\n                window.postMessage({ type: 'authToken', token: '" + i + "' }, '" + e + "');\n            }\n           ";
+t.myWebView.evaluateJS(r);
+}
 });
 window.addEventListener("message", function(t) {
-console.log("message", t);
+console.log("event check for mobile application is it worlking or not", t);
 var n = t.data;
-"authToken" === n && r.myWebView.node._components[0]._impl._iframe.contentWindow.postMessage({
+if ("authToken" === n) {
+console.log("Received authToken message here for cocos game");
+cc.sys.isBrowser ? r.myWebView.node._components[0]._impl._iframe.contentWindow.postMessage({
 type: "authToken",
 cookie: i
-}, "" + e);
+}, e) : r.myWebView.evaluateJS("\n                  window.postMessage({ type: 'authToken', cookie: '" + i + "' }, '" + e + "');\n              ");
+}
 if ("onExit" === n) {
 r.myWebView.url = "";
-r.myWebView.node.active = !1;
+r.myWebViewParent.active = !1;
 }
 });
 },
@@ -19788,9 +19921,7 @@ var s = K.ServerAddress.ipAddress + K.ServerAPI.password + "/" + this.id, o = {
 existingPassword: this.oldPassword.string,
 password: this.newPassword.string
 };
-console.log(o, "pas");
 ServerCom.httpRequest("PUT", s, o, function(e) {
-console.log("response", e);
 if (e.message) {
 ServerCom.errorHeading.string = "Password Changed Successfully";
 ServerCom.errorLable.string = e.message;
@@ -19818,6 +19949,95 @@ this.popupNode.active = !1;
 saveProfile: function() {
 this.profileNode.active = !1;
 this.popupNode.active = !1;
+},
+setFullScreenWidth: function() {
+if (document.fullscreenElement) if (cc.sys.isMobile && cc.sys.isBrowser) {
+this.scrollView.node.width = 1500;
+this.scrollView.node.getChildByName("view").width = 1600;
+} else {
+if (this.pageViewParent.active) {
+var e = cc.winSize.width - 340;
+this.scrollView.node.width = e;
+this.scrollView.node.getChildByName("view").width = e;
+} else {
+this.scrollView.node.setPosition(cc.v2(-800, 0));
+this.scrollView.node.width = 2e3;
+this.scrollView.node.getChildByName("view").width = 2e3;
+}
+this.pageView.node.width.width = 335;
+this.pageView.node.getChildByName("view").width = 335;
+} else {
+if (this.pageViewParent.active) {
+this.scrollView.node.width = 1500;
+this.scrollView.node.getChildByName("view").width = 1600;
+} else {
+this.scrollView.node.setPosition(cc.v2(-900, 0));
+this.scrollView.node.width = 2e3;
+this.scrollView.node.getChildByName("view").width = 2e3;
+}
+this.pageView.node.width = 335;
+this.pageView.node.getChildByName("view").width = 335;
+}
+},
+autoScrollPageView: function() {
+var e = this.pageView.content.childrenCount;
+this.currentPage = (this.currentPage + 1) % e;
+var t = cc.v2(this.currentPage * this.pageView.node.width, 0);
+this.pageView.scrollToOffset(t, 1);
+},
+setupLobbyInputFocusListeners: function() {
+if (cc.sys.isMobile && cc.sys.isBrowser) {
+this.oldPassword && this.oldPassword.node.on(cc.Node.EventType.TOUCH_END, this.onInputFieldClicked, this);
+this.newPassword && this.newPassword.node.on(cc.Node.EventType.TOUCH_END, this.onInputFieldClicked, this);
+if (this.confirmPassword) {
+this.confirmPassword.node.on(cc.Node.EventType.TOUCH_END, this.onInputFieldClicked, this);
+this.confirmPassword.node.on("editing-did-began", this.onInputFieldFocused, this);
+this.confirmPassword.node.on("editing-did-ended", this.onInputFieldBlurred, this);
+}
+}
+},
+onInputFieldClicked: function(e) {
+var t = e.currentTarget.getComponent(cc.EditBox);
+if (t) {
+this.activeInputField = t;
+this.customKeyboard && (this.customKeyboard.active = !0);
+}
+},
+onInputFieldFocused: function(e) {
+var t = e.node.getComponent(cc.EditBox);
+t && (t.placeholder = "");
+},
+onInputFieldBlurred: function(e) {
+e.node.getComponent(cc.EditBox);
+},
+setupLobbyKeyboardButtonListeners: function() {
+var e = this;
+this.getAllKeyboardButtons().forEach(function(t) {
+t.on(cc.Node.EventType.TOUCH_END, e.onKeyboardButtonClicked, e);
+});
+this.deleteButton && this.deleteButton.on(cc.Node.EventType.TOUCH_END, this.onDeleteButtonClicked, this);
+},
+getAllKeyboardButtons: function() {
+var e = [];
+return (e = (e = (e = (e = (e = e.concat(this.smallAlphabet.children)).concat(this.capitalAlphabet.children)).concat(this.symbolsAlphabet.children)).concat(this.spaceButton)).concat(this.commaButton)).concat(this.dotButton);
+},
+onKeyboardButtonClicked: function(e) {
+var t = e.target._components[1].clickEvents[0].customEventData;
+this.appendToActiveInput(t);
+},
+appendToActiveInput: function(e) {
+this.activeInputField && (this.activeInputField.string += e);
+},
+onDeleteButtonClicked: function() {
+this.removeFromActiveInput();
+},
+removeFromActiveInput: function() {
+this.activeInputField && this.activeInputField.string.length > 0 && (this.activeInputField.string = this.activeInputField.string.slice(0, -1));
+},
+disableDefaultKeyboard: function() {
+cc.sys.isMobile && cc.sys.isBrowser && document.querySelectorAll("input, textarea").forEach(function(e) {
+e.style.pointerEvents = "none";
+});
 }
 });
 cc._RF.pop();
@@ -19854,22 +20074,116 @@ type: cc.Label
 loginErrorNode: {
 default: null,
 type: cc.Node
+},
+customKeyboard: {
+default: null,
+type: cc.Node
+},
+smallAlphabet: {
+default: null,
+type: cc.Node
+},
+capitalAlphabet: {
+default: null,
+type: cc.Node
+},
+symbolsAlphabet: {
+default: null,
+type: cc.Node
+},
+capsButton: {
+default: null,
+type: cc.Node
+},
+smallButton: {
+default: null,
+type: cc.Node
+},
+deleteButton: {
+default: null,
+type: cc.Node
+},
+spaceButton: {
+default: null,
+type: cc.Node
+},
+commaButton: {
+default: null,
+type: cc.Node
+},
+dotButton: {
+default: null,
+type: cc.Node
 }
 },
 onLoad: function() {
-this.rememberMe && (this.rememberMe.isChecked = !1);
+this.activeInputField = null;
+this.setupInputFocusListeners();
+this.setupKeyboardButtonListeners();
+this.disableDefaultKeyboard();
+this.loadSavedLoginInfo();
+},
+disableDefaultKeyboard: function() {
+cc.sys.isMobile && cc.sys.isBrowser && document.querySelectorAll("input, textarea").forEach(function(e) {
+e.style.pointerEvents = "none";
+});
+},
+setupInputFocusListeners: function() {
+if (cc.sys.isMobile && cc.sys.isBrowser) {
+this.userName && this.userName.node.on(cc.Node.EventType.TOUCH_END, this.onInputFieldClicked, this);
+this.password && this.password.node.on(cc.Node.EventType.TOUCH_END, this.onInputFieldClicked, this);
+}
+},
+onInputFieldClicked: function(e) {
+var t = this, r = e.currentTarget.getComponent(cc.EditBox);
+if (r) {
+this.activeInputField = r;
+if (this.customKeyboard) {
+this.customKeyboard.active = !0;
+e.preventDefault();
+this.scheduleOnce(function() {
+t.activeInputField.blur();
+}, .1);
+}
+}
+},
+setupKeyboardButtonListeners: function() {
+var e = this;
+this.getAllKeyboardButtons().forEach(function(t) {
+t.on(cc.Node.EventType.TOUCH_END, e.onKeyboardButtonClicked, e);
+});
+this.deleteButton && this.deleteButton.on(cc.Node.EventType.TOUCH_END, this.onDeleteButtonClicked, this);
+},
+getAllKeyboardButtons: function() {
+var e = [];
+return (e = (e = (e = (e = (e = e.concat(this.smallAlphabet.children)).concat(this.capitalAlphabet.children)).concat(this.symbolsAlphabet.children)).concat(this.spaceButton)).concat(this.commaButton)).concat(this.dotButton);
+},
+onKeyboardButtonClicked: function(e) {
+var t = e.target._components[1].clickEvents[0].customEventData;
+this.appendToActiveInput(t);
+},
+appendToActiveInput: function(e) {
+this.activeInputField && (this.activeInputField.string += e);
+},
+onDeleteButtonClicked: function() {
+this.removeFromActiveInput();
 },
 logutClick: function() {
 this.lobbyNode.active && (this.lobbyNode.active = !1);
+(cc.sys.isBrowser ? localStorage.getItem("rememberMeChecked") : cc.sys.localStorage.getItem("rememberMeChecked")) || this.clearSavedLoginInfo();
+},
+removeFromActiveInput: function() {
+this.activeInputField && this.activeInputField.string.length > 0 && (this.activeInputField.string = this.activeInputField.string.slice(0, -1));
 },
 onLoginClick: function() {
 var e = this, t = K.ServerAddress.ipAddress + K.ServerAPI.login, r = {
 username: this.userName.string,
 password: this.password.string
 };
-if ("" != this.userName.string && "" != this.password.string) ServerCom.httpRequest("POST", t, r, function(e) {
+if ("" != this.userName.string && "" != this.password.string) {
+this.rememberMe.isChecked ? this.saveLoginInfo(this.userName.string, this.password.string) : this.clearSavedLoginInfo();
+ServerCom.httpRequest("POST", t, r, function(e) {
 if (e.token) {
-console.log("token on login", e.token);
 var t = Math.floor(10 * Math.random()) + 1;
 if (cc.sys.isBrowser) {
 document.cookie = "userToken=" + e.token + "; path=/;";
@@ -19881,16 +20195,92 @@ cc.sys.localStorage.setItem("index", t);
 setTimeout(function() {
 this.lobbyNode.active = !0;
 }.bind(this), 1e3);
-} else console.log("response of user not found on login page", e);
-}.bind(this)); else {
+}
+}.bind(this));
+} else {
 this.errorLable.string = "Username or Password fields are empty";
 this.loginErrorNode.active = !0;
 setTimeout(function() {
 e.loginErrorNode.active = !1;
 }, 2e3);
 }
+},
+smallAlphabetBUttonClicked: function() {
+if (this.capitalAlphabet.active) {
+this.capitalAlphabet.active = !1;
+this.smallAlphabet.active = !0;
+this.symbolsAlphabet.active && (this.symbolsAlphabet.active = !1);
+this.smallButton.active = !1;
+this.capsButton.active = !0;
+} else {
+this.symbolsAlphabet.active && (this.symbolsAlphabet.active = !1);
+this.capitalAlphabet.active = !0;
+this.smallAlphabet.active = !1;
+this.smallButton.active = !0;
+this.capsButton.active = !1;
+}
+},
+specialSymbolClicked: function() {
+if (this.capitalAlphabet.active || this.smallAlphabet.active) {
+this.smallAlphabet.active = !1;
+this.capitalAlphabet.active = !1;
+this.symbolsAlphabet.active = !0;
+} else {
+this.symbolsAlphabet.active = !1;
+if (!this.smallAlphabet.active) {
+this.smallAlphabet.active = !0;
+this.capitalAlphabet.active = !1;
+}
+}
+},
+closeKeyBoard: function() {
+this.customKeyboard.active = !1;
+},
+saveLoginInfo: function(e, t) {
+if (cc.sys.isBrowser) {
+localStorage.setItem("rememberedUsername", e);
+localStorage.setItem("rememberedPassword", t);
+localStorage.setItem("rememberMeChecked", "true");
+} else {
+cc.sys.localStorage.setItem("rememberedUsername", e);
+cc.sys.localStorage.setItem("rememberedPassword", t);
+cc.sys.localStorage.setItem("rememberMeChecked", "true");
+}
+},
+clearSavedLoginInfo: function() {
+if (cc.sys.isBrowser) {
+localStorage.removeItem("rememberedUsername");
+localStorage.removeItem("rememberedPassword");
+localStorage.removeItem("rememberMeChecked");
+} else {
+cc.sys.localStorage.removeItem("rememberedUsername");
+cc.sys.localStorage.removeItem("rememberedPassword");
+cc.sys.localStorage.removeItem("rememberMeChecked");
+}
+},
+loadSavedLoginInfo: function() {
+var e, t, r;
+if (cc.sys.isBrowser) {
+e = localStorage.getItem("rememberedUsername");
+t = localStorage.getItem("rememberedPassword");
+r = localStorage.getItem("rememberMeChecked");
+} else {
+e = cc.sys.localStorage.getItem("rememberedUsername");
+t = cc.sys.localStorage.getItem("rememberedPassword");
+r = cc.sys.localStorage.getItem("rememberMeChecked");
+}
+if (e && t) {
+this.userName.string = e;
+this.password.string = t;
+}
+"true" === r && (this.rememberMe.isChecked = !0);
 }
 });
+cc._RF.pop();
+}, {} ],
+ResponseType: [ function(e, t) {
+"use strict";
+cc._RF.push(t, "908efYoU2tBd4aoL1r8p0Jt", "ResponseType");
 cc._RF.pop();
 }, {} ],
 ServerCom: [ function(e, t) {
@@ -19923,6 +20313,10 @@ errorHeading: {
 default: null,
 type: cc.Label
 },
+loaderAnimNode: {
+default: null,
+type: cc.Node
+},
 trackerCount: 0,
 timer: 0
 },
@@ -19935,9 +20329,7 @@ checkOrientation: function() {
 try {
 var e = cc.winSize;
 e.width > e.height ? cc.view.setOrientation(cc.macro.ORIENTATION_LANDSCAPE) : cc.view.setOrientation(cc.macro.ORIENTATION_PORTRAIT);
-} catch (e) {
-console.error("Error checking orientation:", e);
-}
+} catch (e) {}
 },
 clearTracker: function() {
 this.trackerCount = 0;
@@ -19945,12 +20337,16 @@ this.tracker = {};
 },
 httpRequest: function(e, t, r, i, n, s) {
 var o = this, a = new XMLHttpRequest();
-a.timeout = s || 4e3;
-ServerCom.loading.active || (ServerCom.loading.active = !0);
+a.timeout = s || 8e3;
+if (!ServerCom.loading.active) {
+ServerCom.loading.active = !0;
+o.startLoaderAnimation();
+}
 a.onreadystatechange = function() {
 K.internetAvailable = !0;
 if (4 == a.readyState) {
 ServerCom.loading.active = !1;
+o.stopLoaderAnimation();
 var e = a.responseText;
 if (a.status >= 200 && a.status < 400) {
 if (null != i) {
@@ -19960,30 +20356,26 @@ i(t);
 } else try {
 var r = JSON.parse(e);
 r.error && r.error;
-console.log("errorDataerrorData", r, a);
 o.errorLable.string = r.error ? r.error : r.message;
 o.loginErrorNode.active = !0;
 setTimeout(function() {
 o.loginErrorNode.active = !1;
 }, 2e3);
-} catch (e) {
-console.log("Error parsing error response:", e);
-}
+} catch (e) {}
 }
 };
 a.onerror = function() {
 ServerCom.loading.active = !1;
+o.stopLoaderAnimation();
 K.internetAvailable = !1;
 try {
-console.log("xhr on error", a);
 var e = JSON.parse(a.responseText);
 e.error && e.error;
-} catch (e) {
-console.error("Error parsing error response:", e);
-}
+} catch (e) {}
 };
 a.ontimeout = function() {
 ServerCom.loading.active = !1;
+o.stopLoaderAnimation();
 K.disconnectRequestedByPlayer = !1;
 K.internetAvailable = !1;
 o.errorLable.string = "Something went wrong", o.loginErrorNode.active = !0;
@@ -20000,14 +20392,26 @@ if (h.startsWith("userToken=")) {
 f = h.substring("userToken=".length, h.length);
 break;
 }
+} else if (cc.sys.os === cc.sys.OS_ANDROID || cc.sys.os == cc.sys.Os_IOS) {
+console.error("Running on Android and IOS");
+f = cc.sys.localStorage.getItem("userToken");
 }
-if (f) {
-console.log(f, "token");
-a.setRequestHeader("Authorization", "Bearer " + f);
-}
+f && a.setRequestHeader("Authorization", "Bearer " + f);
 "POST" === e || "PUT" === e ? a.send(JSON.stringify(r)) : "GET" === e && a.send();
+},
+startLoaderAnimation: function() {
+this.loaderAnimNode._tween && this.loaderAnimNode._tween.stop();
+this.loaderAnimNode._tween = cc.tween(this.loaderAnimNode).repeatForever(cc.tween().to(1, {
+angle: -360
+})).start();
+},
+stopLoaderAnimation: function() {
+if (this.loaderAnimNode._tween) {
+this.loaderAnimNode._tween.stop();
+this.loaderAnimNode.angle = 0;
+}
 }
 });
 cc._RF.pop();
 }, {} ]
-}, {}, [ "GameConfig", "GamesPrefab", "Lobby", "IframeScript", "ServerCom", "Login" ]);
+}, {}, [ "GameConfig", "ResponseType", "EditBox", "GamesPrefab", "Lobby", "IframeScript", "ServerCom", "Login" ]);

@@ -1,6 +1,6 @@
 {
-  "platform": "web-desktop",
-  "actualPlatform": "web-desktop",
+  "platform": "web-mobile",
+  "actualPlatform": "web-mobile",
   "template": "default",
   "buildPath": "./build",
   "debug": false,
@@ -13,8 +13,13 @@
   "keystorePassword": "",
   "keystoreAlias": "",
   "keystoreAliasPassword": "",
-  "apiLevel": "android-35",
-  "appABIs": [],
+  "apiLevel": "android-34",
+  "appABIs": [
+    "armeabi-v7a",
+    "arm64-v8a",
+    "x86",
+    "x86_64"
+  ],
   "vsVersion": "auto",
   "buildScriptsOnly": false
 }

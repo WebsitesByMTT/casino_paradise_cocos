@@ -32,6 +32,10 @@ cc.Class({
       "default": null,
       type: cc.Label
     },
+    loaderAnimNode: {
+      "default": null,
+      type: cc.Node
+    },
     trackerCount: 0,
     timer: 0
   },
@@ -42,6 +46,10 @@ cc.Class({
     this.checkOrientation(); // Add event listener for canvas resize to handle orientation change
 
     cc.view.on('canvas-resize', this.checkOrientation, this);
+
+    if (cc.sys.isMobile && cc.sys.isBrowser) {
+      console.log = function () {};
+    }
   },
   // following function is to check the width and change the orientation(Landscape/Potrait) for mobile or dekstop
   checkOrientation: function checkOrientation() {
@@ -53,8 +61,7 @@ cc.Class({
       } else {
         cc.view.setOrientation(cc.macro.ORIENTATION_PORTRAIT);
       }
-    } catch (error) {
-      console.error("Error checking orientation:", error);
+    } catch (error) {// console.error("Error checking orientation:", error);
     }
   },
   clearTracker: function clearTracker() {
@@ -75,10 +82,11 @@ cc.Class({
   httpRequest: function httpRequest(method, address, data, callback, error, timeout) {
     var inst = this;
     var xhr = new XMLHttpRequest();
-    xhr.timeout = timeout || 4000;
+    xhr.timeout = timeout || 8000;
 
     if (!ServerCom.loading.active) {
       ServerCom.loading.active = true;
+      inst.startLoaderAnimation();
     }
 
     xhr.onreadystatechange = function () {
@@ -86,6 +94,7 @@ cc.Class({
 
       if (xhr.readyState == 4) {
         ServerCom.loading.active = false;
+        inst.stopLoaderAnimation();
         var response = xhr.responseText;
 
         if (xhr.status >= 200 && xhr.status < 400) {
@@ -101,16 +110,15 @@ cc.Class({
 
             if (errorData.error) {
               errorMsg = errorData.error;
-            }
+            } // console.log("errorDataerrorData", errorData, xhr);
 
-            console.log("errorDataerrorData", errorData, xhr);
+
             inst.errorLable.string = errorData.error ? errorData.error : errorData.message;
             inst.loginErrorNode.active = true;
             setTimeout(function () {
               inst.loginErrorNode.active = false;
             }, 2000); // callback(errorData);
-          } catch (e) {
-            console.log("Error parsing error response:", e);
+          } catch (e) {// console.log("Error parsing error response:", e);
           }
         }
       }
@@ -118,23 +126,24 @@ cc.Class({
 
     xhr.onerror = function (err) {
       ServerCom.loading.active = false;
+      inst.stopLoaderAnimation();
       K.internetAvailable = false;
       var errorMsg = "Unknown error";
 
       try {
-        console.log("xhr on error", xhr);
+        // console.log("xhr on error", xhr);
         var errorData = JSON.parse(xhr.responseText);
 
         if (errorData.error) {
           errorMsg = errorData.error;
         }
-      } catch (e) {
-        console.error("Error parsing error response:", e);
+      } catch (e) {// console.error("Error parsing error response:", e);
       }
     };
 
     xhr.ontimeout = function () {
       ServerCom.loading.active = false;
+      inst.stopLoaderAnimation();
       K.disconnectRequestedByPlayer = false;
       K.internetAvailable = false; // 
 
@@ -161,11 +170,17 @@ cc.Class({
           break;
         }
       }
+    } else {
+      if (cc.sys.os === cc.sys.OS_ANDROID || cc.sys.os == cc.sys.Os_IOS) {
+        // This is an Android device
+        console.error("Running on Android and IOS");
+        token = cc.sys.localStorage.getItem('userToken');
+      }
     } // If token exists, add it to a custom header
 
 
     if (token) {
-      console.log(token, "token");
+      // console.log(token, "token");
       xhr.setRequestHeader("Authorization", "Bearer " + token); // xhr.setRequestHeader("Cookie", `userToken=${token}`);
     }
 
@@ -173,6 +188,22 @@ cc.Class({
       xhr.send(JSON.stringify(data));
     } else if (method === "GET") {
       xhr.send();
+    }
+  },
+  startLoaderAnimation: function startLoaderAnimation() {
+    if (this.loaderAnimNode._tween) {
+      this.loaderAnimNode._tween.stop();
+    }
+
+    this.loaderAnimNode._tween = cc.tween(this.loaderAnimNode).repeatForever(cc.tween().to(1, {
+      angle: -360
+    })).start();
+  },
+  stopLoaderAnimation: function stopLoaderAnimation() {
+    if (this.loaderAnimNode._tween) {
+      this.loaderAnimNode._tween.stop();
+
+      this.loaderAnimNode.angle = 0;
     }
   } // WILL use the following code later to check if the same api is request untill we gets its response
   // /**

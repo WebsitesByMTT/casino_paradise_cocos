@@ -1,5 +1,6 @@
 const login = require("Login");
 const jwt = require('jsonwebtoken'); 
+// var setUserDetails = require('ResponseTypes');
 cc.Class({
   extends: cc.Component,
 
@@ -158,7 +159,14 @@ cc.Class({
   dotButton:{
       default: null,
       type: cc.Node
-  }
+  },
+  pageViewParent:{
+    default: null,
+    type:cc.Node
+  },
+  pageView: cc.ScrollView,
+  itemsPerPage: 1,
+  scrollInterval: 3, 
   },
 
   // LIFE-CYCLE CALLBACKS:
@@ -172,23 +180,35 @@ cc.Class({
     this.setupLobbyInputFocusListeners();
     this.setupLobbyKeyboardButtonListeners();
     this.disableDefaultKeyboard();
+    this.initialPosition = this.scrollView.node.position.clone();
 
     this.itemsToLoad = []; // Array to store all items to be loaded
     this.currentIndex = 0; // Current index in the items array
     this.setFullScreenWidth();
     cc.view.setResizeCallback(this.setFullScreenWidth.bind(this)); // Update width on screen resize
-    this.scrollView.node.on("scroll-to-right", this.loadMoreItems, this); // Event listener for horizontal scrolling
-    let currentPos = this.cloudAnimNode.getPosition();
-    let moveAction = cc.moveTo(
-      this.moveDuration,
-      cc.v2(this.targetX, currentPos.y)
-    );
+    // this.scrollView.node.on("scroll-to-right", this.loadMoreItems, this); // Event listener for horizontal scrolling
+    let startX = cc.v2(415, 0)
+    let endY = cc.v2(-415, 0);
+    let resetPos = cc.v2(415, 0)
+    this.cloudAnimNode.setPosition(startX);
+    let moveItem = cc.tween().to(4, {position: endY}).call(()=>{
+      this.cloudAnimNode.setPosition(resetPos);
+    });
+    cc.tween(this.cloudAnimNode).repeatForever(moveItem).start();
     this.getUserDetails();
-    // Run the move action on the sprite node
-    this.cloudAnimNode.runAction(moveAction);
     this.fetchGames(this.category);
+    this.currentPage = 0;
+    this.schedule(this.autoScrollPageView, this.scrollInterval);
+    // const isAndroid = cc.sys.os === cc.sys.OS_ANDROID;
+    // const isIOS = cc.sys.os === cc.sys.OS_IOS;
+    // if (isAndroid || isIOS) {
+    //     this.myWebView.node.on('loaded', this.onWebViewLoaded, this);
+    // }
+    if (cc.sys.isMobile && cc.sys.isBrowser) {
+      console.log = function() {};
+    }
   },
-
+  
   /**
    * @method Fetach Games by category
    * @description HTTP request - POST data
@@ -199,10 +219,18 @@ cc.Class({
    */
   fetchGames: function (gameCategory) {
     let content = this.scrollView.content;
+    let pageViewContent = this.pageView.content;
+    pageViewContent.removeAllChildren();
     content.removeAllChildren();
-
+    this.pageViewParent.active = false;
+    this.scrollView.node.setPosition(this.initialPosition);
+    this.scrollView.node.getChildByName("view").width = 1600;
+    this.scrollView.node.width = 1500;
     var address = K.ServerAddress.ipAddress + K.ServerAPI.game + "=" + gameCategory;
     ServerCom.httpRequest("GET", address, " ", function (response) {
+      if(!response.featured && !response.others){
+        return
+      }
         if (response.featured.length === 0 && response.others.length === 0) {
             ServerCom.errorLable.string = "No Games Found For This Category";
             ServerCom.loginErrorNode.active = true;
@@ -211,74 +239,55 @@ cc.Class({
             }, 2000);
             return;
         }
-
         let otherGames = response.others || [];
         let featured = response.featured || [];
 
         this.itemsToLoad = [];
-        let featuredIndex = 0;
-        // Insert a featured item after every 2 other items
-        for (let i = 0; i < otherGames.length; i++) {
-            if (i > 0 && i % 2 === 0 && featuredIndex < featured.length) {
-                this.itemsToLoad.push({
-                    data: featured[featuredIndex],
-                    prefab: this.smallItemPrefab,
-                });
-                featuredIndex++;
-            }
-            this.itemsToLoad.push({
-                data: otherGames[i],
-                prefab: this.itemPrefab,
-            });
+         this.currentIndex = 0;
+        if (featured.length > 0) {
+          this.pageViewParent.active = true;
+          this.scollItemCount = featured.length;
+          this.populatePageView(featured, gameCategory);
         }
-
-        // If there are remaining featured items and less than 3 otherGames, add the featured items at the end
-        while (featuredIndex < featured.length) {
-            this.itemsToLoad.push({
-                data: featured[featuredIndex],
-                prefab: this.smallItemPrefab,
-            });
-            featuredIndex++;
+        else{
+          this.pageViewParent.active = false;
+          
         }
-
-        // If there are no otherGames, add all featured items
-        if (otherGames.length === 0 && featured.length > 0) {
-            for (let i = 0; i < featured.length; i++) {
-                this.itemsToLoad.push({
-                    data: featured[i],
-                    prefab: this.smallItemPrefab,
-                });
-            }
+       // this is done for testing
+        if(gameCategory == "fav"){
+          this.populateScrollView(otherGames, gameCategory);
+        }else{
+          this.populateScrollView(featured, gameCategory);
         }
-
-        this.currentIndex = 0;
-        this.loadMoreItems(); // Load the first batch of items
+        // if (otherGames.length > 0) {
+        //   this.populateScrollView(otherGames, gameCategory);
+        // }
+        this.setFullScreenWidth();
     }.bind(this));
 },
 
-loadMoreItems: function () {
-    if (this.currentIndex >= this.itemsToLoad.length) return; // No more items to load
-    let endIndex = Math.min(
-        this.currentIndex + this.itemsPerLoad,
-        this.itemsToLoad.length
-    );
-    for (let i = this.currentIndex; i < endIndex; i++) {
-        let itemData = this.itemsToLoad[i];
-        this.populateItems(itemData.data, itemData.prefab);
-    }
-    this.currentIndex = endIndex;
+populatePageView: function(featuredItems, gameCategory) {
+  let pageViewContent = this.pageView.content;
+  for (let i = 0; i < featuredItems.length; i++) {
+      this.populateItems(featuredItems[i], this.smallItemPrefab, pageViewContent, gameCategory);
+  }
 },
 
-// Draw Game Items in Lobby
-populateItems: function (itemData, prefab) {
-    let item = cc.instantiate(prefab);
-    let itemScript = item.getComponent("GamesPrefab");
-    itemScript.updateItem(itemData);
-    this.scrollView.content.addChild(item);
+populateScrollView: function(otherGames, gameCategory) {
+  let scrollViewContent = this.scrollView.content;
+  for (let i = 0; i < otherGames.length; i++) {
+      this.populateItems(otherGames[i], this.itemPrefab, scrollViewContent, gameCategory);
+  }
 },
 
+populateItems: function(itemData, prefab, parent, gameCategory) {
+  let item = cc.instantiate(prefab);
+  let itemScript = item.getComponent('GamesPrefab');
+  itemScript.updateItem(itemData, gameCategory);
+  parent.addChild(item);
+},
 
-  getGamesByCategoryAll: function () {
+getGamesByCategoryAll: function () {
     this.category = "all";
     const gameTabs = [
       this.fishTab.getChildByName("bg"),
@@ -290,7 +299,7 @@ populateItems: function (itemData, prefab) {
     gameTabs.forEach((tab) => (tab.active = false));
     this.allTab.getChildByName("bg").active = true;
     this.fetchGames(this.category);
-  },
+},
 
   getGamesByCategoryfish: function () {
     this.category = "fish";
@@ -371,17 +380,23 @@ populateItems: function (itemData, prefab) {
           Element.ALLOW_KEYBOARD_INPUT
         );
       }
+
+      // console.log("fullout");
       
     } else {
       if (document.cancelFullScreen) {
         document.cancelFullScreen();
+        // console.log("fullout1");
       } else if (document.mozCancelFullScreen) {
+        // console.log("fullou2");
         document.mozCancelFullScreen();
       } else if (document.webkitCancelFullScreen) {
+        // console.log("fullout3");
         document.webkitCancelFullScreen();
       }
+
     }
-    this.setFullScreenWidth();
+    // this.setFullScreenWidth();
   },
   // Close Spin Popup Node
   closeSpinNode: function () {
@@ -413,29 +428,88 @@ populateItems: function (itemData, prefab) {
             }
         }
     } else {
+      if (cc.sys.os === cc.sys.OS_ANDROID || cc.sys.os == cc.sys.Os_IOS) {
+        // This is an Android device
         token = cc.sys.localStorage.getItem('userToken');
+      }
     }
     // Set the WebView URL
     this.myWebView.url = url;
+    
+    
     this.myWebViewParent.active = true;
-    this.myWebView.node.on('loaded', () => {
-        if (token) {
-            this.myWebView.evaluateJS(`
-               window.postMessage({ type: 'authToken', token: '${token}' }, '${url}');
-            `);
-        }
-    });   
-  window.addEventListener('message', function(event) {
-    console.log("message", event);
-    const message = event.data;
-    if (message === 'authToken') {
-        inst.myWebView.node._components[0]._impl._iframe.contentWindow.postMessage({ type: 'authToken', cookie: token }, `${url}`);
+    if(cc.sys.isBrowser){
+          this.myWebView.node.on('loaded', () => {
+            if (token) {
+                this.myWebView.evaluateJS(`
+                  inst.myWebView.node._components[0]._impl._iframe.contentWindow.postMessage({ type: 'authToken', token: '${token}' }, '${url}');
+                `);
+            }
+        });
     }
-    if (message === "onExit") {
-      inst.myWebView.url = "";
-      inst.myWebViewParent.active = false;
+    
+    if (cc.sys.os === cc.sys.OS_ANDROID || cc.sys.os == cc.sys.Os_IOS) {
+        this.myWebView.node.on('loaded', () => {
+          if (token) {
+            console.log("================================================ iam inside loaded function in for Mobilewebviewsss");
+            const script = `
+            if (window && window.postMessage) {
+                window.postMessage({ type: 'authToken', token: '${token}' }, '${url}');
+            }
+           `;
+            this.myWebView.evaluateJS(script);
+              // this.myWebView.evaluateJS(`this.myWebView.node._components[0]._impl._iframe.contentWindow.postMessage({ type: 'authToken', token: '${token}' }, '${url}');
+              // `);
+          }
+      });
+    } 
+//     window.addEventListener('message', function(event) {
+//     const message = event.data;
+//     if (message === 'authToken') {
+//         console.log("this window check", this, "and inst also", inst)
+//         inst.myWebView.node._components[0]._impl._iframe.contentWindow.postMessage({ type: 'authToken', cookie: token }, `${url}`);
+//     }
+//     if (message === "onExit") {
+//       inst.myWebView.url = "";
+//       inst.myWebViewParent.active = false;
+//     }
+// });
+    window.addEventListener('message', (event) => {
+      console.log("event check for mobile application is it worlking or not", event);
+      const message = event.data;
+      
+      if (message === 'authToken') {
+          console.log("Received authToken message here for cocos game");
+          // For browser, we need to use the iframe
+          if (cc.sys.isBrowser) {
+            inst.myWebView.node._components[0]._impl._iframe.contentWindow.postMessage({ type: 'authToken', cookie: token }, url);
+              
+          } else {
+              // For mobile, we can use the same method as before
+              inst.myWebView.evaluateJS(`
+                  window.postMessage({ type: 'authToken', cookie: '${token}' }, '${url}');
+              `);
+          }
+      }
+      
+      if (message === "onExit") {
+          inst.myWebView.url = "";
+          inst.myWebViewParent.active = false;
+          inst.getUserDetails();
+      }
+    });
+
+    if(!document.fullscreenElement){
+      if(cc.sys.isMobile && cc.sys.isBrowser){
+        this.myWebView.node.width = 1200;
+      }else{
+        this.myWebView.node.width = 2250
+      }
+    }else{
+      if(cc.sys.isMobile && cc.sys.isBrowser){
+        this.myWebView.node.width = 2250
+      }
     }
-});
 },
  getUserDetails: function(){  
   let inst= this
@@ -509,9 +583,7 @@ populateItems: function (itemData, prefab) {
         existingPassword: this.oldPassword.string,
         password : this.newPassword.string
       }
-      console.log(changeData, "pas");
       ServerCom.httpRequest("PUT", address, changeData, function(response){
-        console.log("response", response);
         if(response.message){
           ServerCom.errorHeading.string = "Password Changed Successfully"
           ServerCom.errorLable.string = response.message;
@@ -547,16 +619,48 @@ populateItems: function (itemData, prefab) {
 
   setFullScreenWidth() {
     if(!document.fullscreenElement){
-      this.scrollView.node.width = 2050;
-      this.scrollView.node.getChildByName("view").width = 2050;
+      if(!this.pageViewParent.active){
+          this.scrollView.node.setPosition(cc.v2(-950, 0));
+          this.scrollView.node.width = 2100;
+          this.scrollView.node.getChildByName("view").width = 2200;
+      }else{
+        this.scrollView.node.width = 1200;
+        this.scrollView.node.getChildByName("view").width = 1600;
+        
+      }
+      this.pageView.node.width = 335;
+      this.pageView.node.getChildByName("view").width = 335;
     } else{
-      const screenWidth = cc.winSize.width;
-      // Set the width of the ScrollView node
-      this.scrollView.node.width = screenWidth;
-       // Set the width of the View node within the ScrollView
-      this.scrollView.node.getChildByName("view").width = screenWidth;
+      if (cc.sys.isMobile && cc.sys.isBrowser) {
+        this.scrollView.node.width = 1500;
+        this.scrollView.node.getChildByName("view").width = 1600;
+        // this.pageView.node.width.width = 340;
+        // this.pageView.node.getChildByName("view").width = 340;
+      }else{  
+        if(!this.pageViewParent.active){
+          // console.log("mai  full screen mei hun");
+          this.scrollView.node.setPosition(cc.v2(-900, 0));
+          this.scrollView.node.width = 2000;
+          this.scrollView.node.getChildByName("view").width = 2200;
+        }else{
+          const screenWidth = cc.winSize.width - 380;
+          this.scrollView.node.width = screenWidth;
+          this.scrollView.node.getChildByName("view").width = screenWidth;
+          
+        }
+          this.pageView.node.width = 335;
+          this.pageView.node.getChildByName("view").width = 335;
+      }
     }
    },
+   // Auto Scroll 
+   autoScrollPageView() {
+    let content = this.pageView.content;
+    let totalPageCount = content.childrenCount;
+    this.currentPage = (this.currentPage + 1) % totalPageCount;
+    let targetPos = cc.v2(this.currentPage * this.pageView.node.width, 0);
+    this.pageView.scrollToOffset(targetPos, 1); // Scroll to the target position in 1 second
+  },
 
    setupLobbyInputFocusListeners() {
     if (cc.sys.isMobile && cc.sys.isBrowser) {
@@ -569,8 +673,8 @@ populateItems: function (itemData, prefab) {
             }
             if(this.confirmPassword){
               this.confirmPassword.node.on(cc.Node.EventType.TOUCH_END, this.onInputFieldClicked, this);
-              this.confirmPassword.node.on('editing-did-began', this.onInputFieldFocused, this);
-              this.confirmPassword.node.on('editing-did-ended', this.onInputFieldBlurred, this);
+              // this.confirmPassword.node.on('editing-did-began', this.onInputFieldFocused, this);
+              // this.confirmPassword.node.on('editing-did-ended', this.onInputFieldBlurred, this);
             }
         }
     },
@@ -581,9 +685,13 @@ populateItems: function (itemData, prefab) {
       if (inputNode) {
           // inputNode.focus()
           this.activeInputField = inputNode;
-          if (this.customKeyboard) {
-              this.customKeyboard.active = true; // Show the custom keyboard if needed
-          }
+            if (this.customKeyboard) {
+                this.customKeyboard.active = true; // Show the custom keyboard if needed
+                event.preventDefault();
+                this.scheduleOnce(() => {
+                    this.activeInputField.blur(); // Blur the input field after showing the custom keyboard
+                }, 0.1);
+            }
       }
     },
 

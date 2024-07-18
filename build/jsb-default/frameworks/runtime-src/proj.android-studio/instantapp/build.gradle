@@ -93,7 +93,6 @@ android {
                     arguments 'NDK_DEBUG=1'
                 }
             }
-            versionNameSuffix RELEASE_KEY_ALIAS
         }
     }
 

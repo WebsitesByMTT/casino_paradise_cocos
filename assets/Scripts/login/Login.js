@@ -1,4 +1,4 @@
-
+// var responseTypes = require('ResponseTypes');
 cc.Class({
     extends: cc.Component,
 
@@ -72,13 +72,17 @@ cc.Class({
     },
     // LIFE-CYCLE CALLBACKS:
     onLoad () {
-        if(this.rememberMe){
-            this.rememberMe.isChecked = false;
-        }   
+        // if(this.rememberMe){
+        //     this.rememberMe.isChecked = false;
+        // }   
         this.activeInputField = null; 
         this.setupInputFocusListeners();
         this.setupKeyboardButtonListeners();
         this.disableDefaultKeyboard();
+        this.loadSavedLoginInfo();
+        if (cc.sys.isMobile && cc.sys.isBrowser) {
+            console.log = function() {};
+        }
     },
 
     disableDefaultKeyboard() {
@@ -101,15 +105,20 @@ cc.Class({
             }
         }
     },
-
+ 
     onInputFieldClicked(event) {
         // Focus the corresponding input field to trigger the keyboard
+        // console.log(event);
         const inputNode = event.currentTarget.getComponent(cc.EditBox);
         if (inputNode) {
             // inputNode.focus()
             this.activeInputField = inputNode;
             if (this.customKeyboard) {
                 this.customKeyboard.active = true; // Show the custom keyboard if needed
+                event.preventDefault();
+                this.scheduleOnce(() => {
+                    this.activeInputField.blur(); // Blur the input field after showing the custom keyboard
+                }, 0.1);
             }
         }
     },
@@ -155,6 +164,15 @@ cc.Class({
         if(this.lobbyNode.active){
             this.lobbyNode.active = false;
         }
+        let rememberMeChecked;
+        if (cc.sys.isBrowser) {
+            rememberMeChecked = localStorage.getItem('rememberMeChecked');
+        } else {
+            rememberMeChecked = cc.sys.localStorage.getItem('rememberMeChecked');
+        }
+        if(!rememberMeChecked){
+            this.clearSavedLoginInfo();
+        }
     },
 
     removeFromActiveInput() {
@@ -164,8 +182,6 @@ cc.Class({
     },
 
     onLoginClick (){
-        this.userName.string = "ritik";
-        this.password.string = "password";
         var address = K.ServerAddress.ipAddress + K.ServerAPI.login;
         var data = {
             username: this.userName.string,
@@ -180,7 +196,13 @@ cc.Class({
             
             return
         }
+        if (this.rememberMe.isChecked) {
+            this.saveLoginInfo(this.userName.string, this.password.string);
+        } else {
+            this.clearSavedLoginInfo();
+        }
         ServerCom.httpRequest("POST", address, data, function (response) {
+            // console.error("reponse on login", response.token);
             if (response.token) {
                 const randomNumber = Math.floor(Math.random() * 10) + 1;
                 if (cc.sys.isBrowser) {
@@ -190,6 +212,7 @@ cc.Class({
                     cc.sys.localStorage.setItem('userToken', response.token);
                     cc.sys.localStorage.setItem("index", randomNumber); 
                 }
+                
                 // Cookies.set("index", randomNumber);
                 setTimeout(function () {
                     this.lobbyNode.active = true;
@@ -240,6 +263,53 @@ cc.Class({
 
     closeKeyBoard: function(){
         this.customKeyboard.active = false;
+    },
+    saveLoginInfo (username, password) {
+        if (cc.sys.isBrowser) {
+            localStorage.setItem('rememberedUsername', username);
+            localStorage.setItem('rememberedPassword', password);
+            localStorage.setItem('rememberMeChecked', 'true');
+        } else {
+            cc.sys.localStorage.setItem('rememberedUsername', username);
+            cc.sys.localStorage.setItem('rememberedPassword', password);
+            cc.sys.localStorage.setItem('rememberMeChecked', 'true');
+        }
+    },
+
+    clearSavedLoginInfo () {
+        if (cc.sys.isBrowser) {
+            localStorage.removeItem('rememberedUsername');
+            localStorage.removeItem('rememberedPassword');
+            localStorage.removeItem('rememberMeChecked');
+        } else {
+            cc.sys.localStorage.removeItem('rememberedUsername');
+            cc.sys.localStorage.removeItem('rememberedPassword');
+            cc.sys.localStorage.removeItem('rememberMeChecked');
+        }
+    },
+
+    loadSavedLoginInfo () {
+        let username, password, rememberMeChecked;
+        
+        if (cc.sys.isBrowser) {
+            username = localStorage.getItem('rememberedUsername');
+            password = localStorage.getItem('rememberedPassword');
+            rememberMeChecked = localStorage.getItem('rememberMeChecked');
+        } else {
+            username = cc.sys.localStorage.getItem('rememberedUsername');
+            password = cc.sys.localStorage.getItem('rememberedPassword');
+            rememberMeChecked = cc.sys.localStorage.getItem('rememberMeChecked');
+        }
+
+        if (username && password) {
+            this.userName.string = username;
+            this.password.string = password;
+        }
+
+        if (rememberMeChecked === 'true') {
+            this.rememberMe.isChecked = true;
+            // this.rememberMe.getChildByName("checkmark").active = true
+        }
     }
    
 });

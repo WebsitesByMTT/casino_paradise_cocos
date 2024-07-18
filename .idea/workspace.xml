@@ -1,0 +1,768 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="508b604c-9ae4-42ac-b06a-86eb92eb4197" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/build/jsb-default/frameworks/runtime-src/proj.android-studio/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jsb-default/frameworks/runtime-src/proj.android-studio/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jsb-default/frameworks/runtime-src/proj.android-studio/.idea/proj.android-studio.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/jsb-default/frameworks/runtime-src/proj.android-studio/.idea/runConfigurations.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Prefab/SmallItem.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Prefab/SmallItem.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Prefab/item.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Prefab/item.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Scenes/login.fire" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Scenes/login.fire" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Scripts/Config/GameConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Scripts/Config/GameConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Scripts/GamesPrefab.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Scripts/GamesPrefab.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Scripts/Lobby/Lobby.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Scripts/Lobby/Lobby.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Scripts/PrefabScript/IframeScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Scripts/PrefabScript/IframeScript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Scripts/ServerCom.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Scripts/ServerCom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Scripts/login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/Scripts/login/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/CloudSprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/CloudSprite/CloudAnim.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/CloudSprite/CloudAnim.plist.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/CloudSprite/CloudAnim.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/CloudSprite/CloudAnim.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/CloudSprite/newCloud.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/CloudSprite/newCloud.plist.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/CloudSprite/newCloud.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/CloudSprite/newCloud.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/CloudSprite/newCloud1.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/CloudSprite/newCloud1.plist.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/CloudSprite/newCloud1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/CloudSprite/newCloud1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/CloudSprite/newCloud2.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/CloudSprite/newCloud2.plist.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/CloudSprite/newCloud2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/CloudSprite/newCloud2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/CloudSprite/newCloud3.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/CloudSprite/newCloud3.plist.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/CloudSprite/newCloud3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/CloudSprite/newCloud3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/CloudSprite/newCloud4.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/CloudSprite/newCloud4.plist.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/CloudSprite/newCloud4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/CloudSprite/newCloud4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Loader/Loader.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Loader/Loader.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Loader/Loader1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Loader/Loader1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Loader/Loader10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Loader/Loader10.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Loader/Loader11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Loader/Loader11.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Loader/Loader12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Loader/Loader12.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Loader/Loader13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Loader/Loader13.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Loader/Loader14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Loader/Loader14.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Loader/Loader15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Loader/Loader15.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Loader/Loader16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Loader/Loader16.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Loader/Loader17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Loader/Loader17.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Loader/Loader18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Loader/Loader18.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Loader/Loader19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Loader/Loader19.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Loader/Loader2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Loader/Loader2.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Loader/Loader20.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Loader/Loader20.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Loader/Loader3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Loader/Loader3.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Loader/Loader4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Loader/Loader4.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Loader/Loader5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Loader/Loader5.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Loader/Loader6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Loader/Loader6.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Loader/Loader7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Loader/Loader7.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Loader/Loader8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Loader/Loader8.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Loader/Loader9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Sprites/Loader/Loader9.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/anim/CloudAnimation.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/anim/CloudAnimation.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/anim/SmallSpin.anim" beforeDir="false" afterPath="$PROJECT_DIR$/assets/anim/SmallSpin.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/anim/loader.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/anim/loader.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/.cocos-project.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/jsb-default/.cocos-project.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/jsb-default/assets/main/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/00/00a4618a-92a0-4267-8e27-7e202715e584.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/01/01f0c017-afc5-4ef5-b0ca-b7fee044733e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/03/039c5682-1574-43db-b4b5-985a19376220.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/04/0441b794-ed16-4862-8f0c-eade710b1079.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/07/07295294-b480-4409-a65d-97abc91ae2df.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/07/0735ed6a-06ac-4cca-a71f-0d066c756a3b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/08/081aab15-452e-4305-b850-ba7cf1611926.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/08/08477012-4564-4b8e-bef9-f588dd2edd74.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/0a/0a0037bc-a124-4413-886a-e68b65240bc8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/0a/0a8450bf-23ea-47af-be97-44392ad5a1e3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/0b/0b1aab58-089d-43a8-9eff-a8383314ed26.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/0b/0be4ac3f-a1bd-4fe2-b5a2-3dc7889a1b1e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/0c/0c904015-bfd5-4fc4-b085-189ea66ffc72.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/0d/0d56d1ab-4507-4300-878b-c01832ea664d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/0d/0de8c00f-a0ba-4a78-ac59-2ec99ea61fbb.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/0e/0e1b6252-af93-4a9a-bf65-f703569d7589.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/0f/0f5479ac-55d8-44af-9833-76d528690c7f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/12/120e15b8-d6c0-4e86-822d-3d15b67bbf0f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/16/168b2fdf-b8d0-40c0-8586-77de7a6e446f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/17/175c747e-a680-449f-9b9a-690b116144c6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/17/17cfb533-8df9-41c5-979a-04a9872b5fa4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/19/192a194b-7519-46ec-a6c1-0257374d88ab.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/1a/1a17069d-8283-45ca-b6c8-880f998ccfce.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/1b/1bbf6fc6-bd37-4cb8-8abe-98e32b753d3f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/1c/1cbce6bc-0381-45da-8df9-35c0d7de6576.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/1d/1dc34eb1-d494-46cf-a011-39a0313a0cfe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/1d/1dc7098a-40aa-4137-af1f-89df54f65873.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/1e/1e7554e3-145d-44d5-a00f-e71616cb70d2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/1e/1ed603f1-c602-4888-af96-e76b910708dd.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/1f/1f4031fc-abab-43b3-8aa0-562f215489da.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/1f/1f427c4a-4152-4f42-ae64-27b3baebb061.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/20/20270eaf-3ba7-472d-956e-f41eabe759f0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/21/2149130c-b2b7-41e6-8627-5a1af5bac062.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/23/230f96d3-a894-4481-948a-be7f30c7f048.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/23/231ed9ee-c4f0-4094-b153-81bbe6bd714b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/23/23487aa1-b7d3-4660-bafb-995b80c5d5c7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/25/25d8af25-a5c1-430f-8179-69ca4cee7d7c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/28/28658a40-bd42-44f5-9fb0-4216bf87983e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/29/29707251-8373-4a3a-9c45-acf47790f693.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/2a/2a27449d-e32c-4efe-ad91-f744f851f019.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/2a/2a573122-a046-4fdc-bc42-d25d3088a250.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/2a/2ae3a3bc-d0e1-4b84-809f-45f87750befe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/2a/2aee4c6d-14b2-4477-a629-9662957a9ebd.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/2b/2b4be66d-b139-48ef-a4cd-66476d3b28d7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/2b/2b50c435-80fe-484f-8b79-5c446a477613.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/2e/2e2fe60e-014f-4586-8f6a-41c06da2cc1f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/2f/2fabfdc1-61e8-473c-ab4d-1ccfab238fa5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/32/32cc3235-10cb-4c29-9ae7-f08eb44e582d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/33/3362a690-8340-4005-8e28-77514e5e533b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/35/357eabbd-ef8c-4031-99ed-c144f33dd8b6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/36/36119feb-483f-435f-9392-d17d595f5edc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/37/37ab805d-94cc-49d6-8709-fcb7c5b00ed2.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/jsb-default/assets/main/import/37/37ab805d-94cc-49d6-8709-fcb7c5b00ed2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/37/37d06ea3-6243-4da5-8936-a7b42ca91ca5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/38/38aa8459-c793-4081-814d-1d5529b526b6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/39/392634c6-7f18-4e8e-88ea-0c57581f1bdd.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/39/3986557b-c53a-43f7-93b5-5ef0cbc52be2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/3b/3b90551c-5900-4ccc-b0cf-b0f5c67a4c2d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/3e/3ea664ab-6a41-4c4b-b18f-27daf15754a6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/3e/3eb77869-dd53-49bb-ab56-c958e33d8ed6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/41/41b8f266-81e0-4862-8900-1b5b95441c68.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/42/4253fb82-6059-4ba2-8350-6de4ec06637e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/43/43546d48-bb3f-4599-9ca8-43a8787d73fb.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/45/457588f4-032e-49b8-a261-1896936c58c4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/46/46c4783a-717d-4074-8e82-19647ddfb068.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/47/47e8f65a-6be3-4df4-9af8-016acfdd3819.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/48/48f42290-b6ee-412e-b7ea-ae10b0885779.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/48/48fc394c-3fe0-472e-9de9-f08c83be609c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/49/49434272-e24a-4ec1-97c4-b59fa2097ee1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/49/49cc120b-9b26-4e4b-b9cf-4969841e0daf.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/49/49fc59c1-96b4-45cd-b3b7-80d4cab0cb8f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/4a/4ae749b7-3f95-4fe8-95ed-ea45507f4d34.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/4c/4c896123-8de7-48a0-bd7a-d02b1082dacb.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/4e/4e4b5b80-aa27-4da2-998b-7cec668e999f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/4e/4ea5a379-58e5-46ab-979e-826204a3bd4f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/4f/4f17be05-9bb6-4426-906d-239207b61aa3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/51/51350ec6-8eb5-4942-a40b-0326e230a398.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/52/52321335-c18c-4444-a671-1269bd19e0a0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/54/54931f0b-1d36-4bfd-8078-006e4f3804f7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/58/581f6386-defb-4463-b8af-bc8d2cdd66d7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/5a/5a6a535c-49d3-434b-95e0-02588c44ed56.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/5a/5aeec91c-5701-46bf-b8cc-bc6d0459c0d0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/5b/5b03ba37-d73d-4dc2-a0b5-a69471178a53.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/5e/5e306986-a20c-4127-827f-b0195cbab400.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/61/616e3086-22fa-4fc2-be3b-d9b2ecdfbb73.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/62/62e7a73c-4428-450b-8716-20ced6be3aad.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/63/63d71d38-2b7b-4d54-8d14-fb52ce224d54.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/64/645f81da-f52e-4a04-aae0-03cd115855ac.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/67/67b3d0b9-786e-4699-983e-4e88dccf011b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/68/680f26e8-cba1-462b-803b-73807f9798e6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/69/69c88cc8-25c3-4fae-82e9-b86f89094104.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/6a/6ab636f2-9f03-4aa2-8943-275149d4710d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/70/70741e83-e781-4521-b5d0-03f89bcacc4d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/71/7143d8bc-c837-455e-8ec2-b002a51faabe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/72/722e90e8-8268-411d-b412-448c0b8b5cea.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/72/72d708c1-7061-4777-aea5-c34be168f2b8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/73/730aa444-4644-4e20-8688-b63bdf0d70a8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/73/7334516c-b3cc-4bd3-bb2c-c72ae2f39a6a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/73/73d86412-5747-4988-a246-7d4028a2a763.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/74/7480bd5a-98ad-4ab8-9f1e-f0885c3571b0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/75/7562230a-0545-4344-8a55-a074cc96eaa3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/76/761cc76c-41c4-4724-bf8a-c46ab82a4f9e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/76/76e198dc-5ffd-4534-bd0a-a5c13f820ca3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/76/76ee739b-b98f-4763-a09a-e88e39689fe2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/78/78f85043-a4a8-4b78-9aa9-87da4dc0912e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/79/79d1c0bd-f55d-4af9-921f-91b5a9b7f81b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/7b/7bcf9d42-4507-4948-bfbe-2b25a4b7d0c0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/7b/7bd05849-5e73-411e-bbee-b1721c3efc67.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/7f/7f33acf8-fe9e-4f83-80c7-f8bdc6bb4b2c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/80/809900fc-fac2-489a-bba0-fe7a200f39da.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/81/8154373e-3318-464d-8ed0-049ec1d1518c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/81/817e7fca-b7a9-4c2f-b77c-1b138397fed2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/82/82a332a4-a06b-460e-99a3-959d6f6bca90.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/83/83729209-76de-4560-9a3c-2571af570633.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/88/882e5049-e69d-412c-929c-b25923b23b2f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/88/883dfe49-e4bf-4d1b-8918-e16a63986622.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/88/8888a80e-9d70-4197-9700-b1db2153a90a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/88/88b31084-89df-4825-9163-f0f42e2bb3cd.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/89/899635d5-227f-495e-8acd-1ab96ed26a5d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/8a/8a557f98-c18c-4110-ae89-6a6e350065a5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/8b/8b122da3-9b5c-45a7-a0e6-c483cc17aca1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/8b/8bb3671b-b141-4657-a3f2-900e4cbf5396.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/8c/8c9ca602-1e25-45cf-a999-5730082c5ea9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/8d/8d33a17c-9b95-4630-a83b-44958300e3c8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/8f/8f2cba10-121c-4850-979a-0ba3eb89ad97.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/8f/8fd940f0-31e8-47f5-8d5a-46c8cdd3d4c1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/90/90a7b524-4b90-4fec-a091-a4411b3fd24e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/90/90c3a69c-b12d-4d90-97b1-26ef65b10100.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/91/917c64b7-fde8-4a19-84a2-1c6f7aa80c12.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/92/92bd10bf-fe21-4805-8f64-693834ac580c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/97/9744d88b-d9eb-41bc-8ad6-9a07d5eb55b2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/98/98576951-52ee-41e5-8500-c3573ecb1a95.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/jsb-default/assets/main/import/98/98576951-52ee-41e5-8500-c3573ecb1a95.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/99/99a24b82-8440-456b-a0d6-07765797f285.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/9c/9c716e46-c497-4dd9-b1ad-5421a6f6f3d7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/9e/9e1eebe9-dcd7-4c49-9367-3164f039c747.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/9f/9f2729f6-60d5-4a5e-ba40-5e8ddc3c7bf7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/a1/a1440a99-6988-4ec1-8bcb-7363862cf467.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/a5/a52f9e52-20f8-420b-9d2c-03b51fe481f7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/a6/a6083d30-38f4-4412-b93d-ba691fc8b457.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/a7/a72de1d9-5065-4f22-a236-99ac2225ef04.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/a7/a7fa4951-d0a1-4416-a3d1-eee4c3c7dca4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/a8/a8cc58cf-815d-47f6-b8b8-330f6af854f3.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/jsb-default/assets/main/import/a8/a8cc58cf-815d-47f6-b8b8-330f6af854f3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/aa/aac6f825-133e-486f-a031-f95de4c4ab44.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/ab/abfd8116-d27f-4119-b42d-2792ccc69af5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/b0/b0387c63-0716-45dc-a9df-06561b2a5a11.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/b0/b0bc30cb-e574-4b49-aa9f-ba963cb1eab4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/b1/b19cad8b-6dd1-4dfc-9868-084f4ec56784.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/b1/b1ac1d77-b25f-491b-b8b1-11cd3df9ae0b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/b2/b2204d1f-f047-4c74-9d58-efbc5669f51d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/b3/b341e39e-2b6d-420b-b073-e76a2a2e5ad7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/b4/b4294875-bf61-45be-9012-ee60fafa4b7b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/b9/b9b4b1e9-5290-4f95-a89b-d6193fb059b6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/bb/bbc60e4d-04f2-4af7-90ef-811e5d17e49e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/bc/bcb074ff-e3e5-4981-bafc-cf32b811b473.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/bd/bd15eb49-2b4b-47f6-ab0c-163ada1a2f3a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/bd/bd755bd9-a3fe-46c8-a733-8be6424e400d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/bd/bd887396-3ad2-45ed-b310-c5375f2ef476.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/be/be416f6e-0e11-4da6-9dfb-61b49b51ab25.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/be/be662661-e53f-4fbe-981e-00a686e6c593.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/be/befb312f-6014-4c71-84ac-e53a1d5c5bf8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/bf/bf54e8f1-69f8-42ad-8c72-2c7987e26581.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/c1/c1e8d3d5-98d4-43c3-81ce-9b4b4e7459ff.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/c4/c45c401c-6f66-4cbf-8c1d-208c28e21ba7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/c5/c53ae9c5-e1fa-499b-a91e-64add4afeee3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/c9/c927c2c6-1b2c-4b85-b0ca-939300d750d2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/c9/c9767064-f5fc-4cb8-8252-95dea2123c4b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/c9/c9d786c4-270a-4ad6-80d1-65727b29bfd7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/cb/cb416a98-819f-42b0-8dac-30c2679bd3df.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/cc/cc36a434-529b-4590-b22b-9078752b8908.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/cd/cd2e551c-e046-4dec-aba6-c2db400ee677.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/d2/d2abb0ae-51e0-4fcf-8764-892c6de3d56f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/d6/d61a130c-4a10-42af-bc4e-6dd19485276d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/d6/d6449b46-8b8c-49d3-bb74-eedbaf8cc7cc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/d6/d6bd0b52-e457-46de-afd3-62d46b332caf.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/d9/d9adeeb4-d0d7-4cf3-b97d-4723fc032062.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/da/dac2420e-8037-47c0-af94-d66292e30a48.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/dd/ddf8dfcd-4082-4605-8b14-ef679c643236.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/de/de84b380-5c83-4df8-be82-97664105a7b0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/e1/e144a8ea-5f2c-47a5-8f16-8624237d22dc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/e2/e22695f4-f8cb-461f-8d35-9dd6021988e9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/e4/e439fb19-ac91-4035-b594-4c67bf2bc974.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/e5/e55ae0a4-dab3-4d85-aea2-4d2245313c5a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/e6/e6f37db5-0c94-47e4-a761-2a7aa60958c8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/e8/e840b608-7e1f-4546-b10b-058ca4c23652.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/e8/e89412b7-7488-44fc-affc-a25aae57be41.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/eb/ebe08c98-ef1f-4281-9928-f47520c039fc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/ec/ec401d50-45f0-4f4e-b8d1-a5364164572f.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/jsb-default/assets/main/import/ec/ec401d50-45f0-4f4e-b8d1-a5364164572f.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/ef/efc7f654-117c-46be-b0c1-66bb07dd36f9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/f0/f0123442-630c-404d-b29e-007e86b7a0ab.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/f2/f2d81f88-6771-42a9-af25-9c4cd28c418b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/f3/f3770cf3-f3fb-4ec6-81ae-db9aeeb48994.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/f4/f48dcf8a-4976-4c7a-b241-63684291bdd0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/f5/f57efd49-76f8-4d3d-950f-f18ff4b4077a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/f5/f5926c59-0578-41fc-98cd-b7332fa6f271.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/f6/f639e84e-72ba-47fa-b2ce-02ebdf66633d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/fa/fa49a0d8-8439-4452-a928-182f68366640.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/fb/fb584242-6db7-4a58-a80e-5740cc543c7e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/fb/fba7497c-cef7-4c32-a0fc-82f6651eab9e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/fc/fc23a77d-86b6-4e64-9677-8b160c92c1f6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/fd/fd2881ea-5c22-49fe-b626-9e05d768bf43.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/fe/fe7db87f-74e1-413b-8e85-1457f93c20b7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/import/fe/fedba6cf-981d-40ea-abb5-079924a6e86b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/jsb-default/assets/main/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/native/07/07295294-b480-4409-a65d-97abc91ae2df.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/native/0d/0d56d1ab-4507-4300-878b-c01832ea664d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/native/1c/1cbce6bc-0381-45da-8df9-35c0d7de6576.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/native/1e/1ed603f1-c602-4888-af96-e76b910708dd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/native/23/23487aa1-b7d3-4660-bafb-995b80c5d5c7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/native/41/41b8f266-81e0-4862-8900-1b5b95441c68.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/native/4a/4ae749b7-3f95-4fe8-95ed-ea45507f4d34.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/native/64/645f81da-f52e-4a04-aae0-03cd115855ac.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/native/6a/6ab636f2-9f03-4aa2-8943-275149d4710d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/native/70/70741e83-e781-4521-b5d0-03f89bcacc4d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/native/71/7143d8bc-c837-455e-8ec2-b002a51faabe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/native/76/761cc76c-41c4-4724-bf8a-c46ab82a4f9e.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/native/7b/7bd05849-5e73-411e-bbee-b1721c3efc67.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/native/80/809900fc-fac2-489a-bba0-fe7a200f39da.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/native/81/8154373e-3318-464d-8ed0-049ec1d1518c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/native/8f/8fd940f0-31e8-47f5-8d5a-46c8cdd3d4c1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/native/9f/9f2729f6-60d5-4a5e-ba40-5e8ddc3c7bf7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/native/b4/b4294875-bf61-45be-9012-ee60fafa4b7b.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/native/bd/bd15eb49-2b4b-47f6-ab0c-163ada1a2f3a.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/native/bd/bd755bd9-a3fe-46c8-a733-8be6424e400d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/native/be/be416f6e-0e11-4da6-9dfb-61b49b51ab25.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/native/c9/c9767064-f5fc-4cb8-8252-95dea2123c4b.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/native/f4/f48dcf8a-4976-4c7a-b241-63684291bdd0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/native/f5/f5926c59-0578-41fc-98cd-b7332fa6f271.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/native/fb/fb584242-6db7-4a58-a80e-5740cc543c7e.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/assets/main/native/fe/fedba6cf-981d-40ea-abb5-079924a6e86b.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/frameworks/runtime-src/proj.android-studio/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/jsb-default/frameworks/runtime-src/proj.android-studio/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/frameworks/runtime-src/proj.android-studio/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/jsb-default/frameworks/runtime-src/proj.android-studio/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/frameworks/runtime-src/proj.android-studio/app/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/jsb-default/frameworks/runtime-src/proj.android-studio/app/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/frameworks/runtime-src/proj.android-studio/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build/jsb-default/frameworks/runtime-src/proj.android-studio/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/frameworks/runtime-src/proj.android-studio/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/jsb-default/frameworks/runtime-src/proj.android-studio/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/frameworks/runtime-src/proj.android-studio/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/jsb-default/frameworks/runtime-src/proj.android-studio/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/frameworks/runtime-src/proj.ios_mac/ios/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/build/jsb-default/frameworks/runtime-src/proj.ios_mac/ios/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/jsb-default/frameworks/runtime-src/proj.ios_mac/mac/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/build/jsb-default/frameworks/runtime-src/proj.ios_mac/mac/Info.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web-desktop/assets/main/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/web-desktop/assets/main/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web-desktop/assets/main/import/04/04520e5c9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web-desktop/assets/main/import/07/07125b5e6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web-desktop/assets/main/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/web-desktop/assets/main/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web-desktop/assets/main/native/07/07295294-b480-4409-a65d-97abc91ae2df.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web-desktop/assets/main/native/0d/0d56d1ab-4507-4300-878b-c01832ea664d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web-desktop/assets/main/native/1c/1cbce6bc-0381-45da-8df9-35c0d7de6576.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web-desktop/assets/main/native/1e/1ed603f1-c602-4888-af96-e76b910708dd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web-desktop/assets/main/native/23/23487aa1-b7d3-4660-bafb-995b80c5d5c7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web-desktop/assets/main/native/41/41b8f266-81e0-4862-8900-1b5b95441c68.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web-desktop/assets/main/native/4a/4ae749b7-3f95-4fe8-95ed-ea45507f4d34.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web-desktop/assets/main/native/64/645f81da-f52e-4a04-aae0-03cd115855ac.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web-desktop/assets/main/native/6a/6ab636f2-9f03-4aa2-8943-275149d4710d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web-desktop/assets/main/native/70/70741e83-e781-4521-b5d0-03f89bcacc4d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web-desktop/assets/main/native/71/7143d8bc-c837-455e-8ec2-b002a51faabe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web-desktop/assets/main/native/76/761cc76c-41c4-4724-bf8a-c46ab82a4f9e.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web-desktop/assets/main/native/7b/7bd05849-5e73-411e-bbee-b1721c3efc67.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web-desktop/assets/main/native/80/809900fc-fac2-489a-bba0-fe7a200f39da.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web-desktop/assets/main/native/81/8154373e-3318-464d-8ed0-049ec1d1518c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web-desktop/assets/main/native/8f/8fd940f0-31e8-47f5-8d5a-46c8cdd3d4c1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web-desktop/assets/main/native/9f/9f2729f6-60d5-4a5e-ba40-5e8ddc3c7bf7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web-desktop/assets/main/native/b4/b4294875-bf61-45be-9012-ee60fafa4b7b.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web-desktop/assets/main/native/bd/bd15eb49-2b4b-47f6-ab0c-163ada1a2f3a.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web-desktop/assets/main/native/bd/bd755bd9-a3fe-46c8-a733-8be6424e400d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web-desktop/assets/main/native/be/be416f6e-0e11-4da6-9dfb-61b49b51ab25.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web-desktop/assets/main/native/c9/c9767064-f5fc-4cb8-8252-95dea2123c4b.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web-desktop/assets/main/native/f4/f48dcf8a-4976-4c7a-b241-63684291bdd0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web-desktop/assets/main/native/f5/f5926c59-0578-41fc-98cd-b7332fa6f271.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web-desktop/assets/main/native/fb/fb584242-6db7-4a58-a80e-5740cc543c7e.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web-desktop/assets/main/native/fe/fedba6cf-981d-40ea-abb5-079924a6e86b.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/web-desktop/webBuild.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/00/00a4618a-92a0-4267-8e27-7e202715e584.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/01/01f0c017-afc5-4ef5-b0ca-b7fee044733e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/03/039c5682-1574-43db-b4b5-985a19376220.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/04/0441b794-ed16-4862-8f0c-eade710b1079.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/07/07295294-b480-4409-a65d-97abc91ae2df.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/07/07295294-b480-4409-a65d-97abc91ae2df.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/07/0735ed6a-06ac-4cca-a71f-0d066c756a3b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/08/081aab15-452e-4305-b850-ba7cf1611926.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/08/08477012-4564-4b8e-bef9-f588dd2edd74.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/0a/0a0037bc-a124-4413-886a-e68b65240bc8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/0a/0a8450bf-23ea-47af-be97-44392ad5a1e3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/0a/0ad88383-2e25-4756-9336-68684068bdc7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/0a/0af1c381-c8c7-4217-853d-9772d59f19fe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/0b/0b1aab58-089d-43a8-9eff-a8383314ed26.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/0b/0be4ac3f-a1bd-4fe2-b5a2-3dc7889a1b1e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/0c/0c904015-bfd5-4fc4-b085-189ea66ffc72.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/0d/0d56d1ab-4507-4300-878b-c01832ea664d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/0d/0d56d1ab-4507-4300-878b-c01832ea664d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/0d/0d7f8117-add2-4a23-bb06-347ee820cf73.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/0d/0d7f8117-add2-4a23-bb06-347ee820cf73.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/0d/0de8c00f-a0ba-4a78-ac59-2ec99ea61fbb.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/0e/0e1b6252-af93-4a9a-bf65-f703569d7589.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/0e/0e72adb1-54e0-4fe3-9964-d11b719e6746.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/0f/0f5479ac-55d8-44af-9833-76d528690c7f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/12/120e15b8-d6c0-4e86-822d-3d15b67bbf0f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/16/168b2fdf-b8d0-40c0-8586-77de7a6e446f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/17/175c747e-a680-449f-9b9a-690b116144c6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/17/17cfb533-8df9-41c5-979a-04a9872b5fa4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/19/192a194b-7519-46ec-a6c1-0257374d88ab.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/1a/1a17069d-8283-45ca-b6c8-880f998ccfce.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/1b/1bad99bc-48e9-4516-88c7-fed3bc321a92.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/1b/1bbf6fc6-bd37-4cb8-8abe-98e32b753d3f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/1c/1cbce6bc-0381-45da-8df9-35c0d7de6576.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/1c/1cbce6bc-0381-45da-8df9-35c0d7de6576.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/1d/1d30c115-a46a-4466-8329-65e74630df81.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/1d/1dc34eb1-d494-46cf-a011-39a0313a0cfe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/1d/1dc7098a-40aa-4137-af1f-89df54f65873.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/1e/1e7554e3-145d-44d5-a00f-e71616cb70d2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/1e/1ed603f1-c602-4888-af96-e76b910708dd.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/1e/1ed603f1-c602-4888-af96-e76b910708dd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/1f/1f4031fc-abab-43b3-8aa0-562f215489da.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/1f/1f427c4a-4152-4f42-ae64-27b3baebb061.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/20/20270eaf-3ba7-472d-956e-f41eabe759f0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/21/2149130c-b2b7-41e6-8627-5a1af5bac062.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/23/230f96d3-a894-4481-948a-be7f30c7f048.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/23/231ed9ee-c4f0-4094-b153-81bbe6bd714b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/23/23487aa1-b7d3-4660-bafb-995b80c5d5c7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/23/23487aa1-b7d3-4660-bafb-995b80c5d5c7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/24/24980e50-2454-4936-844e-d665e8d2bd07.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/25/25d8af25-a5c1-430f-8179-69ca4cee7d7c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/28/28658a40-bd42-44f5-9fb0-4216bf87983e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/28/28de919f-b559-464b-816c-0a4c3fc5f84b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/28/28f1d4e5-2398-47e9-8cd2-e7ccc7db98cc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/29/294cb0de-b904-4f94-9a63-56d40434e91e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/29/29707251-8373-4a3a-9c45-acf47790f693.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/2a/2a27449d-e32c-4efe-ad91-f744f851f019.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/2a/2a573122-a046-4fdc-bc42-d25d3088a250.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/2a/2ae3a3bc-d0e1-4b84-809f-45f87750befe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/2a/2aee4c6d-14b2-4477-a629-9662957a9ebd.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/2b/2b4be66d-b139-48ef-a4cd-66476d3b28d7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/2b/2b50c435-80fe-484f-8b79-5c446a477613.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/2d/2d0f415a-c96a-47c3-a6c2-f590e6be02ff.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/2e/2e0516e2-2ceb-421c-8b7c-cb23b8e629d4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/2e/2e2fe60e-014f-4586-8f6a-41c06da2cc1f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/2f/2fabfdc1-61e8-473c-ab4d-1ccfab238fa5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/31/31642fe4-cf40-4f1d-bf87-750a70b1936c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/32/32cc3235-10cb-4c29-9ae7-f08eb44e582d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/33/3362a690-8340-4005-8e28-77514e5e533b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/33/33a9cf50-c3ab-4a60-be92-da8d008487ee.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/35/357eabbd-ef8c-4031-99ed-c144f33dd8b6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/36/36119feb-483f-435f-9392-d17d595f5edc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/37/37ab805d-94cc-49d6-8709-fcb7c5b00ed2.json" beforeDir="false" afterPath="$PROJECT_DIR$/library/imports/37/37ab805d-94cc-49d6-8709-fcb7c5b00ed2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/37/37d06ea3-6243-4da5-8936-a7b42ca91ca5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/38/383cda32-e934-4f81-a41c-f8ee8c40bab3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/38/38aa8459-c793-4081-814d-1d5529b526b6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/39/392634c6-7f18-4e8e-88ea-0c57581f1bdd.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/39/3986557b-c53a-43f7-93b5-5ef0cbc52be2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/39/39acd182-93ef-406e-977d-8aa605ff1fb2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/3b/3b90551c-5900-4ccc-b0cf-b0f5c67a4c2d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/3d/3d4ad47e-db7d-42eb-8865-adb9acb5ccb2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/3e/3e710da6-9d7c-41cb-b53a-594c0c15843f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/3e/3e88730e-f7c1-49ec-9041-4fe598d4147c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/3e/3ea664ab-6a41-4c4b-b18f-27daf15754a6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/3e/3eb77869-dd53-49bb-ab56-c958e33d8ed6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/40/40e32d6b-9c96-45db-a835-1c9fbcbeb4a5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/41/41b8f266-81e0-4862-8900-1b5b95441c68.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/41/41b8f266-81e0-4862-8900-1b5b95441c68.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/42/4253fb82-6059-4ba2-8350-6de4ec06637e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/43/43546d48-bb3f-4599-9ca8-43a8787d73fb.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/44/4426934e-94c5-4677-bb5b-9f5e9fa4dfb0.js" beforeDir="false" afterPath="$PROJECT_DIR$/library/imports/44/4426934e-94c5-4677-bb5b-9f5e9fa4dfb0.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/44/4426934e-94c5-4677-bb5b-9f5e9fa4dfb0.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/library/imports/44/4426934e-94c5-4677-bb5b-9f5e9fa4dfb0.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/45/457588f4-032e-49b8-a261-1896936c58c4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/45/45dad6b1-ae41-44b6-a097-20be39c0dc33.js" beforeDir="false" afterPath="$PROJECT_DIR$/library/imports/45/45dad6b1-ae41-44b6-a097-20be39c0dc33.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/45/45dad6b1-ae41-44b6-a097-20be39c0dc33.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/library/imports/45/45dad6b1-ae41-44b6-a097-20be39c0dc33.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/45/45f54ec8-596d-41f6-8ea7-03021bbb421e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/46/46c4783a-717d-4074-8e82-19647ddfb068.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/47/47e8f65a-6be3-4df4-9af8-016acfdd3819.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/48/48f42290-b6ee-412e-b7ea-ae10b0885779.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/48/48fc394c-3fe0-472e-9de9-f08c83be609c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/49/49434272-e24a-4ec1-97c4-b59fa2097ee1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/49/49cc120b-9b26-4e4b-b9cf-4969841e0daf.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/49/49fc59c1-96b4-45cd-b3b7-80d4cab0cb8f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/4a/4a3cbad2-f220-4cc2-a627-3457354c2d08.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/4a/4ae749b7-3f95-4fe8-95ed-ea45507f4d34.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/4a/4ae749b7-3f95-4fe8-95ed-ea45507f4d34.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/4c/4c896123-8de7-48a0-bd7a-d02b1082dacb.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/4c/4cb5f3ca-11d7-4b80-acf6-b24fcc5d1ba6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/4e/4e4b5b80-aa27-4da2-998b-7cec668e999f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/4e/4ea5a379-58e5-46ab-979e-826204a3bd4f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/4f/4f17be05-9bb6-4426-906d-239207b61aa3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/50/506abe6b-b240-4793-a710-2b0ad9141e42.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/51/51350ec6-8eb5-4942-a40b-0326e230a398.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/52/52321335-c18c-4444-a671-1269bd19e0a0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/54/54931f0b-1d36-4bfd-8078-006e4f3804f7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/58/581f6386-defb-4463-b8af-bc8d2cdd66d7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/59/5906b69a-75df-4598-bfc4-39288bd21828.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/5a/5a6a535c-49d3-434b-95e0-02588c44ed56.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/5a/5aeec91c-5701-46bf-b8cc-bc6d0459c0d0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/5b/5b03ba37-d73d-4dc2-a0b5-a69471178a53.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/5d/5d41322e-bc86-4b36-9ef1-d21a26ef9801.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/5d/5dc017b9-a9d8-4504-b86b-a78eb60243d0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/5e/5e306986-a20c-4127-827f-b0195cbab400.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/5f/5fa5e972-ea11-4e7e-acbb-409576cb2f4b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/61/616e3086-22fa-4fc2-be3b-d9b2ecdfbb73.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/62/62e7a73c-4428-450b-8716-20ced6be3aad.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/63/634aa4c1-e62a-4928-8b0c-3e79c1e370f7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/63/63d71d38-2b7b-4d54-8d14-fb52ce224d54.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/64/6415d615-9d55-4f26-842e-25b31c22b884.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/64/645f81da-f52e-4a04-aae0-03cd115855ac.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/64/645f81da-f52e-4a04-aae0-03cd115855ac.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/64/64a58cfc-8d98-409e-8792-19d037e7a7fe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/67/6757aebd-86fb-4add-9b5b-f5ebcb3f6cda.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/67/67b3d0b9-786e-4699-983e-4e88dccf011b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/68/680f26e8-cba1-462b-803b-73807f9798e6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/69/69c88cc8-25c3-4fae-82e9-b86f89094104.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/6a/6ab636f2-9f03-4aa2-8943-275149d4710d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/6a/6ab636f2-9f03-4aa2-8943-275149d4710d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/6e/6e10f8c4-8cc4-4f38-afee-786318511edd.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/70/70741e83-e781-4521-b5d0-03f89bcacc4d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/70/70741e83-e781-4521-b5d0-03f89bcacc4d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/70/708578b5-1c3d-47f2-a2c8-1915eac1969c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/70/70942901-572c-45d9-a90b-5065d1b6990f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/71/7143d8bc-c837-455e-8ec2-b002a51faabe.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/71/7143d8bc-c837-455e-8ec2-b002a51faabe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/72/722e90e8-8268-411d-b412-448c0b8b5cea.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/72/72d708c1-7061-4777-aea5-c34be168f2b8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/73/730aa444-4644-4e20-8688-b63bdf0d70a8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/73/7334516c-b3cc-4bd3-bb2c-c72ae2f39a6a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/73/73d86412-5747-4988-a246-7d4028a2a763.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/74/7480bd5a-98ad-4ab8-9f1e-f0885c3571b0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/75/7562230a-0545-4344-8a55-a074cc96eaa3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/76/761cc76c-41c4-4724-bf8a-c46ab82a4f9e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/76/761cc76c-41c4-4724-bf8a-c46ab82a4f9e.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/76/76e198dc-5ffd-4534-bd0a-a5c13f820ca3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/76/76ee739b-b98f-4763-a09a-e88e39689fe2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/78/78f85043-a4a8-4b78-9aa9-87da4dc0912e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/79/79d1c0bd-f55d-4af9-921f-91b5a9b7f81b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/7b/7bcf9d42-4507-4948-bfbe-2b25a4b7d0c0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/7b/7bd05849-5e73-411e-bbee-b1721c3efc67.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/7b/7bd05849-5e73-411e-bbee-b1721c3efc67.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/7f/7f33acf8-fe9e-4f83-80c7-f8bdc6bb4b2c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/7f/7f7a854a-9d27-4727-b09b-85713aabb9ef.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/80/809900fc-fac2-489a-bba0-fe7a200f39da.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/80/809900fc-fac2-489a-bba0-fe7a200f39da.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/81/8154373e-3318-464d-8ed0-049ec1d1518c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/81/8154373e-3318-464d-8ed0-049ec1d1518c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/81/817e7fca-b7a9-4c2f-b77c-1b138397fed2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/82/82a332a4-a06b-460e-99a3-959d6f6bca90.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/83/83729209-76de-4560-9a3c-2571af570633.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/88/882e5049-e69d-412c-929c-b25923b23b2f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/88/883dfe49-e4bf-4d1b-8918-e16a63986622.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/88/8888a80e-9d70-4197-9700-b1db2153a90a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/88/88b31084-89df-4825-9163-f0f42e2bb3cd.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/89/899635d5-227f-495e-8acd-1ab96ed26a5d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/8a/8a557f98-c18c-4110-ae89-6a6e350065a5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/8b/8b122da3-9b5c-45a7-a0e6-c483cc17aca1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/8b/8bb3671b-b141-4657-a3f2-900e4cbf5396.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/8c/8c8e7bd5-8218-4937-a70d-548b6989bf7b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/8c/8c9ca602-1e25-45cf-a999-5730082c5ea9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/8d/8d33a17c-9b95-4630-a83b-44958300e3c8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/8d/8da192a9-b7b1-429e-8c9c-48f1774ac5b0.js" beforeDir="false" afterPath="$PROJECT_DIR$/library/imports/8d/8da192a9-b7b1-429e-8c9c-48f1774ac5b0.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/8d/8da192a9-b7b1-429e-8c9c-48f1774ac5b0.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/library/imports/8d/8da192a9-b7b1-429e-8c9c-48f1774ac5b0.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/8f/8f2cba10-121c-4850-979a-0ba3eb89ad97.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/8f/8fd940f0-31e8-47f5-8d5a-46c8cdd3d4c1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/8f/8fd940f0-31e8-47f5-8d5a-46c8cdd3d4c1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/90/9043d926-e968-43df-8d8c-d1ba82af6d37.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/90/90a7b524-4b90-4fec-a091-a4411b3fd24e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/90/90c3a69c-b12d-4d90-97b1-26ef65b10100.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/91/917c64b7-fde8-4a19-84a2-1c6f7aa80c12.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/92/92bd10bf-fe21-4805-8f64-693834ac580c.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/97/9744d88b-d9eb-41bc-8ad6-9a07d5eb55b2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/98/98576951-52ee-41e5-8500-c3573ecb1a95.json" beforeDir="false" afterPath="$PROJECT_DIR$/library/imports/98/98576951-52ee-41e5-8500-c3573ecb1a95.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/99/99a24b82-8440-456b-a0d6-07765797f285.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/9c/9c716e46-c497-4dd9-b1ad-5421a6f6f3d7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/9e/9e1eebe9-dcd7-4c49-9367-3164f039c747.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/9e/9e85c26a-a8d4-450b-8b8e-3ea73e048167.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/9f/9f2729f6-60d5-4a5e-ba40-5e8ddc3c7bf7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/9f/9f2729f6-60d5-4a5e-ba40-5e8ddc3c7bf7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/a1/a1440a99-6988-4ec1-8bcb-7363862cf467.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/a1/a1d0922e-238c-42f7-9244-85b755d6e910.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/a5/a52f9e52-20f8-420b-9d2c-03b51fe481f7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/a6/a6083d30-38f4-4412-b93d-ba691fc8b457.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/a7/a72de1d9-5065-4f22-a236-99ac2225ef04.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/a7/a7549785-dbbc-4a9f-9dd1-98872a18c31f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/a7/a7fa4951-d0a1-4416-a3d1-eee4c3c7dca4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/a8/a8cc58cf-815d-47f6-b8b8-330f6af854f3.json" beforeDir="false" afterPath="$PROJECT_DIR$/library/imports/a8/a8cc58cf-815d-47f6-b8b8-330f6af854f3.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/aa/aac6f825-133e-486f-a031-f95de4c4ab44.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/ab/abfd8116-d27f-4119-b42d-2792ccc69af5.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/ac/ac1ace68-27a5-4450-bdeb-0fe6636b4ca5.js" beforeDir="false" afterPath="$PROJECT_DIR$/library/imports/ac/ac1ace68-27a5-4450-bdeb-0fe6636b4ca5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/ac/ac1ace68-27a5-4450-bdeb-0fe6636b4ca5.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/library/imports/ac/ac1ace68-27a5-4450-bdeb-0fe6636b4ca5.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/b0/b0211943-6a2b-4171-b9d2-b884d36e8e1b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/b0/b0387c63-0716-45dc-a9df-06561b2a5a11.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/b0/b0bc30cb-e574-4b49-aa9f-ba963cb1eab4.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/b1/b134b75c-87c4-4ff2-ad18-d866733111e2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/b1/b1631bfe-446f-444b-9e4f-794c48171972.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/b1/b19cad8b-6dd1-4dfc-9868-084f4ec56784.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/b1/b1ac1d77-b25f-491b-b8b1-11cd3df9ae0b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/b2/b2204d1f-f047-4c74-9d58-efbc5669f51d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/b3/b341e39e-2b6d-420b-b073-e76a2a2e5ad7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/b4/b4294875-bf61-45be-9012-ee60fafa4b7b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/b4/b4294875-bf61-45be-9012-ee60fafa4b7b.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/b8/b837672a-ee3d-4b75-a8d1-476a825925d6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/b9/b9b4b1e9-5290-4f95-a89b-d6193fb059b6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/bb/bbc60e4d-04f2-4af7-90ef-811e5d17e49e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/bc/bc67c7a3-fa2e-4955-83bb-030ed4256c96.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/bc/bcb074ff-e3e5-4981-bafc-cf32b811b473.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/bd/bd15eb49-2b4b-47f6-ab0c-163ada1a2f3a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/bd/bd15eb49-2b4b-47f6-ab0c-163ada1a2f3a.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/bd/bd2758aa-9e77-4b4e-806e-50e63132ade7.js" beforeDir="false" afterPath="$PROJECT_DIR$/library/imports/bd/bd2758aa-9e77-4b4e-806e-50e63132ade7.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/bd/bd2758aa-9e77-4b4e-806e-50e63132ade7.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/library/imports/bd/bd2758aa-9e77-4b4e-806e-50e63132ade7.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/bd/bd755bd9-a3fe-46c8-a733-8be6424e400d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/bd/bd755bd9-a3fe-46c8-a733-8be6424e400d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/bd/bd887396-3ad2-45ed-b310-c5375f2ef476.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/be/be416f6e-0e11-4da6-9dfb-61b49b51ab25.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/be/be416f6e-0e11-4da6-9dfb-61b49b51ab25.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/be/be662661-e53f-4fbe-981e-00a686e6c593.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/be/befb312f-6014-4c71-84ac-e53a1d5c5bf8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/bf/bf54e8f1-69f8-42ad-8c72-2c7987e26581.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/bf/bfcbff74-eaca-4b51-b8a5-1fd77f5b50b7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/bf/bff35ff0-a3c6-4fd6-bc68-7dca1830efec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/c0/c04fcd9f-6eaa-4c79-a342-0fb6e7d71226.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/c1/c1e8d3d5-98d4-43c3-81ce-9b4b4e7459ff.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/c2/c2b5ea52-6cab-4559-b77d-8b4a98ac4b2e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/c4/c45c401c-6f66-4cbf-8c1d-208c28e21ba7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/c5/c53ae9c5-e1fa-499b-a91e-64add4afeee3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/c5/c55178b5-583e-4d21-a11a-abfd426fee5e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/c9/c927c2c6-1b2c-4b85-b0ca-939300d750d2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/c9/c9767064-f5fc-4cb8-8252-95dea2123c4b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/c9/c9767064-f5fc-4cb8-8252-95dea2123c4b.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/c9/c9d786c4-270a-4ad6-80d1-65727b29bfd7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/cb/cb416a98-819f-42b0-8dac-30c2679bd3df.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/cb/cb546e10-ba1a-40c9-8a20-ad459847cb84.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/cc/cc36a434-529b-4590-b22b-9078752b8908.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/cd/cd2e551c-e046-4dec-aba6-c2db400ee677.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/d2/d2abb0ae-51e0-4fcf-8764-892c6de3d56f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/d6/d61a130c-4a10-42af-bc4e-6dd19485276d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/d6/d6449b46-8b8c-49d3-bb74-eedbaf8cc7cc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/d6/d6bd0b52-e457-46de-afd3-62d46b332caf.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/d9/d9adeeb4-d0d7-4cf3-b97d-4723fc032062.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/da/daaa27ee-bdcb-4b0c-835f-a4150e9a9655.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/da/dac2420e-8037-47c0-af94-d66292e30a48.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/dd/ddf8dfcd-4082-4605-8b14-ef679c643236.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/de/de84b380-5c83-4df8-be82-97664105a7b0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/e1/e144a8ea-5f2c-47a5-8f16-8624237d22dc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/e1/e1ddcddb-d5c7-45fa-8d00-47c90baf1a30.js" beforeDir="false" afterPath="$PROJECT_DIR$/library/imports/e1/e1ddcddb-d5c7-45fa-8d00-47c90baf1a30.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/e1/e1ddcddb-d5c7-45fa-8d00-47c90baf1a30.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/library/imports/e1/e1ddcddb-d5c7-45fa-8d00-47c90baf1a30.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/e2/e22695f4-f8cb-461f-8d35-9dd6021988e9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/e4/e439fb19-ac91-4035-b594-4c67bf2bc974.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/e5/e55ae0a4-dab3-4d85-aea2-4d2245313c5a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/e6/e6f37db5-0c94-47e4-a761-2a7aa60958c8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/e8/e840b608-7e1f-4546-b10b-058ca4c23652.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/e8/e89412b7-7488-44fc-affc-a25aae57be41.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/e9/e957dbc6-7760-4293-85e2-3526a2c8eb61.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/ea/ea7f86ef-59a7-4302-bc0f-5b354e7bcd37.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/eb/ebe08c98-ef1f-4281-9928-f47520c039fc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/ec/ec401d50-45f0-4f4e-b8d1-a5364164572f.json" beforeDir="false" afterPath="$PROJECT_DIR$/library/imports/ec/ec401d50-45f0-4f4e-b8d1-a5364164572f.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/ec/ec6d32ce-ee89-403e-812a-378ac4174e77.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/ec/ec6dd8f3-ace9-42d1-9e7e-993b6abb2c3b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/ef/efc7f654-117c-46be-b0c1-66bb07dd36f9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/f0/f0123442-630c-404d-b29e-007e86b7a0ab.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/f2/f2d81f88-6771-42a9-af25-9c4cd28c418b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/f3/f348cba9-438d-4401-92af-fc269475e730.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/f3/f34b2dd2-746c-487b-9dd5-a083e467babf.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/f3/f3770cf3-f3fb-4ec6-81ae-db9aeeb48994.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/f4/f48dcf8a-4976-4c7a-b241-63684291bdd0.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/f4/f48dcf8a-4976-4c7a-b241-63684291bdd0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/f5/f57efd49-76f8-4d3d-950f-f18ff4b4077a.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/f5/f5926c59-0578-41fc-98cd-b7332fa6f271.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/f5/f5926c59-0578-41fc-98cd-b7332fa6f271.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/f6/f639e84e-72ba-47fa-b2ce-02ebdf66633d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/f7/f7e697c0-72e0-46e9-be9f-cfb9ac7991cc.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/f8/f84a533b-1d0f-46f6-a6ae-2965f388ae46.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/f9/f9eca533-b4d9-45ac-bf0f-32e9f896252e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/fa/fa49a0d8-8439-4452-a928-182f68366640.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/fb/fb584242-6db7-4a58-a80e-5740cc543c7e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/fb/fb584242-6db7-4a58-a80e-5740cc543c7e.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/fb/fba7497c-cef7-4c32-a0fc-82f6651eab9e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/fc/fc23a77d-86b6-4e64-9677-8b160c92c1f6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/fd/fd2881ea-5c22-49fe-b626-9e05d768bf43.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/fe/fe7db87f-74e1-413b-8e85-1457f93c20b7.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/fe/febf83e4-ace6-419c-bf48-ce62d8832730.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/fe/fedba6cf-981d-40ea-abb5-079924a6e86b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/imports/fe/fedba6cf-981d-40ea-abb5-079924a6e86b.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/uuid-to-mtime.json" beforeDir="false" afterPath="$PROJECT_DIR$/library/uuid-to-mtime.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/builder.json" beforeDir="false" afterPath="$PROJECT_DIR$/local/builder.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/layout.editor.json" beforeDir="false" afterPath="$PROJECT_DIR$/local/layout.editor.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/local/node-tree-state.json" beforeDir="false" afterPath="$PROJECT_DIR$/local/node-tree-state.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings/builder.json" beforeDir="false" afterPath="$PROJECT_DIR$/settings/builder.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/BackupAssets/assets/Prefab/item.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/temp/BackupAssets/assets/Prefab/item.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/BackupAssets/assets/Scenes/login.fire" beforeDir="false" afterPath="$PROJECT_DIR$/temp/BackupAssets/assets/Scenes/login.fire" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/quick-scripts/dst/__file_stats__.json" beforeDir="false" afterPath="$PROJECT_DIR$/temp/quick-scripts/dst/__file_stats__.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/quick-scripts/dst/__qc_bundle__.js" beforeDir="false" afterPath="$PROJECT_DIR$/temp/quick-scripts/dst/__qc_bundle__.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/quick-scripts/dst/__qc_index__.js" beforeDir="false" afterPath="$PROJECT_DIR$/temp/quick-scripts/dst/__qc_index__.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/quick-scripts/dst/__quick_compile__.js" beforeDir="false" afterPath="$PROJECT_DIR$/temp/quick-scripts/dst/__quick_compile__.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/quick-scripts/dst/assets/Scripts/Config/GameConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/temp/quick-scripts/dst/assets/Scripts/Config/GameConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/quick-scripts/dst/assets/Scripts/GamesPrefab.js" beforeDir="false" afterPath="$PROJECT_DIR$/temp/quick-scripts/dst/assets/Scripts/GamesPrefab.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/quick-scripts/dst/assets/Scripts/Lobby/Lobby.js" beforeDir="false" afterPath="$PROJECT_DIR$/temp/quick-scripts/dst/assets/Scripts/Lobby/Lobby.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/quick-scripts/dst/assets/Scripts/PrefabScript/IframeScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/temp/quick-scripts/dst/assets/Scripts/PrefabScript/IframeScript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/quick-scripts/dst/assets/Scripts/ServerCom.js" beforeDir="false" afterPath="$PROJECT_DIR$/temp/quick-scripts/dst/assets/Scripts/ServerCom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/quick-scripts/dst/assets/Scripts/login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/temp/quick-scripts/dst/assets/Scripts/login/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/quick-scripts/src/__qc_index__.js" beforeDir="false" afterPath="$PROJECT_DIR$/temp/quick-scripts/src/__qc_index__.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/quick-scripts/src/assets/Scripts/Config/GameConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/temp/quick-scripts/src/assets/Scripts/Config/GameConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/quick-scripts/src/assets/Scripts/Config/GameConfig.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/temp/quick-scripts/src/assets/Scripts/Config/GameConfig.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/quick-scripts/src/assets/Scripts/GamesPrefab.js" beforeDir="false" afterPath="$PROJECT_DIR$/temp/quick-scripts/src/assets/Scripts/GamesPrefab.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/quick-scripts/src/assets/Scripts/GamesPrefab.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/temp/quick-scripts/src/assets/Scripts/GamesPrefab.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/quick-scripts/src/assets/Scripts/Lobby/Lobby.js" beforeDir="false" afterPath="$PROJECT_DIR$/temp/quick-scripts/src/assets/Scripts/Lobby/Lobby.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/quick-scripts/src/assets/Scripts/Lobby/Lobby.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/temp/quick-scripts/src/assets/Scripts/Lobby/Lobby.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/quick-scripts/src/assets/Scripts/PrefabScript/IframeScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/temp/quick-scripts/src/assets/Scripts/PrefabScript/IframeScript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/quick-scripts/src/assets/Scripts/PrefabScript/IframeScript.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/temp/quick-scripts/src/assets/Scripts/PrefabScript/IframeScript.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/quick-scripts/src/assets/Scripts/ServerCom.js" beforeDir="false" afterPath="$PROJECT_DIR$/temp/quick-scripts/src/assets/Scripts/ServerCom.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/quick-scripts/src/assets/Scripts/ServerCom.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/temp/quick-scripts/src/assets/Scripts/ServerCom.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/quick-scripts/src/assets/Scripts/login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/temp/quick-scripts/src/assets/Scripts/login/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/quick-scripts/src/assets/Scripts/login/Login.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/temp/quick-scripts/src/assets/Scripts/login/Login.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp/startup.json" beforeDir="false" afterPath="$PROJECT_DIR$/temp/startup.json" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="25" />
+    <option name="width" value="1920" />
+    <option name="height" value="1055" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="android.project.structure.last.selected" value="SDK Location" />
+    <property name="android.project.structure.proportion" value="0.15" />
+    <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="508b604c-9ae4-42ac-b06a-86eb92eb4197" name="Default Changelist" comment="" />
+      <created>1721121033076</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1721121033076</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="25" width="1920" height="1055" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" visible="true" weight="0.32960597" />
+      <window_info id="Structure" side_tool="true" />
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="Resources Explorer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Captures" order="0" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="TODO" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="make" />
+      <window_info anchor="right" id="Palette&#9;" />
+    </layout>
+  </component>
+</project>

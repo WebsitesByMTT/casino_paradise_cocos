@@ -1,0 +1,264 @@
+{
+  "buildFiles": [
+    "/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/jni/Android.mk",
+    "/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/jni/Application.mk"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/cocosdev/Library/Android/sdk/ndk/21.4.7075529/ndk-build",
+      "NDK_PROJECT_PATH\u003dnull",
+      "APP_BUILD_SCRIPT\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/jni/Android.mk",
+      "NDK_APPLICATION_MK\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/jni/Application.mk",
+      "APP_ABI\u003darmeabi-v7a",
+      "NDK_ALL_ABIS\u003darmeabi-v7a",
+      "NDK_DEBUG\u003d1",
+      "APP_PLATFORM\u003dandroid-16",
+      "NDK_OUT\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/build/intermediates/ndkBuild/debug/obj",
+      "NDK_LIBS_OUT\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/build/intermediates/ndkBuild/debug/lib",
+      "NDK_TOOLCHAIN_VERSION\u003dclang",
+      "NDK_MODULE_PATH\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/cocos2d-x:/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/cocos2d-x/cocos:/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/cocos2d-x/external",
+      "NDK_DEBUG\u003d1",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/cocosdev/Library/Android/sdk/ndk/21.4.7075529/ndk-build",
+    "NDK_PROJECT_PATH\u003dnull",
+    "APP_BUILD_SCRIPT\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/jni/Android.mk",
+    "NDK_APPLICATION_MK\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/jni/Application.mk",
+    "APP_ABI\u003darmeabi-v7a",
+    "NDK_ALL_ABIS\u003darmeabi-v7a",
+    "NDK_DEBUG\u003d1",
+    "APP_PLATFORM\u003dandroid-16",
+    "NDK_OUT\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/build/intermediates/ndkBuild/debug/obj",
+    "NDK_LIBS_OUT\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/build/intermediates/ndkBuild/debug/lib",
+    "NDK_TOOLCHAIN_VERSION\u003dclang",
+    "NDK_MODULE_PATH\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/cocos2d-x:/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/cocos2d-x/cocos:/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/cocos2d-x/external",
+    "-j8",
+    "NDK_DEBUG\u003d1",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "cocos2dandroid-debug-armeabi-v7a": {
+      "buildCommandComponents": [
+        "/Users/cocosdev/Library/Android/sdk/ndk/21.4.7075529/ndk-build",
+        "NDK_PROJECT_PATH\u003dnull",
+        "APP_BUILD_SCRIPT\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/jni/Android.mk",
+        "NDK_APPLICATION_MK\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/jni/Application.mk",
+        "APP_ABI\u003darmeabi-v7a",
+        "NDK_ALL_ABIS\u003darmeabi-v7a",
+        "NDK_DEBUG\u003d1",
+        "APP_PLATFORM\u003dandroid-16",
+        "NDK_OUT\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/build/intermediates/ndkBuild/debug/obj",
+        "NDK_LIBS_OUT\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/build/intermediates/ndkBuild/debug/lib",
+        "NDK_TOOLCHAIN_VERSION\u003dclang",
+        "NDK_MODULE_PATH\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/cocos2d-x:/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/cocos2d-x/cocos:/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/cocos2d-x/external",
+        "-j8",
+        "NDK_DEBUG\u003d1",
+        "/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/libcocos2dandroid.a"
+      ],
+      "toolchain": "toolchain-armeabi-v7a",
+      "abi": "armeabi-v7a",
+      "artifactName": "cocos2dandroid",
+      "output": "/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/libcocos2dandroid.a"
+    },
+    "editorsupport-debug-armeabi-v7a": {
+      "buildCommandComponents": [
+        "/Users/cocosdev/Library/Android/sdk/ndk/21.4.7075529/ndk-build",
+        "NDK_PROJECT_PATH\u003dnull",
+        "APP_BUILD_SCRIPT\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/jni/Android.mk",
+        "NDK_APPLICATION_MK\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/jni/Application.mk",
+        "APP_ABI\u003darmeabi-v7a",
+        "NDK_ALL_ABIS\u003darmeabi-v7a",
+        "NDK_DEBUG\u003d1",
+        "APP_PLATFORM\u003dandroid-16",
+        "NDK_OUT\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/build/intermediates/ndkBuild/debug/obj",
+        "NDK_LIBS_OUT\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/build/intermediates/ndkBuild/debug/lib",
+        "NDK_TOOLCHAIN_VERSION\u003dclang",
+        "NDK_MODULE_PATH\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/cocos2d-x:/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/cocos2d-x/cocos:/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/cocos2d-x/external",
+        "-j8",
+        "NDK_DEBUG\u003d1",
+        "/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/libeditorsupport.a"
+      ],
+      "toolchain": "toolchain-armeabi-v7a",
+      "abi": "armeabi-v7a",
+      "artifactName": "editorsupport",
+      "output": "/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/libeditorsupport.a"
+    },
+    "cocos2d-debug-armeabi-v7a": {
+      "buildCommandComponents": [
+        "/Users/cocosdev/Library/Android/sdk/ndk/21.4.7075529/ndk-build",
+        "NDK_PROJECT_PATH\u003dnull",
+        "APP_BUILD_SCRIPT\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/jni/Android.mk",
+        "NDK_APPLICATION_MK\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/jni/Application.mk",
+        "APP_ABI\u003darmeabi-v7a",
+        "NDK_ALL_ABIS\u003darmeabi-v7a",
+        "NDK_DEBUG\u003d1",
+        "APP_PLATFORM\u003dandroid-16",
+        "NDK_OUT\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/build/intermediates/ndkBuild/debug/obj",
+        "NDK_LIBS_OUT\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/build/intermediates/ndkBuild/debug/lib",
+        "NDK_TOOLCHAIN_VERSION\u003dclang",
+        "NDK_MODULE_PATH\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/cocos2d-x:/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/cocos2d-x/cocos:/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/cocos2d-x/external",
+        "-j8",
+        "NDK_DEBUG\u003d1",
+        "/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/libcocos2d.a"
+      ],
+      "toolchain": "toolchain-armeabi-v7a",
+      "abi": "armeabi-v7a",
+      "artifactName": "cocos2d",
+      "output": "/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/libcocos2d.a"
+    },
+    "cocos2djs-debug-armeabi-v7a": {
+      "buildCommandComponents": [
+        "/Users/cocosdev/Library/Android/sdk/ndk/21.4.7075529/ndk-build",
+        "NDK_PROJECT_PATH\u003dnull",
+        "APP_BUILD_SCRIPT\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/jni/Android.mk",
+        "NDK_APPLICATION_MK\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/jni/Application.mk",
+        "APP_ABI\u003darmeabi-v7a",
+        "NDK_ALL_ABIS\u003darmeabi-v7a",
+        "NDK_DEBUG\u003d1",
+        "APP_PLATFORM\u003dandroid-16",
+        "NDK_OUT\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/build/intermediates/ndkBuild/debug/obj",
+        "NDK_LIBS_OUT\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/build/intermediates/ndkBuild/debug/lib",
+        "NDK_TOOLCHAIN_VERSION\u003dclang",
+        "NDK_MODULE_PATH\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/cocos2d-x:/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/cocos2d-x/cocos:/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/cocos2d-x/external",
+        "-j8",
+        "NDK_DEBUG\u003d1",
+        "/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/libcocos2djs.so"
+      ],
+      "toolchain": "toolchain-armeabi-v7a",
+      "abi": "armeabi-v7a",
+      "artifactName": "cocos2djs",
+      "output": "/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/libcocos2djs.so"
+    },
+    "pvmp3dec-debug-armeabi-v7a": {
+      "buildCommandComponents": [
+        "/Users/cocosdev/Library/Android/sdk/ndk/21.4.7075529/ndk-build",
+        "NDK_PROJECT_PATH\u003dnull",
+        "APP_BUILD_SCRIPT\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/jni/Android.mk",
+        "NDK_APPLICATION_MK\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/jni/Application.mk",
+        "APP_ABI\u003darmeabi-v7a",
+        "NDK_ALL_ABIS\u003darmeabi-v7a",
+        "NDK_DEBUG\u003d1",
+        "APP_PLATFORM\u003dandroid-16",
+        "NDK_OUT\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/build/intermediates/ndkBuild/debug/obj",
+        "NDK_LIBS_OUT\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/build/intermediates/ndkBuild/debug/lib",
+        "NDK_TOOLCHAIN_VERSION\u003dclang",
+        "NDK_MODULE_PATH\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/cocos2d-x:/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/cocos2d-x/cocos:/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/cocos2d-x/external",
+        "-j8",
+        "NDK_DEBUG\u003d1",
+        "/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/libpvmp3dec.a"
+      ],
+      "toolchain": "toolchain-armeabi-v7a",
+      "abi": "armeabi-v7a",
+      "artifactName": "pvmp3dec",
+      "output": "/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/libpvmp3dec.a"
+    },
+    "extension-debug-armeabi-v7a": {
+      "buildCommandComponents": [
+        "/Users/cocosdev/Library/Android/sdk/ndk/21.4.7075529/ndk-build",
+        "NDK_PROJECT_PATH\u003dnull",
+        "APP_BUILD_SCRIPT\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/jni/Android.mk",
+        "NDK_APPLICATION_MK\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/jni/Application.mk",
+        "APP_ABI\u003darmeabi-v7a",
+        "NDK_ALL_ABIS\u003darmeabi-v7a",
+        "NDK_DEBUG\u003d1",
+        "APP_PLATFORM\u003dandroid-16",
+        "NDK_OUT\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/build/intermediates/ndkBuild/debug/obj",
+        "NDK_LIBS_OUT\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/build/intermediates/ndkBuild/debug/lib",
+        "NDK_TOOLCHAIN_VERSION\u003dclang",
+        "NDK_MODULE_PATH\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/cocos2d-x:/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/cocos2d-x/cocos:/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/cocos2d-x/external",
+        "-j8",
+        "NDK_DEBUG\u003d1",
+        "/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/libextension.a"
+      ],
+      "toolchain": "toolchain-armeabi-v7a",
+      "abi": "armeabi-v7a",
+      "artifactName": "extension",
+      "output": "/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/libextension.a"
+    },
+    "vorbisidec-debug-armeabi-v7a": {
+      "buildCommandComponents": [
+        "/Users/cocosdev/Library/Android/sdk/ndk/21.4.7075529/ndk-build",
+        "NDK_PROJECT_PATH\u003dnull",
+        "APP_BUILD_SCRIPT\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/jni/Android.mk",
+        "NDK_APPLICATION_MK\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/jni/Application.mk",
+        "APP_ABI\u003darmeabi-v7a",
+        "NDK_ALL_ABIS\u003darmeabi-v7a",
+        "NDK_DEBUG\u003d1",
+        "APP_PLATFORM\u003dandroid-16",
+        "NDK_OUT\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/build/intermediates/ndkBuild/debug/obj",
+        "NDK_LIBS_OUT\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/build/intermediates/ndkBuild/debug/lib",
+        "NDK_TOOLCHAIN_VERSION\u003dclang",
+        "NDK_MODULE_PATH\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/cocos2d-x:/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/cocos2d-x/cocos:/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/cocos2d-x/external",
+        "-j8",
+        "NDK_DEBUG\u003d1",
+        "/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/libvorbisidec.a"
+      ],
+      "toolchain": "toolchain-armeabi-v7a",
+      "abi": "armeabi-v7a",
+      "artifactName": "vorbisidec",
+      "output": "/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/libvorbisidec.a"
+    },
+    "audioengine-debug-armeabi-v7a": {
+      "buildCommandComponents": [
+        "/Users/cocosdev/Library/Android/sdk/ndk/21.4.7075529/ndk-build",
+        "NDK_PROJECT_PATH\u003dnull",
+        "APP_BUILD_SCRIPT\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/jni/Android.mk",
+        "NDK_APPLICATION_MK\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/jni/Application.mk",
+        "APP_ABI\u003darmeabi-v7a",
+        "NDK_ALL_ABIS\u003darmeabi-v7a",
+        "NDK_DEBUG\u003d1",
+        "APP_PLATFORM\u003dandroid-16",
+        "NDK_OUT\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/build/intermediates/ndkBuild/debug/obj",
+        "NDK_LIBS_OUT\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/build/intermediates/ndkBuild/debug/lib",
+        "NDK_TOOLCHAIN_VERSION\u003dclang",
+        "NDK_MODULE_PATH\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/cocos2d-x:/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/cocos2d-x/cocos:/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/cocos2d-x/external",
+        "-j8",
+        "NDK_DEBUG\u003d1",
+        "/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/libaudioengine.a"
+      ],
+      "toolchain": "toolchain-armeabi-v7a",
+      "abi": "armeabi-v7a",
+      "artifactName": "audioengine",
+      "output": "/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/libaudioengine.a"
+    },
+    "cpufeatures-debug-armeabi-v7a": {
+      "buildCommandComponents": [
+        "/Users/cocosdev/Library/Android/sdk/ndk/21.4.7075529/ndk-build",
+        "NDK_PROJECT_PATH\u003dnull",
+        "APP_BUILD_SCRIPT\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/jni/Android.mk",
+        "NDK_APPLICATION_MK\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/jni/Application.mk",
+        "APP_ABI\u003darmeabi-v7a",
+        "NDK_ALL_ABIS\u003darmeabi-v7a",
+        "NDK_DEBUG\u003d1",
+        "APP_PLATFORM\u003dandroid-16",
+        "NDK_OUT\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/build/intermediates/ndkBuild/debug/obj",
+        "NDK_LIBS_OUT\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/build/intermediates/ndkBuild/debug/lib",
+        "NDK_TOOLCHAIN_VERSION\u003dclang",
+        "NDK_MODULE_PATH\u003d/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/cocos2d-x:/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/cocos2d-x/cocos:/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/cocos2d-x/external",
+        "-j8",
+        "NDK_DEBUG\u003d1",
+        "/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/libcpufeatures.a"
+      ],
+      "toolchain": "toolchain-armeabi-v7a",
+      "abi": "armeabi-v7a",
+      "artifactName": "cpufeatures",
+      "output": "/Users/cocosdev/Desktop/Cocos-Casino/build/jsb-default/frameworks/runtime-src/proj.android-studio/instantapp/build/intermediates/ndkBuild/debug/obj/local/armeabi-v7a/libcpufeatures.a"
+    }
+  },
+  "toolchains": {
+    "toolchain-armeabi-v7a": {
+      "cCompilerExecutable": "/Users/cocosdev/Library/Android/sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang",
+      "cppCompilerExecutable": "/Users/cocosdev/Library/Android/sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++"
+    }
+  },
+  "cFileExtensions": [
+    "c",
+    "s"
+  ],
+  "cppFileExtensions": [
+    "cc",
+    "cpp"
+  ]
+}

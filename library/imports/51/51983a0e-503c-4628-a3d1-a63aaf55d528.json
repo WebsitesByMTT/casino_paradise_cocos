@@ -1,0 +1,28 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "pageViewIndicator",
+    "texture": "095de321-4792-41c9-8884-dc81ac804756",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      41,
+      22
+    ],
+    "offset": [
+      -0.5,
+      0
+    ],
+    "originalSize": [
+      42,
+      22
+    ],
+    "capInsets": [
+      0,
+      0,
+      0,
+      0
+    ]
+  }
+}
